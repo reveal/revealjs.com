@@ -1,0 +1,16 @@
+{
+    "name": "reveal.js",
+    "url": "https://revealjs.com",
+    "author": {
+        "name": "Hakim El Hattab",
+        "email": "hello@maxpower.com",
+        "handle": "@revealjs",
+        "avatar": "/images/blog/author.jpg"
+    },
+    "images": {
+        "logo": "/images/logo/logo.svg",
+        "favicon": "/images/favicon.ico",
+        "twitter": "/images/meta/twitter.jpg",
+        "og": "/images/meta/og.jpg"
+    }
+}

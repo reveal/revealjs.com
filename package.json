@@ -1,0 +1,32 @@
+{
+  "name": "revealjs.com",
+  "version": "0.0.1",
+  "description": "The official reveal.js website",
+  "scripts": {
+    "dev": "ELEVENTY_ENV=development npx @11ty/eleventy --config=eleventy.config.js --serve & gulp",
+    "production": "NODE_ENV=production gulp && npx @11ty/eleventy --config=eleventy.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reveal/revealjs.com.git"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Hakim El Hattab",
+    "email": "hakim.elhattab@gmail.com",
+    "web": "https://hakim.se"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.10.0",
+    "@fullhuman/postcss-purgecss": "^2.1.2",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.0.2",
+    "html-minifier": "^4.0.0",
+    "tailwindcss": "^1.2.0",
+    "webpack-stream": "^5.2.1"
+  }
+}
