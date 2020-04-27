@@ -8,3 +8,6 @@
 /* purgecss end ignore */
 
 @tailwind utilities;
+
+@import '../node_modules/reveal.js/dist/reveal';
+@import '../node_modules/reveal.js/dist/theme/black';

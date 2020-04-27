@@ -28,5 +28,11 @@
     "html-minifier": "^4.0.0",
     "tailwindcss": "^1.2.0",
     "webpack-stream": "^5.2.1"
+  },
+  "dependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
+    "babel-loader": "^8.1.0",
+    "reveal.js": "github:hakimel/reveal.js#dev"
   }
 }
