@@ -6,13 +6,8 @@
     <title>{% if meta_title %}{{ meta_title }}{% else %}{{ title }}{% endif %} | {{ site.name }}</title>
     <meta name="description" content="{% if meta_description %}{{ meta_description }}{% else %}{{ excerpt }}{% endif %}">
 
-    {% if helpers.environment === "development" %}
-        <link rel="stylesheet" href="/main.css">
-        <script src="/main.js" defer></script>
-    {% else %}
-        <link rel="stylesheet" href="/main.css">
-        <script src="/main.js" defer></script>
-    {% endif %}
+    <link rel="stylesheet" href="/main.css">
+    <script src="/main.js" defer></script>
 
     {% include "components/social-meta.njk" %}
 
@@ -30,7 +25,11 @@
 
     <div id="wrapper" class="wrapper w-full max-w-screen-xl mx-auto px-6">
 
-        <div class="lg:flex">
+        <section id="demo" class="reveal-demo rounded overflow-hidden outline-none text-center" tabindex="-1">
+            {% include "components/demo.html" %}
+        </section>
+
+        <div class="lg:flex pt-6">
             {% include "components/sidebar.njk" %}
             <div class="content min-h-screen w-full lg:static lg:max-h-full lg:overflow-visible lg:w-3/4 xl:w-4/5">
                 {{ content | safe }}

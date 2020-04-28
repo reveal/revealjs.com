@@ -1,28 +1,23 @@
-<header id="header" class="header bg-gray-900 flex flex-col md:flex-row md:justify-between items-center p-4 md:p-4">
+<header id="header" class="header sticky top-0 w-full z-20 bg-gray-100 p-4 py-2 mb-6 border-b border-gray-300">
+	<div class="w-full max-w-screen-xl mx-auto px-6 flex flex-col md:flex-row md:justify-between items-center">
+		<a class="company-logo-link block text-black font-semibold text-2xl hover:text-pink-500" href="/" title="reveal.js home">reveal.js</a>
 
-	<a class="company-logo-link block text-white font-bold text-2xl md:text-3xl hover:text-pink-500" href="/" title="reveal.js home">reveal.js</a>
+		<nav id="nav" class="nav hidden md:flex">
 
-	<nav id="nav" class="nav hidden md:flex">
+		    <ul class="menu flex flex-col md:flex-row items-center list-reset text-base">
 
-	    <ul class="menu flex flex-col md:flex-row items-center list-reset text-base">
+		    	<li>
+		    		<a class="inline-block py-3 px-5 text-gray-800 font-semibold hover:bg-gray-200" href="https://twitter.com/revealjs" target="_blank">@revealjs</a>
+		    	</li>
+		    	<li>
+		            <a class="inline-block py-3 px-5 text-gray-800 font-semibold hover:bg-gray-200" href="https://github.com/sponsors/hakimel/" target="_blank">Sponsor</a>
+		        </li>
+		        <li>
+		            <a class="inline-block py-3 px-5 text-gray-800 font-semibold hover:bg-gray-200" href="https://github.com/hakimel/reveal.js" target="_blank">GitHub</a>
+		        </li>
 
-	        {% for item in navigation.main %}
+		    </ul>
 
-	        <li class="level-1 mb-4 md:mr-4 md:mb-0">
-
-	            <a href="{{ item.url | safe }}" class="link font-bold text-white hover:text-pink-500 active:text-pink-500 {% if page.url == item.url %}active text-pink-500{% endif %}
-	            "{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.label }}</a>
-
-	        </li>
-
-	        {% endfor %}
-
-	        <li>
-	            <a class="inline-block rounded md:ml-2 py-3 px-6 text-white font-bold bg-pink-500 hover:bg-white hover:text-pink-500" href="https://github.com/hakimel/reveal.js" target="_blank" rel="noopener">Download from GitHub</a>
-	        </li>
-
-	    </ul>
-
-	</nav>
-
+		</nav>
+	</div>
 </header>

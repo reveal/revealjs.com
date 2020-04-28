@@ -39,5 +39,5 @@ gulp.task('css', gulp.series('css-dev', 'css-production'))
 gulp.task('default', () => {
     gulp.parallel('js', 'css')()
     gulp.watch([ 'js/**/*.js' ], gulp.series('js'))
-    gulp.watch([ 'css/**/*.scss' ], gulp.series('css'))
+    gulp.watch([ 'css/**.scss' ], gulp.series('css'))
 })

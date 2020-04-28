@@ -1,0 +1,39 @@
+html {
+	font-family: 'Inter', sans-serif;
+}
+
+// headings
+h1, h2, h3 {
+    @apply font-semibold leading-tight mt-0 mb-6;
+}
+
+// links
+a {
+    @apply text-purple-900 no-underline;
+
+    &:not([class]) {
+        border-bottom-width: 2px;
+        border-color: #eb5286;
+
+        &:hover {
+            @apply text-pink-500;
+        }
+    }
+}
+
+.page-title {
+	@apply text-4xl;
+}
+
+.reveal-demo {
+	height: 70vh;
+}
+
+.reveal h1, h2, h3, h4, p, ul {
+	font-family: 'Inter', sans-serif !important;
+}
+
+// 'container' helper class
+.inner {
+    @apply w-full max-w-6xl ml-auto mr-auto px-6;
+}

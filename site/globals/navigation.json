@@ -1,12 +1,20 @@
 {
     "main": [
         {
-            "label": "Home",
-            "url": "/"
+            "label": "Getting Started",
+            "url": "/docs/installation"
         },
         {
-            "label": "About",
-            "url": "/about/"
+            "label": "Content",
+            "url": "/docs/installation"
+        },
+        {
+            "label": "Configuration",
+            "url": "/docs/configuration"
+        },
+        {
+            "label": "API",
+            "url": "/docs/api"
         }
     ]
 }

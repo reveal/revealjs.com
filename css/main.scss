@@ -2,7 +2,7 @@
 /* purgecss start ignore */
 
 @tailwind base;
-@import 'base/global';
+@import 'site';
 @tailwind components;
 
 /* purgecss end ignore */
@@ -11,3 +11,4 @@
 
 @import '../node_modules/reveal.js/dist/reveal';
 @import '../node_modules/reveal.js/dist/theme/black';
+@import '../node_modules/reveal.js/lib/css/monokai';
