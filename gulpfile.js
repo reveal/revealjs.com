@@ -10,6 +10,9 @@ const webpack = require('webpack-stream')
 gulp.task('js', () => gulp.src(['js/main.js'])
     .pipe(webpack({
         mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
+        performance: {
+            hints: false
+        },
         resolve: {
             modules: ['js', 'node_modules']
         },
@@ -26,18 +29,11 @@ gulp.task('js', () => gulp.src(['js/main.js'])
     .pipe(rename('main.js'))
     .pipe(gulp.dest('./dist')))
 
-gulp.task('css-dev', () => gulp.src(['css/main.scss'])
+gulp.task('css', () => gulp.src(['css/main.scss'])
     .pipe(sass())
     .pipe(postcss())
     .pipe(rename('main.css'))
     .pipe(gulp.dest('./dist')))
-
-gulp.task('css-production', () => gulp.src(['dist/main.css'])
-    .pipe(minify())
-    .pipe(rename('main.min.css'))
-    .pipe(gulp.dest('./dist')))
-
-gulp.task('css', gulp.series('css-dev', 'css-production'))
 
 gulp.task('default', () => {
     gulp.watch([ 'js/*.js' ], gulp.series('js'))
