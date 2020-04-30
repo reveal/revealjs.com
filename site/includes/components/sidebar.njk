@@ -1,10 +1,10 @@
-<div class="sidebar inset-0 pt-16 h-full z-90 w-full border-b -mb-16 lg:-mb-0 lg:static lg:h-auto lg:overflow-y-visible lg:border-b-0 lg:pt-0 lg:w-1/4 lg:block lg:border-0 xl:w-1/5">
+<div class="sidebar inset-0 pt-16 h-full z-90 w-full border-b -mb-16 lg:-mb-0 lg:static lg:h-auto lg:overflow-y-visible lg:border-b-0 lg:pt-0 lg:w-1/4 lg:block lg:border-0">
 	<nav class="sticky text-sm" style="top: 6rem;">
 		<ul>
 			{% for section in navigation.sections %}
 
 				<li class="level-1 mb-4">
-					<span class="block mb-2 uppercase font-semibold text-gray-500">{{ section.label }}</span>
+					<span class="block mb-2 text-sm uppercase font-semibold text-gray-500">{{ section.label }}</span>
 					<ul>
 
 						{% for item in section.items %}

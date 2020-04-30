@@ -25,17 +25,17 @@ Some reveal.js features, like external Markdown and speaker notes, require that 
 1. Install [Node.js](https://nodejs.org/) (10.0.0 or later)
 
 1. Clone the reveal.js repository
-   ```sh
+   ```shell
    $ git clone https://github.com/hakimel/reveal.js.git
    ```
 
 1. Move to the reveal.js folder and install dependencies
-   ```sh
+   ```shell
    $ cd reveal.js && npm install
    ```
 
 1. Serve the presentation and monitor source files for changes
-   ```sh
+   ```shell
    $ npm start
    ```
 

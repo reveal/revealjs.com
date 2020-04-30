@@ -1,4 +1,5 @@
 const htmlmin = require('html-minifier')
+const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 
 module.exports = eleventyConfig => {
 
@@ -22,6 +23,10 @@ module.exports = eleventyConfig => {
 
     // Include our static assets
     eleventyConfig.addPassthroughCopy('images')
+
+    eleventyConfig.addPlugin(syntaxHighlight, {
+        alwaysWrapLineHighlights: true
+    });
 
     eleventyConfig.setLibrary('md', require('markdown-it')({
         html: true,

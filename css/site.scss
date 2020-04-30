@@ -36,21 +36,42 @@ html {
         font-weight: 600;
     }
 
-    pre {
-        @apply my-2;
+    p, ol, ul {
+        @apply mb-4;
     }
 
-    pre code {
-        @apply bg-gray-900 text-white p-1 leading-relaxed;
+    ol {
+        @apply list-inside list-decimal;
+    }
+
+    li {
+        @apply mb-4;
+    }
+
+    li p {
+        display: inline-block;
+    }
+
+    pre[class*="language-"] {
+        @apply mt-0 mb-4 -mx-4;
+    }
+
+    code:not([class*="language-"]) {
+        @apply rounded bg-gray-200 text-gray-900 p-1 py-px leading-relaxed;
     }
 }
 
 .reveal-demo {
 	height: 70vh;
+    max-height: 800px;
 }
 
 .reveal h1, h2, h3, h4, p, ul {
 	font-family: 'Inter', sans-serif !important;
+}
+
+.anchorjs-link:after {
+    @apply text-gray-400;
 }
 
 // sidebar
@@ -58,11 +79,11 @@ html {
     @apply text-gray-700;
 }
 
-.nav-link:hover,
 .nav-link:active {
     @apply text-gray-900;
 }
 
+.nav-link:hover,
 .nav-link.selected {
     @apply text-pink-500;
 }

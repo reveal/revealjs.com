@@ -3,7 +3,6 @@ const path = require('path')
 const gulp = require('gulp')
 const sass = require('gulp-sass')
 const rename = require('gulp-rename')
-const minify = require('gulp-clean-css')
 const postcss = require('gulp-postcss')
 const webpack = require('webpack-stream')
 
