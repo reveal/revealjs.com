@@ -423,70 +423,7 @@ Reveal.configure({
 });
 ```
 
-### Auto-Animate
 
-reveal.js can automatically animate elements across slides. All you need to do is add `data-auto-animate` to two adjacent slide `<section>` elements and Auto-Animate will animate all matching elements between the two.
-
-Here's a simple example to give you a better idea of how it can be used. The resulting animation will be the word "Magic" sliding 100px downwards.
-```html
-<section data-auto-animate>
-  <h1>Magic</h1>
-</section>
-<section data-auto-animate>
-  <h1 style="position: relative; top: 100px;">Magic</h1>
-</section>
-```
-
-This example uses the `top` property to move the element but internally reveal.js will use a CSS transform to ensure smooth movement. This same approach to animation works with most animatable CSS properties meaning you can transition things like `position`, `font-size`, `line-height`, `color`, `background-color` and `padding`.
-
-#### How Elements are Matched
-When you navigate between two auto-animated slides we'll do our best to automatically find matching elements between the two slides. For text, we consider it a match if both the text contents and node type are identical. For images, videos and iframes we compare the `src` attribute. We also take into account the order in which the element appears in the DOM.
-
-In situations where automatic matching is not feasible you can give the objects that you want to animate between a matching `data-id` attribute. We prioritize matching `data-id` values above our automatic matching. 
-
-Here's an example where we've given both blocks a matching ID since automatic matching has no content to go on.
-
-```html
-<section data-auto-animate>
-  <div data-id="box" style="padding: 20px; background: salmon;"></div>
-</section>
-<section data-auto-animate>
-  <div data-id="box" style="padding: 20px; background: blue;"></div>
-</section>
-```
-
-#### Animation Settings
-You can override specific animation settings such as easing and duration either for the whole presentation, per-slide or individually for each animated element. The following configuration attributes can be used to change the settings for a specific slide or element:
-
-| Attribute&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                        | Default    | Description 
-| :------------------------------- | ---------: | :---------- 
-| data-auto-animate-easing         | ease       | A CSS [easing function](https://developer.mozilla.org/en-US/docs/Web/CSS/easing-function).
-| data-auto-animate-unmatched      | true       | Determines whether elements with no matching auto-animate target should fade in. Set to false to make them appear instantly.
-| data-auto-animate-duration       | 1.0        | Animation duration in seconds.
-| data-auto-animate-delay          | 0          | Animation delay in seconds (can only be set for specific elements, not at the slide level).
-
-If you'd like to change the defaults for the whole deck, use the following config options:
-```javascript
-Reveal.initialize({
-  autoAnimateEasing: 'ease-out',
-  autoAnimateDuration: 0.8,
-  autoAnimateUnmatched: false
-})
-```
-
-#### API: State Attributes and Events
-We add state attributes to the different elements involved in an auto-animation. These attributes can be tied into if you want to, for example, fine-tune the animation behavior with custom CSS.
-
-Right before an auto-animation starts we add `data-auto-animate="pending"` to the slide `<section>`. At this point the upcoming slide is visible and all of the animated elements have been moved to their starting positions. Next we switch to `data-auto-animate="running"` to indicate when the elements start animating towards their final properties.
-
-Each individual element is decorated with a `data-auto-animate-target` attribute. The value of the attribute is a unique ID for this particular animation OR "unmatched" if this element should animate as unmatched content.
-
-Each time a presentation navigates between two auto-animated slides it dispatches the `autoanimate` event.
-```javascript
-Reveal.on( 'autoanimate', event => {
-  // event.fromSlide, event.toSlide
-} );
-```
 
 ### Vertical Slide Navigation
 
@@ -733,99 +670,6 @@ When preparing a presentation it can sometimes be helpful to prepare optional sl
 
 To "hide" those slides from reveal.js' numbering system you can add a `data-visibility` attribute to the slide like so `<section data-visibility="uncounted">`.
 
-### Slide Backgrounds
-
-Slides are contained within a limited portion of the screen by default to allow them to fit any display and scale uniformly. You can apply full page backgrounds outside of the slide area by adding a `data-background` attribute to your `<section>` elements. Four different types of backgrounds are supported: color, image, video and iframe.
-
-#### Color Backgrounds
-
-All CSS color formats are supported, including hex values, keywords, `rgba()` or `hsl()`.
-
-```html
-<section data-background-color="#ff0000">
-  <h2>Color</h2>
-</section>
-```
-
-#### Image Backgrounds
-
-By default, background images are resized to cover the full page. Available options:
-
-| Attribute                        | Default    | Description |
-| :------------------------------- | :--------- | :---------- |
-| data-background-image            |            | URL of the image to show. GIFs restart when the slide opens. |
-| data-background-size             | cover      | See [background-size](https://developer.mozilla.org/docs/Web/CSS/background-size) on MDN.  |
-| data-background-position         | center     | See [background-position](https://developer.mozilla.org/docs/Web/CSS/background-position) on MDN. |
-| data-background-repeat           | no-repeat  | See [background-repeat](https://developer.mozilla.org/docs/Web/CSS/background-repeat) on MDN. |
-| data-background-opacity          | 1          | Opacity of the background image on a 0-1 scale. 0 is transparent and 1 is fully opaque. |
-
-```html
-<section data-background-image="http://example.com/image.png">
-  <h2>Image</h2>
-</section>
-<section data-background-image="http://example.com/image.png" data-background-size="100px" data-background-repeat="repeat">
-  <h2>This background image will be sized to 100px and repeated</h2>
-</section>
-```
-
-#### Video Backgrounds
-
-Automatically plays a full size video behind the slide.
-
-| Attribute                        | Default | Description |
-| :---------------------------     | :------ | :---------- |
-| data-background-video            |         | A single video source, or a comma separated list of video sources. |
-| data-background-video-loop       | false   | Flags if the video should play repeatedly. |
-| data-background-video-muted      | false   | Flags if the audio should be muted. |
-| data-background-size             | cover   | Use `cover` for full screen and some cropping or `contain` for letterboxing. |
-| data-background-opacity          | 1       | Opacity of the background video on a 0-1 scale. 0 is transparent and 1 is fully opaque. |
-
-```html
-<section data-background-video="https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.mp4,https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.webm" data-background-video-loop data-background-video-muted>
-  <h2>Video</h2>
-</section>
-```
-
-#### Iframe Backgrounds
-
-Embeds a web page as a slide background that covers 100% of the reveal.js width and height. The iframe is in the background layer, behind your slides, and as such it's not possible to interact with it by default. To make your background interactive, you can add the `data-background-interactive` attribute.
-
-```html
-<section data-background-iframe="https://slides.com" data-background-interactive>
-  <h2>Iframe</h2>
-</section>
-```
-
-Iframes are lazy-loaded when they become visible. If you'd like to preload iframes ahead of time, you can append a `data-preload` attribute to the slide `<section>`. You can also enable preloading globally for all iframes using the `preloadIframes` configuration option.
-
-#### Background Transitions
-
-Backgrounds transition using a fade animation by default. This can be changed to a linear sliding transition by passing `backgroundTransition: 'slide'` to the `Reveal.initialize()` call. Alternatively you can set `data-background-transition` on any section with a background to override that specific transition.
-
-
-### Parallax Background
-
-If you want to use a parallax scrolling background, set the first two properties below when initializing reveal.js (the other two are optional).
-
-```javascript
-Reveal.initialize({
-
-  // Parallax background image
-  parallaxBackgroundImage: '', // e.g. "https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg"
-
-  // Parallax background size
-  parallaxBackgroundSize: '', // CSS syntax, e.g. "2100px 900px" - currently only pixels are supported (don't use % or auto)
-
-  // Number of pixels to move the parallax background per slide
-  // - Calculated automatically unless specified
-  // - Set to 0 to disable movement along an axis
-  parallaxBackgroundHorizontal: 200,
-  parallaxBackgroundVertical: 50
-
-});
-```
-
-Make sure that the background size is much bigger than screen size to allow for some scrolling. [View example](http://revealjs.com/?parallaxBackgroundImage=https%3A%2F%2Fs3.amazonaws.com%2Fhakim-static%2Freveal-js%2Freveal-parallax-1.jpg&parallaxBackgroundSize=2100px%20900px).
 
 ### Slide Transitions
 
@@ -861,82 +705,8 @@ You can also use different in and out transitions for the same slide:
 </section>
 ```
 You can choose from `none`, `fade`, `slide`, `convex`, `concave` and `zoom`.
-### Internal links
 
-It's easy to link between slides. The first example below targets the index of another slide whereas the second targets a slide with an ID attribute (`<section id="some-slide">`):
 
-```html
-<a href="#/2/2">Link</a>
-<a href="#/some-slide">Link</a>
-```
-
-You can also add relative navigation links, similar to the built in reveal.js controls, by appending one of the following classes on any element. Note that each element is automatically given an `enabled` class when it's a valid navigation route based on the current slide.
-
-```html
-<a href="#" class="navigate-left">
-<a href="#" class="navigate-right">
-<a href="#" class="navigate-up">
-<a href="#" class="navigate-down">
-<a href="#" class="navigate-prev"> <!-- Previous vertical or horizontal slide -->
-<a href="#" class="navigate-next"> <!-- Next vertical or horizontal slide -->
-```
-
-### Fragments
-
-Fragments are used to highlight individual elements on a slide. Every element with the class `fragment` will be stepped through before moving on to the next slide. Here's an example: http://revealjs.com/#/fragments
-
-The default fragment style is to start out invisible and fade in. This style can be changed by appending a different class to the fragment:
-
-```html
-<section>
-  <p class="fragment grow">grow</p>
-  <p class="fragment shrink">shrink</p>
-  <p class="fragment strike">strike</p>
-  <p class="fragment fade-out">fade-out</p>
-  <p class="fragment fade-up">fade-up (also down, left and right!)</p>
-  <p class="fragment fade-in-then-out">fades in, then out when we move to the next step</p>
-  <p class="fragment fade-in-then-semi-out">fades in, then obfuscate when we move to the next step</p>
-  <p class="fragment highlight-current-blue">blue only once</p>
-  <p class="fragment highlight-red">highlight-red</p>
-  <p class="fragment highlight-green">highlight-green</p>
-  <p class="fragment highlight-blue">highlight-blue</p>
-</section>
-```
-
-Multiple fragments can be applied to the same element sequentially by wrapping it, this will fade in the text on the first step and fade it back out on the second.
-
-```html
-<section>
-  <span class="fragment fade-in">
-    <span class="fragment fade-out">I'll fade in, then out</span>
-  </span>
-</section>
-```
-
-The display order of fragments can be controlled using the `data-fragment-index` attribute.
-
-```html
-<section>
-  <p class="fragment" data-fragment-index="3">Appears last</p>
-  <p class="fragment" data-fragment-index="1">Appears first</p>
-  <p class="fragment" data-fragment-index="2">Appears second</p>
-</section>
-```
-
-### Fragment events
-
-When a slide fragment is either shown or hidden reveal.js will dispatch an event.
-
-Some libraries, like MathJax (see #505), get confused by the initially hidden fragment elements. Often times this can be fixed by calling their update or render function from this callback.
-
-```javascript
-Reveal.on( 'fragmentshown', event => {
-  // event.fragment = the fragment DOM element
-} );
-Reveal.on( 'fragmenthidden', event => {
-  // event.fragment = the fragment DOM element
-} );
-```
 
 ### Code Syntax Highlighting
 
@@ -996,33 +766,6 @@ You can step through multiple code highlights on the same code block. Delimit ea
 
 
 
-### Slide number
-
-If you would like to display the page number of the current slide you can do so using the `slideNumber` and `showSlideNumber` configuration values.
-
-```javascript
-// Shows the slide number using default formatting
-Reveal.configure({ slideNumber: true });
-
-// Slide number formatting can be configured using these variables:
-//  "h.v":  horizontal . vertical slide number (default)
-//  "h/v":  horizontal / vertical slide number
-//    "c":  flattened slide number
-//  "c/t":  flattened slide number / total slides
-Reveal.configure({ slideNumber: 'c/t' });
-
-// You can provide a function to fully customize the number:
-Reveal.configure({ slideNumber: slide => {
-    // Ignore numbering of vertical slides
-    return [ Reveal.getIndices( slide ).h ];
-}});
-
-// Control which views the slide number displays on using the "showSlideNumber" value:
-//     "all": show on all views (default)
-// "speaker": only show slide numbers on speaker notes view
-//   "print": only show slide numbers when printing to PDF
-Reveal.configure({ showSlideNumber: 'speaker' });
-```
 
 ### Overview mode
 
@@ -1041,21 +784,6 @@ Reveal.toggleOverview();
 
 Just press »F« on your keyboard to show your presentation in fullscreen mode. Press the »ESC« key to exit fullscreen mode.
 
-### Embedded media
-
-Add `data-autoplay` to your media element if you want it to automatically start playing when the slide is shown:
-
-```html
-<video data-autoplay src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"></video>
-```
-
-If you want to enable or disable autoplay globally, for all embedded media, you can use the `autoPlayMedia` configuration option. If you set this to `true` ALL media will autoplay regardless of individual `data-autoplay` attributes. If you initialize with `autoPlayMedia: false` NO media will autoplay.
-
-Note that embedded HTML5 `<video>`/`<audio>` and YouTube/Vimeo iframes are automatically paused when you navigate away from a slide. This can be disabled by decorating your element with a `data-ignore` attribute.
-
-### Embedded iframes
-
-reveal.js automatically pushes two [post messages](https://developer.mozilla.org/en-US/docs/Web/API/Window.postMessage) to embedded iframes. `slide:start` when the slide containing the iframe is made visible and `slide:stop` when it is hidden.
 
 ### Stretching elements
 

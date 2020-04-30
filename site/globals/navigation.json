@@ -45,8 +45,33 @@
                     "url": "/markdown#slide-attributes"
                 },
                 {
-                    "label": "Lazy Loading",
-                    "url": "/lazy-loading"
+                    "label": "Media",
+                    "url": "/media"
+                },
+                {
+                    "label": "Slide Backgrounds",
+                    "url": "/backgrounds"
+                },
+                {
+                    "label": "Fragments",
+                    "url": "/fragments"
+                },
+                {
+                    "label": "Links",
+                    "url": "/links"
+                }
+            ]
+        },
+        {
+            "label": "Features",
+            "items": [
+                {
+                    "label": "Auto-Animate",
+                    "url": "/auto-animate"
+                },
+                {
+                    "label": "Slide Numbers",
+                    "url": "/slide-numbers"
                 }
             ]
         },

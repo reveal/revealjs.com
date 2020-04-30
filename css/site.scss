@@ -14,6 +14,10 @@ html {
         @apply text-3xl mb-6;
     }
 
+    h2 {
+        @apply text-2xl mb-3;
+    }
+
     h1:first-child {
         @apply mt-0;
     }

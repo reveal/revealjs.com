@@ -1,12 +1,30 @@
 ---
-id: lazy-loading
+id: media
 layout: default
-meta_title: Lazy Loading
+meta_title: Media
 meta_description: tbd
-title: Lazy Loading
+title: Media
 ---
 
-# Lazy Loading
+# Media
+
+## Autoplay
+
+Add `data-autoplay` to your media element if you want it to automatically start playing when the slide is shown:
+
+```html
+<video data-autoplay src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"></video>
+```
+
+If you want to enable or disable autoplay globally, for all embedded media, you can use the `autoPlayMedia` configuration option. If you set this to `true` ALL media will autoplay regardless of individual `data-autoplay` attributes. If you initialize with `autoPlayMedia: false` NO media will autoplay.
+
+Note that embedded HTML5 `<video>`/`<audio>` and YouTube/Vimeo iframes are automatically paused when you navigate away from a slide. This can be disabled by decorating your element with a `data-ignore` attribute.
+
+## Iframes
+
+reveal.js automatically pushes two [post messages](https://developer.mozilla.org/en-US/docs/Web/API/Window.postMessage) to embedded iframes. `slide:start` when the slide containing the iframe is made visible and `slide:stop` when it is hidden.
+
+## Lazy Loading
 
 When working on presentation with a lot of media or iframe content it's important to load lazily. Lazy loading means that reveal.js will only load content for the few slides nearest to the current slide. The number of slides that are preloaded is determined by the `viewDistance` configuration option.
 
