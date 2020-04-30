@@ -1,10 +1,10 @@
-const htmlmin = require("html-minifier")
+const htmlmin = require('html-minifier')
 
 module.exports = eleventyConfig => {
 
     // Minify our HTML
-    eleventyConfig.addTransform("htmlmin", (content, outputPath) => {
-        if ( outputPath.endsWith(".html") )
+    eleventyConfig.addTransform('htmlmin', (content, outputPath) => {
+        if ( outputPath.endsWith('.html') )
         {
             let minified = htmlmin.minify(content, {
                 useShortDoctype: true,
@@ -21,12 +21,16 @@ module.exports = eleventyConfig => {
     eleventyConfig.addLayoutAlias('landing', 'layouts/landing.njk')
 
     // Include our static assets
-    // eleventyConfig.addPassthroughCopy('css')
-    // eleventyConfig.addPassthroughCopy('js')
     eleventyConfig.addPassthroughCopy('images')
 
+    eleventyConfig.setLibrary('md', require('markdown-it')({
+        html: true,
+        breaks: true,
+        linkify: true
+    }));
+
     return {
-        templateFormats: ["md", "njk"],
+        templateFormats: ['md', 'njk'],
         markdownTemplateEngine: 'njk',
         htmlTemplateEngine: 'njk',
         passthroughFileCopy: true,

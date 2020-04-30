@@ -1,14 +1,23 @@
-<div class="sidebar fixed inset-0 pt-16 h-full z-90 w-full border-b -mb-16 lg:-mb-0 lg:static lg:h-auto lg:overflow-y-visible lg:border-b-0 lg:pt-0 lg:w-1/4 lg:block lg:border-0 xl:w-1/5">
-	<nav>
+<div class="sidebar inset-0 pt-16 h-full z-90 w-full border-b -mb-16 lg:-mb-0 lg:static lg:h-auto lg:overflow-y-visible lg:border-b-0 lg:pt-0 lg:w-1/4 lg:block lg:border-0 xl:w-1/5">
+	<nav class="sticky text-sm" style="top: 6rem;">
 		<ul>
-			{% for item in navigation.main %}
+			{% for section in navigation.sections %}
 
-			<li class="level-1 mb-2 md:mr-4">
+				<li class="level-1 mb-4">
+					<span class="block mb-2 uppercase font-semibold text-gray-500">{{ section.label }}</span>
+					<ul>
 
-			    <a href="{{ item.url | safe }}" class="link font-semibold text-gray-500 hover:text-gray-700 active:text-gray-700 {% if page.url == item.url %}active text-gray-700{% endif %}
-			    "{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.label }}</a>
+						{% for item in section.items %}
+						{% set is_current_page = page.url | replace('/', '') == item.url | replace('/', '') %}
 
-			</li>
+						<li class="level-2 mb-2">
+							<a href="{{ item.url | safe }}" class="nav-link {% if is_current_page %}selected{% endif %} "{% if is_current_page %} aria-current="page"{% endif %}>{{ item.label }}</a>
+						</li>
+
+						{% endfor %}
+
+					</ul>
+				</li>
 
 			{% endfor %}
 		</ul>

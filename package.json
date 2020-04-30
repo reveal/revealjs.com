@@ -19,7 +19,11 @@
   "license": "MIT",
   "devDependencies": {
     "@11ty/eleventy": "^0.10.0",
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
     "@fullhuman/postcss-purgecss": "^2.1.2",
+    "anchor-js": "^4.2.2",
+    "babel-loader": "^8.1.0",
     "gulp": "^4.0.2",
     "gulp-clean-css": "^4.3.0",
     "gulp-postcss": "^8.0.0",
@@ -30,9 +34,6 @@
     "webpack-stream": "^5.2.1"
   },
   "dependencies": {
-    "@babel/core": "^7.9.0",
-    "@babel/preset-env": "^7.9.5",
-    "babel-loader": "^8.1.0",
     "reveal.js": "github:hakimel/reveal.js#dev"
   }
 }

@@ -11,7 +11,6 @@
 
     {% include "components/social-meta.njk" %}
 
-    {# lastly include favicon, fonts, etc #}
     <link rel="icon" type="image/png" href="{{ site.images.favicon }}">
 
     <link rel="canonical" href="{{ site.url }}{{ page.url }}">
@@ -19,7 +18,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
-<body {% if body_class %} id="{{ body_class }}"{% endif %} class="text-purple-900 leading-normal text-lg bg-gray-100">
+<body {% if id %} data-page-id="{{ id }}"{% endif %} class="text-gray-900 leading-normal text-lg bg-gray-100">
 
     {% include "components/header.njk" %}
 
@@ -31,12 +30,12 @@
 
         <div class="lg:flex pt-6">
             {% include "components/sidebar.njk" %}
-            <div class="content min-h-screen w-full lg:static lg:max-h-full lg:overflow-visible lg:w-3/4 xl:w-4/5">
-                {{ content | safe }}
-            </div>
+            <main class="main w-full lg:static lg:max-h-full lg:overflow-visible lg:w-3/4 xl:w-4/5">
+                <article class="article flex flex-1 flex-col focus:outline-none" tabindex="-1">
+                    {{ content | safe }}
+                </article>
+            </main>
         </div>
-
-        {% include "components/footer.njk" %}
 
     </div>
 

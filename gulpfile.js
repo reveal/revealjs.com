@@ -10,6 +10,9 @@ const webpack = require('webpack-stream')
 gulp.task('js', () => gulp.src(['js/main.js'])
     .pipe(webpack({
         mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
+        resolve: {
+            modules: ['js', 'node_modules']
+        },
         module: {
             rules: [
                 {
@@ -37,7 +40,7 @@ gulp.task('css-production', () => gulp.src(['dist/main.css'])
 gulp.task('css', gulp.series('css-dev', 'css-production'))
 
 gulp.task('default', () => {
+    gulp.watch([ 'js/*.js' ], gulp.series('js'))
+    gulp.watch([ 'css/*.scss' ], gulp.series('css'))
     gulp.parallel('js', 'css')()
-    gulp.watch([ 'js/**/*.js' ], gulp.series('js'))
-    gulp.watch([ 'css/**.scss' ], gulp.series('css'))
 })

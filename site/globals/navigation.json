@@ -1,20 +1,93 @@
 {
-    "main": [
+    "sections": [
         {
             "label": "Getting Started",
-            "url": "/docs/installation"
+            "items": [
+                {
+                    "label": "Demo",
+                    "url": "/"
+                },
+                {
+                    "label": "Installation",
+                    "url": "/installation"
+                },
+                {
+                    "label": "- Basic Setup",
+                    "url": "/installation#basic-setup"
+                },
+                {
+                    "label": "- Full Setup",
+                    "url": "/installation#full-setup"
+                }
+            ]
         },
         {
             "label": "Content",
-            "url": "/docs/installation"
+            "items": [
+                {
+                    "label": "Markup",
+                    "url": "/markup"
+                },
+                {
+                    "label": "Markdown",
+                    "url": "/markdown"
+                },
+                {
+                    "label": "- External Markdown",
+                    "url": "/markdown#external-markdown"
+                },
+                {
+                    "label": "- Element Attributes",
+                    "url": "/markdown#element-attributes"
+                },
+                {
+                    "label": "- Slide Attributes",
+                    "url": "/markdown#slide-attributes"
+                },
+                {
+                    "label": "Lazy Loading",
+                    "url": "/lazy-loading"
+                }
+            ]
         },
         {
             "label": "Configuration",
-            "url": "/docs/configuration"
+            "items": [
+                {
+                    "label": "Options",
+                    "url": "/options"
+                },
+                {
+                    "label": "Theming",
+                    "url": "/theming"
+                }
+            ]
         },
         {
             "label": "API",
-            "url": "/docs/api"
+            "items": [
+                {
+                    "label": "Methods",
+                    "url": "/methods"
+                },
+                {
+                    "label": "Events",
+                    "url": "/events"
+                }
+            ]
+        },
+        {
+            "label": "Plugins",
+            "items": [
+                {
+                    "label": "Using Plugins",
+                    "url": "/using-plugins"
+                },
+                {
+                    "label": "Creating a Plugin",
+                    "url": "/using-plugins"
+                }
+            ]
         }
     ]
 }

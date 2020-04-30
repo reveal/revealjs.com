@@ -2,27 +2,47 @@ html {
 	font-family: 'Inter', sans-serif;
 }
 
-// headings
-h1, h2, h3 {
-    @apply font-semibold leading-tight mt-0 mb-6;
-}
+// documentation page
+.article {
+    @apply w-full max-w-6xl ml-auto mr-auto px-6;
 
-// links
-a {
-    @apply text-purple-900 no-underline;
+    h1, h2, h3 {
+        @apply font-semibold leading-tight mt-6 mb-2;
+    }
 
-    &:not([class]) {
-        border-bottom-width: 2px;
-        border-color: #eb5286;
+    h1 {
+        @apply text-3xl mb-6;
+    }
 
-        &:hover {
-            @apply text-pink-500;
+    h1:first-child {
+        @apply mt-0;
+    }
+
+    // links
+    a {
+        @apply text-purple-900 no-underline;
+
+        &:not([class]) {
+            border-bottom-width: 2px;
+            border-color: #eb5286;
+
+            &:hover {
+                @apply text-pink-500;
+            }
         }
     }
-}
 
-.page-title {
-	@apply text-4xl;
+    b, strong {
+        font-weight: 600;
+    }
+
+    pre {
+        @apply my-2;
+    }
+
+    pre code {
+        @apply bg-gray-900 text-white p-1 leading-relaxed;
+    }
 }
 
 .reveal-demo {
@@ -33,7 +53,16 @@ a {
 	font-family: 'Inter', sans-serif !important;
 }
 
-// 'container' helper class
-.inner {
-    @apply w-full max-w-6xl ml-auto mr-auto px-6;
+// sidebar
+.nav-link {
+    @apply text-gray-700;
+}
+
+.nav-link:hover,
+.nav-link:active {
+    @apply text-gray-900;
+}
+
+.nav-link.selected {
+    @apply text-pink-500;
 }
