@@ -2,7 +2,6 @@
 id: fragments
 layout: default
 meta_title: Fragments
-meta_description: tbd
 title: Fragments
 ---
 

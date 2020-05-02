@@ -10,8 +10,8 @@
 						{% for item in section.items %}
 						{% set is_current_page = page.url | replace('/', '') == item.url | replace('/', '') %}
 
-						<li class="level-2 mb-2">
-							<a href="{{ item.url | safe }}" class="nav-link {% if is_current_page %}selected{% endif %} "{% if is_current_page %} aria-current="page"{% endif %}>{{ item.label }}</a>
+						<li class="nav-item level-2 p-1 {% if is_current_page %}selected{% endif %}">
+							<a href="{{ item.url | safe }}" class="nav-link"{% if is_current_page %} aria-current="page"{% endif %}>{{ item.label }}</a>
 						</li>
 
 						{% endfor %}

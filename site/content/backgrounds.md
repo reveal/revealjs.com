@@ -2,7 +2,6 @@
 id: backgrounds
 layout: default
 meta_title: Backgrounds
-meta_description: tbd
 title: Backgrounds
 ---
 

@@ -2,7 +2,6 @@
 id: media
 layout: default
 meta_title: Media
-meta_description: tbd
 title: Media
 ---
 

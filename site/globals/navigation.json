@@ -26,39 +26,55 @@
             "items": [
                 {
                     "label": "Markup",
-                    "url": "/markup"
+                    "url": "/content/markup"
                 },
                 {
                     "label": "Markdown",
-                    "url": "/markdown"
+                    "url": "/content/markdown"
                 },
                 {
                     "label": "- External Markdown",
-                    "url": "/markdown#external-markdown"
+                    "url": "/content/markdown#external-markdown"
                 },
                 {
                     "label": "- Element Attributes",
-                    "url": "/markdown#element-attributes"
+                    "url": "/content/markdown#element-attributes"
                 },
                 {
                     "label": "- Slide Attributes",
-                    "url": "/markdown#slide-attributes"
+                    "url": "/content/markdown#slide-attributes"
+                },
+                {
+                    "label": "Vertical Slides",
+                    "url": "/features/vertical-slides"
                 },
                 {
                     "label": "Media",
-                    "url": "/media"
+                    "url": "/content/media"
+                },
+                {
+                    "label": "Code",
+                    "url": "/content/code"
+                },
+                {
+                    "label": "Math",
+                    "url": "/content/math"
                 },
                 {
                     "label": "Slide Backgrounds",
-                    "url": "/backgrounds"
+                    "url": "/content/backgrounds"
                 },
                 {
                     "label": "Fragments",
-                    "url": "/fragments"
+                    "url": "/content/fragments"
                 },
                 {
                     "label": "Links",
-                    "url": "/links"
+                    "url": "/content/links"
+                },
+                {
+                    "label": "Layout",
+                    "url": "/content/layout"
                 }
             ]
         },
@@ -67,11 +83,35 @@
             "items": [
                 {
                     "label": "Auto-Animate",
-                    "url": "/auto-animate"
+                    "url": "/features/auto-animate"
+                },
+                {
+                    "label": "Auto-Slide",
+                    "url": "/features/auto-slide"
+                },
+                {
+                    "label": "Speaker View",
+                    "url": "/features/speaker-view"
                 },
                 {
                     "label": "Slide Numbers",
-                    "url": "/slide-numbers"
+                    "url": "/features/slide-numbers"
+                },
+                {
+                    "label": "Touch Navigation",
+                    "url": "/features/touch-navigation"
+                },
+                {
+                    "label": "PDF Export",
+                    "url": "/features/pdf-export"
+                },
+                {
+                    "label": "Overview Mode",
+                    "url": "/features/overview"
+                },
+                {
+                    "label": "Fullscreen Mode",
+                    "url": "/features/fullscreen"
                 }
             ]
         },
@@ -79,12 +119,28 @@
             "label": "Configuration",
             "items": [
                 {
+                    "label": "Initialization",
+                    "url": "/config/initialization"
+                },
+                {
                     "label": "Options",
-                    "url": "/options"
+                    "url": "/config/options"
+                },
+                {
+                    "label": "Presentation Size",
+                    "url": "/config/presentation-size"
                 },
                 {
                     "label": "Theming",
-                    "url": "/theming"
+                    "url": "/config/theming"
+                },
+                {
+                    "label": "Transitions",
+                    "url": "/config/transitions"
+                },
+                {
+                    "label": "Keyboard",
+                    "url": "/config/keyboard"
                 }
             ]
         },
@@ -92,12 +148,20 @@
             "label": "API",
             "items": [
                 {
-                    "label": "Methods",
-                    "url": "/methods"
+                    "label": "API Methods",
+                    "url": "/api/"
+                },
+                {
+                    "label": "Presentation State",
+                    "url": "/api/#presentation-state"
+                },
+                {
+                    "label": "postMessage",
+                    "url": "/api/postmessage"
                 },
                 {
                     "label": "Events",
-                    "url": "/events"
+                    "url": "/api/events"
                 }
             ]
         },
@@ -106,11 +170,28 @@
             "items": [
                 {
                     "label": "Using Plugins",
-                    "url": "/using-plugins"
+                    "url": "/plugins"
                 },
                 {
                     "label": "Creating a Plugin",
-                    "url": "/using-plugins"
+                    "url": "/plugins/creating-plugins"
+                },
+                {
+                    "label": "Multiplex",
+                    "url": "/plugins/multiplex"
+                },
+                {
+                    "label": "Third Party Plugins",
+                    "url": "https://github.com/hakimel/reveal.js/wiki/Plugins,-Tools-and-Hardware"
+                }
+            ]
+        },
+        {
+            "label": "Other",
+            "items": [
+                {
+                    "label": "Changelog",
+                    "url": "https://github.com/hakimel/reveal.js/releases"
                 }
             ]
         }

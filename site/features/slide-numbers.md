@@ -5,7 +5,7 @@ meta_title: Slide Numbers
 title: Slide Numbers
 ---
 
-# Slide number
+# Slide Numbers
 
 If you would like to display the page number of the current slide you can do so using the `slideNumber` and `showSlideNumber` configuration values.
 

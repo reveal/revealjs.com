@@ -48,6 +48,10 @@ html {
         @apply list-inside list-decimal;
     }
 
+    ul {
+        @apply list-inside list-disc;
+    }
+
     li {
         @apply mb-4;
     }
@@ -87,7 +91,7 @@ html {
     @apply text-gray-900;
 }
 
-.nav-link:hover,
-.nav-link.selected {
-    @apply text-pink-500;
+.nav-item:hover,
+.nav-item.selected {
+    @apply bg-teal-300;
 }

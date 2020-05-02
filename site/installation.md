@@ -2,7 +2,6 @@
 id: installation
 layout: default
 meta_title: Installation
-meta_description: tbd
 title: Installation
 ---
 

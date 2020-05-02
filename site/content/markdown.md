@@ -2,7 +2,6 @@
 id: markdown
 layout: default
 meta_title: Markdown
-meta_description: tbd
 title: Markdown
 ---
 
