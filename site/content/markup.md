@@ -21,7 +21,7 @@ Here's a barebones example of a fully working reveal.js presentation:
         <section>Slide 2</section>
       </div>
     </div>
-    <script src="dist/reveal.es5.js"></script>
+    <script src="dist/reveal.js"></script>
     <script>
       Reveal.initialize();
     </script>
@@ -29,7 +29,9 @@ Here's a barebones example of a fully working reveal.js presentation:
 </html>
 ```
 
-The presentation markup hierarchy needs to be `.reveal > .slides > section` where the `section` represents one slide and can be repeated indefinitely. If you place multiple `section` elements inside of another `section` they will be shown as vertical slides. The first of the vertical slides is the "root" of the others (at the top), and will be included in the horizontal sequence. For example:
+The presentation markup hierarchy needs to be `.reveal > .slides > section` where the `section` element represents one slide and can be repeated indefinitely.
+
+If you place multiple `section` elements inside of another `section` they will be shown as [vertical slides](/features/vertical-slides). The first of the vertical slides is the "root" of the others (at the top), and will be included in the horizontal sequence. For example:
 
 ```html
 <div class="reveal">
@@ -43,7 +45,7 @@ The presentation markup hierarchy needs to be `.reveal > .slides > section` wher
 </div>
 ```
 
-It's also possible to write presentations using [Markdown](/markdown).
+It's also possible to write presentations using [Markdown](/content/markdown).
 
 ## Slide Visibility
 When preparing a presentation it can sometimes be helpful to prepare optional slides that you may or may not have time to show. This is easily done by appending a few slides at the end of the presentation, however this means that the reveal.js progress bar and slide numbering will hint that there are additional slides.

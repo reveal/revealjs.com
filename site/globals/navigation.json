@@ -45,10 +45,6 @@
                     "url": "/content/markdown#slide-attributes"
                 },
                 {
-                    "label": "Vertical Slides",
-                    "url": "/features/vertical-slides"
-                },
-                {
                     "label": "Media",
                     "url": "/content/media"
                 },
@@ -81,6 +77,10 @@
         {
             "label": "Features",
             "items": [
+                {
+                    "label": "Vertical Slides",
+                    "url": "/features/vertical-slides"
+                },
                 {
                     "label": "Auto-Animate",
                     "url": "/features/auto-animate"

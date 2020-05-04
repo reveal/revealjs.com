@@ -18,20 +18,24 @@ html {
         @apply text-2xl mb-3;
     }
 
+    h3 {
+        @apply text-xl mb-3;
+    }
+
     h1:first-child {
         @apply mt-0;
     }
 
     // links
     a {
-        @apply text-purple-900 no-underline;
+        @apply text-purple-700 no-underline;
 
         &:not([class]) {
             border-bottom-width: 2px;
-            border-color: #eb5286;
+            @apply text-purple-700;
 
             &:hover {
-                @apply text-pink-500;
+                @apply text-purple-500;
             }
         }
     }
@@ -74,6 +78,10 @@ html {
     max-height: 800px;
 }
 
+.reveal {
+    font-size: 36px;
+}
+
 .reveal h1, h2, h3, h4, p, ul {
 	font-family: 'Inter', sans-serif !important;
 }
@@ -84,14 +92,16 @@ html {
 
 // sidebar
 .nav-link {
-    @apply text-gray-700;
+    @apply text-gray-700 w-full inline-block;
 }
 
 .nav-link:active {
     @apply text-gray-900;
 }
 
-.nav-item:hover,
-.nav-item.selected {
-    @apply bg-teal-300;
+.nav-link:hover {
+    @apply bg-gray-200 rounded;
+}
+.nav-link.selected {
+    @apply bg-purple-200 text-purple-900 rounded;
 }

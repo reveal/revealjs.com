@@ -17,11 +17,31 @@ Add `data-autoplay` to your media element if you want it to automatically start 
 
 If you want to enable or disable autoplay globally, for all embedded media, you can use the `autoPlayMedia` configuration option. If you set this to `true` ALL media will autoplay regardless of individual `data-autoplay` attributes. If you initialize with `autoPlayMedia: false` NO media will autoplay.
 
+```js
+Reveal.initialize({
+	autoPlayMedia: true
+})
+```
+
 Note that embedded HTML5 `<video>`/`<audio>` and YouTube/Vimeo iframes are automatically paused when you navigate away from a slide. This can be disabled by decorating your element with a `data-ignore` attribute.
 
 ## Iframes
 
 reveal.js automatically pushes two [post messages](https://developer.mozilla.org/en-US/docs/Web/API/Window.postMessage) to embedded iframes. `slide:start` when the slide containing the iframe is made visible and `slide:stop` when it is hidden.
+
+TODO
+
+```js
+// JavaScript inside of an iframe embedded within reveal.js
+window.addEventListener( 'message', event => {
+	if( event.data === 'slide:start' ) {
+		// The slide containing this iframe is visible
+	}
+	else if( event.data === 'slide:stop' ) {
+		// The slide containing this iframe is not visible
+	}
+} );
+```
 
 ## Lazy Loading
 

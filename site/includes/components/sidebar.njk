@@ -1,17 +1,17 @@
-<div class="sidebar inset-0 pt-16 h-full z-90 w-full border-b -mb-16 lg:-mb-0 lg:static lg:h-auto lg:overflow-y-visible lg:border-b-0 lg:pt-0 lg:w-1/4 lg:block lg:border-0">
-	<nav class="sticky text-sm" style="top: 6rem;">
+<div class="sidebar inset-0 pt-16 h-full z-90 w-full border-b -mb-16 lg:-mb-0 lg:static lg:h-auto lg:overflow-y-visible lg:border-b-0 lg:pt-0 lg:w-1/5 lg:block lg:border-0">
+	<nav class="sticky text-sm">
 		<ul>
 			{% for section in navigation.sections %}
 
 				<li class="level-1 mb-4">
-					<span class="block mb-2 text-sm uppercase font-semibold text-gray-500">{{ section.label }}</span>
+					<span class="block mb-2 text-xs uppercase font-semibold text-gray-500">{{ section.label }}</span>
 					<ul>
 
 						{% for item in section.items %}
 						{% set is_current_page = page.url | replace('/', '') == item.url | replace('/', '') %}
 
-						<li class="nav-item level-2 p-1 {% if is_current_page %}selected{% endif %}">
-							<a href="{{ item.url | safe }}" class="nav-link"{% if is_current_page %} aria-current="page"{% endif %}>{{ item.label }}</a>
+						<li class="level-2">
+							<a href="{{ item.url | safe }}" class="nav-link -mx-1 p-1 {% if is_current_page %}selected{% endif %}"{% if is_current_page %} aria-current="page"{% endif %}>{{ item.label }}</a>
 						</li>
 
 						{% endfor %}

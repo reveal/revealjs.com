@@ -35,6 +35,6 @@ Read MathJax's documentation if you need [HTTPS delivery](http://docs.mathjax.or
 ## Math in Markdown
 If you want to include math inside of a presentation written in Markdown you need to wrap the formula in backticks. This prevents syntax conflicts between LaTeX and Markdown. For example:
 
-```
+```tex
 `$$ J(\theta_0,\theta_1) = \sum_{i=0} $$`
 ```
