@@ -1,76 +1,18 @@
+$headerHeight: 4rem;
+$headerMargin: 2rem;
+
 html {
 	font-family: 'Inter', sans-serif;
+    font-size: 16px;
 }
 
-// documentation page
-.article {
-    @apply w-full max-w-6xl ml-auto mr-auto px-6;
+:target {
+    scroll-margin-top: $headerHeight + $headerMargin;
+}
 
-    h1, h2, h3 {
-        @apply font-semibold leading-tight mt-6 mb-2;
-    }
-
-    h1 {
-        @apply text-3xl mb-6;
-    }
-
-    h2 {
-        @apply text-2xl mb-3;
-    }
-
-    h3 {
-        @apply text-xl mb-3;
-    }
-
-    h1:first-child {
-        @apply mt-0;
-    }
-
-    // links
-    a {
-        @apply text-purple-700 no-underline;
-
-        &:not([class]) {
-            border-bottom-width: 2px;
-            @apply text-purple-700;
-
-            &:hover {
-                @apply text-purple-500;
-            }
-        }
-    }
-
-    b, strong {
-        font-weight: 600;
-    }
-
-    p, ol, ul {
-        @apply mb-4;
-    }
-
-    ol {
-        @apply list-inside list-decimal;
-    }
-
-    ul {
-        @apply list-inside list-disc;
-    }
-
-    li {
-        @apply mb-4;
-    }
-
-    li p {
-        display: inline-block;
-    }
-
-    pre[class*="language-"] {
-        @apply mt-0 mb-4 -mx-4;
-    }
-
-    code:not([class*="language-"]) {
-        @apply rounded bg-gray-200 text-gray-900 p-1 py-px leading-relaxed;
-    }
+.stick-to-header {
+    position: sticky;
+    top: $headerHeight + $headerMargin;
 }
 
 .reveal-demo {
@@ -84,10 +26,6 @@ html {
 
 .reveal h1, h2, h3, h4, p, ul {
 	font-family: 'Inter', sans-serif !important;
-}
-
-.anchorjs-link:after {
-    @apply text-gray-400;
 }
 
 // sidebar

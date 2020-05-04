@@ -23,7 +23,7 @@ All CSS color formats are supported, including hex values, keywords, `rgba()` or
 
 By default, background images are resized to cover the full page. Available options:
 
-| Attribute                        | Default    | Description |
+| Attribute<div style="width:200px"></div> | Default <div style="width:80px"></div> | Description |
 | :------------------------------- | :--------- | :---------- |
 | data-background-image            |            | URL of the image to show. GIFs restart when the slide opens. |
 | data-background-size             | cover      | See [background-size](https://developer.mozilla.org/docs/Web/CSS/background-size) on MDN.  |
@@ -53,7 +53,7 @@ Automatically plays a full size video behind the slide.
 | data-background-opacity          | 1       | Opacity of the background video on a 0-1 scale. 0 is transparent and 1 is fully opaque. |
 
 ```html
-<section data-background-video="https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.mp4,https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.webm" data-background-video-loop data-background-video-muted>
+<section data-background-video="https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.mp4" data-background-video-loop data-background-video-muted>
   <h2>Video</h2>
 </section>
 ```

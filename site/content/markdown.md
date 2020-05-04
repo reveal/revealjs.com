@@ -7,9 +7,7 @@ title: Markdown
 
 # Markdown
 
-It's possible to write your slides using Markdown. To enable Markdown, add the `data-markdown` attribute to your `<section>` elements and wrap the contents in a `<textarea data-template>` like the example below. You'll also need to add the `plugin/markdown/marked.js` and `plugin/markdown/markdown.js` scripts (in that order) to your HTML file. _Note: both these dependencies are already included in the default `index.html`._
-
-This is based on [data-markdown](https://gist.github.com/1343518) from [Paul Irish](https://github.com/paulirish) modified to use [marked](https://github.com/chjj/marked) to support [GitHub Flavored Markdown](https://help.github.com/articles/github-flavored-markdown). Sensitive to indentation (avoid mixing tabs and spaces) and line breaks (avoid consecutive breaks).
+It's possible and often times more convenient to write presentation content using Markdown. To create a Markdow slide, add the `data-markdown` attribute to your `<section>` element and wrap the contents in a `<textarea data-template>` like the example below.
 
 ```html
 <section data-markdown>
@@ -21,11 +19,26 @@ This is based on [data-markdown](https://gist.github.com/1343518) from [Paul Iri
 </section>
 ```
 
+Note that this is sensitive to indentation (avoid mixing tabs and spaces) and line breaks (avoid consecutive breaks).
+
+## Markdown Plugin
+
+This is functionality is powered by the built-in Markdown plugin which in turn uses [marked](https://github.com/chjj/marked) for all parsing. The Markdown plugin is included in our default presentation examples. If you want to manually add it to a new presentation here's how:
+
+```javascript
+import Reveal from 'reveal.js';
+import Markdown from '/dist/plugin/markdown.esm.js';
+
+Reveal.initialize({
+  plugins: [ Markdown ]
+});
+```
+
 ## External Markdown
 
 You can write your content as a separate file and have reveal.js load it at runtime. Note the separator arguments which determine how slides are delimited in the external file: the `data-separator` attribute defines a regular expression for horizontal slides (defaults to `^\r?\n---\r?\n$`, a newline-bounded horizontal rule)  and `data-separator-vertical` defines vertical slides (disabled by default). The `data-separator-notes` attribute is a regular expression for specifying the beginning of the current slide's speaker notes (defaults to `notes?:`, so it will match both "note:" and "notes:"). The `data-charset` attribute is optional and specifies which charset to use when loading the external file.
 
-When used locally, this feature requires that reveal.js [runs from a local web server](#full-setup).  The following example customises all available options:
+When used locally, this feature requires that reveal.js [runs from a local web server](/installation/#full-setup).  The following example customises all available options:
 
 ```html
 <section data-markdown="example.md"

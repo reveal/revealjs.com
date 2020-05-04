@@ -60,7 +60,7 @@ yarn add reveal.js
 Once installed, you can include reveal.js as an ES module:
 ```js
 import Reveal from 'reveal.js';
-import Markdown from 'reveal.js/dist/plugin/markdown.es6.js';
+import Markdown from 'reveal.js/dist/plugin/markdown.esm.js';
 
 let deck = new Reveal({
    plugins: [ Markdown ]

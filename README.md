@@ -3,7 +3,7 @@ The official reveal.js website
 
 
 ```
-npm run dev
+npm start
 ```
 
 ```

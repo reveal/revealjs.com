@@ -18,11 +18,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
-<body {% if id %} data-page-id="{{ id }}"{% endif %} class="text-gray-900 leading-normal text-lg bg-gray-100">
+<body {% if id %} data-page-id="{{ id }}"{% endif %} class="text-gray-900 leading-normal bg-gray-100">
 
     {% include "components/header.njk" %}
 
-    <div id="wrapper" class="wrapper w-full max-w-screen-xl mx-auto px-6">
+    <div id="wrapper" class="wrapper w-full max-w-screen-xl mx-auto px-6 pt-6 relative">
 
         <div class="lg:flex">
             {% include "components/sidebar.njk" %}

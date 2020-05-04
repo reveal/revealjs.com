@@ -1,0 +1,118 @@
+// documentation page
+.article {
+    @apply w-full max-w-6xl ml-auto mr-auto px-6;
+
+    h1, h2, h3 {
+        @apply font-semibold leading-tight mt-6 mb-2;
+    }
+
+    h1 {
+        @apply text-3xl mb-6;
+    }
+
+    h2 {
+        @apply text-2xl mb-3;
+    }
+
+    h3 {
+        @apply text-xl mb-3;
+    }
+
+    h1:first-child {
+        @apply mt-0;
+    }
+
+    // links
+    a {
+        @apply text-purple-700 no-underline;
+
+        &:not([class]) {
+            border-bottom-width: 2px;
+            @apply text-purple-700;
+
+            &:hover {
+                @apply text-purple-500;
+            }
+        }
+    }
+
+    b, strong {
+        font-weight: 600;
+    }
+
+    p, ol, ul {
+        @apply my-2;
+    }
+
+    ol {
+        @apply list-inside list-decimal;
+    }
+
+    ul {
+        @apply list-inside list-disc;
+    }
+
+    li {
+        @apply mb-4;
+    }
+
+    li p {
+        display: inline-block;
+    }
+
+    pre[class*="language-"] {
+        @apply m-4 -mx-4 p-4;
+    }
+
+    code:not([class*="language-"]) {
+        @apply rounded bg-gray-200 text-purple-900 p-1 py-px leading-relaxed;
+    }
+}
+
+.article {
+    table {
+        display: block;
+        overflow: auto;
+        @apply m-4 -mx-4 border border-gray-300 rounded text-base;
+    }
+
+    table th {
+      @apply p-4 align-top border-b border-gray-300 font-semibold;
+    }
+
+    table td {
+      @apply p-4 align-top border-0;
+    }
+
+    table tr {
+      background-color: #fff;
+    }
+
+    table tr:nth-child(2n) {
+      background-color: transparent;
+    }
+}
+
+
+.article {
+    // An inline presentation
+    .example-deck {
+        height: 250px;
+        box-sizing: content-box;
+        @apply my-4 -mx-4 p-4 rounded bg-gray-800 border-t border-gray-700;
+    }
+
+    // Input/output (code/deck) wrapper
+    .example-deck-wrapper pre[class*="language-"] {
+        @apply mb-0 rounded-b-none;
+    }
+
+    .example-deck-wrapper .example-deck {
+        @apply mt-0 rounded-t-none;
+    }
+}
+
+
+.anchorjs-link:after {
+    @apply text-gray-400;
+}

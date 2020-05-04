@@ -33,18 +33,6 @@
                     "url": "/content/markdown"
                 },
                 {
-                    "label": "- External Markdown",
-                    "url": "/content/markdown#external-markdown"
-                },
-                {
-                    "label": "- Element Attributes",
-                    "url": "/content/markdown#element-attributes"
-                },
-                {
-                    "label": "- Slide Attributes",
-                    "url": "/content/markdown#slide-attributes"
-                },
-                {
                     "label": "Media",
                     "url": "/content/media"
                 },

@@ -7,7 +7,7 @@ title: Vertical Slides
 
 # Vertical Slide Navigation
 
-Slides can be nested within other slides to create vertical stacks (see [Markup](#markup)). When presenting, you use the left/right arrows to step through the main (horizontal) slides. When you arrive at a vertical stack you can optionally press the up/down arrows to view the vertical slides or skip past them by pressing the right arrow. Here's an example showing a bird's-eye view of what this looks like in action:
+Slides can be nested within other slides to create vertical stacks (see [Markup](/content/markup)). When presenting, you use the left/right arrows to step through the main (horizontal) slides. When you arrive at a vertical stack you can optionally press the up/down arrows to view the vertical slides or skip past them by pressing the right arrow. Here's an example showing a bird's-eye view of what this looks like in action:
 
 <img src="https://static.slid.es/support/reveal.js-vertical-slides.gif" width="450">
 
