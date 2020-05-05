@@ -10,11 +10,6 @@ html {
     scroll-margin-top: $headerHeight + $headerMargin;
 }
 
-.stick-to-header {
-    position: sticky;
-    top: $headerHeight + $headerMargin;
-}
-
 .reveal-demo {
 	height: 70vh;
     max-height: 800px;
@@ -42,4 +37,29 @@ html {
 }
 .nav-link.selected {
     @apply bg-purple-200 text-purple-900 rounded;
+}
+
+body[data-page=home] .sidebar-inner {
+    @apply pt-0 top-16;
+}
+
+/* Advertising */
+#carbonads {
+    width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    z-index: 10;
+    text-align: left;
+    @apply text-sm;
+}
+
+#carbonads .carbon-img img {
+    margin: 0 0 10px 0;
+    border: 0;
+    box-shadow: none;
+}
+
+#carbonads .carbon-poweredby {
+    display: block;
+    margin-top: 10px;
+    color: #aaa;
 }
