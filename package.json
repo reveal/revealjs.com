@@ -4,7 +4,7 @@
   "description": "The official reveal.js website",
   "scripts": {
     "start": "ELEVENTY_ENV=development npx @11ty/eleventy --config=eleventy.config.js --serve & gulp",
-    "production": "NODE_ENV=production gulp build && npx @11ty/eleventy --config=eleventy.config.js && mv dist docs"
+    "production": "NODE_ENV=production gulp build && npx @11ty/eleventy --config=eleventy.config.js"
   },
   "repository": {
     "type": "git",

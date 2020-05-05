@@ -36,7 +36,7 @@ gulp.task('css', () => gulp.src(['css/main.scss'])
 
 gulp.task('build', gulp.parallel('js', 'css'))
 
-gulp.task('watch', () => {
+gulp.task('default', () => {
     gulp.watch([ 'js/*.js' ], gulp.series('js'))
     gulp.watch([ 'css/*.scss' ], gulp.series('css'))
     gulp.series('build')
