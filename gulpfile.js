@@ -34,8 +34,10 @@ gulp.task('css', () => gulp.src(['css/main.scss'])
     .pipe(rename('main.css'))
     .pipe(gulp.dest('./dist')))
 
-gulp.task('default', () => {
+gulp.task('build', gulp.parallel('js', 'css'))
+
+gulp.task('watch', () => {
     gulp.watch([ 'js/*.js' ], gulp.series('js'))
     gulp.watch([ 'css/*.scss' ], gulp.series('css'))
-    gulp.parallel('js', 'css')()
+    gulp.series('build')
 })
