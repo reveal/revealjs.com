@@ -28,11 +28,15 @@ module.exports = eleventyConfig => {
         alwaysWrapLineHighlights: true
     });
 
-    eleventyConfig.setLibrary('md', require('markdown-it')({
+    let md = require('markdown-it')({
         html: true,
         breaks: true,
         linkify: true
-    }));
+    });
+
+    md.use( require('markdown-it-attrs') );
+
+    eleventyConfig.setLibrary('md', md);
 
     return {
         templateFormats: ['md', 'njk'],

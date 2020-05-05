@@ -91,6 +91,14 @@
     table tr:nth-child(2n) {
       background-color: transparent;
     }
+
+    table.no-wrap-1st td:first-child {
+        white-space: nowrap;
+    }
+
+    table.w-full-2nd td:nth-child(2) {
+        width: 100%;
+    }
 }
 
 

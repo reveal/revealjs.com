@@ -7,66 +7,85 @@ title: Fragments
 
 # Fragments
 
-Fragments are used to highlight individual elements on a slide. Every element with the class `fragment` will be stepped through before moving on to the next slide.
+Fragments are used to highlight or incrementally reveal individual elements on a slide. Every element with the class `fragment` will be stepped through before moving on to the next slide.
 
-The default fragment style is to start out invisible and fade in. This style can be changed by appending a different class to the fragment:
+The default fragment style is to start out invisible and fade in. This style can be changed by appending a different class to the fragment.
 
 ```html
-<section>
-  <p class="fragment grow">grow</p>
-  <p class="fragment shrink">shrink</p>
-  <p class="fragment strike">strike</p>
-  <p class="fragment fade-out">fade-out</p>
-  <p class="fragment fade-up">fade-up (also down, left and right!)</p>
-  <p class="fragment fade-in-then-out">fades in, then out when we move to the next step</p>
-  <p class="fragment fade-in-then-semi-out">fades in, then obfuscate when we move to the next step</p>
-  <p class="fragment highlight-current-blue">blue only once</p>
-  <p class="fragment highlight-red">highlight-red</p>
-  <p class="fragment highlight-green">highlight-green</p>
-  <p class="fragment highlight-blue">highlight-blue</p>
-</section>
+<p class="fragment">Fade in</p>
+<p class="fragment fade-out">Fade out</p>
+<p class="fragment highlight-red">Highlight red</p>
+<p class="fragment fade-in-then-out">Fade in, then out</p>
+<p class="fragment fade-up">Slide up while fading in</p>
 ```
 <div class="reveal example-deck">
   <div class="slides">
     <section>
-      <p class="fragment grow">grow</p>
-      <p class="fragment shrink">shrink</p>
-      <p class="fragment strike">strike</p>
-      <p class="fragment fade-out">fade-out</p>
-      <p class="fragment fade-up">fade-up (also down, left and right!)</p>
-      <p class="fragment fade-in-then-out">fades in, then out when we move to the next step</p>
-      <p class="fragment fade-in-then-semi-out">fades in, then obfuscate when we move to the next step</p>
+      <p class="fragment">Fade in</p>
+      <p class="fragment fade-out">Fade out</p>
+      <p class="fragment highlight-red">Highlight red</p>
+      <p class="fragment fade-in-then-out">Fade in, then out</p>
+      <p class="fragment fade-up">Slide up while fading in</p>
     </section>
   </div>
 </div>
 
-Multiple fragments can be applied to the same element sequentially by wrapping it, this will fade in the text on the first step and fade it back out on the second.
+| Name                    | Effect     |
+| :-                      |:-          |
+| fade-out                | Start visible, fade out |
+| fade-up                 | Slide up while fading in |
+| fade-down               | Slide down while fading in |
+| fade-left               | Slide left while fading in |
+| fade-right              | Slide right while fading in |
+| fade-in-then-out        | Fades in, then out on the next step |
+| fade-in-then-semi-out   | Fades in, then to 50% on the next step |
+| grow                    | Scale up |
+| shrink                  | Scale down |
+| strike                  | Strike through |
+| highlight-red           | Turn text red |
+| highlight-green         | Turn text green |
+| highlight-blue          | Turn text blue |
+| highlight-current-red   | Turn text red, then back to original on next step |
+| highlight-current-green | Turn text green, then back to original on next step |
+| highlight-current-blue  | Turn text blue, then back to original on next step |
+{.no-wrap-1st .w-full-2nd}
+
+
+## Nested Fragments
+
+Multiple fragments can be applied to the same element sequentially by wrapping it, this will fade in the text on the first step, turn it red on the second and fade out on the third.
 
 ```html
-<section>
-  <span class="fragment fade-in">
-    <span class="fragment fade-out">I'll fade in, then out</span>
+<span class="fragment fade-in">
+  <span class="fragment highlight-red">
+    <span class="fragment fade-out">
+      Fade in > Turn red > Fade out
+    </span>
   </span>
-</section>
+</span>
 ```
 <div class="reveal example-deck">
   <div class="slides">
     <section>
       <span class="fragment fade-in">
-        <span class="fragment fade-out">I'll fade in, then out</span>
+        <span class="fragment highlight-red">
+          <span class="fragment fade-out">
+            Fade in > Turn red > Fade out
+          </span>
+        </span>
       </span>
     </section>
   </div>
 </div>
 
-The display order of fragments can be controlled using the `data-fragment-index` attribute.
+## Fragment Order
+
+By default fragments will be stepped through in the order that they appear in the DOM. This display order can be changed using the `data-fragment-index` attribute. Note that multiple elements can appear at the same index.
 
 ```html
-<section>
-  <p class="fragment" data-fragment-index="3">Appears last</p>
-  <p class="fragment" data-fragment-index="1">Appears first</p>
-  <p class="fragment" data-fragment-index="2">Appears second</p>
-</section>
+<p class="fragment" data-fragment-index="3">Appears last</p>
+<p class="fragment" data-fragment-index="1">Appears first</p>
+<p class="fragment" data-fragment-index="2">Appears second</p>
 ```
 <div class="reveal example-deck">
   <div class="slides">
@@ -78,11 +97,9 @@ The display order of fragments can be controlled using the `data-fragment-index`
   </div>
 </div>
 
-## Fragment events
+## Fragment Events
 
-When a slide fragment is either shown or hidden reveal.js will dispatch an event.
-
-Some libraries, like MathJax (see #505), get confused by the initially hidden fragment elements. Often times this can be fixed by calling their update or render function from this callback.
+When a fragment is either shown or hidden reveal.js will dispatch an event.
 
 ```javascript
 Reveal.on( 'fragmentshown', event => {
