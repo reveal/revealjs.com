@@ -1,5 +1,7 @@
+import 'sidebar.js';
+import 'hovereffect.js';
+
 import AnchorJS from 'anchor-js';
-import Sidebar from 'sidebar.js';
 import Reveal from 'reveal.js';
 import Highlight from 'reveal.js/dist/plugin/highlight.esm.js';
 import Markdown from 'reveal.js/dist/plugin/markdown.esm.js';

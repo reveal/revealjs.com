@@ -1,6 +1,12 @@
 $headerHeight: 4rem;
 $headerMargin: 2rem;
 
+$activeColor: #e9d8fd;
+
+$easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.275);
+$easeOutQuint: cubic-bezier(0.230, 1.000, 0.320, 1.000);
+$easeInOutQuint: cubic-bezier(0.860, 0.000, 0.070, 1.000);
+
 html {
 	font-family: 'Inter', sans-serif;
     font-size: 16px;
@@ -46,18 +52,11 @@ html {
     @apply text-gray-700 w-full inline-block;
 }
 
-.nav-link:active {
-    @apply text-gray-900;
-}
-
-.nav-link:hover {
-    @apply bg-gray-200 rounded;
-}
 .nav-link.selected {
-    @apply bg-purple-200 text-purple-900 rounded;
+    @apply bg-purple-300 text-purple-900 rounded;
 }
 
-/* Advertising */
+// Advertising
 #carbonads {
     width: 100%;
     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -76,4 +75,39 @@ html {
     display: block;
     margin-top: 10px;
     color: #aaa;
+}
+
+
+// Anchors
+.r-anchor {
+    position: relative;
+}
+
+.r-anchor-label {
+    position: relative;
+    z-index: 2;
+}
+
+.r-anchor-background {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    border-radius: 4px;
+    z-index: -1;
+    background-color: $activeColor;
+
+    transition: opacity 0.15s $easeOutQuint,
+                visibility 0.15s $easeOutQuint,
+                transform 0.3s $easeOutQuint;
+}
+
+.r-anchor.hover .r-anchor-background {
+    opacity: 1;
+    transform: none;
+    visibility: visible;
 }
