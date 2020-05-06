@@ -13,28 +13,43 @@ Slides are contained within a limited portion of the screen by default to allow 
 All CSS color formats are supported, including hex values, keywords, `rgba()` or `hsl()`.
 
 ```html
-<section data-background-color="#ff0000">
-  <h2>Color</h2>
+<section data-background-color="salmon">
+  <h2>🐟</h2>
+</section>
+<section data-background-color="rgb(70, 70, 255)">
+  <h2>🐳</h2>
 </section>
 ```
+<div class="reveal example-deck">
+  <div class="slides">
+    <section data-background-color="salmon">
+      <h2 style="font-size: 4em;">🐟</h2>
+    </section>
+    <section data-background-color="rgb(70, 70, 255)">
+      <h2 style="font-size: 4em;">🐳</h2>
+    </section>
+  </div>
+</div>
 
 ## Image Backgrounds
 
 By default, background images are resized to cover the full page. Available options:
 
-| Attribute<div style="width:200px"></div> | Default <div style="width:80px"></div> | Description |
+| Attribute | Default <div style="width:80px"></div> | Description |
 | :------------------------------- | :--------- | :---------- |
 | data-background-image            |            | URL of the image to show. GIFs restart when the slide opens. |
 | data-background-size             | cover      | See [background-size](https://developer.mozilla.org/docs/Web/CSS/background-size) on MDN.  |
 | data-background-position         | center     | See [background-position](https://developer.mozilla.org/docs/Web/CSS/background-position) on MDN. |
 | data-background-repeat           | no-repeat  | See [background-repeat](https://developer.mozilla.org/docs/Web/CSS/background-repeat) on MDN. |
 | data-background-opacity          | 1          | Opacity of the background image on a 0-1 scale. 0 is transparent and 1 is fully opaque. |
+{.nowrap-1st}
 
 ```html
 <section data-background-image="http://example.com/image.png">
   <h2>Image</h2>
 </section>
-<section data-background-image="http://example.com/image.png" data-background-size="100px" data-background-repeat="repeat">
+<section data-background-image="http://example.com/image.png" 
+          data-background-size="100px" data-background-repeat="repeat">
   <h2>This background image will be sized to 100px and repeated</h2>
 </section>
 ```
@@ -43,26 +58,43 @@ By default, background images are resized to cover the full page. Available opti
 
 Automatically plays a full size video behind the slide.
 
-| Attribute                        | Default | Description |
+| Attribute | Default | Description |
 | :---------------------------     | :------ | :---------- |
 | data-background-video            |         | A single video source, or a comma separated list of video sources. |
 | data-background-video-loop       | false   | Flags if the video should play repeatedly. |
 | data-background-video-muted      | false   | Flags if the audio should be muted. |
 | data-background-size             | cover   | Use `cover` for full screen and some cropping or `contain` for letterboxing. |
 | data-background-opacity          | 1       | Opacity of the background video on a 0-1 scale. 0 is transparent and 1 is fully opaque. |
+{.nowrap-1st}
 
 ```html
-<section data-background-video="https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.mp4" data-background-video-loop data-background-video-muted>
+<section data-background-video="https://static.slid.es/site/homepage/v1/homepage-video-editor.mp4" 
+          data-background-video-loop data-background-video-muted>
   <h2>Video</h2>
 </section>
 ```
+<div class="reveal example-deck">
+  <div class="slides">
+    <section data-background-video="https://static.slid.es/site/homepage/v1/homepage-video-editor.mp4" 
+          data-background-video-loop data-background-video-muted>
+      <h2>Video</h2>
+    </section>
+  </div>
+</div>
 
 ## Iframe Backgrounds
 
 Embeds a web page as a slide background that covers 100% of the reveal.js width and height. The iframe is in the background layer, behind your slides, and as such it's not possible to interact with it by default. To make your background interactive, you can add the `data-background-interactive` attribute.
 
+| Attribute | Default | Description
+| :- | :- | :-
+| data-background-iframe       |       | URL of the iframe to load
+| data-background-interactive  | false | Include this attribute to make it possible to interact with the iframe contents. Enabling this will prevent interaction with the slide content.
+{.nowrap-1st}
+
 ```html
-<section data-background-iframe="https://slides.com" data-background-interactive>
+<section data-background-iframe="https://slides.com"
+          data-background-interactive>
   <h2>Iframe</h2>
 </section>
 ```
@@ -71,7 +103,7 @@ Iframes are lazy-loaded when they become visible. If you'd like to preload ifram
 
 ## Background Transitions
 
-Backgrounds transition using a fade animation by default. This can be changed to a linear sliding transition by passing `backgroundTransition: 'slide'` to the `Reveal.initialize()` call. Alternatively you can set `data-background-transition` on any section with a background to override that specific transition.
+We'll use a cross fade to transition between slide backgrounds by default. This can be changed using the [`backgroundTransition`](/config/transitions/#background-transitions) config option.
 
 
 ## Parallax Background

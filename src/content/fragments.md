@@ -47,7 +47,7 @@ The default fragment style is to start out invisible and fade in. This style can
 | highlight-current-red   | Turn text red, then back to original on next step |
 | highlight-current-green | Turn text green, then back to original on next step |
 | highlight-current-blue  | Turn text blue, then back to original on next step |
-{.no-wrap-1st .w-full-2nd}
+{.key-value}
 
 
 ## Nested Fragments

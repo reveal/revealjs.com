@@ -5,11 +5,12 @@ import AnchorJS from 'anchor-js';
 import Reveal from 'reveal.js';
 import Highlight from 'reveal.js/dist/plugin/highlight.esm.js';
 import Markdown from 'reveal.js/dist/plugin/markdown.esm.js';
+import MathJax from 'reveal.js/dist/plugin/math.esm.js';
 
 // Set up link anchors
 const anchors = new AnchorJS();
 anchors.options = { placement: 'left', icon: '#' };
-anchors.add( '.main h2, .main h3, .main h4' );
+anchors.add( '.article>h2, .article>h3, .article>h4' );
 
 const PAGE_ID = document.body.dataset.page;
 
@@ -47,7 +48,10 @@ else {
 			keyboard: false,
 			progress: false,
 			controlsTutorial: false,
-			plugins: [ Markdown, Highlight ]
+			math: {
+			  config: 'TeX-AMS_HTML-full'
+			},
+			plugins: [ Markdown, Highlight, MathJax ]
 		} );
 		deck.initialize();
 

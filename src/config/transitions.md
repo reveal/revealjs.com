@@ -6,7 +6,7 @@ layout: default
 
 # Transitions
 
-The global presentation transition is set using the `transition` config value. You can override the global transition for a specific slide by using the `data-transition` attribute:
+When navigating a presentation, we transition between slides by animating them from right to left by default. This transition can be changed by setting the `transition` config option to a valid [transition style](#styles). Transitions can also be overridden for a specific slide using the `data-transition` attribute.
 
 ```html
 <section data-transition="zoom">
@@ -18,7 +18,23 @@ The global presentation transition is set using the `transition` config value. Y
 </section>
 ```
 
-You can also use different in and out transitions for the same slide:
+## Styles
+
+This is a complete list of all available transition styles. They work for both slides and slide backgrounds.
+
+| Name     | Effect
+| :-       | :-
+| none     | Switch backgrounds instantly
+| fade     | Cross fade — *default for background transitions*
+| slide    | Slide between backgrounds — *default for slide transitions*
+| convex   | Slide at a convex angle
+| concave  | Slide at a concave angle
+| zoom     | Scale the incoming slide up so it grows in from the center of the screen
+{.key-value}
+
+## Separate In-Out Transitions
+
+You can also use different in and out transitions for the same slide by appending `-in` or `-out` to the transition name.
 
 ```html
 <section data-transition="slide">
@@ -37,4 +53,33 @@ You can also use different in and out transitions for the same slide:
     And it starts again.
 </section>
 ```
-You can choose from `none`, `fade`, `slide`, `convex`, `concave` and `zoom`.
+<div class="reveal example-deck">
+  <div class="slides">
+    <section data-transition="slide">
+        The train goes on …
+    </section>
+    <section data-transition="slide">
+        and on …
+    </section>
+    <section data-transition="slide-in fade-out">
+        and stops.
+    </section>
+    <section data-transition="fade-in slide-out">
+        (Passengers entering and leaving)
+    </section>
+    <section data-transition="slide">
+        And it starts again.
+    </section>
+  </div>
+</div>
+
+## Background Transitions
+
+We transition between slide backgrounds using a cross fade by default. This can be changed on a global level or overriden for specific slides. To change background transitions for all slides, use the `backgroundTransition` config option.
+```js
+Reveal.initialize({
+  backgroundTransition: 'slide'
+});
+```
+
+Alternatively you can use the `data-background-transition` attribute on any `<section>` to override that specific transition.

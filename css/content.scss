@@ -88,13 +88,15 @@
       background-color: transparent;
     }
 
-    table.no-wrap-1st td:first-child {
+    table.nowrap-1st td:first-child,
+    table.key-value td:first-child {
         white-space: nowrap;
     }
 
-    table.w-full-2nd td:nth-child(2) {
+    table.key-value td:nth-child(2) {
         width: 100%;
     }
+
 }
 
 
