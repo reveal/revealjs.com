@@ -16,10 +16,9 @@ reveal.js comes with a broad range of features including [nested slides](https:/
 - Why should I use it
 - How do I get started
 
-## Getting Started
-
 
 ## Supporting reveal.js
+
 
 
 

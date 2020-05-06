@@ -20,16 +20,14 @@
         @apply mt-0;
     }
 
-    // links
     a {
         @apply text-purple-700 no-underline;
 
         &:not([class]) {
-            border-bottom-width: 2px;
-            @apply text-purple-700;
+            @apply text-purple-700 border-b-2 border-purple-200;
 
             &:hover {
-                @apply text-purple-500;
+                @apply text-purple-500 border-purple-200;
             }
         }
     }
@@ -105,7 +103,7 @@
     .example-deck {
         height: 250px;
         box-sizing: content-box;
-        @apply my-4 -mx-4 p-4 rounded bg-gray-800 border-t border-gray-700;
+        @apply my-4 -mx-4 p-4 rounded border-t border-gray-700;
     }
 
     // Input/output (code/deck) wrapper

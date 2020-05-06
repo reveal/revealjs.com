@@ -1,4 +1,7 @@
 
+let sidebar = document.querySelector( '.sidebar' );
+let menuToggle = document.querySelector( '.menu-toggle' );
+
 /**
  * Update the selected item in the navigation to
  * match the current URL & hash.
@@ -6,10 +9,10 @@
 let updateSelection = () => {
 
 	let currentURL = window.location.pathname.replace( /\/$/, '' ) + window.location.hash;
-	let newSelection = document.querySelector( '.sidebar .nav-link[href="'+ currentURL +'"]' )
+	let newSelection = sidebar.querySelector( '.nav-link[href="'+ currentURL +'"]' )
 
 	if( newSelection ) {
-		let selectedItem = document.querySelector( '.sidebar .nav-link.selected' );
+		let selectedItem = sidebar.querySelector( '.nav-link.selected' );
 		if( selectedItem ) selectedItem.classList.remove( 'selected' );
 		newSelection.classList.add( 'selected' )
 	}
@@ -19,3 +22,10 @@ let updateSelection = () => {
 updateSelection();
 
 window.addEventListener( 'hashchange', updateSelection );
+
+
+menuToggle.addEventListener( 'click', () => {
+
+	sidebar.classList.toggle( 'hidden' );
+
+} )

@@ -1,3 +1,7 @@
+@import '../node_modules/reveal.js/dist/reveal';
+@import '../node_modules/reveal.js/dist/theme/black';
+@import '../node_modules/highlight.js/scss/dracula.scss';
+@import '../node_modules/prism-themes/themes/prism-dracula';
 
 /* purgecss start ignore */
 
@@ -9,8 +13,3 @@
 /* purgecss end ignore */
 
 @tailwind utilities;
-
-@import '../node_modules/reveal.js/dist/reveal';
-@import '../node_modules/reveal.js/dist/theme/black';
-@import '../node_modules/reveal.js/lib/css/monokai';
-@import '../node_modules/prism-themes/themes/prism-dracula';

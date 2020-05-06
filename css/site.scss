@@ -10,6 +10,7 @@ html {
     scroll-margin-top: $headerHeight + $headerMargin;
 }
 
+// reveal.js styles
 .reveal-demo {
 	height: 70vh;
     max-height: 800px;
@@ -17,10 +18,27 @@ html {
 
 .reveal {
     font-size: 36px;
+    background-color: #2d234c;
+}
+
+.reveal a,
+.reveal .controls button,
+.reveal .progress span {
+    @apply text-purple-300;
+}
+
+.reveal .progress {
+    height: 6px;
 }
 
 .reveal h1, h2, h3, h4, p, ul {
 	font-family: 'Inter', sans-serif !important;
+}
+
+.reveal iframe,
+.reveal a img {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 // sidebar
