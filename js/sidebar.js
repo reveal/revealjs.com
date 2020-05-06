@@ -24,8 +24,9 @@ updateSelection();
 window.addEventListener( 'hashchange', updateSelection );
 
 
+/**
+ * Toggle the mobile nav.
+ */
 menuToggle.addEventListener( 'click', () => {
-
 	sidebar.classList.toggle( 'hidden' );
-
 } )
