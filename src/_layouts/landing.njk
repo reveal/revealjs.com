@@ -24,13 +24,13 @@
 
     <div class="w-full max-w-screen-xl mx-auto px-6 relative">
 
-        <section id="demo" class="reveal-demo rounded overflow-hidden outline-none text-center mt-20 mb-6 -mx-2" tabindex="-1">
+        <section id="demo" class="reveal-demo rounded overflow-hidden outline-none text-center mt-20 -mx-2" tabindex="-1">
             {% include "demo.html" %}
         </section>
 
         <div class="lg:flex -mx-6">
             {% include "sidebar.njk" %}
-            <main class="main w-full lg:static lg:max-h-full lg:overflow-visible lg:w-3/5">
+            <main class="main w-full pt-8 lg:static lg:max-h-full lg:overflow-visible lg:w-3/5">
                 <article class="article flex flex-1 flex-col focus:outline-none w-full max-w-6xl ml-auto mr-auto px-6" tabindex="-1">
                     {{ content | safe }}
                 </article>

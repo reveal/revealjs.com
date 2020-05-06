@@ -57,10 +57,6 @@ html {
     @apply bg-purple-200 text-purple-900 rounded;
 }
 
-body[data-page=home] .sidebar-inner {
-    @apply pt-0 top-16;
-}
-
 /* Advertising */
 #carbonads {
     width: 100%;
