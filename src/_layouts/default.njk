@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} | {{ site.name }}</title>
+    <meta name="description" content="{% if description %}{{ description }}{% else %}{{ excerpt }}{% endif %}">
+
+    <link rel="stylesheet" href="/main.css">
+    <script src="/main.js" defer></script>
+
+    {% include "social-meta.njk" %}
+
+    <link rel="icon" type="image/png" href="{{ site.images.favicon }}">
+
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body {% if id %} data-page="{{ id }}"{% endif %} class="text-gray-900 leading-normal bg-gray-100">
+
+    {% include "header.njk" %}
+
+    <div class="w-full max-w-screen-xl mx-auto px-6 relative">
+
+        <div class="lg:flex -mx-6">
+            {% include "sidebar.njk" %}
+            <main class="main pt-24 w-full lg:static lg:max-h-full lg:overflow-visible lg:w-3/5">
+                <article class="article flex flex-1 flex-col focus:outline-none w-full max-w-6xl ml-auto mr-auto px-6" tabindex="-1">
+                    {{ content | safe }}
+                </article>
+            </main>
+            {% include "extras.njk" %}
+        </div>
+
+    </div>
+
+</body>
+</html>

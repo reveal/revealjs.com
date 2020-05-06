@@ -1,0 +1,27 @@
+<div class="sidebar hidden fixed inset-0 pt-16 h-full z-90 w-full border-b bg-gray-100 -mb-16 lg:-mb-0 lg:static lg:h-auto lg:overflow-y-visible lg:border-b-0 lg:pt-0 lg:w-1/4 lg:block lg:border-0 lg:top-16 xl:w-1/5">
+	<div class="sidebar-inner overflow-hidden h-screen pt-16 sticky inset-0">
+		<nav class="inset-0 overflow-y-auto text-sm px-6 py-8 lg:h-full">
+			<ul>
+				{% for section in navigation.sections %}
+
+					<li class="level-1 mb-4">
+						<span class="block mb-2 text-xs uppercase font-semibold text-gray-500">{{ section.label }}</span>
+						<ul>
+
+							{% for item in section.items %}
+							{% set is_current_page = page.url | replace('/', '') == item.url | replace('/', '') %}
+
+							<li class="level-2">
+								<a href="{{ item.url | safe }}" class="nav-link -mx-1 p-1 {% if is_current_page %}selected{% endif %}"{% if is_current_page %} aria-current="page"{% endif %}>{{ item.label }}</a>
+							</li>
+
+							{% endfor %}
+
+						</ul>
+					</li>
+
+				{% endfor %}
+			</ul>
+		</nav>
+	</div>
+</div>

@@ -22,7 +22,7 @@ The official reveal.js website and docs. Contributions are welcome!
 The development server will automatically reload as you make changes.
 
 ## Technologies
-This site is built using [Eleventy](https://www.11ty.dev/) — a static site generator. It's styled using [tailwindcss](https://tailwindcss.com/) and the docs are written in Markdown.
+This site is built using [Eleventy](https://www.11ty.dev/) — a powerful but easy to use static site generator. It's styled with [tailwindcss](https://tailwindcss.com/) and the docs are written in Markdown.
 
 ## Deploy
 The site is hosted on Netlify and automatically deploys master when there are new commits.

@@ -1,0 +1,20 @@
+{# Google Schema #}
+<meta itemprop="name" content="{{ title }} | {{ site.name }}">
+<meta itemprop="description" content="{% if description %}{{ description }}{% else %}{{ excerpt }}{% endif %}">
+
+{# Twitter #}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ title }} | {{ site.name }}">
+<meta name="twitter:description" content="{% if description %}{{ description }}{% else %}{{ excerpt }}{% endif %}">
+<meta name="twitter:site" content="{{ site.author.handle }}">
+<meta name="twitter:creator" content="{{ site.author.handle }}">
+<meta name="twitter:image:src" content="{{ site.url }}{{ site.images.twitter }}">
+
+{# Open Graph #}
+<meta name="og:title" content="{{ title }} | {{ site.name }}">
+<meta name="og:description" content="{% if description %}{{ description }}{% else %}{{ excerpt }}{% endif %}">
+<meta name="og:image" content="{{ site.url }}{{ site.images.og }}">
+<meta name="og:url" content="{{ site.url }}{{ page.url }}">
+<meta name="og:site_name" content="{{ site.name }}">
+<meta name="og:locale" content="en_GB">
+<meta name="og:type" content="website">

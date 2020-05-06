@@ -18,8 +18,8 @@ module.exports = eleventyConfig => {
     })
 
     // Layout aliases
-    eleventyConfig.addLayoutAlias('default', 'layouts/default.njk')
-    eleventyConfig.addLayoutAlias('landing', 'layouts/landing.njk')
+    eleventyConfig.addLayoutAlias('default', 'default.njk')
+    eleventyConfig.addLayoutAlias('landing', 'landing.njk')
 
     // Include our static assets
     eleventyConfig.addPassthroughCopy('images')
@@ -45,10 +45,11 @@ module.exports = eleventyConfig => {
         passthroughFileCopy: true,
 
         dir: {
-            input: 'site',
+            input: 'src',
             output: 'dist',
-            includes: 'includes',
-            data: 'globals'
+            layouts: '_layouts',
+            includes: '_includes',
+            data: '_data'
         }
     }
 
