@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo | {{ site.name }}</title>
+    <meta name="description" content="{% if description %}{{ description }}{% else %}{{ excerpt }}{% endif %}">
+
+    <link rel="stylesheet" href="/main.css">
+
+    {% include "social-meta.njk" %}
+
+    <link rel="icon" type="image/png" href="{{ site.images.favicon }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="h-screen full-page-demo">
+
+    {% include "demo.html" %}
+
+    <script src="/main.js" defer></script>
+
+</body>
+</html>

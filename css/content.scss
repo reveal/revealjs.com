@@ -131,6 +131,10 @@
         @apply my-4 -mx-4 p-4 rounded border-t border-gray-700;
     }
 
+    pre + .reveal-example {
+        @apply -mt-2 rounded-t-none;
+    }
+
     // Input/output (code/deck) wrapper
     .reveal-example-wrapper pre[class*="language-"] {
         @apply mb-0 rounded-b-none;

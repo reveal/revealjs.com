@@ -7,6 +7,7 @@ import Reveal from 'reveal.js';
 import Highlight from 'reveal.js/dist/plugin/highlight.esm.js';
 import Markdown from 'reveal.js/dist/plugin/markdown.esm.js';
 import MathJax from 'reveal.js/dist/plugin/math.esm.js';
+import Zoom from 'reveal.js/dist/plugin/zoom.esm.js';
 
 
 if( document.readyState === 'complete' ) {
@@ -36,7 +37,18 @@ function setup() {
 			embedded: true,
 			hash: true,
 			margin: 0.1,
-			plugins: [ Markdown, Highlight ]
+			plugins: [ Markdown, Highlight, Zoom ]
+		});
+		deck.initialize();
+
+	} );
+
+	// Full page version of the reveal.js demo
+	Array.from( document.querySelectorAll( '.full-page-demo .reveal' ) ).forEach( deckElement => {
+
+		let deck = new Reveal( deckElement, {
+			hash: true,
+			plugins: [ Markdown, Highlight, Zoom ]
 		});
 		deck.initialize();
 
@@ -67,7 +79,7 @@ function setup() {
 			math: {
 			  config: 'TeX-AMS_HTML-full'
 			},
-			plugins: [ Markdown, Highlight, MathJax ]
+			plugins: [ Markdown, Highlight, Zoom, MathJax ]
 		} );
 		deck.initialize();
 
