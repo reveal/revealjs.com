@@ -21,6 +21,13 @@ The official reveal.js website and docs. Contributions are welcome!
 
 The development server will automatically reload as you make changes.
 
+## Spell Check
+There's a built-in task for spell checking.
+
+```sh
+$ npm test
+```
+
 ## Technologies
 This site is built using [Eleventy](https://www.11ty.dev/) — a powerful but easy to use static site generator. It's styled with [tailwindcss](https://tailwindcss.com/) and the docs are written in Markdown.
 

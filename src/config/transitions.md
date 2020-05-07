@@ -75,7 +75,7 @@ You can also use different in and out transitions for the same slide by appendin
 
 ## Background Transitions
 
-We transition between slide backgrounds using a cross fade by default. This can be changed on a global level or overriden for specific slides. To change background transitions for all slides, use the `backgroundTransition` config option.
+We transition between slide backgrounds using a cross fade by default. This can be changed on a global level or overridden for specific slides. To change background transitions for all slides, use the `backgroundTransition` config option.
 ```js
 Reveal.initialize({
   backgroundTransition: 'slide'

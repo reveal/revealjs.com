@@ -66,7 +66,7 @@ loaded when they become visible.
 
 ## Iframes
 
-Using iframes is a convenient way to include content from external sources, like a YouTube video or Google Sheet. reveal.js automatically detects YouTube and Vimeo embed URLs and autplays them when the slide becomes visible.
+Using iframes is a convenient way to include content from external sources, like a YouTube video or Google Sheet. reveal.js automatically detects YouTube and Vimeo embed URLs and autoplays them when the slide becomes visible.
 
 If you add an `<iframe>` inside your slide it's constrained by the size of the slide. To break out of this constraint and add a full page iframe, you can use an [iframe slide background](/content/backgrounds/#iframe-backgrounds).
 

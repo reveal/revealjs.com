@@ -16,13 +16,13 @@ let trackMouseMovement = () => {
 			let ox = event.pageX - this.lastMouseX;
 			let oy = event.pageY - this.lastMouseY;
 
-			let longestMovement = Math.max( Math.abs( ox ), Math.abs( oy ) );
+			// let longestMovement = Math.max( Math.abs( ox ), Math.abs( oy ) );
 
-			let sx = ox/longestMovement;
-			let sy = oy/longestMovement;
+			// let sx = ox/longestMovement;
+			// let sy = oy/longestMovement;
 
-			this.pointerDirectionX = sx;
-			this.pointerDirectionY = sy;
+			this.pointerDirectionX = ox/6;
+			this.pointerDirectionY = oy/6;
 		}
 
 		this.lastMouseX = event.pageX;

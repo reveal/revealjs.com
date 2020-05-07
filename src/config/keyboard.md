@@ -18,7 +18,7 @@ Reveal.configure({
 });
 ```
 
-## Adding Keyboard Bindings via JavaScrpt
+## Adding Keyboard Bindings via JavaScript
 
 Custom key bindings can be added and removed using the following Javascript API. Custom key bindings will override the default keyboard bindings, but will in turn be overridden by the user defined bindings in the ``keyboard`` config option.
 

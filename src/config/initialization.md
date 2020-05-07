@@ -37,7 +37,7 @@ If you want to run multiple presentations side-by-side on the same page you can 
 
 ## ES Module
 
-We provide two JavaScript bundles; `/dist/reveal.es5.js` with support for legacy browers and `/dist/reveal.js` which targets modern browsers with ES6 support.
+We provide two JavaScript bundles; `/dist/reveal.es5.js` with support for legacy browsers and `/dist/reveal.js` which targets modern browsers with ES6 support.
 
 Here's how to import and initialize the ES module version of reveal.js, including the Markdown plugin:
 

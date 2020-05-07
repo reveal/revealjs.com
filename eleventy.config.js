@@ -38,6 +38,9 @@ module.exports = eleventyConfig => {
 
     eleventyConfig.setLibrary('md', md);
 
+    // eleventyConfig.addWatchTarget("js/");
+    // eleventyConfig.addWatchTarget("css/");
+
     return {
         templateFormats: ['md', 'njk'],
         markdownTemplateEngine: 'njk',

@@ -16,6 +16,11 @@ html {
     scroll-margin-top: $headerHeight + $headerMargin;
 }
 
+.no-transition,
+.no-transition * {
+    transition: none !important;
+}
+
 // reveal.js styles
 .reveal-demo {
 	height: 70vh;
@@ -24,7 +29,7 @@ html {
 
 .reveal {
     font-size: 36px;
-    background-color: #2d234c;
+    background-color: darken(desaturate(#2d234c, 10%),10%);
 }
 
 .reveal a,
@@ -78,7 +83,7 @@ html {
 }
 
 
-// Anchors
+// Directional hover effect
 .r-anchor {
     position: relative;
 }
@@ -97,7 +102,7 @@ html {
     opacity: 0;
     pointer-events: none;
     visibility: hidden;
-    border-radius: 4px;
+    border-radius: 0.25rem;
     z-index: -1;
     background-color: $activeColor;
 

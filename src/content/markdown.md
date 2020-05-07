@@ -6,7 +6,7 @@ layout: default
 
 # Markdown
 
-It's possible and often times more convenient to write presentation content using Markdown. To create a Markdow slide, add the `data-markdown` attribute to your `<section>` element and wrap the contents in a `<textarea data-template>` like the example below.
+It's possible and often times more convenient to write presentation content using Markdown. To create a Markdown slide, add the `data-markdown` attribute to your `<section>` element and wrap the contents in a `<textarea data-template>` like the example below.
 
 ```html
 <section data-markdown>
@@ -37,7 +37,7 @@ Reveal.initialize({
 
 You can write your content as a separate file and have reveal.js load it at runtime. Note the separator arguments which determine how slides are delimited in the external file: the `data-separator` attribute defines a regular expression for horizontal slides (defaults to `^\r?\n---\r?\n$`, a newline-bounded horizontal rule)  and `data-separator-vertical` defines vertical slides (disabled by default). The `data-separator-notes` attribute is a regular expression for specifying the beginning of the current slide's speaker notes (defaults to `notes?:`, so it will match both "note:" and "notes:"). The `data-charset` attribute is optional and specifies which charset to use when loading the external file.
 
-When used locally, this feature requires that reveal.js [runs from a local web server](/installation/#full-setup).  The following example customises all available options:
+When used locally, this feature requires that reveal.js [runs from a local web server](/installation/#full-setup).  The following example customizes all available options:
 
 ```html
 <section data-markdown="example.md"
@@ -54,7 +54,7 @@ When used locally, this feature requires that reveal.js [runs from a local web s
 
 ## Element Attributes
 
-Special syntax (through HTML comments) is available for adding attributes to Markdown elements. This is useful for fragments, amongst other things.
+Special syntax (through HTML comments) is available for adding attributes to Markdown elements. This is useful for fragments, among other things.
 
 ```html
 <section data-markdown>
@@ -80,7 +80,7 @@ Special syntax (through HTML comments) is available for adding attributes to the
 
 ## Configuring *marked*
 
-We use [marked](https://github.com/chjj/marked) to parse Markdown. To customise marked's rendering, you can pass in options when [configuring Reveal](#configuration):
+We use [marked](https://github.com/chjj/marked) to parse Markdown. To customize marked's rendering, you can pass in options when [configuring Reveal](#configuration):
 
 ```javascript
 Reveal.initialize({

@@ -6,7 +6,7 @@ layout: default
 
 # Layout
 
-TODO: Descibe layout techniques.
+TODO: Describe layout techniques.
 - Image stack
 
 ## Stretching elements
