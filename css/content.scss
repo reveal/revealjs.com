@@ -1,13 +1,11 @@
 // documentation page
 .article {
-    word-break: break-word;
-
     h1, h2, h3 {
         @apply font-semibold leading-tight mt-6 mb-2;
     }
 
     h1 {
-        @apply text-3xl mb-6;
+        @apply text-3xl mb-4;
     }
 
     h2 {
@@ -22,8 +20,10 @@
         @apply mt-0;
     }
 
-    a {
-        @apply text-purple-700 no-underline;
+    &>a,
+    &>*>a,
+    &>*>*>a {
+        @apply text-purple-700 no-underline .break-words;
 
         &:not([class]) {
             @apply text-purple-700 border-b-2 border-purple-200;
@@ -38,7 +38,7 @@
         font-weight: 600;
     }
 
-    p, ol, ul {
+    p, ol, ul, picture {
         @apply my-2;
     }
 
@@ -58,12 +58,30 @@
         @apply inline-block my-0;
     }
 
+    picture {
+        @apply -mx-4 rounded overflow-hidden
+    }
+}
+
+// code blocks
+.article {
     pre[class*="language-"] {
-        @apply m-4 -mx-4 p-4;
+        @apply mx-4 my-2 -mx-4 p-4;
     }
 
     code:not([class*="language-"]) {
         @apply rounded bg-gray-200 text-purple-900 p-1 py-px leading-relaxed;
+    }
+
+    pre mark {
+        background: transparent;
+        color: currentColor;
+    }
+    pre .highlight-line {
+        opacity: 0.4;
+    }
+    pre .highlight-line-active {
+        opacity: 1;
     }
 }
 
@@ -90,7 +108,10 @@
       background-color: transparent;
     }
 
+    table.nowrap-1st th:first-child,
     table.nowrap-1st td:first-child,
+    table.nowrap-2nd th:nth-child(2),
+    table.nowrap-2nd td:nth-child(2),
     table.key-value td:first-child {
         white-space: nowrap;
     }

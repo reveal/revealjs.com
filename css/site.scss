@@ -56,6 +56,11 @@ html {
 .article .reveal h2 { font-size: 1.6em; }
 .article .reveal h3 { font-size: 1.3em; }
 
+// header
+.header-nav path {
+    @apply fill-current;
+}
+
 // sidebar
 .nav-link {
     @apply text-gray-700 w-full inline-block;

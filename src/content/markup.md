@@ -35,7 +35,7 @@ If you place multiple `section` elements inside of another `section` they will b
 ```html
 <div class="reveal">
   <div class="slides">
-    <section>Single Horizontal Slide</section>
+    <section>Horizontal Slide</section>
     <section>
       <section>Vertical Slide 1</section>
       <section>Vertical Slide 2</section>
@@ -45,7 +45,7 @@ If you place multiple `section` elements inside of another `section` they will b
 ```
 <div class="reveal reveal-example">
   <div class="slides">
-    <section>Single Horizontal Slide</section>
+    <section>Horizontal Slide</section>
     <section>
       <section>Vertical Slide 1</section>
       <section>Vertical Slide 2</section>

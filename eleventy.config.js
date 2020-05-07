@@ -25,7 +25,7 @@ module.exports = eleventyConfig => {
     eleventyConfig.addPassthroughCopy('images')
 
     eleventyConfig.addPlugin(syntaxHighlight, {
-        alwaysWrapLineHighlights: true
+        alwaysWrapLineHighlights: false
     });
 
     let md = require('markdown-it')({

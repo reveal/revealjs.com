@@ -6,9 +6,36 @@ layout: default
 
 # Vertical Slide Navigation
 
-Slides can be nested within other slides to create vertical stacks (see [Markup](/content/markup)). When presenting, you use the left/right arrows to step through the main (horizontal) slides. When you arrive at a vertical stack you can optionally press the up/down arrows to view the vertical slides or skip past them by pressing the right arrow. Here's an example showing a bird's-eye view of what this looks like in action:
+Your slides are stepped between using a horizontal sliding transition by default. These horizontal slides are considered the main, or *top-level*, slides in your deck.
 
-<img src="https://static.slid.es/support/reveal.js-vertical-slides.gif" width="450">
+It's also possible to nest multiple slides within a single top-level slide to create a vertical stack. This is a great way to logically group content in your presentation and makes it convenient to include optional slides.
+
+When presenting, you use the left/right arrows to step through the top-level (horizontal) slides. When you arrive at a vertical stack you can optionally press the up/down arrows to view the vertical slides or skip past them by pressing the right arrow. Here's an example showing a bird's-eye view of what this looks like in action.
+
+<picture>
+  <img src="https://static.slid.es/support/reveal.js-vertical-slides.gif" alt="Slide layout with vertical slides">
+</picture>
+
+## Markup
+
+Here's what the markup looks like for a simple vertical stack.
+
+```html
+<section>Horizontal Slide</section>
+<section>
+  <section>Vertical Slide 1</section>
+  <section>Vertical Slide 2</section>
+</section>
+```
+<div class="reveal reveal-example">
+  <div class="slides">
+    <section>Horizontal Slide</section>
+    <section>
+      <section>Vertical Slide 1</section>
+      <section>Vertical Slide 2</section>
+    </section>
+  </div>
+</div>
 
 ## Navigation Mode
 You can fine tune the reveal.js navigation behavior by using the `navigationMode` config option. Note that these options are only useful for presentations that use a mix of horizontal and vertical slides. The following navigation modes are available:

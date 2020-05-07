@@ -12,19 +12,19 @@ The plugin defaults to using [LaTeX](https://en.wikipedia.org/wiki/LaTeX) but th
 
 Below is an example of how the plugin can be configured. If you don't intend to change these values you do not need to include the `math` config option at all.
 
-```js
-Reveal.initialize({
-  math: {
-    mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
-    config: 'TeX-AMS_HTML-full',
-    // pass other options into `MathJax.Hub.Config()`
-    TeX: { Macros: { RR: "{\\bf R}" } }
-  },
-
-  dependencies: [
-    { src: 'dist/plugin/math.js', async: true }
-  ]
-});
+```html
+<script src="dist/plugin/math.js"></script>
+<script>
+  Reveal.initialize({
+    math: {
+      mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+      config: 'TeX-AMS_HTML-full',
+      // pass other options into `MathJax.Hub.Config()`
+      TeX: { Macros: { RR: "{\\bf R}" } }
+    },
+    plugins: [ RevealMath ]
+  });
+</script>
 ```
 
 ```html

@@ -14,9 +14,19 @@ Here's a simple example to give you a better idea of how it can be used. The res
   <h1>Magic</h1>
 </section>
 <section data-auto-animate>
-  <h1 style="position: relative; top: 100px;">Magic</h1>
+  <h1 style="position: relative; top: 100px; color: red;">Magic</h1>
 </section>
 ```
+<div class="reveal reveal-example">
+  <div class="slides">
+    <section data-auto-animate>
+      <h1>Magic</h1>
+    </section>
+    <section data-auto-animate>
+      <h1 style="position: relative; top: 100px; color: red;">Magic</h1>
+    </section>
+  </div>
+</div>
 
 This example uses the `top` property to move the element but internally reveal.js will use a CSS transform to ensure smooth movement. This same approach to animation works with most animatable CSS properties meaning you can transition things like `position`, `font-size`, `line-height`, `color`, `background-color` and `padding`.
 
@@ -35,6 +45,16 @@ Here's an example where we've given both blocks a matching ID since automatic ma
   <div data-id="box" style="padding: 20px; background: blue;"></div>
 </section>
 ```
+<div class="reveal reveal-example">
+  <div class="slides">
+    <section data-auto-animate>
+	  <div data-id="box" style="height: 50px; background: salmon;"></div>
+	</section>
+	<section data-auto-animate>
+	  <div data-id="box" style="height: 150px; background: blue;"></div>
+	</section>
+  </div>
+</div>
 
 ## Animation Settings
 You can override specific animation settings such as easing and duration either for the whole presentation, per-slide or individually for each animated element. The following configuration attributes can be used to change the settings for a specific slide or element:
