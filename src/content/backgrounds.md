@@ -20,7 +20,7 @@ All CSS color formats are supported, including hex values, keywords, `rgba()` or
   <h2>🐳</h2>
 </section>
 ```
-<div class="reveal example-deck">
+<div class="reveal reveal-example">
   <div class="slides">
     <section data-background-color="salmon">
       <h2 style="font-size: 4em;">🐟</h2>
@@ -73,7 +73,7 @@ Automatically plays a full size video behind the slide.
   <h2>Video</h2>
 </section>
 ```
-<div class="reveal example-deck">
+<div class="reveal reveal-example">
   <div class="slides">
     <section data-background-video="https://static.slid.es/site/homepage/v1/homepage-video-editor.mp4" 
           data-background-video-loop data-background-video-muted>

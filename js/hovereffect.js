@@ -1,3 +1,7 @@
+/**
+ * Directional hover effect copied from https://hakim.se.
+ */
+
 let lastMouseX = 0,
 	lastMouseY = 0;
 

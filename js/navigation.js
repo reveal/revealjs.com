@@ -1,11 +1,8 @@
 
 let sidebar = document.querySelector( '.sidebar' );
-let menuToggle = document.querySelector( '.menu-toggle' );
 
-/**
- * Update the selected item in the navigation to
- * match the current URL & hash.
- */
+// Update the selected item in the navigation to
+// match the current URL & hash.
 let updateSelection = () => {
 
 	let currentURL = window.location.pathname.replace( /\/$/, '' ) + window.location.hash;
@@ -24,9 +21,7 @@ updateSelection();
 window.addEventListener( 'hashchange', updateSelection );
 
 
-/**
- * Toggle the mobile nav.
- */
-menuToggle.addEventListener( 'click', () => {
+// Toggle the mobile nav.
+document.querySelector( '.menu-toggle' ).addEventListener( 'click', () => {
 	sidebar.classList.toggle( 'hidden' );
 } )

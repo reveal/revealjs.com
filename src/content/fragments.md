@@ -17,7 +17,7 @@ The default fragment style is to start out invisible and fade in. This style can
 <p class="fragment fade-in-then-out">Fade in, then out</p>
 <p class="fragment fade-up">Slide up while fading in</p>
 ```
-<div class="reveal example-deck">
+<div class="reveal reveal-example">
   <div class="slides">
     <section>
       <p class="fragment">Fade in</p>
@@ -63,7 +63,7 @@ Multiple fragments can be applied to the same element sequentially by wrapping i
   </span>
 </span>
 ```
-<div class="reveal example-deck">
+<div class="reveal reveal-example">
   <div class="slides">
     <section>
       <span class="fragment fade-in">
@@ -86,7 +86,7 @@ By default fragments will be stepped through in the order that they appear in th
 <p class="fragment" data-fragment-index="1">Appears first</p>
 <p class="fragment" data-fragment-index="2">Appears second</p>
 ```
-<div class="reveal example-deck">
+<div class="reveal reveal-example">
   <div class="slides">
     <section>
       <p class="fragment" data-fragment-index="3">Appears last</p>

@@ -102,18 +102,18 @@
 
 .article {
     // An inline presentation
-    .example-deck {
+    .reveal-example {
         height: 250px;
         box-sizing: content-box;
         @apply my-4 -mx-4 p-4 rounded border-t border-gray-700;
     }
 
     // Input/output (code/deck) wrapper
-    .example-deck-wrapper pre[class*="language-"] {
+    .reveal-example-wrapper pre[class*="language-"] {
         @apply mb-0 rounded-b-none;
     }
 
-    .example-deck-wrapper .example-deck {
+    .reveal-example-wrapper .reveal-example {
         @apply mt-0 rounded-t-none;
     }
 }

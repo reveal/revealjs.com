@@ -53,7 +53,7 @@ You can also use different in and out transitions for the same slide by appendin
     And it starts again.
 </section>
 ```
-<div class="reveal example-deck">
+<div class="reveal reveal-example">
   <div class="slides">
     <section data-transition="slide">
         The train goes on …

@@ -14,8 +14,6 @@ Below is an example of how the plugin can be configured. If you don't intend to 
 
 ```js
 Reveal.initialize({
-  // other options ...
-
   math: {
     mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
     config: 'TeX-AMS_HTML-full',
@@ -31,7 +29,7 @@ Reveal.initialize({
 
 ```html
 <section>
-  <h3>The Lorenz Equations</h3>
+  <h2>The Lorenz Equations</h2>
   \[\begin{aligned}
   \dot{x} &amp; = \sigma(y-x) \\
   \dot{y} &amp; = \rho x - y - xz \\
@@ -39,10 +37,10 @@ Reveal.initialize({
   \end{aligned} \]
 </section>
 ```
-<div class="reveal example-deck">
+<div class="reveal reveal-example">
   <div class="slides">
     <section>
-      <h3>The Lorenz Equations</h3>
+      <h2>The Lorenz Equations</h2>
       \[\begin{aligned}
       \dot{x} &amp; = \sigma(y-x) \\
       \dot{y} &amp; = \rho x - y - xz \\
@@ -52,7 +50,7 @@ Reveal.initialize({
   </div>
 </div>
 
-## Math in Markdown
+## Markdown
 If you want to include math inside of a presentation written in Markdown you need to wrap the formula in backticks. This prevents syntax conflicts between LaTeX and Markdown. For example:
 
 ```tex

@@ -43,7 +43,7 @@ If you place multiple `section` elements inside of another `section` they will b
   </div>
 </div>
 ```
-<div class="reveal example-deck">
+<div class="reveal reveal-example">
   <div class="slides">
     <section>Single Horizontal Slide</section>
     <section>
