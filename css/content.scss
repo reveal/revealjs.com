@@ -69,7 +69,7 @@
         @apply mx-4 my-2 -mx-4 p-4;
     }
 
-    code:not([class*="language-"]) {
+    code:not([class*="language-"]):not(.hljs) {
         @apply rounded bg-gray-200 text-purple-900 p-1 py-px leading-relaxed;
     }
 
@@ -77,46 +77,44 @@
         background: transparent;
         color: currentColor;
     }
-    pre .highlight-line {
+    code:not(.hljs) .highlight-line {
         opacity: 0.4;
     }
-    pre .highlight-line-active {
+    code:not(.hljs) .highlight-line-active {
         opacity: 1;
     }
 }
 
-.article {
-    table {
-        display: block;
-        overflow: auto;
-        @apply m-4 -mx-4 border border-gray-300 rounded text-base;
-    }
+.article>table {
+    display: block;
+    overflow: auto;
+    @apply m-4 -mx-4 border border-gray-300 rounded text-base;
 
-    table th {
+    th {
       @apply p-4 align-top border-b border-gray-300 font-semibold;
     }
 
-    table td {
+    td {
       @apply p-4 align-top border-0;
     }
 
-    table tr {
+    tr {
       background-color: #fff;
     }
 
-    table tr:nth-child(2n) {
+    tr:nth-child(2n) {
       background-color: transparent;
     }
 
-    table.nowrap-1st th:first-child,
-    table.nowrap-1st td:first-child,
-    table.nowrap-2nd th:nth-child(2),
-    table.nowrap-2nd td:nth-child(2),
-    table.key-value td:first-child {
+    &.nowrap-1st th:first-child,
+    &.nowrap-1st td:first-child,
+    &.nowrap-2nd th:nth-child(2),
+    &.nowrap-2nd td:nth-child(2),
+    &.key-value td:first-child {
         white-space: nowrap;
     }
 
-    table.key-value td:nth-child(2) {
+    &.key-value td:nth-child(2) {
         width: 100%;
     }
 
@@ -126,9 +124,13 @@
 .article {
     // An inline presentation
     .reveal-example {
-        height: 250px;
+        height: 280px;
         box-sizing: content-box;
         @apply my-4 -mx-4 p-4 rounded border-t border-gray-700;
+
+        pre {
+            font-size: 28px;
+        }
     }
 
     pre + .reveal-example {

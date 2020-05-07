@@ -16,6 +16,10 @@ html {
     scroll-margin-top: $headerHeight + $headerMargin;
 }
 
+a, button {
+    touch-action: manipulation
+}
+
 .no-transition,
 .no-transition * {
     transition: none !important;

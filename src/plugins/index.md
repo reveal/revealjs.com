@@ -41,4 +41,4 @@ You can add your own extensions using the same syntax. The following properties 
 - **condition**: [optional] Function which must return true for the script to be loaded
 
 You can also include dependencies which are bundled/already present on the page. To include a bundled plugin. replace the `src` property with a reference to a `plugin` instance:
-- **plugin**: the plugin instance (see [Plugins](#plugins))
+- **plugin**: the plugin instance (see [Plugins](/plugins))

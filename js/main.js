@@ -72,6 +72,7 @@ function setup() {
 		let deck = new Reveal( deckElement, {
 			width: 900,
 			height: 500,
+			hash: false,
 			embedded: true,
 			keyboard: false,
 			progress: false,

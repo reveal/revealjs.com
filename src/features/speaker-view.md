@@ -16,21 +16,21 @@ Alternatively you can add your notes in a `data-notes` attribute on the slide. L
 
 When used locally, this feature requires that reveal.js [runs from a local web server](/installation#full-setup).
 
-```html
+```html/3-5
 <section>
   <h2>Some Slide</h2>
 
   <aside class="notes">
-    Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit »S« on your keyboard).
+    Shhh, these are your private notes 📝
   </aside>
 </section>
 ```
 
-If you're using the external Markdown plugin, you can add notes with the help of a special delimiter:
+If you're using the [Markdown](/content/markdown) plugin, you can add notes with the help of a special delimiter:
 
-```html
-<section data-markdown="example.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n" data-separator-notes="^Note:">
-
+```html/0-1,7-8
+<section data-markdown="example.md" data-separator="^\n\n\n"
+         data-separator-vertical="^\n\n" data-separator-notes="^Note:">
 # Title
 ## Sub-title
 
@@ -45,9 +45,9 @@ This will only display in the notes window.
 
 Notes are only visible to the speaker inside of the speaker view. If you wish to share your notes with others you can initialize reveal.js with the `showNotes` configuration value set to `true`. Notes will appear along the bottom of the presentations.
 
-When `showNotes` is enabled notes are also included when you [export to PDF](https://github.com/hakimel/reveal.js#pdf-export). By default, notes are printed in a box on top of the slide. If you'd rather print them on a separate page, after the slide, set `showNotes: "separate-page"`.
+When `showNotes` is enabled notes are also included when you [export to PDF](/features/pdf-export). By default, notes are printed in a box on top of the slide. If you'd rather print them on a separate page, after the slide, set `showNotes: "separate-page"`.
 
-## Speaker notes clock and timers
+## Speaker Notes Clock and Timers
 
 The speaker notes window will also show:
 

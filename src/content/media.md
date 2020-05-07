@@ -32,7 +32,7 @@ When working on presentations with a lot of media or iframe content it's importa
 
 To enable lazy loading all you need to do is change your `src` attributes to `data-src` as shown below. This is supported for image, video, audio and iframe elements.
 
-```html
+```html/1-2,4-5
 <section>
   <img data-src="image.png">
   <iframe data-src="https://hakim.se"></iframe>
@@ -52,7 +52,7 @@ When we lazy load a video or audio element, reveal.js won't start playing that c
 You can override this behavior with the `data-preload` attribute. The iframe below will be loaded
 according to the `viewDistance`.
 
-```html
+```html/1
 <section>
   <iframe data-src="https://hakim.se" data-preload></iframe>
 </section>

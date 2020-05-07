@@ -45,10 +45,8 @@ window.addEventListener( 'message', event => {
 
 This cross-window messaging can be toggled on or off using configuration flags. These are the default values.
 
-```javascript
+```javascript/1-5
 Reveal.initialize({
-  // ...
-
   // Exposes the reveal.js API through window.postMessage
   postMessage: true,
 

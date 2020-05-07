@@ -44,7 +44,6 @@ Reveal.addKeyBinding( 82, () => {
 } )
 ```
 
-This allows plugins to add key bindings directly to Reveal so they can
-
-* make use of Reveal's pre-processing logic for key handling (for example, ignoring key presses when paused); and
-* be included in the help overlay (optional)
+This allows plugins to add key bindings directly to Reveal so they can:
+- Make use of Reveal's pre-processing logic for key handling (for example, ignoring key presses when paused); and
+- Be included in the help overlay (optional)

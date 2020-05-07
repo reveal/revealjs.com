@@ -6,18 +6,11 @@ layout: default
 
 # Presenting Code
 
-By default, Reveal is configured with [highlight.js](https://highlightjs.org/) for code syntax highlighting. To enable syntax highlighting, you'll have to load the highlight plugin ([plugin/highlight/highlight.js](plugin/highlight/highlight.js)) and a highlight.js CSS theme (Reveal comes packaged with the Monokai themes: [lib/css/monokai.css](lib/css/monokai.css)).
+reveal.js includes a powerful set of features aimed at presenting syntax highlighted code — powered by [highlight.js](https://highlightjs.org/). This functionality lives in the highlight plugin and is included in our default presentation boilerplate.
 
-```javascript
-Reveal.initialize({
-  // More info https://github.com/hakimel/reveal.js#dependencies
-  dependencies: [
-    { src: 'plugin/highlight/highlight.js', async: true },
-  ]
-});
-```
+Below is an example with clojure code that will be syntax highlighted. When the `data-trim` attribute is present, surrounding whitespace within the `<code>` is automatically removed.
 
-Below is an example with clojure code that will be syntax highlighted. When the `data-trim` attribute is present, surrounding whitespace is automatically removed.  HTML will be escaped by default. To avoid this, for example if you are using `<mark>` to call out a line of code, add the `data-noescape` attribute to the `<code>` element.
+HTML will be escaped by default. To avoid this, add `data-noescape` to the `<code>` element.
 
 ```html
 <section>
@@ -30,30 +23,121 @@ Below is an example with clojure code that will be syntax highlighted. When the 
   </code></pre>
 </section>
 ```
+<div class="reveal reveal-example">
+  <div class="slides">
+    <section>
+      <pre><code data-trim data-noescape>
+      (def lazy-fib
+        (concat
+         [0 1]
+         ((fn rfib [a b]
+              (lazy-cons (+ a b) (rfib b (+ a b)))) 0 1)))
+      </code></pre>
+    </section>
+  </div>
+</div>
+
+## Theming
+Make sure that a syntax highlight theme is included in your document. We include Monokai by default, which is distributed with the reveal.js repo at [lib/css/monokai.css](https://github.com/hakimel/reveal.js/tree/master/lib/css/monokai.css). A full list of available themes can be found at <https://highlightjs.org/static/demo/>.
+
+```html
+<link rel="stylesheet" href="lib/css/monokai.css">
+<script src="dist/plugin/highlight.js"></script>
+<script>
+  Reveal.initialize({
+    plugins: [ RevealHighlight ]
+  });
+</script>
+```
 
 ## Line Numbers & Highlights
 
-To enable line numbers, add `data-line-numbers` to your `<code>` tags. If you want to highlight specific lines you can provide a comma separated list of line numbers using the same attribute. For example, in the following example lines 4 and 8-11 are highlighted:
+You can enable line numbers by adding `data-line-numbers` to your `<code>` tags. If you want to highlight specific lines you can provide a comma separated list of line numbers using the same attribute. For example, in the following example lines 3 and 8-10 are highlighted:
 
 ```html
-<pre><code class="hljs" data-line-numbers="4,8-11">
-import React, { useState } from 'react';
- 
-function Example() {
-  const [count, setCount] = useState(0);
- 
-  return (
-    <div>
-      <p>You clicked {count} times</p>
-      <button onClick={() => setCount(count + 1)}>
-        Click me
-      </button>
-    </div>
-  );
-}
+<pre><code data-line-numbers="3,8-10">
+<table>
+  <tr>
+    <td>Apples</td>
+    <td>$1</td>
+    <td>7</td>
+  </tr>
+  <tr>
+    <td>Oranges</td>
+    <td>$2</td>
+    <td>18</td>
+  </tr>
+</table>
 </code></pre>
 ```
+<div class="reveal reveal-example">
+  <div class="slides">
+    <section>
+<pre><code data-line-numbers="3,8-10" data-trim data-noescape>
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;td>Apples&lt;/td&gt;
+    &lt;td>$1&lt;/td&gt;
+    &lt;td>7&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td>Oranges&lt;/td&gt;
+    &lt;td>$2&lt;/td&gt;
+    &lt;td>18&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</code></pre>
+    </section>
+  </div>
+</div>
 
 ## Step-by-step Highlights
 
 You can step through multiple code highlights on the same code block. Delimit each of your highlight steps with the `|` character. For example `data-line-numbers="1|2-3|4,6-10"` will produce three steps. It will start by highlighting line 1, next step is lines 2-3, and finally line 4 and 6 through 10.
+
+```html
+<pre><code data-line-numbers="3-5|8-10|13-15">
+<table>
+  <tr>
+    <td>Apples</td>
+    <td>$1</td>
+    <td>7</td>
+  </tr>
+  <tr>
+    <td>Oranges</td>
+    <td>$2</td>
+    <td>18</td>
+  </tr>
+  <tr>
+    <td>Kiwi</td>
+    <td>$3</td>
+    <td>1</td>
+  </tr>
+</table>
+</code></pre>
+```
+<div class="reveal reveal-example">
+  <div class="slides">
+    <section>
+<pre><code data-line-numbers="3-5|8-10|13-15" data-trim data-noescape>
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;td>Apples&lt;/td&gt;
+    &lt;td>$1&lt;/td&gt;
+    &lt;td>7&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td>Oranges&lt;/td&gt;
+    &lt;td>$2&lt;/td&gt;
+    &lt;td>18&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td>Kiwi&lt;/td&gt;
+    &lt;td>$3&lt;/td&gt;
+    &lt;td>1&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+</code></pre>
+    </section>
+  </div>
+</div>

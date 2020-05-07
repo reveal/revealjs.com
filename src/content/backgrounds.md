@@ -12,7 +12,7 @@ Slides are contained within a limited portion of the screen by default to allow 
 
 All CSS color formats are supported, including hex values, keywords, `rgba()` or `hsl()`.
 
-```html
+```html/0,3
 <section data-background-color="salmon">
   <h2>🐟</h2>
 </section>
@@ -44,7 +44,7 @@ By default, background images are resized to cover the full page. Available opti
 | data-background-opacity          | 1          | Opacity of the background image on a 0-1 scale. 0 is transparent and 1 is fully opaque. |
 {.nowrap-1st}
 
-```html
+```html/0,3-4
 <section data-background-image="http://example.com/image.png">
   <h2>Image</h2>
 </section>
@@ -67,7 +67,7 @@ Automatically plays a full size video behind the slide.
 | data-background-opacity          | 1       | Opacity of the background video on a 0-1 scale. 0 is transparent and 1 is fully opaque. |
 {.nowrap-1st}
 
-```html
+```html/0-1
 <section data-background-video="https://static.slid.es/site/homepage/v1/homepage-video-editor.mp4" 
           data-background-video-loop data-background-video-muted>
   <h2>Video</h2>
@@ -92,7 +92,7 @@ Embeds a web page as a slide background that covers 100% of the reveal.js width 
 | data-background-interactive  | false | Include this attribute to make it possible to interact with the iframe contents. Enabling this will prevent interaction with the slide content.
 {.nowrap-1st}
 
-```html
+```html/0-1
 <section data-background-iframe="https://slides.com"
           data-background-interactive>
   <h2>Iframe</h2>
@@ -110,9 +110,8 @@ We'll use a cross fade to transition between slide backgrounds by default. This 
 
 If you want to use a parallax scrolling background, set the first two properties below when initializing reveal.js (the other two are optional).
 
-```javascript
+```javascript/1-11
 Reveal.initialize({
-
   // Parallax background image
   parallaxBackgroundImage: '', // e.g. "https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg"
 
@@ -124,8 +123,7 @@ Reveal.initialize({
   // - Set to 0 to disable movement along an axis
   parallaxBackgroundHorizontal: 200,
   parallaxBackgroundVertical: 50
-
 });
 ```
 
-Make sure that the background size is much bigger than screen size to allow for some scrolling. [View example](http://revealjs.com/?parallaxBackgroundImage=https%3A%2F%2Fs3.amazonaws.com%2Fhakim-static%2Freveal-js%2Freveal-parallax-1.jpg&parallaxBackgroundSize=2100px%20900px).
+Make sure that the background size is much bigger than screen size to allow for some scrolling. [View example](/demo?parallaxBackgroundImage=https%3A%2F%2Fs3.amazonaws.com%2Fhakim-static%2Freveal-js%2Freveal-parallax-1.jpg&parallaxBackgroundSize=2100px%20900px).

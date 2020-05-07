@@ -8,7 +8,7 @@ layout: default
 
 If you only have a single presentation on the page we recommend initializing reveal.js using the singleton API.
 ```html
-<script src="dist/reveal.es5.js"></script>
+<script src="dist/reveal.js"></script>
 <script>
   Reveal.initialize({ keyboard: true });
 </script>
@@ -25,7 +25,7 @@ If you want to run multiple presentations side-by-side on the same page you can 
 ```html
 <div class="reveal deck-1">...</div>
 <div class="reveal deck-2">...</div>
-<script src="dist/reveal.es5.js"></script>
+<script src="dist/reveal.js"></script>
 <script>
   let deck1 = new Reveal( document.querySelector( 'deck-1' ), { embedded: true } );
   let deck2 = new Reveal( document.querySelector( 'deck-2' ), { embedded: true } );
@@ -37,14 +37,14 @@ If you want to run multiple presentations side-by-side on the same page you can 
 
 ## ES Module
 
-We provide two JavaScript bundles; `/dist/reveal.es5.js` with support for legacy browsers and `/dist/reveal.js` which targets modern browsers with ES6 support.
+We provide two JavaScript bundles; `/dist/reveal.js` with support for legacy browsers and `/dist/reveal.esm.js` which targets modern browsers with ES6 support.
 
 Here's how to import and initialize the ES module version of reveal.js, including the Markdown plugin:
 
 ```html
 <script type="module">
-  import Reveal from '/dist/reveal.js';
-  import Markdown from '/plugin/markdown/markdown.js';
+  import Reveal from 'dist/reveal.esm.js';
+  import Markdown from 'dist/plugin/markdown.esm.js';
   Reveal.initialize({
     plugins: [ Markdown ]
   });

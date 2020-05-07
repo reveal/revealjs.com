@@ -95,6 +95,37 @@ Special syntax (through HTML comments) is available for adding attributes to the
 </section>
 ```
 
+## Syntax Highlighting
+
+Powerful syntax highlighting features are built into reveal.js. Using the bracket syntax shown below, you can highlight individual lines and even walk through multiple separate highlights step-by-step. [Learn more about line highlights](/content/code/#line-numbers-highlights).
+
+```html
+<section data-markdown>
+  <textarea data-template>
+    ```js [1-2|3|4]
+    let a = 1;
+    let b = 2;
+    let c = x => 1 + 2 + x;
+    c(3);
+    ```
+  </textarea>
+</section>
+```
+<div class="reveal reveal-example">
+  <div class="slides">
+    <section data-markdown>
+      <textarea data-template>
+        ```js [1-2|3|4]
+        let a = 1;
+        let b = 2;
+        let c = x => 1 + 2 + x;
+        c(3);
+        ```
+      </textarea>
+    </section>
+  </div>
+</div>
+
 ## Configuring *marked*
 
 We use [marked](https://github.com/chjj/marked) to parse Markdown. To customize marked's rendering, you can pass in options when [configuring Reveal](#configuration):
