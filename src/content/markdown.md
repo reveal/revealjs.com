@@ -11,12 +11,29 @@ It's possible and often times more convenient to write presentation content usin
 ```html
 <section data-markdown>
   <textarea data-template>
-    ## Page title
-
+    ## Slide 1
     A paragraph with some text and a [link](http://hakim.se).
+    ---
+    ## Slide 2
+    ---
+    ## Slide 3
   </textarea>
 </section>
 ```
+<div class="reveal reveal-example">
+  <div class="slides">
+    <section data-markdown data-separator="---">
+        <script type="text/template">
+## Slide 1
+A paragraph with some text and a [link](http://hakim.se).
+---
+## Slide 2
+---
+## Slide 3
+        </script>
+    </section>
+  </div>
+</div>
 
 Note that this is sensitive to indentation (avoid mixing tabs and spaces) and line breaks (avoid consecutive breaks).
 

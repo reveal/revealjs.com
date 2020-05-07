@@ -10,14 +10,6 @@
                 {
                     "label": "Installation",
                     "url": "/installation"
-                },
-                {
-                    "label": "- Basic Setup",
-                    "url": "/installation#basic-setup"
-                },
-                {
-                    "label": "- Full Setup",
-                    "url": "/installation#full-setup"
                 }
             ]
         },

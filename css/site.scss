@@ -52,6 +52,10 @@ html {
     margin-right: auto;
 }
 
+.article .reveal h1 { font-size: 2.5em; }
+.article .reveal h2 { font-size: 1.6em; }
+.article .reveal h3 { font-size: 1.3em; }
+
 // sidebar
 .nav-link {
     @apply text-gray-700 w-full inline-block;

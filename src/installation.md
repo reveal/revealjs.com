@@ -6,17 +6,22 @@ layout: default
 
 # Installation
 
-The **basic setup** is for authoring presentations only. The **full setup** gives you access to all reveal.js features and plugins such as speaker notes as well as the development tasks needed to make changes to the source.
+We provide three few different ways to install reveal.js depending on your use case and technical knowledge.
+1. The [basic setup](#basic-setup) is the easiest way to get started. No need to set up any build tools.
+1. The [full setup](#full-setup) gives you access to all reveal.js features and plugins such as speaker notes as well as the development tasks needed to make changes to the source.
+1. If you want to use reveal.js as a dependency in your project, you can [install from npm](#installing-from-npm).
 
 ## Basic Setup
 
-The core of reveal.js is very easy to install. You'll simply need to download a copy of this repository and open the index.html file directly in your browser.
+We make a point of distributing reveal.js in a way that it can be used by as many people as possible. The basic setup is our most broadly accessible way to get started and only requires that you have a web browser. There's no need to go through a build process or install any dependencies.
 
 1. Download the latest reveal.js version <https://github.com/hakimel/reveal.js/archive/master.zip>
-2. Unzip and replace the example contents in index.html with your own
-3. Open index.html in a browser to view it
+1. Unzip and replace the example contents in index.html with your own
+1. Open index.html in a browser to view it
 
-## Full Setup
+That's it 🚀
+
+## Full Setup <span class="text-gray-500 font-normal">- Recommended</span>{id="full-setup"}
 
 Some reveal.js features, like external Markdown and speaker notes, require that presentations run from a local web server. The following instructions will set up such a server as well as all of the development tasks needed to make edits to the reveal.js source code.
 
@@ -46,9 +51,9 @@ The development server defaults to port 8000. You can use the the `port` argumen
 npm start -- --port=8001
 ```
 
-## Installing from npm or yarn
+## Installing From npm
 
-You can also install reveal.js as a dependency using npm or yarn.
+You can also install reveal.js using npm or yarn.
 
 ```shell
 npm install reveal.js

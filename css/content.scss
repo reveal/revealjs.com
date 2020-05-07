@@ -1,5 +1,7 @@
 // documentation page
 .article {
+    word-break: break-word;
+
     h1, h2, h3 {
         @apply font-semibold leading-tight mt-6 mb-2;
     }
@@ -49,11 +51,11 @@
     }
 
     li {
-        @apply mb-4;
+        @apply mb-2;
     }
 
     li p {
-        display: inline-block;
+        @apply inline-block my-0;
     }
 
     pre[class*="language-"] {
