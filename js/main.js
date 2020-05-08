@@ -79,6 +79,7 @@ function setup() {
 			width: 900,
 			height: 500,
 			hash: false,
+			respondToHashChanges: false,
 			embedded: true,
 			keyboard: false,
 			progress: false,
