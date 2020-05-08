@@ -32,10 +32,10 @@
         @apply text-purple-700 no-underline .break-words;
 
         &:not([class]) {
-            @apply text-purple-700 border-b-2 border-purple-200;
+            @apply text-purple-700;
 
             &:hover {
-                @apply text-purple-500 border-purple-200;
+                @apply text-purple-500;
             }
         }
     }
