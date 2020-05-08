@@ -4,7 +4,7 @@ title: Upgrading
 layout: default
 ---
 
-# Upgrading from 3.X to 4.0
+# Upgrading from version 3 to 4.0
 
 TODO
 
@@ -14,5 +14,5 @@ Notes:
 - Plugins: New way of registering (plugins config option)
 - Plugins: /plugin/zoom-js renamed /plugin/zoom
 - Removed print stylesheets (now baked in)
-- Removed Reveal.navigateTo from API
+- Removed `Reveal.navigateTo` from API
 - Multiplex and Notes Server plugins have moved out

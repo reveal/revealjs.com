@@ -74,6 +74,19 @@ a, button {
     @apply bg-purple-300 text-purple-900 rounded;
 }
 
+
+// External links
+.exernal-link-icon {
+    @apply inline-block ml-2 align-middle opacity-75;
+}
+
+.exernal-link-icon svg {
+    height: 1rem;
+}
+.exernal-link-icon path {
+    @apply fill-current;
+}
+
 // Advertising
 #carbonads {
     width: 100%;

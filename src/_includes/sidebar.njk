@@ -12,7 +12,10 @@
               {% set is_current_page = page.url | replace('/', '') == item.url | replace('/', '') %}
 
               <li class="level-2">
-                <a href="{{ item.url | safe }}" class="nav-link -mx-1 p-1 {% if is_current_page %}selected{% endif %}"{% if is_current_page %} aria-current="page"{% endif %}>{{ item.label }}</a>
+                <a href="{{ item.url | safe }}" class="nav-link -mx-1 p-1 {{ item.class }} {% if is_current_page %}selected{% endif %}"{% if is_current_page %} aria-current="page"{% endif %}>
+                  {{ item.label }}
+                  {% if item.external %}<span class="exernal-link-icon">{% include "images/right-arrow.svg" %}</span>{% endif %}
+                </a>
               </li>
 
               {% endfor %}

@@ -161,7 +161,8 @@
                 },
                 {
                     "label": "Third Party Plugins",
-                    "url": "https://github.com/hakimel/reveal.js/wiki/Plugins,-Tools-and-Hardware"
+                    "url": "https://github.com/hakimel/reveal.js/wiki/Plugins,-Tools-and-Hardware",
+                    "external": true
                 }
             ]
         },
@@ -169,16 +170,18 @@
             "label": "Other",
             "items": [
                 {
-                    "label": "Changelog",
-                    "url": "https://github.com/hakimel/reveal.js/releases"
-                },
-                {
                     "label": "Upgrade Instructions",
                     "url": "/other/upgrading"
                 },
                 {
+                    "label": "Changelog",
+                    "url": "https://github.com/hakimel/reveal.js/releases",
+                    "external": true
+                },
+                {
                     "label": "3.9.2 Docs",
-                    "url": "https://github.com/hakimel/reveal.js/blob/3.9.2/README.md"
+                    "url": "https://github.com/hakimel/reveal.js/blob/3.9.2/README.md",
+                    "external": true
                 }
             ]
         }

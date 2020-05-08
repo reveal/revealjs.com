@@ -11,6 +11,7 @@ postMessage
 stringified
 animatable
 stylesheet
+stylesheets
 backticks
 viewport
 i.e.
@@ -49,9 +50,22 @@ td
 js
 h.v
 
+RevealHighlight
+RevealMarkdown
+RevealSearch
+RevealNotes
+RevealMath
+RevealZoom
+highlight.js
+markdown.js
+search.js
+notes.js
+math.js
+zoom.js
 reveal.js
 reveal.js.
 revealjs.com
+
 monokai
 monokai.css
 mathjax
