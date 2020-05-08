@@ -9,8 +9,10 @@ layout: default
 The `Reveal` object exposes an extensive JavaScript API for controlling navigation and checking the current state of the presentation.
 
 ```javascript
-// Navigation
+// Navigate to a specific slide
 Reveal.slide( indexh, indexv, indexf );
+
+// Relative navigation
 Reveal.left();
 Reveal.right();
 Reveal.up();
@@ -21,6 +23,9 @@ Reveal.next();
 // Fragment navigation
 Reveal.prevFragment();
 Reveal.nextFragment();
+
+// Call this if you add or remove slides to update controls, progress, etc
+Reveal.sync();
 
 // Randomize the order of slides
 Reveal.shuffle();
@@ -34,9 +39,6 @@ Reveal.togglePause();
 // to force on/off
 Reveal.toggleHelp();
 
-// Change a config value at runtime
-Reveal.configure({ controls: true });
-
 // Returns the present configuration options
 Reveal.getConfig();
 
@@ -49,6 +51,10 @@ Reveal.getComputedSlideSize();
 // Retrieves the previous and current slide elements
 Reveal.getPreviousSlide();
 Reveal.getCurrentSlide();
+
+// Checks which directions we can navigate towards
+// {top: false, right: true, bottom: false, left: false}
+Reveal.availableRoutes();
 
 Reveal.getIndices();        // { h: 0, v: 0, f: 0 }
 Reveal.getSlidePastCount();
@@ -65,34 +71,23 @@ Reveal.getVerticalSlides();
 Reveal.hasHorizontalSlides();
 Reveal.hasVerticalSlides();
 
+// Checks if the deck has navigated on either axis at least once
+Reveal.hasNavigatedHorizontally();
+Reveal.hasNavigatedVertically();
+
 // Returns the speaker notes for the current slide
 Reveal.getSlideNotes();
 
 // State checks
 Reveal.isFirstSlide();
 Reveal.isLastSlide();
+Reveal.isVerticalSlide();
 Reveal.isOverview();
 Reveal.isPaused();
 Reveal.isAutoSliding();
 
-// Returns the top-level DOM element
-Reveal.getRevealElement(); // <div class="reveal">...</div>
-```
-
-
-## Presentation State
-
-The presentation's current state can be fetched by using the `getState` method. A state object contains all of the information required to put the presentation back as it was when `getState` was first called. Sort of like a snapshot. It's a simple object that can easily be stringified and persisted or sent over the wire.
-
-```javascript
-Reveal.slide( 1 );
-// we're on slide 1
-
-var state = Reveal.getState();
-
-Reveal.slide( 3 );
-// we're on slide 3
-
-Reveal.setState( state );
-// we're back on slide 1
+// Retrieve key DOM elements
+Reveal.getRevealElement(); // <div class="reveal">
+Reveal.getSlidesElement(); // <div class="slides">
+Reveal.getViewportElement(); // <div class="reveal-viewport">
 ```

@@ -6,7 +6,7 @@ layout: default
 
 # Installation
 
-We provide three different ways to install reveal.js depending on your use case and technical knowledge.
+We provide three different ways to install reveal.js depending on your use case and technical experience.
 1. The [basic setup](#basic-setup) is the easiest way to get started. No need to set up any build tools.
 1. The [full setup](#full-setup) gives you access to all reveal.js features and plugins such as speaker notes as well as the build tools needed to make changes to the source code.
 1. If you want to use reveal.js as a dependency in your project, you can [install from npm](#installing-from-npm).

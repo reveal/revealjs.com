@@ -6,7 +6,9 @@ layout: default
 
 # Configuration Options
 
-At the end of your page you need to initialize reveal by running the following code. Note that all configuration values are optional and will default to the values specified below.
+Presentation behavior can be fine-tuned using a wide array of configuration options. These objects can be included where you [initialize](/api/initialization) reveal.js. It's also possible to [change config values at runtime](#reconfiguring).
+
+Note that **all** configuration values are **optional** and will default to the values specified below.
 
 ```javascript
 Reveal.initialize({
@@ -202,7 +204,9 @@ Reveal.initialize({
 });
 ```
 
-The configuration can be updated after initialization using the `configure` method:
+## Reconfiguring
+
+The configuration can be updated after initialization using the `configure` method.
 
 ```javascript
 // Turn autoSlide off

@@ -51,7 +51,7 @@ Reveal.initialize({ slideNumber: slide => {
 
 ## Context
 
-When slide numbers are enabled, they will be included in all contexts by default. If you only want to show slide numbers in a specific context you can set `showSlideNumber` to one of the following:
+When slide numbers are enabled, they will be included in all contexts by default. If you only want to show slide numbers in a specific context you can set ``showSlideNumber`` to one of the following:
 
 | Value   | Description
 | :-      | :-

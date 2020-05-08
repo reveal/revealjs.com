@@ -18,7 +18,7 @@ Reveal.initialize({
   width: 960,
   height: 700,
 
-  // Factor of the display size that should remain empty around 
+  // Factor of the display size that should remain empty around
   // the content
   margin: 0.1,
 
@@ -50,4 +50,4 @@ Reveal.initialize({
 });
 ```
 
-That will make your slides cover 100% of the available page width and height.
+That will make your slides cover 100% of the available page width and height and leave the responsive styling to you.

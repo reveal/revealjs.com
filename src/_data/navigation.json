@@ -25,6 +25,10 @@
                     "url": "/content/markdown"
                 },
                 {
+                    "label": "Backgrounds",
+                    "url": "/content/backgrounds"
+                },
+                {
                     "label": "Media",
                     "url": "/content/media"
                 },
@@ -35,10 +39,6 @@
                 {
                     "label": "Math",
                     "url": "/content/math"
-                },
-                {
-                    "label": "Slide Backgrounds",
-                    "url": "/content/backgrounds"
                 },
                 {
                     "label": "Fragments",
@@ -132,7 +132,7 @@
                 },
                 {
                     "label": "Presentation State",
-                    "url": "/api/methods/#presentation-state"
+                    "url": "/api/presentation-state"
                 },
                 {
                     "label": "postMessage",
