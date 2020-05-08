@@ -96,7 +96,7 @@ By default fragments will be stepped through in the order that they appear in th
   </div>
 </div>
 
-## Fragment Events
+## Events
 
 When a fragment is either shown or hidden reveal.js will dispatch an event.
 

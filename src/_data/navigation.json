@@ -51,6 +51,14 @@
                 {
                     "label": "Layout",
                     "url": "/content/layout"
+                },
+                {
+                    "label": "Themes",
+                    "url": "/content/themes"
+                },
+                {
+                    "label": "Transitions",
+                    "url": "/content/transitions"
                 }
             ]
         },
@@ -96,52 +104,39 @@
             ]
         },
         {
-            "label": "Configuration",
+            "label": "API & Config",
             "items": [
                 {
                     "label": "Initialization",
-                    "url": "/config/initialization"
+                    "url": "/api/initialization"
                 },
                 {
-                    "label": "Options",
-                    "url": "/config/options"
+                    "label": "Config Options",
+                    "url": "/api/config"
                 },
-                {
-                    "label": "Presentation Size",
-                    "url": "/config/presentation-size"
-                },
-                {
-                    "label": "Theming",
-                    "url": "/config/theming"
-                },
-                {
-                    "label": "Transitions",
-                    "url": "/config/transitions"
-                },
-                {
-                    "label": "Keyboard",
-                    "url": "/config/keyboard"
-                }
-            ]
-        },
-        {
-            "label": "API",
-            "items": [
                 {
                     "label": "API Methods",
-                    "url": "/api/"
-                },
-                {
-                    "label": "Presentation State",
-                    "url": "/api/#presentation-state"
-                },
-                {
-                    "label": "postMessage",
-                    "url": "/api/postmessage"
+                    "url": "/api/methods"
                 },
                 {
                     "label": "Events",
                     "url": "/api/events"
+                },
+                {
+                    "label": "Presentation Size",
+                    "url": "/api/presentation-size"
+                },
+                {
+                    "label": "Keyboard",
+                    "url": "/api/keyboard"
+                },
+                {
+                    "label": "Presentation State",
+                    "url": "/api/methods/#presentation-state"
+                },
+                {
+                    "label": "postMessage",
+                    "url": "/api/postmessage"
                 }
             ]
         },
@@ -172,6 +167,10 @@
                 {
                     "label": "Changelog",
                     "url": "https://github.com/hakimel/reveal.js/releases"
+                },
+                {
+                    "label": "reveal.js 3.9.2 Docs",
+                    "url": "https://github.com/hakimel/reveal.js/blob/3.9.2/README.md"
                 }
             ]
         }

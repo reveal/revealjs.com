@@ -69,6 +69,12 @@ function setup() {
 			wrapper.appendChild( deckElement );
 		}
 
+		let config = {};
+
+		if( deckElement.hasAttribute( 'data-config' ) ) {
+			config = JSON.parse( deckElement.dataset.config );
+		}
+
 		let deck = new Reveal( deckElement, {
 			width: 900,
 			height: 500,
@@ -80,7 +86,8 @@ function setup() {
 			math: {
 			  config: 'TeX-AMS_HTML-full'
 			},
-			plugins: [ Markdown, Highlight, Zoom, MathJax ]
+			plugins: [ Markdown, Highlight, Zoom, MathJax ],
+			... config
 		} );
 		deck.initialize();
 

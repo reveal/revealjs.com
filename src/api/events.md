@@ -6,15 +6,15 @@ layout: default
 
 # Events
 
-Doc TODO
-- on/off methods
-- fragment events
-- pause events
-- overview mode events
+We dispatch a number of events to make it easy for you to react to changes in the presentation. `Reveal.on()` is used to add event listeners, and `Reveal.off()` is used to remove them.
 
-## Ready Event
+```js
+Reveal.on( 'eventname', callbackFunction );
+```
 
-A `ready` event is fired when reveal.js has loaded all non-async dependencies and is ready to start navigating. To check if reveal.js is already 'ready' you can call `Reveal.isReady()`.
+## Ready
+
+The `ready` event is fired when reveal.js has loaded all non-async dependencies and is ready to accept API calls. To check if reveal.js is already 'ready' you can call `Reveal.isReady()`.
 
 ```javascript
 Reveal.on( 'ready', event => {
@@ -25,9 +25,9 @@ Reveal.on( 'ready', event => {
 Note that we also add a `.ready` class to the `.reveal` element so that you can hook into this with CSS.
 
 
-## Slide Change Events
+## Slide Changed
 
-A `slidechanged` event is fired each time the slide is changed. The event object holds the index values of the current slide as well as a reference to the previous and current slide DOM nodes.
+The `slidechanged` event is fired each time the slide changes. The event object holds the index values of the current slide as well as a reference to the previous and current slide HTML elements.
 
 Some libraries, like MathJax (see [#226](https://github.com/hakimel/reveal.js/issues/226#issuecomment-10261609)), get confused by the transforms and display states of slides. Often times, this can be fixed by calling their update or render function from this callback.
 
@@ -37,19 +37,27 @@ Reveal.on( 'slidechanged', event => {
 } );
 ```
 
-The `slidechanged` event fires instantly when the slide changes. If you'd rather invoke your event listener when the slide has finished transitioning and is fully visible, you can use the `slidetransitionend` event. The `slidetransitionend` event includes the same event data as described above.
+## Slide Transition End
+
+The `slidechanged` event fires instantly as soon as the slide changes. If you'd rather invoke your event listener when the slide has finished transitioning and is fully visible, you can use the `slidetransitionend` event. The `slidetransitionend` event includes the same event data as `slidechanged`.
 
 ```javascript
-Reveal.on( 'slidetransitionend', event => console.log( event.currentSlide ) );
+Reveal.on( 'slidetransitionend', event => {
+	console.log( event.currentSlide );
+});
 ```
 
 
-## Resize Event
+## Resize
 
-When reveal.js changes the scale of the slides it fires a resize event. You can subscribe to the event to resize your elements accordingly.
+The `resize` event is fired when reveal.js changes the scale of the presentation.
 
 ```javascript
 Reveal.on( 'resize', event => {
   // event.scale, event.oldScale, event.size
 } );
 ```
+
+## Feature-specific events
+- [Overview mode events](/features/overview/#events)
+- [Fragment events](/content/fragments/#events)

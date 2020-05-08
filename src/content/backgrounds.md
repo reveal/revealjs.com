@@ -103,7 +103,7 @@ Iframes are lazy-loaded when they become visible. If you'd like to preload ifram
 
 ## Background Transitions
 
-We'll use a cross fade to transition between slide backgrounds by default. This can be changed using the [`backgroundTransition`](/config/transitions/#background-transitions) config option.
+We'll use a cross fade to transition between slide backgrounds by default. This can be changed using the [`backgroundTransition`](/content/transitions/#background-transitions) config option.
 
 
 ## Parallax Background

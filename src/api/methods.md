@@ -1,12 +1,12 @@
 ---
-id: api
-title: API
+id: methods
+title: API Methods
 layout: default
 ---
 
 # API
 
-The `Reveal` object exposes a JavaScript API for controlling navigation and reading state:
+The `Reveal` object exposes an extensive JavaScript API for controlling navigation and checking the current state of the presentation.
 
 ```javascript
 // Navigation
@@ -17,6 +17,8 @@ Reveal.up();
 Reveal.down();
 Reveal.prev();
 Reveal.next();
+
+// Fragment navigation
 Reveal.prevFragment();
 Reveal.nextFragment();
 
@@ -25,8 +27,8 @@ Reveal.shuffle();
 
 // Toggle presentation states, optionally pass true/false to force on/off
 Reveal.toggleOverview();
-Reveal.togglePause();
 Reveal.toggleAutoSlide();
+Reveal.togglePause();
 
 // Shows a help overlay with keyboard shortcuts, optionally pass true/false
 // to force on/off
@@ -41,7 +43,8 @@ Reveal.getConfig();
 // Fetch the current scale of the presentation
 Reveal.getScale();
 
-Reveal.getComputedSlideSize(); // Returns object with width, height keys, and (scaled) presentationWidth and presentationHeight.
+// Returns an object with the scaled presentationWidth & presentationHeight
+Reveal.getComputedSlideSize();
 
 // Retrieves the previous and current slide elements
 Reveal.getPreviousSlide();

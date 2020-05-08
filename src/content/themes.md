@@ -1,12 +1,12 @@
 ---
-id: theming
-title: Theming
+id: themes
+title: Themes
 layout: default
 ---
 
-# Theming
+# Themes
 
-The framework comes with a few different themes included:
+The framework comes with a few different themes included.
 
 | Name      | Effect
 | :-        | :-
@@ -27,6 +27,10 @@ Each theme is available as a separate stylesheet. To change theme you will need 
 <link rel="stylesheet" href="dist/theme/black.css">
 ```
 
+## Custom Properties
+All theme variables are exposed as CSS custom properties in the pseudo-class `:root`. See [the list of exposed variables](https://github.com/hakimel/reveal.js/blob/master/css/theme/template/exposer.scss).
+
+## Creating a Theme
 If you want to add a theme of your own see the instructions here: [/css/theme/README.md](https://github.com/hakimel/reveal.js/blob/master/css/theme/README.md).
 
-All theme variables are exposed as CSS custom properties in the pseudo-class `:root`. See [the list of exposed variables](https://github.com/hakimel/reveal.js/blob/master/css/theme/template/exposer.scss).
+Alternatively, if you want a clean start, you can opt to start from a blank CSS document and customize everything from the ground up.

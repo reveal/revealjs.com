@@ -47,11 +47,15 @@ let translate = ( element, x, y ) => {
 	element.style.transform = 'translate('+x+'px,'+y+'px)';
 }
 
+let hoverTimeout;
+
 let bindDirectionalHovers = ( element, childSelector ) => {
 
 	let children = Array.from( element.querySelectorAll( childSelector ) );
 
 	element.addEventListener( 'mouseenter', function( event ) {
+
+		clearTimeout( hoverTimeout );
 
 		// Move the children into their start positions
 		children.forEach( childElement => {
@@ -60,10 +64,9 @@ let bindDirectionalHovers = ( element, childSelector ) => {
 		}, this );
 
 		// Wait until the next cycle and trigger the hover effect
-		setTimeout( () => {
+		hoverTimeout = setTimeout( () => {
 
 			element.classList.add( 'hover' );
-
 			children.forEach( childElement => {
 				childElement.classList.remove( 'no-transition' );
 				translate( childElement, 0, 0 );
@@ -74,6 +77,8 @@ let bindDirectionalHovers = ( element, childSelector ) => {
 	}.bind( this ), false );
 
 	element.addEventListener( 'mouseleave', function( event ) {
+
+		clearTimeout( hoverTimeout );
 
 		// Remove the hover effect and move the child in the
 		// direction of the mouse

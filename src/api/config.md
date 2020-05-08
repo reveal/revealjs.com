@@ -1,6 +1,6 @@
 ---
-id: options
-title: Options
+id: config
+title: Config
 layout: default
 ---
 

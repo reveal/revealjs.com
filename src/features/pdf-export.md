@@ -42,7 +42,7 @@ If you want to number printed pages, make sure to enable [slide numbers](/featur
 
 ## Page Size
 
-Export dimensions are inferred from the configured [presentation size](/config/presentation-size). Slides that are too tall to fit within a single page will expand onto multiple pages. You can limit how many pages a slide may expand to using the `pdfMaxPagesPerSlide` config option. For example, to ensures that no slide ever grows to more than one printed page you can set it to 1.
+Export dimensions are inferred from the configured [presentation size](/api/presentation-size). Slides that are too tall to fit within a single page will expand onto multiple pages. You can limit how many pages a slide may expand to using the `pdfMaxPagesPerSlide` config option. For example, to ensures that no slide ever grows to more than one printed page you can set it to 1.
 ```js
 Reveal.configure({ pdfMaxPagesPerSlide: 1 })
 ```

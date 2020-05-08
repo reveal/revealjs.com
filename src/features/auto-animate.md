@@ -4,7 +4,7 @@ title: Auto-Animate
 layout: default
 ---
 
-# Auto-Animate
+# Auto-Animate<span class="r-version-badge new">4.0.0</span>
 
 reveal.js can automatically animate elements across slides. All you need to do is add `data-auto-animate` to two adjacent slide `<section>` elements and Auto-Animate will animate all matching elements between the two.
 

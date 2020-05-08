@@ -6,7 +6,9 @@ layout: default
 
 # Touch Navigation
 
-You can swipe to navigate through a presentation on any touch-enabled device. Horizontal swipes change between horizontal slides, vertical swipes change between vertical slides. If you wish to disable this you can set the `touch` config option to false when initializing reveal.js.
+You can swipe to navigate through a presentation on any touch-enabled device. Horizontal swipes change between horizontal slides, vertical swipes change between vertical slides.
+
+If you wish to disable this you can set the `touch` config option to false when initializing.
 
 ```javascript
 Reveal.initialize({
