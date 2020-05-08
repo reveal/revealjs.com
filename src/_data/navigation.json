@@ -148,6 +148,10 @@
                     "url": "/plugins"
                 },
                 {
+                    "label": "Built-in Plugins",
+                    "url": "/plugins#built-in-plugins"
+                },
+                {
                     "label": "Creating a Plugin",
                     "url": "/plugins/creating-plugins"
                 },
@@ -169,7 +173,11 @@
                     "url": "https://github.com/hakimel/reveal.js/releases"
                 },
                 {
-                    "label": "reveal.js 3.9.2 Docs",
+                    "label": "Upgrade Instructions",
+                    "url": "/other/upgrading"
+                },
+                {
+                    "label": "3.9.2 Docs",
                     "url": "https://github.com/hakimel/reveal.js/blob/3.9.2/README.md"
                 }
             ]

@@ -1,6 +1,6 @@
 ---
-id: fragments
-title: Fragments
+id: creating-plugins
+title: Creating Plugins
 layout: default
 ---
 

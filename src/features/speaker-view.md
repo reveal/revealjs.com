@@ -4,7 +4,7 @@ title: Speaker View
 layout: default
 ---
 
-# Speaker Notes
+# Speaker View
 
 reveal.js comes with a speaker notes plugin which can be used to present per-slide notes in a separate browser window. The notes window also gives you a preview of the next upcoming slide so it may be helpful even if you haven't written any notes. Press the »S« key on your keyboard to open the notes window.
 

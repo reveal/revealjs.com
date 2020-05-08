@@ -74,6 +74,9 @@
     .r-version-badge.new:before {
         content: 'New in ';
     }
+    .r-version-badge.deprecated:before {
+        content: 'Deprecated in ';
+    }
 }
 
 // code blocks
