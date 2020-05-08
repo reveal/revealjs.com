@@ -38,6 +38,8 @@ module.exports = eleventyConfig => {
 
     eleventyConfig.setLibrary('md', md);
 
+    eleventyConfig.setQuietMode(true);
+
     // eleventyConfig.addWatchTarget("js/");
     // eleventyConfig.addWatchTarget("css/");
 
