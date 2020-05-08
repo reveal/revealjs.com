@@ -6,18 +6,30 @@ layout: default
 
 # Auto-Slide
 
-Presentations can be configured to progress through slides automatically, without any user input. To enable this you will need to tell the framework how many milliseconds it should wait between slides:
+Presentations can be configured to step through slides automatically, without any user input. To enable this you will need to specify an interval for slide changes using the `autoSlide` config option. The interval is provided in milliseconds.
 
 ```javascript
 // Slide every five seconds
-Reveal.configure({
-  autoSlide: 5000
+Reveal.initialize({
+  autoSlide: 5000,
+  loop: true
 });
 ```
+<div class="reveal reveal-example" data-config='{"autoSlide": 5000, "loop": true}'>
+  <div class="slides">
+    <section>Slide 1</section>
+    <section>Slide 2</section>
+    <section>Slide 3</section>
+  </div>
+</div>
 
-When this is turned on a control element will appear that enables users to pause and resume auto-sliding. Alternatively, sliding can be paused or resumed by pressing »A« on the keyboard. Sliding is paused automatically as soon as the user starts navigating. You can disable these controls by specifying `autoSlideStoppable: false` in your reveal.js config.
+A play/pause control element will automatically appear for auto-sliding decks. Sliding is automatically paused if the user starts interacting with the deck. It's also possible to pause or resume sliding by pressing »A« on the keyboard (won't work in the embedded demo here).
 
-You can also override the slide duration for individual slides and fragments by using the `data-autoslide` attribute:
+You can disable the auto-slide controls and prevent sliding from being paused by specifying `autoSlideStoppable: false` in your [config options](/api/config).
+
+## Slide Timing
+
+It's also possible to override the slide duration for individual slides and fragments by using the `data-autoslide` attribute.
 
 ```html
 <section data-autoslide="2000">
@@ -27,6 +39,22 @@ You can also override the slide duration for individual slides and fragments by 
 </section>
 ```
 
-To override the method used for navigation when auto-sliding, you can specify the `autoSlideMethod` setting. To only navigate along the top layer and ignore vertical slides, set this to `Reveal.navigateRight`.
+## Auto-Slide Method
 
-Whenever the auto-slide mode is resumed or paused the `autoslideresumed` and `autoslidepaused` events are fired.
+The `autoSlideMethod` config option can be used to override the default function used for navigation when auto-sliding.
+
+We step through all slides, both horizontal and [vertical](/features/vertical-slides), by default. To only navigate along the top layer and ignore vertical slides, you can set this to `Reveal.navigateRight`.
+
+```js
+Reveal.configure({
+	autoSlideMethod: Reveal.navigateRight
+});
+````
+
+## Events
+We fire events whenever auto-sliding is paused or resumed.
+
+```javascript
+Reveal.on( 'autoslideresumed', event => { /* ... */ } );
+Reveal.on( 'autoslidepaused', event => { /* ... */ } );
+```

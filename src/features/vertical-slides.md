@@ -4,7 +4,7 @@ title: Vertical Slides
 layout: default
 ---
 
-# Vertical Slide Navigation
+# Vertical Slides
 
 Your slides are stepped between using a horizontal sliding transition by default. These horizontal slides are considered the main, or *top-level*, slides in your deck.
 
