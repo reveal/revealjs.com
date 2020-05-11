@@ -11,27 +11,29 @@ reveal.js can automatically animate elements across slides. All you need to do i
 Here's a simple example to give you a better idea of how it can be used. The resulting animation will be the word "Magic" sliding 100px downwards.
 ```html
 <section data-auto-animate>
-  <h1>Magic</h1>
+  <h1 style="margin-top: 100px;">Auto</h1>
+  <h1 style="opacity: 0;">Animate</h1>
 </section>
 <section data-auto-animate>
-  <h1 style="position: relative; top: 100px; color: red;">Magic</h1>
+  <h1>Auto</h1>
+  <h1>Animate</h1>
 </section>
 ```
 <div class="reveal reveal-example">
   <div class="slides">
     <section data-auto-animate>
-      <h1>Magic</h1>
+      <h1>Auto-Animate</h1>
     </section>
     <section data-auto-animate>
-      <h1 style="position: relative; top: 100px; color: red;">Magic</h1>
+      <h1 style="margin-top: 100px; color: red;">Auto-Animate</h1>
     </section>
   </div>
 </div>
 
-This example uses the `top` property to move the element but internally reveal.js will use a CSS transform to ensure smooth movement. This same approach to animation works with most animatable CSS properties meaning you can transition things like `position`, `font-size`, `line-height`, `color`, `background-color` and `padding`.
+This example uses the `margin-top` property to move the element but internally reveal.js will use a CSS transform to ensure smooth movement. This same approach to animation works with most animatable CSS properties meaning you can transition things like `position`, `font-size`, `line-height`, `color`, `background-color`, `padding` and `margin`.
 
 ## How Elements are Matched
-When you navigate between two auto-animated slides we'll do our best to automatically find matching elements between the two slides. For text, we consider it a match if both the text contents and node type are identical. For images, videos and iframes we compare the `src` attribute. We also take into account the order in which the element appears in the DOM.
+When you navigate between two auto-animated slides we'll do our best to automatically find matching elements in the two slides. For text, we consider it a match if both the text contents and node type are identical. For images, videos and iframes we compare the `src` attribute. We also take into account the order in which the element appears in the DOM.
 
 In situations where automatic matching is not feasible you can give the objects that you want to animate between a matching `data-id` attribute. We prioritize matching `data-id` values above our automatic matching. 
 
@@ -39,10 +41,10 @@ Here's an example where we've given both blocks a matching ID since automatic ma
 
 ```html
 <section data-auto-animate>
-  <div data-id="box" style="padding: 20px; background: salmon;"></div>
+  <div data-id="box" style="height: 50px; background: salmon;"></div>
 </section>
 <section data-auto-animate>
-  <div data-id="box" style="padding: 20px; background: blue;"></div>
+  <div data-id="box" style="height: 200px; background: blue;"></div>
 </section>
 ```
 <div class="reveal reveal-example">
@@ -51,7 +53,7 @@ Here's an example where we've given both blocks a matching ID since automatic ma
 	  <div data-id="box" style="height: 50px; background: salmon;"></div>
 	</section>
 	<section data-auto-animate>
-	  <div data-id="box" style="height: 150px; background: blue;"></div>
+	  <div data-id="box" style="height: 200px; background: blue;"></div>
 	</section>
   </div>
 </div>

@@ -162,6 +162,11 @@
     .reveal-example-wrapper .reveal-example {
         @apply mt-0 rounded-t-none;
     }
+
+    .reveal-example.focused:before {
+        content: '';
+        @apply absolute block inset-0 border-2 border-purple-400 pointer-events-none rounded-b;
+    }
 }
 
 

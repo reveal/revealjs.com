@@ -81,8 +81,8 @@ function setup() {
 			hash: false,
 			respondToHashChanges: false,
 			embedded: true,
-			keyboard: false,
 			progress: false,
+			keyboardCondition: 'focused',
 			controlsTutorial: false,
 			math: {
 			  config: 'TeX-AMS_HTML-full'
