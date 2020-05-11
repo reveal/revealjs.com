@@ -6,22 +6,74 @@ layout: default
 
 # Layout
 
-Much of reveal.js' layout logic is 
+We provide a a few different layout helpers for your content. We're aiming to add more of these in upcoming versions so keep an eye out for that.
 
-TODO: Describe layout techniques.
-- Image stack
+If you're looking to change the sizing, scaling and centering of your presentation please see [Presentation Size](/api/presentation-size).
+
+## Stack
+
+The `r-stack` layout helper lets you center and place multiple elements on top of each other. This is intended to be used together with [fragments](/content/fragmetns) to incrementally reveal elements.
+
+```html
+<div class="r-stack">
+  <img class="fragment" src="https://placekitten.com/450/300" width="450" height="300">
+  <img class="fragment" src="https://placekitten.com/300/450" width="300" height="450">
+  <img class="fragment" src="https://placekitten.com/400/400" width="400" height="400">
+</div>
+```
+<div class="reveal reveal-example">
+  <div class="slides">
+    <section>
+      <div class="r-stack">
+        <img class="fragment" src="https://placekitten.com/450/300" width="450" height="300">
+        <img class="fragment" src="https://placekitten.com/300/450" width="300" height="450">
+        <img class="fragment" src="https://placekitten.com/400/400" width="400" height="400">
+      </div>
+    </section>
+  </div>
+</div>
+
+If you want to show each of the stacked elements individually you can adjust the fragment settings:
+
+```html
+<div class="r-stack">
+  <img class="fragment fade-out" data-fragment-index="0" src="https://placekitten.com/450/300" width="450" height="300">
+  <img class="fragment current-visible" data-fragment-index="0" src="https://placekitten.com/300/450" width="300" height="450">
+  <img class="fragment" src="https://placekitten.com/400/400" width="400" height="400">
+</div>
+```
+<div class="reveal reveal-example">
+  <div class="slides">
+    <section>
+      <div class="r-stack">
+        <img class="fragment fade-out" data-fragment-index="0" src="https://placekitten.com/450/300" width="450" height="300">
+        <img class="fragment current-visible" data-fragment-index="0" src="https://placekitten.com/300/450" width="300" height="450">
+        <img class="fragment" src="https://placekitten.com/400/400" width="400" height="400">
+      </div>
+    </section>
+  </div>
+</div>
+
 
 ## Stretch
 
-Sometimes it's desirable to have an element, like an image or video, stretch to consume as much space as possible within a given slide. This can be done by adding the `.stretch` class to an element as seen below:
+The `r-stretch` layout helper lets you resize an element, like an image or video, to cover the remaining vertical space in a slide. For example, in the below example our slide contains a **title**, an **image** and a **byline**. Because the **image** has the `.r-stretch` class, it's height is set to the slide height minus the combined height of the **title** and **byline**.
 
 ```html
-<section>
-  <h2>This video will use up the remaining space on the slide</h2>
-  <video class="stretch" src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"></video>
-</section>
+<h2>Stretch Example</h2>
+<img class="r-stretch" src="/images/slides-symbol-512x512.png">
+<p>Image byline</p>
 ```
+<div class="reveal reveal-example">
+  <div class="slides">
+    <section>
+      <h2>Stretch Example</h2>
+      <img class="r-stretch plain" style="display: inline-block;" src="/images/slides-symbol-512x512.png">
+      <p>Image byline</p>
+    </section>
+  </div>
+</div>
 
-Limitations:
+#### Stretch Limitations
 - Only direct descendants of a slide section can be stretched
 - Only one descendant per slide section can be stretched
