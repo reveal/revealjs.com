@@ -40,6 +40,11 @@ module.exports = eleventyConfig => {
 
     eleventyConfig.setQuietMode(true);
 
+    // eleventyConfig.addCollection("myCollectionName", function(collection) {
+    //     console.log(collection.getAll()[4].template.frontMatter.content)
+    //     return collection.getAll();
+    // });
+
     // eleventyConfig.addWatchTarget("js/");
     // eleventyConfig.addWatchTarget("css/");
 

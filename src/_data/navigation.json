@@ -1,193 +1,193 @@
 {
-    "sections": [
+  "sections": [
+    {
+      "label": "Getting Started",
+      "items": [
         {
-            "label": "Getting Started",
-            "items": [
-                {
-                    "label": "Overview",
-                    "url": "/"
-                },
-                {
-                    "label": "Installation",
-                    "url": "/installation"
-                }
-            ]
+          "label": "Overview",
+          "url": "/"
         },
         {
-            "label": "Content",
-            "items": [
-                {
-                    "label": "Markup",
-                    "url": "/content/markup"
-                },
-                {
-                    "label": "Markdown",
-                    "url": "/content/markdown"
-                },
-                {
-                    "label": "Backgrounds",
-                    "url": "/content/backgrounds"
-                },
-                {
-                    "label": "Media",
-                    "url": "/content/media"
-                },
-                {
-                    "label": "Code",
-                    "url": "/content/code"
-                },
-                {
-                    "label": "Math",
-                    "url": "/content/math"
-                },
-                {
-                    "label": "Fragments",
-                    "url": "/content/fragments"
-                },
-                {
-                    "label": "Links",
-                    "url": "/content/links"
-                },
-                {
-                    "label": "Layout",
-                    "url": "/content/layout"
-                },
-                {
-                    "label": "Themes",
-                    "url": "/content/themes"
-                },
-                {
-                    "label": "Transitions",
-                    "url": "/content/transitions"
-                }
-            ]
-        },
-        {
-            "label": "Features",
-            "items": [
-                {
-                    "label": "Vertical Slides",
-                    "url": "/features/vertical-slides"
-                },
-                {
-                    "label": "Auto-Animate",
-                    "url": "/features/auto-animate"
-                },
-                {
-                    "label": "Auto-Slide",
-                    "url": "/features/auto-slide"
-                },
-                {
-                    "label": "Speaker View",
-                    "url": "/features/speaker-view"
-                },
-                {
-                    "label": "Slide Numbers",
-                    "url": "/features/slide-numbers"
-                },
-                {
-                    "label": "Touch Navigation",
-                    "url": "/features/touch-navigation"
-                },
-                {
-                    "label": "PDF Export",
-                    "url": "/features/pdf-export"
-                },
-                {
-                    "label": "Overview Mode",
-                    "url": "/features/overview"
-                },
-                {
-                    "label": "Fullscreen Mode",
-                    "url": "/features/fullscreen"
-                }
-            ]
-        },
-        {
-            "label": "API & Config",
-            "items": [
-                {
-                    "label": "Initialization",
-                    "url": "/api/initialization"
-                },
-                {
-                    "label": "Config Options",
-                    "url": "/api/config"
-                },
-                {
-                    "label": "API Methods",
-                    "url": "/api/methods"
-                },
-                {
-                    "label": "Events",
-                    "url": "/api/events"
-                },
-                {
-                    "label": "Presentation Size",
-                    "url": "/api/presentation-size"
-                },
-                {
-                    "label": "Keyboard",
-                    "url": "/api/keyboard"
-                },
-                {
-                    "label": "Presentation State",
-                    "url": "/api/presentation-state"
-                },
-                {
-                    "label": "postMessage",
-                    "url": "/api/postmessage"
-                }
-            ]
-        },
-        {
-            "label": "Plugins",
-            "items": [
-                {
-                    "label": "Using Plugins",
-                    "url": "/plugins"
-                },
-                {
-                    "label": "Built-in Plugins",
-                    "url": "/plugins/#built-in-plugins"
-                },
-                {
-                    "label": "API",
-                    "url": "/plugins/#api"
-                },
-                {
-                    "label": "Creating a Plugin",
-                    "url": "/plugins/creating-plugins"
-                },
-                {
-                    "label": "Multiplex",
-                    "url": "/plugins/multiplex"
-                },
-                {
-                    "label": "Third Party Plugins",
-                    "url": "https://github.com/hakimel/reveal.js/wiki/Plugins,-Tools-and-Hardware",
-                    "external": true
-                }
-            ]
-        },
-        {
-            "label": "Other",
-            "items": [
-                {
-                    "label": "Upgrade Instructions",
-                    "url": "/other/upgrading"
-                },
-                {
-                    "label": "Changelog",
-                    "url": "https://github.com/hakimel/reveal.js/releases",
-                    "external": true
-                },
-                {
-                    "label": "3.9.2 Docs",
-                    "url": "https://github.com/hakimel/reveal.js/blob/3.9.2/README.md",
-                    "external": true
-                }
-            ]
+          "label": "Installation",
+          "url": "/installation"
         }
-    ]
+      ]
+    },
+    {
+      "label": "Content",
+      "items": [
+        {
+          "label": "Markup",
+          "url": "/content/markup"
+        },
+        {
+          "label": "Markdown",
+          "url": "/content/markdown"
+        },
+        {
+          "label": "Backgrounds",
+          "url": "/content/backgrounds"
+        },
+        {
+          "label": "Media",
+          "url": "/content/media"
+        },
+        {
+          "label": "Code",
+          "url": "/content/code"
+        },
+        {
+          "label": "Math",
+          "url": "/content/math"
+        },
+        {
+          "label": "Fragments",
+          "url": "/content/fragments"
+        },
+        {
+          "label": "Links",
+          "url": "/content/links"
+        },
+        {
+          "label": "Layout",
+          "url": "/content/layout"
+        },
+        {
+          "label": "Themes",
+          "url": "/content/themes"
+        },
+        {
+          "label": "Transitions",
+          "url": "/content/transitions"
+        }
+      ]
+    },
+    {
+      "label": "Features",
+      "items": [
+        {
+          "label": "Vertical Slides",
+          "url": "/features/vertical-slides"
+        },
+        {
+          "label": "Auto-Animate",
+          "url": "/features/auto-animate"
+        },
+        {
+          "label": "Auto-Slide",
+          "url": "/features/auto-slide"
+        },
+        {
+          "label": "Speaker View",
+          "url": "/features/speaker-view"
+        },
+        {
+          "label": "Slide Numbers",
+          "url": "/features/slide-numbers"
+        },
+        {
+          "label": "Touch Navigation",
+          "url": "/features/touch-navigation"
+        },
+        {
+          "label": "PDF Export",
+          "url": "/features/pdf-export"
+        },
+        {
+          "label": "Overview Mode",
+          "url": "/features/overview"
+        },
+        {
+          "label": "Fullscreen Mode",
+          "url": "/features/fullscreen"
+        }
+      ]
+    },
+    {
+      "label": "API & Config",
+      "items": [
+        {
+          "label": "Initialization",
+          "url": "/api/initialization"
+        },
+        {
+          "label": "Config Options",
+          "url": "/api/config"
+        },
+        {
+          "label": "API Methods",
+          "url": "/api/methods"
+        },
+        {
+          "label": "Events",
+          "url": "/api/events"
+        },
+        {
+          "label": "Presentation Size",
+          "url": "/api/presentation-size"
+        },
+        {
+          "label": "Keyboard",
+          "url": "/api/keyboard"
+        },
+        {
+          "label": "Presentation State",
+          "url": "/api/presentation-state"
+        },
+        {
+          "label": "postMessage",
+          "url": "/api/postmessage"
+        }
+      ]
+    },
+    {
+      "label": "Plugins",
+      "items": [
+        {
+          "label": "Using Plugins",
+          "url": "/plugins"
+        },
+        {
+          "label": "Built-in Plugins",
+          "url": "/plugins/#built-in-plugins"
+        },
+        {
+          "label": "API",
+          "url": "/plugins/#api"
+        },
+        {
+          "label": "Creating a Plugin",
+          "url": "/plugins/creating-plugins"
+        },
+        {
+          "label": "Multiplex",
+          "url": "/plugins/multiplex"
+        },
+        {
+          "label": "Third Party Plugins",
+          "url": "https://github.com/hakimel/reveal.js/wiki/Plugins,-Tools-and-Hardware",
+          "external": true
+        }
+      ]
+    },
+    {
+      "label": "Other",
+      "items": [
+        {
+          "label": "Upgrade Instructions",
+          "url": "/other/upgrading"
+        },
+        {
+          "label": "Changelog",
+          "url": "https://github.com/hakimel/reveal.js/releases",
+          "external": true
+        },
+        {
+          "label": "3.9.2 Docs",
+          "url": "https://github.com/hakimel/reveal.js/blob/3.9.2/README.md",
+          "external": true
+        }
+      ]
+    }
+  ]
 }
