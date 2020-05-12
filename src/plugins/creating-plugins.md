@@ -4,34 +4,61 @@ title: Creating Plugins
 layout: default
 ---
 
-# Plugin API
+# Creating a Plugin <span class="r-version-badge new">4.0.0</span>
 
-**Outdated, this will be rewritten to match the 4.0 plugin API**
+We provide a lightweight specification and API for plugins. This is used by our default plugins like [code highlighting](/content/code) and [Markdown](/content/markdown) but can also be used to create your own plugins.
 
-Plugins should register themselves with reveal.js by calling `Reveal.registerPlugin( MyPlugin )`. Registered plugins _must_ expose a unique `id` property and can optionally expose an `init` function that reveal.js will call to initialize them.
+## Plugin Definition
 
-When reveal.js is booted up via `initialize()`, it will go through all registered plugins and invoke their `init` methods. If the `init` method returns a Promise, reveal.js will wait for that promise to be fulfilled before finishing the startup sequence and firing the [ready](#ready-event) event. Here’s an example of a plugin that does some asynchronous work before reveal.js can proceed:
+Plugins are objects that contain the following properties.
 
-```javascript
-let MyPlugin = {
-  id: ’my-plugin’,
+| Property    | Value
+| :-          | :-
+| id <span class="r-var-type">String</span>     | The plugins unique ID. This can be used to retrieve the plugin instance via `Reveal.getPlugin(<id>)`.
+| init <span class="r-var-type">Function</span>      | An optional function that is called when the plugin should run. It's invoked with one argument; a reference to the [presentation instance](/api/methods) that the plugin was registered with.<br><br>The init function can optionally return a [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). If a Promise is returned, reveal.js will wait for it to resolve before the presentation finishes initialization and fires the [ready event](/api/events/#ready).
+{.key-value}
+
+Here's an example plugin which shuffles all slides in a presentation when the T key is pressed. Note that we export a function that returns a new plugin object. This is done because there may be [multiple presentation instances on the same page](/api/initialization/#multiple-presentations), and each should have their own instance of our plugin.
+
+
+```js
+// toaster.js
+export default () => {
+  id: 'toaster',
+  init: ( deck ) => {
+    deck.addKeyBinding( { keyCode: 84, key: 'T' }, () => {
+      deck.shuffle();
+      console.log('🍻');
+    } );
+  }
+}
+```
+
+## Registering a Plugin
+
+Plugins are registered by including them in the `plugins` array of the [config options](/api/config). You can also register a plugin at runtime using `Reveal.registerPlugin( Plugin )`.
+
+```js
+import Reveal from 'dist/reveal.esm.js';
+import Toaster from 'toaster.js';
+
+Reveal.initialize({
+  plugins: [ Toaster ]
+});
+```
+
+### Async Plugins
+If your plugin needs to run asynchronous code before reveal.js finishes initializing it can return a Promise. Here's an example plugin that will delay initialization for three seconds.
+
+```js
+let WaitForIt = {
+  id: "wait-for-it",
   init: deck => {
     return new Promise( resolve => setTimeout( resolve, 3000 ) )
   }
-};
-Reveal.initialize({
-  plugins: [ MyPlugin ]
-}).then( () => {
-  console.log( ’Three seconds later...’ )
-} );
+}
+
+Reveal.initialize({ plugins: [ WaitForIt ] }).then( () => {
+  console.log( "Three seconds later..." );
+} )
 ```
-
-If the plugin’s init method does _not_ return a Promise, the plugin is considered ready right away and will not hold up the reveal.js startup sequence.
-
-## Manually Registering Plugins
-
-TBD. Describe how plugins can be registered after reveal.js is already initialized.
-
-## Retrieving Plugins
-
-If you want to check if a specific plugin is registered you can use the `Reveal.hasPlugin` method and pass in a plugin ID, for example: `Reveal.hasPlugin( ’my-plugin’ )`. If you want to retrieve a plugin instance you can use `Reveal.getPlugin( ’my-plugin’ )`.

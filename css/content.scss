@@ -77,6 +77,10 @@
     .r-version-badge.deprecated:before {
         content: 'Deprecated in ';
     }
+
+    .r-var-type {
+        @apply text-gray-700 ml-2 text-sm border p-px px-1 rounded-sm;
+    }
 }
 
 // code blocks

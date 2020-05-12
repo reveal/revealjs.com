@@ -57,7 +57,7 @@ npm start -- --port=8001
 
 ## Installing From npm
 
-You can also install reveal.js using npm or yarn.
+The framework is published to, and can be installed from, [npm](https://www.npmjs.com/package/reveal.js). Note that reveal.js is targeted at the browser and includes CSS, fonts and other assets so the npm dependency use case may be limited.
 
 ```shell
 npm install reveal.js
@@ -76,8 +76,8 @@ let deck = new Reveal({
 deck.initialize();
 ```
 
-You'll also need to include the reveal.js styles and a presentation theme. Here's an example of how that can be done assuming you're using Sass:
-```scss
-@import '/node_modules/reveal.js/dist/reveal';
-@import '/node_modules/reveal.js/dist/theme/black';
+You'll also need to include the reveal.js styles and a [presentation theme](/content/themes).
+```html
+<link rel="stylesheet" href="/node_modules/reveal.js/dist/reveal.css">
+<link rel="stylesheet" href="/node_modules/reveal.js/dist/theme/black.css">
 ```

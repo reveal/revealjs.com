@@ -152,6 +152,10 @@
                     "url": "/plugins#built-in-plugins"
                 },
                 {
+                    "label": "API",
+                    "url": "/plugins#api"
+                },
+                {
                     "label": "Creating a Plugin",
                     "url": "/plugins/creating-plugins"
                 },

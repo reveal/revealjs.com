@@ -132,7 +132,7 @@ a, button {
     z-index: -1;
     background-color: $activeColor;
 
-    transition: opacity 0.15s $easeOutQuint,
+    transition: opacity 0.1s $easeOutQuint,
                 visibility 0.15s $easeOutQuint,
                 transform 0.3s $easeOutQuint;
 }

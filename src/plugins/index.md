@@ -49,6 +49,31 @@ These plugins are distributed together with the reveal.js repo. Here's a full li
 
 All of the above are available as ES modules if you swap `.js` for `.esm.js`.
 
+## API
+
+We provide API methods for checking which plugins that are currently registered. It's also possible to retrieve a reference to any registered plugin instance if you want to manually call a method on them.
+
+
+```js
+import Reveal from 'dist/reveal.esm.js';
+import Markdown from 'dist/plugin/markdown.esm.js';
+import Highlight from 'dist/plugin/highlight.esm.js';
+
+Reveal.initialize({ plugins: [ Markdown, Highlight ] });
+
+Reveal.hasPlugin( 'markdown' )
+// true
+
+Reveal.getPlugin( 'markdown' )
+// { id: "markdown", init: ... }
+
+Reveal.getPlugins()
+// {
+//   markdown: { id: "markdown", init: ... },
+//   highlight: { id: "highlight", init: ... }
+// }
+```
+
 ## Dependencies <span class="r-version-badge deprecated">4.0.0</span>
 
 This functionality is left in for backwards compatibility but has been deprecated as of reveal.js 4.0.0. In older versions we used a built-in dependency loader to load plugins. We moved away from this because how scripts are best loaded and bundled may vary greatly depending on use case. If you need to load a dependency, include it using a `<script defer>` tag instead.

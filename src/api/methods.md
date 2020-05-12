@@ -6,7 +6,7 @@ layout: default
 
 # API
 
-The `Reveal` object exposes an extensive JavaScript API for controlling navigation and checking the current state of the presentation.
+We provide an extensive JavaScript API for controlling navigation and checking the current state of a presentation. If you're working with a single presentation instance the API can be accessed via the global `Reveal` object.
 
 ```javascript
 // Navigate to a specific slide
