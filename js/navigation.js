@@ -6,7 +6,7 @@ if( sidebar ) {
 	// match the current URL & hash.
 	let updateSelection = () => {
 
-		let currentURL = window.location.pathname.replace( /\/$/, '' ) + window.location.hash;
+		let currentURL = window.location.pathname.replace( /\/$/, '' ) + '/' + window.location.hash;
 		let newSelection = sidebar.querySelector( '.nav-link[href="'+ currentURL +'"]' )
 
 		if( newSelection ) {

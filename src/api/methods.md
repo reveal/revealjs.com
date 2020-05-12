@@ -91,3 +91,6 @@ Reveal.getRevealElement(); // <div class="reveal">
 Reveal.getSlidesElement(); // <div class="slides">
 Reveal.getViewportElement(); // <div class="reveal-viewport">
 ```
+
+## More Reading
+- [Plugin API](/plugins/#api)

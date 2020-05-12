@@ -31,12 +31,8 @@
     table a {
         @apply text-purple-700 no-underline .break-words;
 
-        &:not([class]) {
-            @apply text-purple-700;
-
-            &:hover {
-                @apply text-purple-500;
-            }
+        &:hover {
+            @apply text-purple-500;
         }
     }
 
