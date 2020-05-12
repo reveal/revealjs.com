@@ -19,13 +19,13 @@
 
 <body data-page="{{ id }}" class="text-gray-900 leading-normal bg-gray-100">
 
+    <section id="demo" class="reveal-demo overflow-hidden outline-none text-center" tabindex="-1">
+        {% include "demo.html" %}
+    </section>
+
     {% include "header.njk" %}
 
     <div class="w-full max-w-screen-xl mx-auto px-6 relative">
-
-        <section id="demo" class="reveal-demo rounded overflow-hidden outline-none text-center mt-20 -mx-2" tabindex="-1">
-            {% include "demo.html" %}
-        </section>
 
         <div class="lg:flex -mx-6">
             {% include "sidebar.njk" %}

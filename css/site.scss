@@ -17,7 +17,13 @@ html {
 }
 
 a, button {
-    touch-action: manipulation
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: darken( $activeColor, 15% );
+}
+
+.header a,
+.header button {
+    -webkit-tap-highlight-color: transparent;
 }
 
 .no-transition,
@@ -27,8 +33,8 @@ a, button {
 
 // reveal.js styles
 .reveal-demo {
-	height: 70vh;
-    max-height: 800px;
+	height: 65vh;
+    max-height: 900px;
 }
 
 .reveal {
@@ -61,6 +67,10 @@ a, button {
 .article .reveal h3 { font-size: 1.3em; }
 
 // header
+.menu-visible header {
+    position: fixed;
+}
+
 .header-nav path {
     @apply fill-current;
 }

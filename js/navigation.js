@@ -39,6 +39,7 @@ if( sidebar ) {
 	// Toggle the mobile nav.
 	document.querySelector( '.menu-toggle' ).addEventListener( 'click', () => {
 		sidebar.classList.toggle( 'hidden' );
+		document.documentElement.classList.toggle( 'menu-visible', !sidebar.classList.contains( 'hidden' ) );
 	} )
 
 }
