@@ -87,6 +87,47 @@ Reveal.on( 'autoanimate', event => {
 } );
 ```
 
+## Example: List Animation
+We match list items individually to let you animate new items being added or removed.
+```html/2-4,10,12
+<section data-auto-animate>
+  <ul>
+    <li>Mercury</li>
+    <li>Jupiter</li>
+    <li>Mars</li>
+  </ul>
+</section>
+<section data-auto-animate>
+  <ul>
+    <li>Mercury</li>
+    <li>Earth</li>
+    <li>Jupiter</li>
+    <li>Saturn</li>
+    <li>Mars</li>
+  </ul>
+</section>
+```
+<div class="reveal reveal-example">
+  <div class="slides">
+    <section data-auto-animate>
+      <ul>
+        <li>Mercury</li>
+        <li>Jupiter</li>
+        <li>Mars</li>
+      </ul>
+    </section>
+    <section data-auto-animate>
+      <ul>
+        <li>Mercury</li>
+        <li>Earth</li>
+        <li>Jupiter</li>
+        <li>Saturn</li>
+        <li>Mars</li>
+      </ul>
+    </section>
+  </div>
+</div>
+
 ## Advanced: State Attributes
 We add state attributes to the different elements involved in an auto-animation. These attributes can be tied into if you want to, for example, fine-tune the animation behavior with custom CSS.
 

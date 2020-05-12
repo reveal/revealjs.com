@@ -57,21 +57,19 @@ let bindDirectionalHovers = ( element, childSelector ) => {
 
 		clearTimeout( hoverTimeout );
 
+
 		// Move the children into their start positions
 		children.forEach( childElement => {
 			childElement.classList.add( 'no-transition' );
 			translate( childElement, -15 * this.pointerDirectionX, -15 * this.pointerDirectionY );
+			childElement.offsetHeight;
+			childElement.classList.remove( 'no-transition' );
 		}, this );
+
 
 		// Wait until the next cycle and trigger the hover effect
 		hoverTimeout = setTimeout( () => {
-
 			element.classList.add( 'hover' );
-			children.forEach( childElement => {
-				childElement.classList.remove( 'no-transition' );
-				translate( childElement, 0, 0 );
-			}, this );
-
 		}, 1 );
 
 	}.bind( this ), false );
