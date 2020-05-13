@@ -18,7 +18,7 @@ HTML will be escaped by default. To avoid this, add `data-noescape` to the `<cod
 (def lazy-fib
   (concat
    [0 1]
-   <mark>((fn rfib [a b]</mark>
+   ((fn rfib [a b]
         (lazy-cons (+ a b) (rfib b (+ a b)))) 0 1)))
   </code></pre>
 </section>
