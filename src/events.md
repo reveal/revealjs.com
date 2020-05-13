@@ -67,6 +67,6 @@ Reveal.on( 'resize', event => {
 ```
 
 ## Feature-specific Events
-- [Overview mode events](/features/overview/#events)
-- [Fragment events](/content/fragments/#events)
-- [Auto-Slide events](/features/auto-slide/#events)
+- [Overview mode events](/overview/#events)
+- [Fragment events](/fragments/#events)
+- [Auto-Slide events](/auto-slide/#events)

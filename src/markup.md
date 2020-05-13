@@ -30,7 +30,7 @@ Here's a barebones example of a fully working reveal.js presentation:
 
 The presentation markup hierarchy needs to be `.reveal > .slides > section` where the `section` element represents one slide and can be repeated indefinitely.
 
-If you place multiple `section` elements inside of another `section` they will be shown as [vertical slides](/features/vertical-slides). The first of the vertical slides is the "root" of the others (at the top), and will be included in the horizontal sequence. For example:
+If you place multiple `section` elements inside of another `section` they will be shown as [vertical slides](/vertical-slides). The first of the vertical slides is the "root" of the others (at the top), and will be included in the horizontal sequence. For example:
 
 ```html
 <div class="reveal">
@@ -53,7 +53,7 @@ If you place multiple `section` elements inside of another `section` they will b
   </div>
 </div>
 
-It's also possible to write presentations using [Markdown](/content/markdown).
+It's also possible to write presentations using [Markdown](/markdown).
 
 ## Viewport
 The reveal.js viewport is the wrapper DOM element that determines the size of your presentation on a web page. By default, this will be the `body` element. If you're including multiple presentations on the same page each presentations `.reveal` element will act as their viewport.
@@ -70,15 +70,15 @@ To "hide" those slides from reveal.js' numbering system you can add a `data-visi
 
 ## Slide States
 
-If you set `data-state="purple-haze"` on a slide `<section>`, "purple-haze" will be applied as a class on the [viewport element](#viewport) when that slide is opened. This allows you to apply broad style changes to the page based on the active slide.
+If you set `data-state="make-it-pop"` on a slide `<section>`, "make-it-pop" will be applied as a class on the [viewport element](#viewport) when that slide is opened. This allows you to apply broad style changes to the page based on the active slide.
 
 ```html
-<section data-state="purple-haze"></section>
+<section data-state="make-it-pop"></section>
 ```
 
 ```css
 /* CSS */
-.purple-haze {
+.make-it-pop {
   filter: drop-shadow(0 0 10px purple);
 }
 ```
@@ -86,7 +86,7 @@ If you set `data-state="purple-haze"` on a slide `<section>`, "purple-haze" will
 You can also listen to these changes in state via JavaScript:
 
 ```javascript
-Reveal.on( 'purple-haze', () => {
-  console.log('🎸');
+Reveal.on( 'make-it-pop', () => {
+  console.log('✨');
 } );
 ```

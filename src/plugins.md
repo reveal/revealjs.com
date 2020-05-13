@@ -33,17 +33,17 @@ If you're using ES modules, we also provide module exports for all built-in plug
 
 ## Built-in Plugins
 
-A few common plugins which add support for [Markdown](/content/markdown), [code highlighting](/content/code) and [speaker notes](/features/speaker-view) are included in our default [presentation boilerplate](https://github.com/hakimel/reveal.js/blob/master/index.html).
+A few common plugins which add support for [Markdown](/markdown), [code highlighting](/code) and [speaker notes](/speaker-view) are included in our default [presentation boilerplate](https://github.com/hakimel/reveal.js/blob/master/index.html).
 
-These plugins are distributed together with the reveal.js repo. Here's a full list of plugins available in the repo.
+These plugins are distributed together with the reveal.js repo. Here's a complete list of all built-in plugins.
 
 | Name               | Description
 | :-                 | :-
-| RevealHighlight    | Syntax highlighted [code](/content/code).<br><span class="text-gray-600">dist/plugin/highlight.js</span>
-| RevealMarkdown     | Write content using [Markdown](/content/markdown).<br><span class="text-gray-600">dist/plugin/markdown.js</span>
+| RevealHighlight    | Syntax highlighted [code](/code).<br><span class="text-gray-600">dist/plugin/highlight.js</span>
+| RevealMarkdown     | Write content using [Markdown](/markdown).<br><span class="text-gray-600">dist/plugin/markdown.js</span>
 | RevealSearch       | Press CTRL+Shift+F to search slide content.<br><span class="text-gray-600">dist/plugin/search.js</span>
-| RevealNotes        | Show a [speaker view](/features/speaker-view) in a separate window.<br><span class="text-gray-600">dist/plugin/notes.js</span>
-| RevealMath         | Render [math equations](/content/math/).<br><span class="text-gray-600">dist/plugin/math.js</span>
+| RevealNotes        | Show a [speaker view](/speaker-view) in a separate window.<br><span class="text-gray-600">dist/plugin/notes.js</span>
+| RevealMath         | Render [math equations](/math/).<br><span class="text-gray-600">dist/plugin/math.js</span>
 | RevealZoom         | Alt+click to zoom in on elements.<br><span class="text-gray-600">dist/plugin/zoom.js</span>
 {.key-value}
 
@@ -74,7 +74,7 @@ Reveal.getPlugins()
 // }
 ```
 
-## Dependencies <span class="r-version-badge deprecated">4.0.0</span>
+## Dependencies <span class="r-version-badge deprecated">4.0.0</span> {id=dependencies}
 
 This functionality is left in for backwards compatibility but has been deprecated as of reveal.js 4.0.0. In older versions we used a built-in dependency loader to load plugins. We moved away from this because how scripts are best loaded and bundled may vary greatly depending on use case. If you need to load a dependency, include it using a `<script defer>` tag instead.
 

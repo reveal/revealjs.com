@@ -13,7 +13,7 @@ Slides are contained within a limited portion of the screen by default to allow 
 All CSS color formats are supported, including hex values, keywords, `rgba()` or `hsl()`.
 
 ```html/0,3
-<section data-background-color="salmon">
+<section data-background-color="aquamarine">
   <h2>🐟</h2>
 </section>
 <section data-background-color="rgb(70, 70, 255)">
@@ -22,7 +22,7 @@ All CSS color formats are supported, including hex values, keywords, `rgba()` or
 ```
 <div class="reveal reveal-example">
   <div class="slides">
-    <section data-background-color="salmon">
+    <section data-background-color="aquamarine">
       <h2 style="font-size: 4em;">🐟</h2>
     </section>
     <section data-background-color="rgb(70, 70, 255)">
@@ -103,7 +103,7 @@ Iframes are lazy-loaded when they become visible. If you'd like to preload ifram
 
 ## Background Transitions
 
-We'll use a cross fade to transition between slide backgrounds by default. This can be changed using the [`backgroundTransition`](/content/transitions/#background-transitions) config option.
+We'll use a cross fade to transition between slide backgrounds by default. This can be changed using the [`backgroundTransition`](/transitions/#background-transitions) config option.
 
 
 ## Parallax Background

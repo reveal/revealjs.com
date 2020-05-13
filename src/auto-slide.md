@@ -25,7 +25,7 @@ Reveal.initialize({
 
 A play/pause control element will automatically appear for auto-sliding decks. Sliding is automatically paused if the user starts interacting with the deck. It's also possible to pause or resume sliding by pressing »A« on the keyboard (won't work in the embedded demo here).
 
-You can disable the auto-slide controls and prevent sliding from being paused by specifying `autoSlideStoppable: false` in your [config options](/api/config).
+You can disable the auto-slide controls and prevent sliding from being paused by specifying `autoSlideStoppable: false` in your [config options](/config).
 
 ## Slide Timing
 
@@ -43,7 +43,7 @@ It's also possible to override the slide duration for individual slides and frag
 
 The `autoSlideMethod` config option can be used to override the default function used for navigation when auto-sliding.
 
-We step through all slides, both horizontal and [vertical](/features/vertical-slides), by default. To only navigate along the top layer and ignore vertical slides, you can set this to `Reveal.navigateRight`.
+We step through all slides, both horizontal and [vertical](/vertical-slides), by default. To only navigate along the top layer and ignore vertical slides, you can set this to `Reveal.navigateRight`.
 
 ```js
 Reveal.configure({

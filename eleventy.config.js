@@ -35,6 +35,7 @@ module.exports = eleventyConfig => {
     });
 
     md.use( require('markdown-it-attrs') );
+    md.use( require('markdown-it-anchor') );
 
     eleventyConfig.setLibrary('md', md);
 

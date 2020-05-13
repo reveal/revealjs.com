@@ -37,7 +37,7 @@ You can create links from one slide to another. Start by giving your target slid
 
 ## Numbered Links
 
-It's also possible to link to slides based on their slide index. The href format for an numbered link is `#/0` where 0 is the horizontal slide number. To link to a [vertical slide](/features/vertical-slides) use `#/0/0` where the second number is the index of the vertical slide target.
+It's also possible to link to slides based on their slide index. The href format for an numbered link is `#/0` where 0 is the horizontal slide number. To link to a [vertical slide](/vertical-slides) use `#/0/0` where the second number is the index of the vertical slide target.
 
 ```html
 <a href="#/2">Go to 2nd slide</a>

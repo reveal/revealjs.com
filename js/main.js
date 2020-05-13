@@ -13,6 +13,8 @@ import Zoom from 'reveal.js/dist/plugin/zoom.esm.js';
 
 const PAGE_ID = document.body.dataset.page;
 
+setupAnchors();
+
 if( document.readyState === 'complete' ) {
 	setup();
 }
@@ -27,7 +29,6 @@ else if( document.readyState === 'interactive' ) {
 
 function setup() {
 
-	setupAnchors();
 	setupInlineDecks();
 
 	if( PAGE_ID === 'home' ) {

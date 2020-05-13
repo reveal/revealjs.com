@@ -6,7 +6,7 @@ layout: default
 
 # Media
 
-We provide convenient mechanics for autoplaying and lazy loading HTML media elements and iframes based on slide visibility and proximity. This works for [\<video\>](https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement), [\<audio\>](https://developer.mozilla.org/en-US/docs/Web/API/HTMLAudioElement) and [\<iframe\>](https://developer.mozilla.org/en-US/docs/Web/API/HTMLIframeElement) elements.
+We provide convenient mechanics for autoplaying and lazy loading HTML media elements and iframes based on slide visibility and proximity. This works for [\<video\>](https://developer.mozilla.org/en-US/docs/Web/HTMLVideoElement), [\<audio\>](https://developer.mozilla.org/en-US/docs/Web/HTMLAudioElement) and [\<iframe\>](https://developer.mozilla.org/en-US/docs/Web/HTMLIframeElement) elements.
 
 ## Autoplay
 
@@ -64,11 +64,11 @@ You can also change the default globally with the `preloadIframes` configuration
 
 Using iframes is a convenient way to include content from external sources, like a YouTube video or Google Sheet. reveal.js automatically detects YouTube and Vimeo embed URLs and autoplays them when the slide becomes visible.
 
-If you add an `<iframe>` inside your slide it's constrained by the size of the slide. To break out of this constraint and add a full page iframe, you can use an [iframe slide background](/content/backgrounds/#iframe-backgrounds).
+If you add an `<iframe>` inside your slide it's constrained by the size of the slide. To break out of this constraint and add a full page iframe, you can use an [iframe slide background](/backgrounds/#iframe-backgrounds).
 
 ### Iframe Post Message
 
-reveal.js automatically pushes two [post messages](https://developer.mozilla.org/en-US/docs/Web/API/Window.postMessage) to embedded iframes. `slide:start` when the slide containing the iframe is made visible and `slide:stop` when it is hidden.
+reveal.js automatically pushes two [post messages](https://developer.mozilla.org/en-US/docs/Web/Window.postMessage) to embedded iframes. `slide:start` when the slide containing the iframe is made visible and `slide:stop` when it is hidden.
 
 ```js
 // JavaScript inside of an iframe embedded within reveal.js

@@ -8,7 +8,7 @@ layout: default
 
 Press the »ESC« or »O« keys to toggle the overview mode on and off. While you're in this mode, you can still navigate between slides, as if you were at 1,000 feet above your presentation.
 
-<picture><img src="/images/content/overview.png" alt="Slide layout with vertical slides"></picture>
+<picture><img src="/images/overview.png" alt="Slide layout with vertical slides"></picture>
 
 ## API
 

@@ -18,39 +18,39 @@
       "items": [
         {
           "label": "Markup",
-          "url": "/content/markup"
+          "url": "/markup"
         },
         {
           "label": "Markdown",
-          "url": "/content/markdown"
+          "url": "/markdown"
         },
         {
           "label": "Backgrounds",
-          "url": "/content/backgrounds"
+          "url": "/backgrounds"
         },
         {
           "label": "Media",
-          "url": "/content/media"
+          "url": "/media"
         },
         {
           "label": "Code",
-          "url": "/content/code"
+          "url": "/code"
         },
         {
           "label": "Math",
-          "url": "/content/math"
+          "url": "/math"
         },
         {
           "label": "Fragments",
-          "url": "/content/fragments"
+          "url": "/fragments"
         },
         {
           "label": "Links",
-          "url": "/content/links"
+          "url": "/links"
         },
         {
           "label": "Layout",
-          "url": "/content/layout"
+          "url": "/layout"
         }
       ]
     },
@@ -59,19 +59,19 @@
       "items": [
         {
           "label": "Themes",
-          "url": "/content/themes"
+          "url": "/themes"
         },
         {
           "label": "Transitions",
-          "url": "/content/transitions"
+          "url": "/transitions"
         },
         {
           "label": "Config Options",
-          "url": "/api/config"
+          "url": "/config"
         },
         {
           "label": "Presentation Size",
-          "url": "/api/presentation-size"
+          "url": "/presentation-size"
         }
       ]
     },
@@ -80,39 +80,39 @@
       "items": [
         {
           "label": "Vertical Slides",
-          "url": "/features/vertical-slides"
+          "url": "/vertical-slides"
         },
         {
           "label": "Auto-Animate",
-          "url": "/features/auto-animate"
+          "url": "/auto-animate"
         },
         {
           "label": "Auto-Slide",
-          "url": "/features/auto-slide"
+          "url": "/auto-slide"
         },
         {
           "label": "Speaker View",
-          "url": "/features/speaker-view"
+          "url": "/speaker-view"
         },
         {
           "label": "Slide Numbers",
-          "url": "/features/slide-numbers"
+          "url": "/slide-numbers"
         },
         {
           "label": "Touch Navigation",
-          "url": "/features/touch-navigation"
+          "url": "/touch-navigation"
         },
         {
           "label": "PDF Export",
-          "url": "/features/pdf-export"
+          "url": "/pdf-export"
         },
         {
           "label": "Overview Mode",
-          "url": "/features/overview"
+          "url": "/overview"
         },
         {
           "label": "Fullscreen Mode",
-          "url": "/features/fullscreen"
+          "url": "/fullscreen"
         }
       ]
     },
@@ -121,27 +121,27 @@
       "items": [
         {
           "label": "Initialization",
-          "url": "/api/initialization"
+          "url": "/initialization"
         },
         {
           "label": "API Methods",
-          "url": "/api/methods"
+          "url": "/methods"
         },
         {
           "label": "Events",
-          "url": "/api/events"
+          "url": "/events"
         },
         {
           "label": "Keyboard",
-          "url": "/api/keyboard"
+          "url": "/keyboard"
         },
         {
           "label": "Presentation State",
-          "url": "/api/presentation-state"
+          "url": "/presentation-state"
         },
         {
           "label": "postMessage",
-          "url": "/api/postmessage"
+          "url": "/postmessage"
         }
       ]
     },
@@ -157,16 +157,12 @@
           "url": "/plugins/#built-in-plugins"
         },
         {
-          "label": "API",
-          "url": "/plugins/#api"
-        },
-        {
           "label": "Creating a Plugin",
-          "url": "/plugins/creating-plugins"
+          "url": "/creating-plugins"
         },
         {
           "label": "Multiplex",
-          "url": "/plugins/multiplex"
+          "url": "/multiplex"
         },
         {
           "label": "Third Party Plugins",
@@ -180,7 +176,7 @@
       "items": [
         {
           "label": "Upgrade Instructions",
-          "url": "/other/upgrading"
+          "url": "/upgrading"
         },
         {
           "label": "Changelog",

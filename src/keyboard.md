@@ -23,7 +23,7 @@ The keyboard object is a map of key codes and their corresponding *action*. The 
 | Type          | Action
 | :-            | :-
 | Function      | Triggers a callback function.
-| String        | Calls the given method name in the [reveal.js API](/api/methods).
+| String        | Calls the given method name in the [reveal.js API](/methods).
 | null          | Disables the key (blocks the default reveal.js action)
 {.key-value}
 

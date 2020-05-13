@@ -2,7 +2,7 @@ import Reveal from 'reveal.js';
 import Highlight from 'reveal.js/dist/plugin/highlight.esm.js';
 import Markdown from 'reveal.js/dist/plugin/markdown.esm.js';
 import Zoom from 'reveal.js/dist/plugin/zoom.esm.js';
-import { throttle } from 'lodash';
+import { throttle } from 'lodash/throttle';
 
 export default () => {
 

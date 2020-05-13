@@ -97,7 +97,7 @@ Special syntax (through HTML comments) is available for adding attributes to the
 
 ## Syntax Highlighting
 
-Powerful syntax highlighting features are built into reveal.js. Using the bracket syntax shown below, you can highlight individual lines and even walk through multiple separate highlights step-by-step. [Learn more about line highlights](/content/code/#line-numbers-highlights).
+Powerful syntax highlighting features are built into reveal.js. Using the bracket syntax shown below, you can highlight individual lines and even walk through multiple separate highlights step-by-step. [Learn more about line highlights](/code/#line-numbers-highlights).
 
 ```html
 <section data-markdown>

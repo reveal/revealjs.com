@@ -25,14 +25,11 @@
     }
 
     // :'(
-    &>a,
-    &>*>a,
-    &>*>*>a,
-    table a {
-        @apply text-pink-600 no-underline break-words;
+    a:not([class]) {
+        @apply text-pink-600 border-b border-pink-200 no-underline break-words;
 
         &:hover {
-            @apply text-pink-800;
+            @apply text-pink-800 border-pink-300;
         }
     }
 
@@ -151,6 +148,10 @@
 
         pre {
             font-size: 28px;
+        }
+
+        a {
+            @apply no-underline border-none;
         }
     }
 

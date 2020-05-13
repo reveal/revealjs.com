@@ -12,7 +12,7 @@ reveal.js is an open source HTML presentation framework. It's a tool that enable
 
 Presentations made with reveal.js are built on open technologies. That means anything you can do on the web, you can do in your presentation. Change styles with CSS, include an external web page using an `<iframe>` or write your own custom behavior with JavaScript.
 
-The framework comes with a broad range of features including [nested slides](/features/vertical-slides/), [Markdown support](/content/markdown), [PDF export](/features/pdf-export), [speaker notes](/features/speaker-view/), [syntax highlighted code](/content/code) and a [JavaScript API](/api). There's also a fully featured visual editor and platform for sharing reveal.js presentations at [slides.com](https://slides.com?ref=github).
+The framework comes with a broad range of features including [nested slides](/vertical-slides/), [Markdown support](/markdown), [PDF export](/pdf-export), [speaker notes](/speaker-view/), [syntax highlighted code](/code) and a [JavaScript API](/api). There's also a fully featured visual editor and platform for sharing reveal.js presentations at [slides.com](https://slides.com?ref=github).
 
 
 ## Ready to Get Started?
