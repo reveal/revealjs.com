@@ -172,6 +172,9 @@
         @apply absolute block inset-0 border-2 border-pink-400 pointer-events-none rounded-b;
     }
 }
+.article .reveal h1 { font-size: 2.5em; }
+.article .reveal h2 { font-size: 1.6em; }
+.article .reveal h3 { font-size: 1.3em; }
 
 
 .anchorjs-link:after {
