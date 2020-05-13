@@ -66,6 +66,10 @@
           "url": "/content/transitions"
         },
         {
+          "label": "Config Options",
+          "url": "/api/config"
+        },
+        {
           "label": "Presentation Size",
           "url": "/api/presentation-size"
         }
@@ -118,10 +122,6 @@
         {
           "label": "Initialization",
           "url": "/api/initialization"
-        },
-        {
-          "label": "Config Options",
-          "url": "/api/config"
         },
         {
           "label": "API Methods",
