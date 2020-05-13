@@ -30,10 +30,16 @@ a, button {
     transform: translateY(-20px);
     opacity: 0;
 }
-.header-logo {
+.header-logo,
+.menu-visible .header-logo.invisible {
     transform: none;
     transition: all 0.2s ease;
     opacity: 1;
+    visibility: visible;
+}
+
+.menu-visible .header-logo.invisible {
+    transition: none;
 }
 
 .no-transition,
