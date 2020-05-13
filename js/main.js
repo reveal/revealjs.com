@@ -1,3 +1,5 @@
+import setupHome from 'pages/home.js';
+import setupDemo from 'pages/demo.js';
 import 'navigation.js';
 import 'hovereffect.js';
 
@@ -9,6 +11,7 @@ import Markdown from 'reveal.js/dist/plugin/markdown.esm.js';
 import MathJax from 'reveal.js/dist/plugin/math.esm.js';
 import Zoom from 'reveal.js/dist/plugin/zoom.esm.js';
 
+const PAGE_ID = document.body.dataset.page;
 
 if( document.readyState === 'complete' ) {
 	setup();
@@ -24,38 +27,30 @@ else if( document.readyState === 'interactive' ) {
 
 function setup() {
 
+	setupAnchors();
+	setupInlineDecks();
+
+	if( PAGE_ID === 'home' ) {
+		setupHome();
+	}
+	else if( PAGE_ID === 'demo' ) {
+		setupDemo();
+	}
+
+}
+
+function setupAnchors() {
+
 	// Set up link anchors
 	const anchors = new AnchorJS();
 	anchors.options = { placement: 'left', icon: '#' };
 	anchors.add( '.article>h2, .article>h3, .article>h4' );
 
+}
 
-	// Set up the homepage demo deck
-	Array.from( document.querySelectorAll( '.reveal-demo .reveal' ) ).forEach( deckElement => {
+function setupInlineDecks() {
 
-		let deck = new Reveal( deckElement, {
-			embedded: true,
-			hash: true,
-			margin: 0.1,
-			plugins: [ Markdown, Highlight, Zoom ]
-		});
-		deck.initialize();
-
-	} );
-
-	// Full page version of the reveal.js demo
-	Array.from( document.querySelectorAll( '.full-page-demo .reveal' ) ).forEach( deckElement => {
-
-		let deck = new Reveal( deckElement, {
-			hash: true,
-			plugins: [ Markdown, Highlight, Zoom ]
-		});
-		deck.initialize();
-
-	} );
-
-
-	// Set up inline example decks in the documentation
+	// Inline example decks in the docs
 	Array.from( document.querySelectorAll( '.reveal-example' ) ).forEach( deckElement => {
 
 		// If this deck is paired with an input code block,

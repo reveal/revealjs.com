@@ -1,6 +1,6 @@
-<header class="header {% if id == "landing" %}sticky{% else %}fixed{% endif %} flex h-16 items-center top-0 w-full z-30 bg-gray-100 py-2 border-b border-gray-300">
+<header class="header {% if id == "home" %}sticky{% else %}fixed{% endif %} flex h-16 items-center top-0 w-full z-30 overflow-hidden bg-gray-100 py-2 border-b border-gray-300">
   <div class="w-full max-w-screen-xl mx-auto px-6 flex flex-row items-center justify-between">
-    <a class="block text-black" href="/" title="reveal.js home">
+    <a class="header-logo block text-black {% if id == "home" %}invisible{% endif %}" href="/" title="reveal.js home">
       <img src="/images/logo/logo-black-text.svg" alt="reveal.js logo" style="height: 48px">
     </a>
 

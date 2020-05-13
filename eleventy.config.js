@@ -19,7 +19,7 @@ module.exports = eleventyConfig => {
 
     // Layout aliases
     eleventyConfig.addLayoutAlias('default', 'default.njk')
-    eleventyConfig.addLayoutAlias('landing', 'landing.njk')
+    eleventyConfig.addLayoutAlias('home', 'home.njk')
 
     // Include our static assets
     eleventyConfig.addPassthroughCopy('images')

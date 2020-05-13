@@ -1,8 +1,8 @@
 ---
-id: landing
+id: home
 title: The HTML Presentation Framework
 description: Home of the reveal.js HTML presentation framework
-layout: landing
+layout: home
 hidden: true
 ---
 

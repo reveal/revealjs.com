@@ -26,6 +26,16 @@ a, button {
     -webkit-tap-highlight-color: transparent;
 }
 
+.header-logo.invisible {
+    transform: translateY(-20px);
+    opacity: 0;
+}
+.header-logo {
+    transform: none;
+    transition: all 0.2s ease;
+    opacity: 1;
+}
+
 .no-transition,
 .no-transition * {
     transition: none !important;
