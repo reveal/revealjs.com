@@ -2,6 +2,7 @@ import Reveal from 'reveal.js';
 import Highlight from 'reveal.js/dist/plugin/highlight.esm.js';
 import Markdown from 'reveal.js/dist/plugin/markdown.esm.js';
 import Zoom from 'reveal.js/dist/plugin/zoom.esm.js';
+import { throttle } from 'lodash';
 
 export default () => {
 
@@ -26,7 +27,7 @@ export default () => {
 
 			updateVisibility();
 
-			document.addEventListener( 'scroll', updateVisibility )
+			document.addEventListener( 'scroll', throttle( updateVisibility, 100 ) )
 
 		}
 
