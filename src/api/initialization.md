@@ -50,7 +50,7 @@ By default reveal.js will capture all keyboard events in the document. For embed
 </script>
 ```
 
-## ES Module <span class="r-version-badge new">4.0.0</span>
+## ES Module <span class="r-version-badge new">4.0.0</span> {id="es-module"}
 
 We provide two JavaScript bundles depending your use case. Our default presentation boilerplate uses `dist/reveal.js` which has broad cross browser support (ES5) and exposes Reveal to the global window (UMD).
 

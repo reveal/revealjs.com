@@ -1,7 +1,7 @@
 $headerHeight: 4rem;
 $headerMargin: 2rem;
 
-$activeColor: #e9d8fd;
+$activeColor: lighten(#FBB6CE,5%);
 
 $easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.275);
 $easeOutQuint: cubic-bezier(0.230, 1.000, 0.320, 1.000);
@@ -45,7 +45,7 @@ a, button {
 .reveal a,
 .reveal .controls button,
 .reveal .progress span {
-    @apply text-purple-300;
+    @apply text-pink-500;
 }
 
 .reveal .progress {
@@ -81,7 +81,7 @@ a, button {
 }
 
 .nav-link.selected {
-    @apply bg-purple-300 text-purple-900 rounded;
+    @apply bg-pink-300 text-pink-900 rounded;
 }
 
 

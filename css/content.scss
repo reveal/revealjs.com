@@ -29,10 +29,10 @@
     &>*>a,
     &>*>*>a,
     table a {
-        @apply text-purple-700 no-underline .break-words;
+        @apply text-pink-600 no-underline break-words;
 
         &:hover {
-            @apply text-purple-500;
+            @apply text-pink-800;
         }
     }
 
@@ -86,7 +86,7 @@
     }
 
     code:not([class*="language-"]):not(.hljs) {
-        @apply rounded bg-gray-200 text-purple-900 p-1 py-px leading-relaxed;
+        @apply rounded bg-gray-200 text-pink-900 p-1 py-px leading-relaxed;
     }
 
     pre mark {
@@ -165,7 +165,7 @@
 
     .reveal-example.focused:before {
         content: '';
-        @apply absolute block inset-0 border-2 border-purple-400 pointer-events-none rounded-b;
+        @apply absolute block inset-0 border-2 border-pink-400 pointer-events-none rounded-b;
     }
 }
 
