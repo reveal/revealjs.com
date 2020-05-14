@@ -20,7 +20,7 @@ You can create links from one slide to another. Start by giving your target slid
 	<a href="#/0">Back to the first</a>
 </section>
 ```
-<div class="reveal reveal-example">
+<div class="reveal reveal-example" data-config='{"respondToHashChanges": true}'>
   <div class="slides">
     <section>
 		<a href="#/grand-finale">Go to the last slide</a>

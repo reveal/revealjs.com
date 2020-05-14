@@ -87,7 +87,78 @@ Reveal.on( 'autoanimate', event => {
 } );
 ```
 
-## Example: List Animation
+## Example: Animating Between Code Blocks
+We support animations between code blocks. Make sure that the code block has `data-line-numbers` enabled and that all blocks have a matching `data-id` value.
+```html
+<section data-auto-animate>
+  <pre data-id="code-animation"><code data-trim data-line-numbers>
+    let planets = [
+      { name: 'mars', diameter: 6779 },
+    ]
+  </code></pre>
+</section>
+<section data-auto-animate>
+  <pre data-id="code-animation"><code data-trim data-line-numbers>
+    let planets = [
+      { name: 'mars', diameter: 6779 },
+      { name: 'earth', diameter: 12742 },
+      { name: 'jupiter', diameter: 139820 }
+    ]
+  </code></pre>
+</section>
+<section data-auto-animate>
+  <pre data-id="code-animation"><code data-trim data-line-numbers>
+    let circumferenceReducer = ( c, planet ) => {
+      return c + planet.diameter * Math.PI;
+    }
+
+    let planets = [
+      { name: 'mars', diameter: 6779 },
+      { name: 'earth', diameter: 12742 },
+      { name: 'jupiter', diameter: 139820 }
+    ]
+
+    let c = planets.reduce( circumferenceReducer, 0 )
+  </code></pre>
+</section>
+```
+<div class="reveal reveal-example">
+  <div class="slides">
+    <section data-auto-animate>
+      <pre data-id="code-animation"><code data-trim data-line-numbers>
+        let planets = [
+          { name: 'mars', diameter: 6779 },
+        ]
+      </code></pre>
+    </section>
+    <section data-auto-animate>
+      <pre data-id="code-animation"><code data-trim data-line-numbers>
+        let planets = [
+          { name: 'mars', diameter: 6779 },
+          { name: 'earth', diameter: 12742 },
+          { name: 'jupiter', diameter: 139820 }
+        ]
+      </code></pre>
+    </section>
+    <section data-auto-animate>
+      <pre data-id="code-animation"><code data-trim data-line-numbers>
+        let circumferenceReducer = ( c, planet ) => {
+          return c + planet.diameter * Math.PI;
+        }
+        &nbsp;
+        let planets = [
+          { name: 'mars', diameter: 6779 },
+          { name: 'earth', diameter: 12742 },
+          { name: 'jupiter', diameter: 139820 }
+        ]
+        &nbsp;
+        let c = planets.reduce( circumferenceReducer, 0 )
+      </code></pre>
+    </section>
+  </div>
+</div>
+
+## Example: Animating Between Lists
 We match list items individually to let you animate new items being added or removed.
 ```html/2-4,10,12
 <section data-auto-animate>

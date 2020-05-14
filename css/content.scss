@@ -80,6 +80,7 @@
 .article {
     pre[class*="language-"] {
         @apply mx-4 my-2 -mx-4 p-4;
+        max-height: 50vh;
     }
 
     code:not([class*="language-"]):not(.hljs) {
@@ -148,6 +149,7 @@
 
         pre {
             font-size: 28px;
+            width: 100%;
         }
 
         a {

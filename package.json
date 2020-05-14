@@ -1,6 +1,6 @@
 {
   "name": "revealjs.com",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "The official reveal.js website",
   "scripts": {
     "test": "mdspell -r -n -a --en-us 'src/*.md' 'src/**/*.md'",
