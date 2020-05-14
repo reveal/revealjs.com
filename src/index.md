@@ -1,7 +1,7 @@
 ---
 id: home
-title: The HTML Presentation Framework
-description: Home of the reveal.js HTML presentation framework
+title: The HTML presentation framework
+description: Documentation and demos for the open source reveal.js HTML presentation framework.
 layout: home
 hidden: true
 ---
