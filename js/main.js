@@ -1,7 +1,7 @@
 import setupHome from 'pages/home.js';
 import setupDemo from 'pages/demo.js';
+import setupHovers from 'hovereffect.js';
 import 'navigation.js';
-import 'hovereffect.js';
 
 import AnchorJS from 'anchor-js';
 
@@ -13,6 +13,7 @@ import Zoom from 'reveal.js/dist/plugin/zoom.esm.js';
 
 const PAGE_ID = document.body.dataset.page;
 
+setupHovers( '.header-nav a, .header-cta, .sidebar a:not(.selected)' );
 setupAnchors();
 
 if( document.readyState === 'complete' ) {

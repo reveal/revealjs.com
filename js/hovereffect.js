@@ -12,33 +12,30 @@ let trackMouseMovement = () => {
 
 	document.addEventListener( 'mousemove', () => {
 
-		if( this.lastMouseX && this.lastMouseY ) {
-			let ox = event.pageX - this.lastMouseX;
-			let oy = event.pageY - this.lastMouseY;
+		if( lastMouseX && lastMouseY ) {
+			let ox = event.pageX - lastMouseX;
+			let oy = event.pageY - lastMouseY;
 
 			// let longestMovement = Math.max( Math.abs( ox ), Math.abs( oy ) );
 
 			// let sx = ox/longestMovement;
 			// let sy = oy/longestMovement;
 
-			this.pointerDirectionX = ox/6;
-			this.pointerDirectionY = oy/6;
+			pointerDirectionX = ox/6;
+			pointerDirectionY = oy/6;
 		}
 
-		this.lastMouseX = event.pageX;
-		this.lastMouseY = event.pageY;
-
-		this.lastScreenX = event.screenX;
-		this.lastScreenY = event.screenY;
+		lastMouseX = event.pageX;
+		lastMouseY = event.pageY;
 
 	} );
 
 	document.addEventListener( 'scroll', event => {
-		this.lastMouseX = null;
-		this.lastMouseY = null;
+		lastMouseX = null;
+		lastMouseY = null;
 
-		this.pointerDirectionX = 0;
-		this.pointerDirectionY = 0;
+		pointerDirectionX = 0;
+		pointerDirectionY = 0;
 	} );
 
 }
@@ -61,10 +58,10 @@ let bindDirectionalHovers = ( element, childSelector ) => {
 		// Move the children into their start positions
 		children.forEach( childElement => {
 			childElement.classList.add( 'no-transition' );
-			translate( childElement, -15 * this.pointerDirectionX, -15 * this.pointerDirectionY );
+			translate( childElement, -15 * pointerDirectionX, -15 * pointerDirectionY );
 			childElement.offsetHeight;
 			childElement.classList.remove( 'no-transition' );
-		}, this );
+		} );
 
 
 		// Wait until the next cycle and trigger the hover effect
@@ -72,7 +69,7 @@ let bindDirectionalHovers = ( element, childSelector ) => {
 			element.classList.add( 'hover' );
 		}, 1 );
 
-	}.bind( this ), false );
+	}, false );
 
 	element.addEventListener( 'mouseleave', function( event ) {
 
@@ -82,25 +79,29 @@ let bindDirectionalHovers = ( element, childSelector ) => {
 		// direction of the mouse
 		element.classList.remove( 'hover' );
 		children.forEach( childElement => {
-			translate( childElement, 15 * this.pointerDirectionX, 15 * this.pointerDirectionY );
-		}, this );
+			translate( childElement, 15 * pointerDirectionX, 15 * pointerDirectionY );
+		} );
 
-	}.bind( this ), false );
+	}, false );
 
 }
 
-if( !/ipad|iphone|ipod|android|windows\sphone/gi.test( navigator.userAgent ) ) {
+export default selector => {
 
-	// Wrap anchors in the markup we need for hover effects
-	Array.from( document.querySelectorAll( '.header-nav a, .sidebar a:not(.selected)' ) ).forEach( element => {
-		element.classList.add( 'r-anchor' );
-		element.innerHTML = '<span class="r-anchor-label">' + element.innerHTML + '</span><span class="r-anchor-background"></span>';
-	} );
+	if( !/ipad|iphone|ipod|android|windows\sphone/gi.test( navigator.userAgent ) ) {
 
-	Array.from( document.querySelectorAll( '.r-anchor' ) ).forEach( element => {
-		bindDirectionalHovers( element, '.r-anchor-background' );
-	}, this );
+		// Wrap anchors in the markup we need for hover effects
+		Array.from( document.querySelectorAll( selector ) ).forEach( element => {
+			element.classList.add( 'r-anchor' );
+			element.innerHTML = '<span class="r-anchor-label">' + element.innerHTML + '</span><span class="r-anchor-background"></span>';
+		} );
 
-	trackMouseMovement();
+		Array.from( document.querySelectorAll( '.r-anchor' ) ).forEach( element => {
+			bindDirectionalHovers( element, '.r-anchor-background' );
+		} );
+
+		trackMouseMovement();
+
+	}
 
 }

@@ -17,12 +17,10 @@ export default () => {
 	function setupHeader() {
 
 		let demoLogo = document.querySelector( '.demo-logo' );
-		let headerLogo = document.querySelector( '.header-logo' );
-
-		if( demoLogo && headerLogo ) {
+		if( demoLogo ) {
 
 			let updateVisibility = () => {
-				headerLogo.classList.toggle( 'invisible', demoLogo.getBoundingClientRect().bottom > 0 );
+				document.documentElement.classList.toggle( 'logo-visible', demoLogo.getBoundingClientRect().bottom < 0 );
 			}
 
 			updateVisibility();

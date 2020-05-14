@@ -1,7 +1,7 @@
 $headerHeight: 4rem;
 $headerMargin: 2rem;
 
-$activeColor: lighten(#FBB6CE,5%);
+$activeColor: #F2E142;
 
 $easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.275);
 $easeOutQuint: cubic-bezier(0.230, 1.000, 0.320, 1.000);
@@ -67,19 +67,38 @@ a, button {
     -webkit-tap-highlight-color: transparent;
 }
 
-.header-logo.invisible {
+.header-logo-wrapper {
+    position: relative;
+}
+
+.header-logo {
     transform: translateY(-20px);
     opacity: 0;
+    visibility: hidden;
 }
-.header-logo,
-.menu-visible .header-logo.invisible {
+.logo-visible .header-logo,
+.menu-visible .header-logo {
     transform: none;
     transition: all 0.2s ease;
     opacity: 1;
     visibility: visible;
 }
 
-.menu-visible .header-logo.invisible {
+.header-cta {
+    position: absolute !important;
+    transition: all 0.2s ease;
+    top: 0;
+}
+
+.logo-visible .header-cta,
+.menu-visible .header-cta {
+    opacity: 0;
+    transform: translateY(20px);
+    visibility: hidden;
+}
+
+.menu-visible .header-logo,
+.menu-visible .header-cta {
     transition: none;
 }
 
@@ -104,8 +123,12 @@ a, button {
     @apply text-gray-700 w-full inline-block;
 }
 
+.nav-link:hover {
+    @apply text-yellow-900;
+}
+
 .nav-link.selected {
-    @apply bg-pink-300 text-pink-900 rounded;
+    @apply text-yellow-900 bg-yellow-400 rounded;
 }
 
 

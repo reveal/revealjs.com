@@ -1,8 +1,11 @@
 <header class="header {% if id == "home" %}sticky{% else %}fixed{% endif %} flex h-16 items-center top-0 w-full z-30 overflow-hidden bg-gray-100 py-2 border-b border-gray-300">
-  <div class="w-full max-w-screen-xl mx-auto px-6 flex flex-row items-center justify-between">
-    <a class="header-logo block text-black mr-6 {% if id == "home" %}invisible{% endif %}" href="/" title="reveal.js home">
-      <img src="/images/logo/logo-black-text.svg" alt="reveal.js logo" style="height: 48px">
-    </a>
+  <div class="w-full relative max-w-screen-xl mx-auto px-6 flex flex-row items-center justify-between">
+    <div class="header-left block text-black mr-6">
+      <a class="header-logo block text-black mr-6" href="/" title="reveal.js home">
+        <img src="/images/logo/logo-black-text.svg" alt="reveal.js logo" style="height: 48px">
+      </a>
+      <a class="header-cta py-3 px-2 -mx-2 text-gray-800 hover:text-gray-900 rounded font-semibold" href="/installation">Get Started</a>
+    </div>
 
     <nav class="header-nav hidden md:flex">
 
@@ -17,9 +20,6 @@
           <a class="inline-block py-3 px-5 text-gray-800 hover:text-gray-900 rounded font-semibold align-middle" href="https://github.com/hakimel/reveal.js" target="_blank">
             {% include "images/github.svg" %}
           </a>
-        </li>
-        <li>
-          <a class="inline-block py-3 px-5 text-gray-800 hover:text-gray-900 rounded font-semibold" href="/installation">Get Started</a>
         </li>
 
       </ul>
