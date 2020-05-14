@@ -51,10 +51,13 @@ a, button {
 	font-family: 'Inter', sans-serif !important;
 }
 
-.reveal iframe,
-.reveal a img {
+.reveal iframe {
     margin-left: auto;
     margin-right: auto;
+}
+
+.reveal img {
+    display: inline-block;
 }
 
 

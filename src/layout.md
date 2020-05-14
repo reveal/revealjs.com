@@ -6,13 +6,13 @@ layout: default
 
 # Layout
 
-We provide a a few different layout helpers for your content. We're aiming to add more of these in upcoming versions so keep an eye out for that.
+We provide a few different helper classes for controlling the layout and styling your content. We're aiming to add more of these in upcoming versions so keep an eye out for that.
 
 If you're looking to change the sizing, scaling and centering of your presentation please see [Presentation Size](/presentation-size).
 
 ## Stack
 
-The `r-stack` layout helper lets you center and place multiple elements on top of each other. This is intended to be used together with [fragments](/fragmetns) to incrementally reveal elements.
+The `r-stack` layout helper lets you center and place multiple elements on top of each other. This is intended to be used together with [fragments](/fragments) to incrementally reveal elements.
 
 ```html
 <div class="r-stack">
@@ -68,7 +68,7 @@ The `r-stretch` layout helper lets you resize an element, like an image or video
   <div class="slides">
     <section>
       <h2>Stretch Example</h2>
-      <img class="r-stretch plain" style="display: inline-block;" src="/images/slides-symbol-512x512.png">
+      <img class="r-stretch" style="display: inline-block;" src="/images/slides-symbol-512x512.png">
       <p>Image byline</p>
     </section>
   </div>
@@ -77,3 +77,25 @@ The `r-stretch` layout helper lets you resize an element, like an image or video
 #### Stretch Limitations
 - Only direct descendants of a slide section can be stretched
 - Only one descendant per slide section can be stretched
+
+
+## Frame
+
+Decorate any element with `r-frame` to make it stand out against the background. If the framed element is placed inside an anchor, we'll apply a hover effect to the border.
+
+```html
+<img src="logo.svg" width="200">
+<a href="#">
+  <img class="r-frame" src="logo.svg" width="200">
+</a>
+```
+<div class="reveal reveal-example">
+  <div class="slides">
+    <section>
+      <img src="/images/logo/reveal-symbol.svg" width="200">
+      <a href="#">
+        <img class="r-frame" src="/images/logo/reveal-symbol.svg" width="200">
+      </a>
+    </section>
+  </div>
+</div>
