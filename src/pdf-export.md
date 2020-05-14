@@ -8,11 +8,11 @@ layout: default
 
 Presentations can be exported to PDF via a special print stylesheet. Here's an example of an exported presentation that's been uploaded to SlideShare: http://www.slideshare.net/hakimel/revealjs-300.
 
-Note: This feature requires has only been confirmed to work in [Google Chrome](http://google.com/chrome) and [Chromium](https://www.chromium.org/Home).
+Note: This feature requires has only been confirmed to work in [Google Chrome](https://google.com/chrome) and [Chromium](https://www.chromium.org/Home).
 
 ## Instructions
 
-1. Open your presentation with `print-pdf` included in the query string, for example: `http://localhost:8000/?print-pdf`. You can test this at [revealjs.com/demo?print-pdf](/demo?print-pdf).
+1. Open your presentation with `print-pdf` included in the query string, for example: `http://localhost:8000/?print-pdf`. You can test this at [revealjs.com/demo?print-pdf](/demo/?print-pdf).
 1. Open the in-browser print dialog (CTRL/CMD+P).
 1. Change the **Destination** setting to **Save as PDF**.
 1. Change the **Layout** to **Landscape**.
@@ -24,7 +24,7 @@ Note: This feature requires has only been confirmed to work in [Google Chrome](h
 
 ## Speaker Notes
 
-Your [speaker notes](/speaker-view) can be included in the PDF export by enabling the `showNotes`.
+Your [speaker notes](/speaker-view/) can be included in the PDF export by enabling the `showNotes`.
 
 ```js
 Reveal.configure({ showNotes: true });
@@ -38,17 +38,17 @@ Reveal.configure({ showNotes: 'separate-page' });
 
 ## Page Numbers
 
-If you want to number printed pages, make sure to enable [slide numbers](/slide-numbers).
+If you want to number printed pages, make sure to enable [slide numbers](/slide-numbers/).
 
 ## Page Size
 
-Export dimensions are inferred from the configured [presentation size](/presentation-size). Slides that are too tall to fit within a single page will expand onto multiple pages. You can limit how many pages a slide may expand to using the `pdfMaxPagesPerSlide` config option. For example, to ensures that no slide ever grows to more than one printed page you can set it to 1.
+Export dimensions are inferred from the configured [presentation size](/presentation-size/). Slides that are too tall to fit within a single page will expand onto multiple pages. You can limit how many pages a slide may expand to using the `pdfMaxPagesPerSlide` config option. For example, to ensures that no slide ever grows to more than one printed page you can set it to 1.
 ```js
 Reveal.configure({ pdfMaxPagesPerSlide: 1 })
 ```
 
 ## Separate Pages for Fragments
-[Fragments](/fragments) are printed on separate slides by default. Meaning if you have a slide with three fragment steps, it will generate three separate slides where the fragments appear incrementally.
+[Fragments](/fragments/) are printed on separate slides by default. Meaning if you have a slide with three fragment steps, it will generate three separate slides where the fragments appear incrementally.
 
 If you prefer printing all fragments in their visible states on the same slide you can use the `pdfSeparateFragments` config option.
 

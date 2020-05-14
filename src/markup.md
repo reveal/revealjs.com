@@ -30,7 +30,7 @@ Here's a barebones example of a fully working reveal.js presentation:
 
 The presentation markup hierarchy needs to be `.reveal > .slides > section` where the `section` element represents one slide and can be repeated indefinitely.
 
-If you place multiple `section` elements inside of another `section` they will be shown as [vertical slides](/vertical-slides). The first of the vertical slides is the "root" of the others (at the top), and will be included in the horizontal sequence. For example:
+If you place multiple `section` elements inside of another `section` they will be shown as [vertical slides](/vertical-slides/). The first of the vertical slides is the "root" of the others (at the top), and will be included in the horizontal sequence. For example:
 
 ```html
 <div class="reveal">
@@ -53,7 +53,7 @@ If you place multiple `section` elements inside of another `section` they will b
   </div>
 </div>
 
-It's also possible to write presentations using [Markdown](/markdown).
+It's also possible to write presentations using [Markdown](/markdown/).
 
 ## Viewport
 The reveal.js viewport is the wrapper DOM element that determines the size of your presentation on a web page. By default, this will be the `body` element. If you're including multiple presentations on the same page each presentations `.reveal` element will act as their viewport.

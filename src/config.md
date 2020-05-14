@@ -6,7 +6,7 @@ layout: default
 
 # Configuration Options
 
-Presentation behavior can be fine-tuned using a wide array of configuration options. These objects can be included where you [initialize](/initialization) reveal.js. It's also possible to [change config values at runtime](#reconfiguring).
+Presentation behavior can be fine-tuned using a wide array of configuration options. These objects can be included where you [initialize](/initialization/) reveal.js. It's also possible to [change config values at runtime](#reconfiguring).
 
 Note that **all** configuration values are **optional** and will default to the values specified below.
 

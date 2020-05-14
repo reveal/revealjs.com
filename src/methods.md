@@ -93,4 +93,4 @@ Reveal.getViewportElement(); // <div class="reveal-viewport">
 ```
 
 ## More Reading
-- [Plugin API](/#api)
+- [Plugin API](/plugins/#api)

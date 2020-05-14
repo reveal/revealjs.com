@@ -13,7 +13,7 @@ We provide three different ways to install reveal.js depending on your use case 
 
 #### Next Steps
 
-Once reveal.js is installed, we recommend checking out the [Markup](/markup) and [Config Option](/config) guides.
+Once reveal.js is installed, we recommend checking out the [Markup](/markup/) and [Config Option](/config/) guides.
 
 ## Basic Setup
 
@@ -76,7 +76,7 @@ let deck = new Reveal({
 deck.initialize();
 ```
 
-You'll also need to include the reveal.js styles and a [presentation theme](/themes).
+You'll also need to include the reveal.js styles and a [presentation theme](/themes/).
 ```html
 <link rel="stylesheet" href="/node_modules/reveal.js/dist/reveal.css">
 <link rel="stylesheet" href="/node_modules/reveal.js/dist/theme/black.css">

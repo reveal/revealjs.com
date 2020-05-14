@@ -6,7 +6,7 @@ layout: default
 
 # Math
 
-If you want to display math equations in your presentation you can easily do so with the MathJax plugin. This is a very thin wrapper around the [MathJax](http://www.mathjax.org/) library. [Find our more about plugins here](/plugins).
+If you want to display math equations in your presentation you can easily do so with the MathJax plugin. This is a very thin wrapper around the [MathJax](http://www.mathjax.org/) library. [Find our more about plugins here](/plugins/).
 
 The plugin defaults to using [LaTeX](https://en.wikipedia.org/wiki/LaTeX) but that can be adjusted through the `math` configuration object. Note that MathJax is loaded from a remote server. If you want to use it offline you'll need to download a copy of the library and adjust the `mathjax` configuration value.
 

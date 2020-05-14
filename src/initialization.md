@@ -8,7 +8,7 @@ layout: default
 
 The most common reveal.js use case is to have a single presentation which covers the full viewport. As of 4.0 we also support running [multiple presentations](#multiple-presentations) in parallel on the same page as well as including the library as an [ES module](#es-module).
 
-If you only have a single presentation on the page we recommend initializing reveal.js using the global `Reveal` object. The `Reveal.initialize` method accepts one argument; a reveal.js [config object](/config/options).
+If you only have a single presentation on the page we recommend initializing reveal.js using the global `Reveal` object. The `Reveal.initialize` method accepts one argument; a reveal.js [config object](/config/).
 ```html
 <script src="dist/reveal.js"></script>
 <script>
@@ -25,7 +25,7 @@ Reveal.initialize.then( () => {
 
 ## Multiple Presentations <span class="r-version-badge new">4.0.0</span> {id="multiple-presentations"}
 
-To run multiple presentations side-by-side on the same page you can create instances of the `Reveal` class. The `Reveal` constructor accepts two arguments; the `.reveal` HTML element root of the presentation and an optional [config object](/config/options).
+To run multiple presentations side-by-side on the same page you can create instances of the `Reveal` class. The `Reveal` constructor accepts two arguments; the `.reveal` HTML element root of the presentation and an optional [config object](/config/options/).
 
 Note that you will also need to set the [embedded](/presentation-size/#embedded) config option to true. This flag makes the presentations size themselves according to their `.reveal` root element size, rather than the browser viewport.
 

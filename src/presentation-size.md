@@ -8,7 +8,7 @@ layout: default
 
 All presentations have a "normal" size, that is, the resolution at which they are authored. reveal.js will automatically scale presentations uniformly based on the normal size to ensure that everything fits on any given display or viewport without changing the aspect ratio or layout of your content.
 
-See below for a list of [config options](/options) related to sizing, including their default values:
+See below for a list of [config options](/config/) related to sizing, including their default values:
 
 ```javascript
 Reveal.initialize({
@@ -37,7 +37,7 @@ Reveal.initialize({ center: false })
 
 ## Embedded
 
-By default, reveal.js will assume that it should cover the full browser viewport. If you want to embed your presentation within a smaller portion of a web page, or show [multiple presentations](/initialization/#multiple-presentations) on the same page, you can use the `embedded` [config option](/config).
+By default, reveal.js will assume that it should cover the full browser viewport. If you want to embed your presentation within a smaller portion of a web page, or show [multiple presentations](/initialization/#multiple-presentations) on the same page, you can use the `embedded` [config option](/config/).
 
 ```js
 Reveal.initialize({ embedded: false })

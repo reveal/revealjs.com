@@ -128,7 +128,7 @@ Powerful syntax highlighting features are built into reveal.js. Using the bracke
 
 ## Configuring *marked*
 
-We use [marked](https://github.com/chjj/marked) to parse Markdown. To customize marked's rendering, you can pass in options when [configuring Reveal](#configuration):
+We use [marked](https://github.com/chjj/marked) to parse Markdown. To customize marked's rendering, you can pass in options when [configuring Reveal](/config/):
 
 ```javascript
 Reveal.initialize({

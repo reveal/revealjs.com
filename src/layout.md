@@ -8,11 +8,11 @@ layout: default
 
 We provide a few different helper classes for controlling the layout and styling your content. We're aiming to add more of these in upcoming versions so keep an eye out for that.
 
-If you're looking to change the sizing, scaling and centering of your presentation please see [Presentation Size](/presentation-size).
+If you're looking to change the sizing, scaling and centering of your presentation please see [Presentation Size](/presentation-size/).
 
 ## Stack
 
-The `r-stack` layout helper lets you center and place multiple elements on top of each other. This is intended to be used together with [fragments](/fragments) to incrementally reveal elements.
+The `r-stack` layout helper lets you center and place multiple elements on top of each other. This is intended to be used together with [fragments](/fragments/) to incrementally reveal elements.
 
 ```html
 <div class="r-stack">

@@ -14,7 +14,7 @@ Notes are defined by appending an `<aside>` element to a slide as seen below. Yo
 
 Alternatively you can add your notes in a `data-notes` attribute on the slide. Like `<section data-notes="Something important"></section>`.
 
-When used locally, this feature requires that reveal.js [runs from a local web server](/installation#full-setup).
+When used locally, this feature requires that reveal.js [runs from a local web server](/installation/#full-setup).
 
 ```html/3-5
 <section>
@@ -26,7 +26,7 @@ When used locally, this feature requires that reveal.js [runs from a local web s
 </section>
 ```
 
-If you're using the [Markdown](/markdown) plugin, you can add notes with the help of a special delimiter:
+If you're using the [Markdown](/markdown/) plugin, you can add notes with the help of a special delimiter:
 
 ```html/0-1,7-8
 <section data-markdown="example.md" data-separator="^\n\n\n"
@@ -45,7 +45,7 @@ This will only display in the notes window.
 
 Notes are only visible to the speaker inside of the speaker view. If you wish to share your notes with others you can initialize reveal.js with the `showNotes` configuration value set to `true`. Notes will appear along the bottom of the presentations.
 
-When `showNotes` is enabled notes are also included when you [export to PDF](/pdf-export). By default, notes are printed in a box on top of the slide. If you'd rather print them on a separate page, after the slide, set `showNotes: "separate-page"`.
+When `showNotes` is enabled notes are also included when you [export to PDF](/pdf-export/). By default, notes are printed in a box on top of the slide. If you'd rather print them on a separate page, after the slide, set `showNotes: "separate-page"`.
 
 ## Speaker Notes Clock and Timers
 
