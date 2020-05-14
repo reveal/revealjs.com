@@ -1,7 +1,8 @@
 import setupHome from 'pages/home.js';
 import setupDemo from 'pages/demo.js';
-import setupHovers from 'hovereffect.js';
-import 'navigation.js';
+import setupHovers from 'components/hover.js';
+import setupPrefetch from 'components/prefetch.js';
+import setupNavigation from 'components/navigation.js';
 
 import AnchorJS from 'anchor-js';
 
@@ -13,6 +14,7 @@ import Zoom from 'reveal.js/dist/plugin/zoom.esm.js';
 
 const PAGE_ID = document.body.dataset.page;
 
+setupNavigation();
 setupHovers( '.header-nav a, .header-cta, .sidebar a:not(.selected)' );
 setupAnchors();
 
@@ -31,6 +33,7 @@ else if( document.readyState === 'interactive' ) {
 function setup() {
 
 	setupInlineDecks();
+	setupPrefetch();
 
 	if( PAGE_ID === 'home' ) {
 		setupHome();
