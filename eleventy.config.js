@@ -41,10 +41,24 @@ module.exports = eleventyConfig => {
 
     eleventyConfig.setQuietMode(true);
 
-    // eleventyConfig.addCollection("myCollectionName", function(collection) {
-    //     console.log(collection.getAll()[4].template.frontMatter.content)
-    //     return collection.getAll();
-    // });
+    // Collection of pages that can appear in search results
+    eleventyConfig.addCollection('searchPages', collection => {
+        return collection.getFilteredByGlob('src/*.md').sort((a,b) => {
+            if(a.data.title < b.data.title) return -1;
+            if(a.data.title > b.date.title) return 1;
+            return 0;
+        });
+    });
+
+    // Helper for extracting the searchable content in a page
+    eleventyConfig.addShortcode('searchContent', page => {
+        if( !page.hasOwnProperty('templateContent') ) {
+            console.warn('Failed to extract excerpt: Document has no property "templateContent".');
+            return null;
+        }
+
+        return JSON.stringify( page.templateContent ).slice( 1,-1 );
+    });
 
     // eleventyConfig.addWatchTarget("js/");
     // eleventyConfig.addWatchTarget("css/");
