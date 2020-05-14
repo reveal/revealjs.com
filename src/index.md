@@ -8,20 +8,20 @@ hidden: true
 
 # Create Stunning Presentations on the Web
 
-reveal.js is an open source HTML presentation framework. It's a tool that enables anyone with a web browser to create fully featured and beautiful presentations for free.
+reveal.js is an open source HTML presentation framework. It's a tool that enables anyone with a web browser to create fully-featured and beautiful presentations for free.
 
-Presentations made with reveal.js are built on open technologies. That means anything you can do on the web, you can do in your presentation. Change styles with CSS, include an external web page using an `<iframe>` or write your own custom behavior with JavaScript.
+Presentations made with reveal.js are built on open web technologies. That means anything you can do on the web, you can do in your presentation. Change styles with CSS, include an external web page using an `<iframe>` or add your own custom behavior using our [JavaScript API](/api).
 
-The framework comes with a broad range of features including [nested slides](/vertical-slides/), [Markdown support](/markdown), [PDF export](/pdf-export), [speaker notes](/speaker-view/), [syntax highlighted code](/code) and a [JavaScript API](/api). There's also a fully featured visual editor and platform for sharing reveal.js presentations at [slides.com](https://slides.com?ref=github).
+The framework comes with a broad range of features including [nested slides](/vertical-slides/), [Markdown support](/markdown), [Auto-Animate](/auto-animate), [PDF export](/pdf-export), [speaker notes](/speaker-view/), [LaTeX support](/math) and [syntax highlighted code](/code).
 
 
 ## Ready to Get Started?
 
-Learn how to get the source code and create your first presentation in the [installation instructions](/installation).
+It only takes a minute to get set up. Learn how to create your first presentation in the [installation instructions](/installation)!
 
 ## Online Editor
 
-Presentations are written using HTML or Markdown but there's also an online editor for those of you who prefer a graphical interface. Give it a try at [https://slides.com](https://slides.com?ref=github).
+If you want the benefits of reveal.js without having to write HTML or Markdown try [https://slides.com](https://slides.com?ref=github). It's a fully-featured visual editor and platform for reveal.js, by the same creator.
 
 ## Supporting reveal.js
 
