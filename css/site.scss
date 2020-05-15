@@ -118,11 +118,17 @@ a, button {
     position: fixed;
 }
 
-.menu-toggle:after {
-    content: 'Menu';
+.menu-toggle .line1,
+.menu-toggle .line2 {
+    transition: all 0.4s ease;
+    transform-origin: 8px 12px;
 }
-.menu-visible .menu-toggle:after {
-    content: 'Close';
+
+.menu-visible .menu-toggle .line1 {
+    transform: rotate(45deg);
+}
+.menu-visible .menu-toggle .line2 {
+    transform: rotate(-45deg);
 }
 
 .header-nav path {

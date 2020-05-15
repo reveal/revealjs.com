@@ -25,7 +25,7 @@ Reveal.initialize.then( () => {
 
 ## Multiple Presentations <span class="r-version-badge new">4.0.0</span> {id="multiple-presentations"}
 
-To run multiple presentations side-by-side on the same page you can create instances of the `Reveal` class. The `Reveal` constructor accepts two arguments; the `.reveal` HTML element root of the presentation and an optional [config object](/config/options/).
+To run multiple presentations side-by-side on the same page you can create instances of the `Reveal` class. The `Reveal` constructor accepts two arguments; the `.reveal` HTML element root of the presentation and an optional [config object](/config/).
 
 Note that you will also need to set the [embedded](/presentation-size/#embedded) config option to true. This flag makes the presentations size themselves according to their `.reveal` root element size, rather than the browser viewport.
 
