@@ -74,7 +74,7 @@ export default async () => {
 
 		return `
 			<a href="${result.url}" class="search-result block m-0 p-2 outline-none rounded focus:bg-yellow-400 hover:bg-yellow-400">
-				<p class="font-semibold">${title}</p>
+				<p class="font-semibold text-base">${title}</p>
 				${content}
 			</a>
 			<div class="divider border-t border-gray-200 my-2"></div>
