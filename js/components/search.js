@@ -48,15 +48,14 @@ export default async () => {
 	function renderSearchResult( searchTerm, result ) {
 
 		let content = '';
-		let contentMatches = result.content.matchAll( new RegExp( searchTerm, 'gi' ) )
+		let contentMatches = result.content.matchAll( new RegExp( searchTerm.split(' ').join('|'), 'gi' ) );
 		let i = 0;
 
 		for( let match of contentMatches ) {
 			let start = match.index;
 			let end = start + match[0].length;
-			let value = 	result.content.slice( start - 20, start ) +
-							'<mark>' + match[0] + '</mark>' +
-							result.content.slice( end, end + 140 );
+			let value = result.content.slice( start - 20, end + 140 )
+				.replace( new RegExp( match[0], 'gi' ), '<mark>$&</mark>' );
 
 			if( value ) {
 				content += '<p class="excerpt mt-2">...' + value + '...</p>';
