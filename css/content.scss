@@ -43,11 +43,11 @@
     }
 
     ol {
-        @apply list-inside list-decimal;
+        @apply pl-4 list-decimal;
     }
 
     ul {
-        @apply list-inside list-disc;
+        @apply pl-4 list-disc;
     }
 
     li {
@@ -82,6 +82,11 @@
     pre[class*="language-"] {
         @apply mx-4 my-2 -mx-4 p-4;
         max-height: 50vh;
+    }
+
+    ol pre[class*="language-"],
+    li pre[class*="language-"] {
+        @apply -ml-8;
     }
 
     code:not([class*="language-"]):not(.hljs) {
