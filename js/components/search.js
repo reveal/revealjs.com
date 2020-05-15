@@ -6,11 +6,15 @@ import debounce from 'lodash/debounce';
 
 export default async () => {
 
+	let searchInput = document.querySelector( '.search-input' );
+	let searchResults = document.querySelector( '.search-results' );
+
 	let result;
 	let docs;
 	let index;
 
-	async function loadSearchData() {
+	async function load() {
+
 		searchResults.dataset.state = 'loading';
 		setStatusText( 'Loading...' );
 
@@ -27,34 +31,72 @@ export default async () => {
 				this.add( doc );
 			} );
 		});
+
 	}
 
 	function search( term ) {
+
 		// Make sure we're loaded
 		if( docs ) {
-			let results = index.search( term );
-
-			results.forEach(r => {
-				r.title = docs[r.ref].title;
-				r.url = docs[r.ref].url;
-			});
-
-			return results;
+			return index.search( term ).map( r => {
+				return docs[r.ref];
+			} ).slice(0, 3);
 		}
+
+	}
+
+	function renderSearchResult( searchTerm, result ) {
+
+		let content = '';
+		let contentMatches = result.content.matchAll( new RegExp( searchTerm, 'gi' ) )
+		let i = 0;
+
+		for( let match of contentMatches ) {
+			let start = match.index;
+			let end = start + match[0].length;
+			let value = 	result.content.slice( start - 20, start ) +
+							'<mark>' + match[0] + '</mark>' +
+							result.content.slice( end, end + 140 );
+
+			if( value ) {
+				content += '<p class="excerpt mt-2">...' + value + '...</p>';
+			}
+
+			// Only one excerpt for now
+			if( ++i === 1 ) break;
+		}
+
+		let title = result.title;
+		let titleMatch = title.match( new RegExp( searchTerm, 'i' ) );
+		if( titleMatch && titleMatch.length === 1 ) {
+			title = title.slice( 0, titleMatch.index ) + '<mark>' + titleMatch[0] + '</mark>' + title.slice(  titleMatch.index + titleMatch[0].length );
+		}
+
+		return `
+			<a href="${result.url}" class="search-result block m-0 p-2 outline-none rounded focus:bg-yellow-400 hover:bg-yellow-400">
+				<p class="font-semibold">${title}</p>
+				${content}
+			</a>
+			<div class="divider border-t border-gray-200 my-2"></div>
+		`;
+
 	}
 
 	function setStatusText( value ) {
+
 		searchResults.innerHTML = `<span class="text-gray-500">${value}</span>`;
+
 	}
 
 	function show() {
+
 		if( !isVisible() ) {
 			searchResults.classList.add( 'show' );
 			document.addEventListener( 'mousedown', onDocumentMouseDown );
 
 			// Lazy-load the first time the search field is shown
 			if( !docs ) {
-				loadSearchData().then(
+				load().then(
 					() => {
 						let searchTerm = searchInput.value.trim();
 						if( searchTerm && isVisible() ) {
@@ -68,22 +110,25 @@ export default async () => {
 				);
 			}
 		}
+
 	}
 
 	function hide() {
+
 		if( isVisible() ) {
 			searchResults.classList.remove( 'show' );
 			document.removeEventListener( 'mousedown', onDocumentMouseDown );
 		}
+
 	}
 
 	function isVisible() {
+
 		return searchResults.classList.contains( 'show' );
+
 	}
 
-	let searchInput = document.querySelector( '.search-input' );
-	let searchResults = document.querySelector( '.search-results' );
-
+	searchInput.addEventListener( 'focus', show );
 	searchInput.addEventListener( 'input', debounce( event => {
 
 		let searchTerm = searchInput.value.trim();
@@ -91,14 +136,7 @@ export default async () => {
 
 			let results = search( searchTerm );
 			if( results.length ) {
-				searchResults.innerHTML = results.map( result => {
-					return `
-						<a href="${result.url}" class="search-result block m-0 p-2 outline-none rounded focus:bg-yellow-400 hover:bg-yellow-400">
-							<p>${result.title}</p>
-						</a>
-						<div class="divider border-t border-gray-200 my-2"></div>
-					`;
-				} ).join('');
+				searchResults.innerHTML = results.map( renderSearchResult.bind( this, searchTerm ) ).join('');
 				searchResults.dataset.state = 'has-results';
 			}
 			else {
@@ -113,8 +151,6 @@ export default async () => {
 		}
 
 	}, 300 ) );
-
-	searchInput.addEventListener( 'focus', show );
 
 	document.addEventListener( 'keyup', event => {
 		if( event.key === '/' ) {

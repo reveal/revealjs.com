@@ -1,6 +1,6 @@
 ---
 id: upgrading
-title: Upgrading
+title: Upgrade Instructions
 layout: default
 ---
 
