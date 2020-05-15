@@ -1,4 +1,4 @@
-<header class="header {% if id == "home" %}sticky{% else %}fixed{% endif %} flex h-16 items-center top-0 w-full z-30 overflow-hidden bg-gray-100 py-2 border-b border-gray-300">
+<header class="header {% if id == "home" %}sticky{% else %}fixed{% endif %} flex h-16 items-center top-0 w-full z-30 bg-gray-100 py-2 border-b border-gray-300">
   <div class="w-full relative max-w-screen-xl mx-auto px-6 flex flex-row items-center justify-between">
     <div class="header-left block text-black mr-6">
       <a class="header-logo block text-black mr-6" href="/" title="reveal.js home">
@@ -11,6 +11,10 @@
 
       <ul class="menu flex flex-col md:flex-row items-center list-reset text-base">
 
+        <li class="search relative">
+          <input class="search-input inline-block py-2 px-4 bg-gray-300 border-2 border-gray-300 outline-none rounded text-gray-800 hover:text-gray-900 focus:border-yellow-400 focus:bg-white" placeholder="Search..." />
+          <div class="search-results absolute top-100 bg-white p-2 mt-2 rounded shadow-lg min-w-full text-sm" data-state="no-term"></div>
+        </li>
         <li>
           <a class="inline-block py-3 px-5 text-gray-800 hover:text-gray-900 rounded font-semibold align-middle" href="https://twitter.com/revealjs" target="_blank">
             {% include "images/twitter.svg" %}

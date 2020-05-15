@@ -1,0 +1,17 @@
+
+.search-results {
+    display: none;
+}
+
+.search-results.show[data-state="no-results"],
+.search-results.show[data-state="has-results"] {
+    display: block;
+}
+
+.search-results.show[data-state="no-results"] {
+    @apply p-4;
+}
+
+.divider:last-child {
+    display: none;
+}
