@@ -97,6 +97,18 @@ a, button {
     visibility: hidden;
 }
 
+@media (max-width: 640px) {
+    .header-logo {
+        transform: none;
+        opacity: 1;
+        visibility: visible;
+    }
+    .header-cta {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
 .menu-visible .header-logo,
 .menu-visible .header-cta {
     transition: none;
