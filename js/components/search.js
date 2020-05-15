@@ -6,43 +6,79 @@ import debounce from 'lodash/debounce';
 
 export default async () => {
 
-	let result = await fetch( '/api/search.json' );
-	let docs = await result.json();
+	let result;
+	let docs;
+	let index;
 
-	let index = lunr( function() {
-		this.ref('id');
-		this.field('title');
-		this.field('content');
+	async function loadSearchData() {
+		searchResults.dataset.state = 'loading';
+		setStatusText( 'Loading...' );
 
-		docs.forEach( ( doc, index ) => {
-			doc.id = index;
-			this.add( doc );
-		} );
-	});
+		result = await fetch( '/api/search.json' );
+		docs = await result.json();
 
-	let search = term => {
-		let results = index.search( term );
+		index = lunr( function() {
+			this.ref('id');
+			this.field('title');
+			this.field('content');
 
-		results.forEach(r => {
-			r.title = docs[r.ref].title;
-			r.url = docs[r.ref].url;
+			docs.forEach( ( doc, index ) => {
+				doc.id = index;
+				this.add( doc );
+			} );
 		});
-
-		return results;
 	}
 
-	let show = () => {
-		if( !searchResults.classList.contains( 'show' ) ) {
-			searchResults.classList.add( 'show' );
-			document.addEventListener( 'mousedown', onDocumentMouseDown );
+	function search( term ) {
+		// Make sure we're loaded
+		if( docs ) {
+			let results = index.search( term );
+
+			results.forEach(r => {
+				r.title = docs[r.ref].title;
+				r.url = docs[r.ref].url;
+			});
+
+			return results;
 		}
 	}
 
-	let hide = () => {
-		if( searchResults.classList.contains( 'show' ) ) {
+	function setStatusText( value ) {
+		searchResults.innerHTML = `<span class="text-gray-500">${value}</span>`;
+	}
+
+	function show() {
+		if( !isVisible() ) {
+			searchResults.classList.add( 'show' );
+			document.addEventListener( 'mousedown', onDocumentMouseDown );
+
+			// Lazy-load the first time the search field is shown
+			if( !docs ) {
+				loadSearchData().then(
+					() => {
+						let searchTerm = searchInput.value.trim();
+						if( searchTerm && isVisible() ) {
+							search();
+						}
+					},
+					() => {
+						searchResults.dataset.state = 'loading-error';
+						setStatusText( 'Failed to load search data 😭' );
+					}
+				);
+			}
+		}
+	}
+
+	function hide() {
+		if( isVisible() ) {
 			searchResults.classList.remove( 'show' );
 			document.removeEventListener( 'mousedown', onDocumentMouseDown );
 		}
+	}
+
+	function isVisible() {
+		return searchResults.classList.contains( 'show' );
 	}
 
 	let searchInput = document.querySelector( '.search-input' );
@@ -53,7 +89,7 @@ export default async () => {
 		let searchTerm = searchInput.value.trim();
 		if( searchTerm ) {
 
-			let results = search( searchInput.value );
+			let results = search( searchTerm );
 			if( results.length ) {
 				searchResults.innerHTML = results.map( result => {
 					return `
@@ -66,14 +102,14 @@ export default async () => {
 				searchResults.dataset.state = 'has-results';
 			}
 			else {
-				searchResults.innerHTML = `<span class="text-gray-500">No results for "${searchTerm}"</span>`;
 				searchResults.dataset.state = 'no-results';
+				setStatusText( `No results for "${searchTerm}"` );
 			}
 
 		}
 		else {
-			searchResults.innerHTML = '<span class="text-gray-500">Enter a search term</span>';
 			searchResults.dataset.state = 'no-term';
+			setStatusText( `Enter a search term` );
 		}
 
 	}, 300 ) );

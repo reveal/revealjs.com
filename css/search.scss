@@ -1,10 +1,17 @@
 
+.search {
+    width: 300px;
+}
+
 .search-results {
     display: none;
+    max-width: 90vw;
+    width: 400px;
 }
 
 .search-results.show[data-state="no-results"],
-.search-results.show[data-state="has-results"] {
+.search-results.show[data-state="has-results"],
+.search-results.show[data-state="loading-error"] {
     display: block;
 }
 
