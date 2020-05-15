@@ -150,7 +150,7 @@ export default async () => {
 			setStatusText( `Enter a search term` );
 		}
 
-	}, 300 ) );
+	}, 150 ) );
 
 	document.addEventListener( 'keyup', event => {
 		if( event.key === '/' ) {
