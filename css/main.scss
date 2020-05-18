@@ -1,12 +1,14 @@
 @import '../node_modules/reveal.js/dist/reveal';
-@import 'reveal-theme';
+@import 'lib/reveal-theme';
 @import '../node_modules/highlight.js/scss/dracula.scss';
 @import '../node_modules/prism-themes/themes/prism-dracula';
 
 /* purgecss start ignore */
 
 @tailwind base;
-@import 'site';
+@import 'base';
+@import 'decks';
+@import 'header';
 @import 'search';
 @import 'content';
 @tailwind components;

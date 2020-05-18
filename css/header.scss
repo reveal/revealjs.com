@@ -1,0 +1,72 @@
+.header a,
+.header button {
+    -webkit-tap-highlight-color: transparent;
+}
+
+.header-logo-wrapper {
+    position: relative;
+}
+
+.header-logo {
+    transform: translateY(-20px);
+    opacity: 0;
+    visibility: hidden;
+}
+.logo-visible .header-logo,
+.menu-visible .header-logo {
+    transform: none;
+    transition: all 0.2s ease;
+    opacity: 1;
+    visibility: visible;
+}
+
+.header-cta {
+    position: absolute !important;
+    transition: all 0.2s ease;
+    top: 0;
+}
+
+.logo-visible .header-cta,
+.menu-visible .header-cta {
+    opacity: 0;
+    transform: translateY(20px);
+    visibility: hidden;
+}
+
+@media (max-width: 640px) {
+    .header-logo {
+        transform: none;
+        opacity: 1;
+        visibility: visible;
+    }
+    .header-cta {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.menu-visible .header-logo,
+.menu-visible .header-cta {
+    transition: none;
+}
+
+.menu-visible header {
+    position: fixed;
+}
+
+.menu-toggle .line1,
+.menu-toggle .line2 {
+    transition: all 0.3s ease;
+    transform-origin: 8px 12px;
+}
+
+.menu-visible .menu-toggle .line1 {
+    transform: rotate(45deg);
+}
+.menu-visible .menu-toggle .line2 {
+    transform: rotate(-45deg);
+}
+
+.header-nav path {
+    @apply fill-current;
+}
