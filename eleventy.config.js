@@ -39,6 +39,7 @@ module.exports = eleventyConfig => {
 
     eleventyConfig.setLibrary('md', md);
 
+    // Cut back on terminal noise during development
     eleventyConfig.setQuietMode(true);
 
     // Collection of pages that can appear in search results
