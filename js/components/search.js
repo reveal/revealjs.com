@@ -35,13 +35,22 @@ export default async () => {
 
 	}
 
-	function search( term ) {
+	function search( searchTerm ) {
 
 		// Make sure we're loaded
 		if( docs ) {
-			return index.search( term ).map( r => {
+			let results = index.search( searchTerm ).map( r => {
 				return docs[r.ref];
 			} ).slice(0, SEARCH_RESULT_LIMIT);
+
+			if( results.length ) {
+				searchResults.innerHTML = results.map( renderSearchResult.bind( this, searchTerm ) ).join('');
+				setupHovers( '.search-result' );
+				setState( 'has-results' );
+			}
+			else {
+				setState( 'no-results', `No results for "${searchTerm}"` );
+			}
 		}
 
 	}
@@ -102,7 +111,7 @@ export default async () => {
 					() => {
 						let searchTerm = searchInput.value.trim();
 						if( searchTerm && isVisible() ) {
-							search();
+							search( searchTerm );
 						}
 					},
 					() => {
@@ -144,27 +153,15 @@ export default async () => {
 	}
 
 	searchInput.addEventListener( 'focus', show );
-	searchInput.addEventListener( 'input', debounce( event => {
-
+	searchInput.addEventListener( 'input', event => {
 		let searchTerm = searchInput.value.trim();
 		if( searchTerm ) {
-
-			let results = search( searchTerm );
-			if( results.length ) {
-				searchResults.innerHTML = results.map( renderSearchResult.bind( this, searchTerm ) ).join('');
-				setupHovers( '.search-result' );
-				setState( 'has-results' );
-			}
-			else {
-				setState( 'no-results', `No results for "${searchTerm}"` );
-			}
-
+			search( searchTerm );
 		}
 		else {
 			setState( 'no-term', 'Enter a search term' );
 		}
-
-	}, 150 ) );
+	} );
 
 	document.addEventListener( 'keydown', event => {
 
