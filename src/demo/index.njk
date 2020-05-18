@@ -6,7 +6,7 @@
     <title>Demo | {{ site.name }}</title>
     <meta name="description" content="{% if description %}{{ description }}{% else %}{{ excerpt }}{% endif %}">
 
-    <link rel="stylesheet" href="/main.css">
+    <link rel="stylesheet" href="/main.css{{ helpers.assetSuffix }}">
 
     {% include "meta.njk" %}
 
@@ -19,7 +19,7 @@
 
     {% include "demo.html" %}
 
-    <script src="/main.js" defer></script>
+    <script src="/main.js{{ helpers.assetSuffix }}" defer></script>
 
 </body>
 </html>
