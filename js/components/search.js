@@ -1,5 +1,5 @@
 import lunr from 'lunr';
-import debounce from 'lodash/debounce';
+import throttle from 'lodash/throttle';
 import setupHovers from 'components/hover.js';
 
 // Based on:
@@ -100,12 +100,31 @@ export default async () => {
 
 	}
 
+	let setFixedResultPosition = throttle( () => {
+
+		let bounds = searchInput.getBoundingClientRect();
+		searchResults.style.top = Math.round( bounds.bottom ) + 'px';
+
+	}, 33 );
+
 	function show() {
 
 		if( !isVisible() ) {
 			document.documentElement.classList.add( 'search-visible' );
 			document.addEventListener( 'mousedown', onDocumentMouseDown );
 			document.addEventListener( 'keydown', onDocumentKeyDown );
+
+			// Our search results are position fixed on small screens,
+			// but on the homepage the header is pushed down from the
+			// top of the screen... et voilà:
+			if( document.querySelector( '.header' ).offsetTop > 0 && getComputedStyle( searchResults ).position === 'fixed' ) {
+				document.addEventListener( 'scroll', setFixedResultPosition );
+				setFixedResultPosition();
+			}
+			else {
+				searchResults.style.top = '';
+			}
+
 
 			// Lazy-load the first time the search field is shown
 			if( !docs ) {
@@ -131,6 +150,8 @@ export default async () => {
 			document.documentElement.classList.remove( 'search-visible' );
 			document.removeEventListener( 'mousedown', onDocumentMouseDown );
 			document.removeEventListener( 'keydown', onDocumentKeyDown );
+			document.removeEventListener( 'scroll', updateFixedPosition );
+
 		}
 
 	}
@@ -156,6 +177,8 @@ export default async () => {
 
 	searchInput.addEventListener( 'focus', show );
 	searchInput.addEventListener( 'input', event => {
+		show();
+
 		let searchTerm = searchInput.value.trim();
 		if( searchTerm ) {
 			search( searchTerm );

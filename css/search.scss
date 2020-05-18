@@ -29,11 +29,3 @@
 .divider:last-child {
     display: none;
 }
-
-// Hide the reveal.js demo marquee while searching on
-// the homepage.
-@media (max-width: 1024px) {
-    .search-visible .reveal-demo {
-        display: none;
-    }
-}
