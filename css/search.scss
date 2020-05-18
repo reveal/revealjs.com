@@ -3,13 +3,13 @@
     display: none;
 }
 
-.search-results.show[data-state="no-results"],
-.search-results.show[data-state="has-results"],
-.search-results.show[data-state="loading-error"] {
+.search-visible .search-results[data-state="no-results"],
+.search-visible .search-results[data-state="has-results"],
+.search-visible .search-results[data-state="loading-error"] {
     display: block;
 }
 
-.search-results.show[data-state="no-results"] {
+.search-visible .search-results[data-state="no-results"] {
     @apply p-4;
 }
 
@@ -23,9 +23,17 @@
 }
 
 .search-results mark {
-    @apply ;
+    @apply bg-yellow-300;
 }
 
 .divider:last-child {
     display: none;
+}
+
+// Hide the reveal.js demo marquee while searching on
+// the homepage.
+@media (max-width: 1024px) {
+    .search-visible .reveal-demo {
+        display: none;
+    }
 }

@@ -69,7 +69,9 @@ export default async () => {
 			let end = start + contentMatch.length;
 			let value = result.content.slice( start - 40, end + 120 );
 
-			content = '<p class="excerpt mt-2">...' + highlightWords( value, searchTermMatcher ) + '...</p>';
+			if( value.length > 0 ) {
+				content = '<p class="excerpt mt-2">...' + highlightWords( value, searchTermMatcher ) + '...</p>';
+			}
 		}
 
 		return `
@@ -101,7 +103,7 @@ export default async () => {
 	function show() {
 
 		if( !isVisible() ) {
-			searchResults.classList.add( 'show' );
+			document.documentElement.classList.add( 'search-visible' );
 			document.addEventListener( 'mousedown', onDocumentMouseDown );
 			document.addEventListener( 'keydown', onDocumentKeyDown );
 
@@ -126,7 +128,7 @@ export default async () => {
 	function hide() {
 
 		if( isVisible() ) {
-			searchResults.classList.remove( 'show' );
+			document.documentElement.classList.remove( 'search-visible' );
 			document.removeEventListener( 'mousedown', onDocumentMouseDown );
 			document.removeEventListener( 'keydown', onDocumentKeyDown );
 		}
@@ -135,7 +137,7 @@ export default async () => {
 
 	function isVisible() {
 
-		return searchResults.classList.contains( 'show' );
+		return document.documentElement.classList.contains( 'search-visible' );
 
 	}
 
