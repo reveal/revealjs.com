@@ -42,7 +42,7 @@ Note that this is sensitive to indentation (avoid mixing tabs and spaces) and li
 This is functionality is powered by the built-in Markdown plugin which in turn uses [marked](https://github.com/chjj/marked) for all parsing. The Markdown plugin is included in our default presentation examples. If you want to manually add it to a new presentation here's how:
 
 ```html
-<script src="dist/plugin/markdown.js"></script>
+<script src="plugin/markdown/markdown.js"></script>
 <script>
   Reveal.initialize({
     plugins: [ RevealMarkdown ]

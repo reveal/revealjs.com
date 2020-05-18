@@ -12,7 +12,7 @@ Plugins can be used to extend reveal.js with additional functionality. To make u
 
 Here's an example:
 ```html
-<script src="dist/plugin/markdown.js"></script>
+<script src="plugin/markdown/markdown.js"></script>
 <script>
   Reveal.initialize({
     plugins: [ RevealMarkdown ]
@@ -24,7 +24,7 @@ If you're using ES modules, we also provide module exports for all built-in plug
 ```html
 <script type="module">
   import Reveal from 'dist/reveal.esm.js';
-  import Markdown from 'dist/plugin/markdown.esm.js';
+  import Markdown from 'plugin/markdown/markdown.esm.js';
   Reveal.initialize({
     plugins: [ Markdown ]
   });
@@ -39,12 +39,12 @@ These plugins are distributed together with the reveal.js repo. Here's a complet
 
 | Name               | Description
 | :-                 | :-
-| RevealHighlight    | Syntax highlighted [code](/code/).<br><span class="text-gray-600">dist/plugin/highlight.js</span>
-| RevealMarkdown     | Write content using [Markdown](/markdown/).<br><span class="text-gray-600">dist/plugin/markdown.js</span>
-| RevealSearch       | Press CTRL+Shift+F to search slide content.<br><span class="text-gray-600">dist/plugin/search.js</span>
-| RevealNotes        | Show a [speaker view](/speaker-view/) in a separate window.<br><span class="text-gray-600">dist/plugin/notes.js</span>
-| RevealMath         | Render [math equations](/math/).<br><span class="text-gray-600">dist/plugin/math.js</span>
-| RevealZoom         | Alt+click to zoom in on elements.<br><span class="text-gray-600">dist/plugin/zoom.js</span>
+| RevealHighlight    | Syntax highlighted [code](/code/).<br><span class="text-gray-600">plugin/highlight/highlight.js</span>
+| RevealMarkdown     | Write content using [Markdown](/markdown/).<br><span class="text-gray-600">plugin/markdown/markdown.js</span>
+| RevealSearch       | Press CTRL+Shift+F to search slide content.<br><span class="text-gray-600">plugin/search/search.js</span>
+| RevealNotes        | Show a [speaker view](/speaker-view/) in a separate window.<br><span class="text-gray-600">plugin/notes/notes.js</span>
+| RevealMath         | Render [math equations](/math/).<br><span class="text-gray-600">plugin/math/math.js</span>
+| RevealZoom         | Alt+click to zoom in on elements.<br><span class="text-gray-600">plugin/zoom/zoom.js</span>
 {.key-value}
 
 All of the above are available as ES modules if you swap `.js` for `.esm.js`.
@@ -56,8 +56,8 @@ We provide API methods for checking which plugins that are currently registered.
 
 ```js
 import Reveal from 'dist/reveal.esm.js';
-import Markdown from 'dist/plugin/markdown.esm.js';
-import Highlight from 'dist/plugin/highlight.esm.js';
+import Markdown from 'plugin/markdown/markdown.esm.js';
+import Highlight from 'plugin/highlight/highlight.esm.js';
 
 Reveal.initialize({ plugins: [ Markdown, Highlight ] });
 
@@ -83,10 +83,10 @@ Dependencies are loaded in the order they appear.
 ```js
 Reveal.initialize({
   dependencies: [
-    { src: ’dist/plugin/markdown.js’, condition: () => {
+    { src: plugin/markdown/markdown.js’, condition: () => {
         return !!document.querySelector( ’[data-markdown]’ );
     } },
-    { src: ’dist/plugin/highlight.js’, async: true }
+    { src: plugin/highlight/highlight.js’, async: true }
   ]
 });
 ```

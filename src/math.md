@@ -13,7 +13,7 @@ The plugin defaults to using [LaTeX](https://en.wikipedia.org/wiki/LaTeX) but th
 Below is an example of how the plugin can be configured. If you don't intend to change these values you do not need to include the `math` config option at all.
 
 ```html
-<script src="dist/plugin/math.js"></script>
+<script src="plugin/math/math.js"></script>
 <script>
   Reveal.initialize({
     math: {

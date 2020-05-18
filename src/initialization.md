@@ -61,7 +61,7 @@ Here's how to import and initialize the ES module version of reveal.js as well a
 ```html
 <script type="module">
   import Reveal from 'dist/reveal.esm.js';
-  import Markdown from 'dist/plugin/markdown.esm.js';
+  import Markdown from 'plugin/markdown/markdown.esm.js';
   Reveal.initialize({
     plugins: [ Markdown ]
   });

@@ -1,7 +1,7 @@
 import Reveal from 'reveal.js';
-import Highlight from 'reveal.js/dist/plugin/highlight.esm.js';
-import Markdown from 'reveal.js/dist/plugin/markdown.esm.js';
-import Zoom from 'reveal.js/dist/plugin/zoom.esm.js';
+import Highlight from 'reveal.js/plugin/highlight/highlight.esm.js';
+import Markdown from 'reveal.js/plugin/markdown/markdown.esm.js';
+import Zoom from 'reveal.js/plugin/zoom/zoom.esm.js';
 
 export default () => {
 
