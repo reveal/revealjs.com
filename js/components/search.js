@@ -6,19 +6,19 @@ import debounce from 'lodash/debounce';
 
 export default async () => {
 
-	let searchInput = document.querySelector( '.search-input' );
-	let searchResults = document.querySelector( '.search-results' );
+	const SEARCH_RESULT_LIMIT = 3;
 
-	let result;
+	const searchInput = document.querySelector( '.search-input' );
+	const searchResults = document.querySelector( '.search-results' );
+
 	let docs;
 	let index;
 
 	async function load() {
 
-		searchResults.dataset.state = 'loading';
-		setStatusText( 'Loading...' );
+		setState( 'loading', 'Loading...' );
 
-		result = await fetch( '/api/search.json' );
+		let result = await fetch( '/api/search.json' );
 		docs = await result.json();
 
 		index = lunr( function() {
@@ -40,35 +40,26 @@ export default async () => {
 		if( docs ) {
 			return index.search( term ).map( r => {
 				return docs[r.ref];
-			} ).slice(0, 3);
+			} ).slice(0, SEARCH_RESULT_LIMIT);
 		}
 
 	}
 
 	function renderSearchResult( searchTerm, result ) {
 
+		let searchTermMatcher = new RegExp( searchTerm.split(' ').join('|'), 'i' );
+
+		let title = highlightWords( result.title, searchTermMatcher );
+
 		let content = '';
-		let contentMatches = result.content.matchAll( new RegExp( searchTerm.split(' ').join('|'), 'gi' ) );
-		let i = 0;
+		let contentMatch = result.content.match( searchTermMatcher );
 
-		for( let match of contentMatches ) {
-			let start = match.index;
-			let end = start + match[0].length;
-			let value = result.content.slice( start - 20, end + 140 )
-				.replace( new RegExp( match[0], 'gi' ), '<mark>$&</mark>' );
+		if( contentMatch ) {
+			let start = contentMatch.index;
+			let end = start + contentMatch.length;
+			let value = result.content.slice( start - 40, end + 120 );
 
-			if( value ) {
-				content += '<p class="excerpt mt-2">...' + value + '...</p>';
-			}
-
-			// Only one excerpt for now
-			if( ++i === 1 ) break;
-		}
-
-		let title = result.title;
-		let titleMatch = title.match( new RegExp( searchTerm, 'i' ) );
-		if( titleMatch && titleMatch.length === 1 ) {
-			title = title.slice( 0, titleMatch.index ) + '<mark>' + titleMatch[0] + '</mark>' + title.slice(  titleMatch.index + titleMatch[0].length );
+			content = '<p class="excerpt mt-2">...' + highlightWords( value, searchTermMatcher ) + '...</p>';
 		}
 
 		return `
@@ -81,9 +72,19 @@ export default async () => {
 
 	}
 
-	function setStatusText( value ) {
+	function highlightWords( string, wordExpression ) {
 
-		searchResults.innerHTML = `<span class="text-gray-500">${value}</span>`;
+		return string.replace( new RegExp( wordExpression, 'gi' ), '<mark>$&</mark>' )
+
+	}
+
+	function setState( state, description ) {
+
+		searchResults.dataset.state = state;
+
+		if( typeof description === 'string' ) {
+			searchResults.innerHTML = `<span class="text-gray-500">${description}</span>`;
+		}
 
 	}
 
@@ -92,6 +93,7 @@ export default async () => {
 		if( !isVisible() ) {
 			searchResults.classList.add( 'show' );
 			document.addEventListener( 'mousedown', onDocumentMouseDown );
+			document.addEventListener( 'keydown', onDocumentKeyDown );
 
 			// Lazy-load the first time the search field is shown
 			if( !docs ) {
@@ -103,8 +105,7 @@ export default async () => {
 						}
 					},
 					() => {
-						searchResults.dataset.state = 'loading-error';
-						setStatusText( 'Failed to load search data 😭' );
+						setState( 'loading-error', 'Failed to load search data 😭' );
 					}
 				);
 			}
@@ -117,6 +118,7 @@ export default async () => {
 		if( isVisible() ) {
 			searchResults.classList.remove( 'show' );
 			document.removeEventListener( 'mousedown', onDocumentMouseDown );
+			document.removeEventListener( 'keydown', onDocumentKeyDown );
 		}
 
 	}
@@ -124,6 +126,22 @@ export default async () => {
 	function isVisible() {
 
 		return searchResults.classList.contains( 'show' );
+
+	}
+
+	function moveFocus( offset=1 ) {
+
+		let resultElements = Array.from( document.querySelectorAll( '.search-result' ) );
+		let target;
+
+		if( document.activeElement && document.activeElement.classList.contains( 'search-result' ) ) {
+			target = resultElements[ resultElements.indexOf( document.activeElement ) + offset ];
+		}
+		else {
+			target = resultElements[0];
+		}
+
+		if( target ) target.focus();
 
 	}
 
@@ -136,36 +154,52 @@ export default async () => {
 			let results = search( searchTerm );
 			if( results.length ) {
 				searchResults.innerHTML = results.map( renderSearchResult.bind( this, searchTerm ) ).join('');
-				searchResults.dataset.state = 'has-results';
+				setState( 'has-results' );
 			}
 			else {
-				searchResults.dataset.state = 'no-results';
-				setStatusText( `No results for "${searchTerm}"` );
+				setState( 'no-results', `No results for "${searchTerm}"` );
 			}
 
 		}
 		else {
-			searchResults.dataset.state = 'no-term';
-			setStatusText( `Enter a search term` );
+			setState( 'no-term', 'Enter a search term' );
 		}
 
 	}, 150 ) );
 
 	document.addEventListener( 'keyup', event => {
+
 		if( event.key === '/' ) {
 			searchInput.focus();
 			searchInput.select();
 		}
-		else if( event.key === 'Escape' ) {
+
+	} );
+
+	// only bound while search is visible
+	function onDocumentKeyDown( event ) {
+
+		if( event.key === 'Escape' ) {
 			searchInput.blur();
 			hide();
 		}
-	} );
+		else if( event.key === 'ArrowUp' ) {
+			moveFocus( -1 );
+			event.preventDefault();
+		}
+		else if( event.key === 'ArrowDown' ) {
+			moveFocus( 1 );
+			event.preventDefault();
+		}
+
+	}
 
 	function onDocumentMouseDown( event ) {
+
 		if( !event.target.closest( '.search' ) ) {
-			searchResults.classList.remove( 'show' );
+			hide();
 		}
+
 	}
 
 }
