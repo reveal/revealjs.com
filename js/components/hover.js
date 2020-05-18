@@ -8,43 +8,11 @@ let lastMouseX = 0,
 let pointerDirectionX = 0,
 	pointerDirectionY = 0;
 
-let trackMouseMovement = () => {
-
-	document.addEventListener( 'mousemove', () => {
-
-		if( lastMouseX && lastMouseY ) {
-			let ox = event.pageX - lastMouseX;
-			let oy = event.pageY - lastMouseY;
-
-			// let longestMovement = Math.max( Math.abs( ox ), Math.abs( oy ) );
-
-			// let sx = ox/longestMovement;
-			// let sy = oy/longestMovement;
-
-			pointerDirectionX = ox/6;
-			pointerDirectionY = oy/6;
-		}
-
-		lastMouseX = event.pageX;
-		lastMouseY = event.pageY;
-
-	} );
-
-	document.addEventListener( 'scroll', event => {
-		lastMouseX = null;
-		lastMouseY = null;
-
-		pointerDirectionX = 0;
-		pointerDirectionY = 0;
-	} );
-
-}
+let hoverTimeout;
 
 let translate = ( element, x, y ) => {
 	element.style.transform = 'translate('+x+'px,'+y+'px)';
 }
-
-let hoverTimeout;
 
 let bindDirectionalHovers = ( element, childSelector ) => {
 
@@ -86,6 +54,34 @@ let bindDirectionalHovers = ( element, childSelector ) => {
 
 }
 
+document.addEventListener( 'mousemove', () => {
+
+		if( lastMouseX && lastMouseY ) {
+			let ox = event.pageX - lastMouseX;
+			let oy = event.pageY - lastMouseY;
+
+			// let longestMovement = Math.max( Math.abs( ox ), Math.abs( oy ) );
+
+			// let sx = ox/longestMovement;
+			// let sy = oy/longestMovement;
+
+			pointerDirectionX = ox/6;
+			pointerDirectionY = oy/6;
+		}
+
+		lastMouseX = event.pageX;
+		lastMouseY = event.pageY;
+
+	} );
+
+	document.addEventListener( 'scroll', event => {
+		lastMouseX = null;
+		lastMouseY = null;
+
+		pointerDirectionX = 0;
+		pointerDirectionY = 0;
+	} );
+
 export default selector => {
 
 	if( !/ipad|iphone|ipod|android|windows\sphone/gi.test( navigator.userAgent ) ) {
@@ -99,8 +95,6 @@ export default selector => {
 		Array.from( document.querySelectorAll( '.r-anchor' ) ).forEach( element => {
 			bindDirectionalHovers( element, '.r-anchor-background' );
 		} );
-
-		trackMouseMovement();
 
 	}
 

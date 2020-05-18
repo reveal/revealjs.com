@@ -1,5 +1,6 @@
 import lunr from 'lunr';
 import debounce from 'lodash/debounce';
+import setupHovers from 'components/hover.js';
 
 // Based on:
 // https://www.raymondcamden.com/2019/10/20/adding-search-to-your-eleventy-static-site-with-lunr
@@ -63,7 +64,7 @@ export default async () => {
 		}
 
 		return `
-			<a href="${result.url}" class="search-result block m-0 p-2 outline-none border-2 border-transparent rounded focus:border-blue-400 hover:bg-gray-200">
+			<a href="${result.url}" class="search-result block z-10 m-0 p-2 outline-none border-2 border-transparent rounded focus:border-blue-400">
 				<p class="font-semibold text-base">${title}</p>
 				${content}
 			</a>
@@ -129,17 +130,14 @@ export default async () => {
 
 	}
 
+	/**
+	 * Moves focus between the search input & results.
+	 */
 	function moveFocus( offset=1 ) {
 
-		let resultElements = Array.from( document.querySelectorAll( '.search-result' ) );
-		let target;
-
-		if( document.activeElement && document.activeElement.classList.contains( 'search-result' ) ) {
-			target = resultElements[ resultElements.indexOf( document.activeElement ) + offset ];
-		}
-		else {
-			target = resultElements[0];
-		}
+		let focusables = [ searchInput, ...document.querySelectorAll( '.search-result' ) ];
+		let index = focusables.indexOf( document.activeElement );
+		let target = index === -1 ? focusables[1] : focusables[ index + offset ];
 
 		if( target ) target.focus();
 
@@ -154,6 +152,7 @@ export default async () => {
 			let results = search( searchTerm );
 			if( results.length ) {
 				searchResults.innerHTML = results.map( renderSearchResult.bind( this, searchTerm ) ).join('');
+				setupHovers( '.search-result' );
 				setState( 'has-results' );
 			}
 			else {
@@ -167,11 +166,13 @@ export default async () => {
 
 	}, 150 ) );
 
-	document.addEventListener( 'keyup', event => {
+	document.addEventListener( 'keydown', event => {
 
-		if( event.key === '/' ) {
+		// '/'
+		if( event.keyCode === 191 ) {
 			searchInput.focus();
 			searchInput.select();
+			event.preventDefault();
 		}
 
 	} );
@@ -183,11 +184,15 @@ export default async () => {
 			searchInput.blur();
 			hide();
 		}
-		else if( event.key === 'ArrowUp' ) {
+		else if( event.key === 'Enter' ) {
+			searchInput.blur();
+			hide();
+		}
+		else if( event.key === 'ArrowUp' || ( event.key === 'Tab' && event.shiftKey ) ) {
 			moveFocus( -1 );
 			event.preventDefault();
 		}
-		else if( event.key === 'ArrowDown' ) {
+		else if( event.key === 'ArrowDown' || event.key === 'Tab' ) {
 			moveFocus( 1 );
 			event.preventDefault();
 		}

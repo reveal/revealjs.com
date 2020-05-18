@@ -1,8 +1,6 @@
 $headerHeight: 4rem;
 $headerMargin: 2rem;
 
-$activeColor: #F2E142;
-
 $easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.275);
 $easeOutQuint: cubic-bezier(0.230, 1.000, 0.320, 1.000);
 $easeInOutQuint: cubic-bezier(0.860, 0.000, 0.070, 1.000);
@@ -18,7 +16,7 @@ html {
 
 a, button {
     touch-action: manipulation;
-    -webkit-tap-highlight-color: darken( $activeColor, 15% );
+    -webkit-tap-highlight-color: darken( #edf2f7, 15% );
 }
 
 .no-transition,
@@ -142,7 +140,7 @@ a, button {
 }
 
 .nav-link:hover {
-    @apply text-yellow-900;
+    @apply text-gray-900;
 }
 
 .nav-link.selected {
@@ -205,7 +203,7 @@ a, button {
     visibility: hidden;
     border-radius: 0.25rem;
     z-index: -1;
-    background-color: $activeColor;
+    @apply bg-gray-300;
 
     transition: opacity 0.2s $easeOutQuint,
                 visibility 0.2s $easeOutQuint,
@@ -220,4 +218,8 @@ a, button {
     transition: opacity 0.1s $easeOutQuint,
                 visibility 0.1s $easeOutQuint,
                 transform 0.3s $easeOutQuint;
+}
+
+.search-result .r-anchor-background {
+    @apply bg-gray-200;
 }
