@@ -9,9 +9,10 @@ let pointerDirectionX = 0,
 	pointerDirectionY = 0;
 
 let hoverTimeout;
+let lastMouseLeave;
 
-let translate = ( element, x, y ) => {
-	element.style.transform = 'translate('+x+'px,'+y+'px)';
+let transform = ( element, x, y, scale ) => {
+	element.style.transform = 'scale('+scale+') translate('+x+'px,'+y+'px)';
 }
 
 let bindDirectionalHovers = ( element, childSelector ) => {
@@ -22,11 +23,16 @@ let bindDirectionalHovers = ( element, childSelector ) => {
 
 		clearTimeout( hoverTimeout );
 
-
 		// Move the children into their start positions
 		children.forEach( childElement => {
+			let tx = ( event.offsetX / childElement.offsetWidth ) * 100;
+			let ty = ( event.offsetY / childElement.offsetHeight ) * 100;
+			childElement.style.transformOrigin = tx + '% ' + ty + '%';
+
+			let scale = Date.now() - lastMouseLeave < 200 ? 1 : 0.7;
+
 			childElement.classList.add( 'no-transition' );
-			translate( childElement, -15 * pointerDirectionX, -15 * pointerDirectionY );
+			transform( childElement, -16 * pointerDirectionX, -16 * pointerDirectionY, scale );
 			childElement.offsetHeight;
 			childElement.classList.remove( 'no-transition' );
 		} );
@@ -41,13 +47,19 @@ let bindDirectionalHovers = ( element, childSelector ) => {
 
 	element.addEventListener( 'mouseleave', function( event ) {
 
+		lastMouseLeave = Date.now();
+
 		clearTimeout( hoverTimeout );
 
 		// Remove the hover effect and move the child in the
 		// direction of the mouse
 		element.classList.remove( 'hover' );
 		children.forEach( childElement => {
-			translate( childElement, 15 * pointerDirectionX, 15 * pointerDirectionY );
+			let tx = ( event.offsetX / childElement.offsetWidth ) * 100;
+			let ty = ( event.offsetY / childElement.offsetHeight ) * 100;
+			childElement.style.transformOrigin = tx + '% ' + ty + '%';
+
+			transform( childElement, 16 * pointerDirectionX, 16 * pointerDirectionY );
 		} );
 
 	}, false );
