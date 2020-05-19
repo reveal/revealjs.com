@@ -23,14 +23,22 @@ export default () => {
 
 		// Remember the sidebar scroll position between page loads
 		let storedScrollTop = parseInt( sessionStorage.getItem( 'sidebar-scroll-top' ), 10 );
+		let sidebarScroller = document.querySelector( '.sidebar-scroller' );
 
 		if( !isNaN( storedScrollTop ) ) {
-			document.querySelector( '.sidebar-scroller' ).scrollTop = storedScrollTop;
+			sidebarScroller.scrollTop = storedScrollTop;
+		}
+		else {
+			let selectedItem = sidebar.querySelector( '.nav-link.selected' );
+			if( selectedItem.offsetTop > sidebarScroller.offsetHeight * 0.8 ) {
+				sidebarScroller.scrollTop = selectedItem.offsetTop - sidebarScroller.offsetHeight * 0.8;
+			}
 		}
 
 		window.addEventListener( 'beforeunload', () => {
-			sessionStorage.setItem( 'sidebar-scroll-top', document.querySelector( '.sidebar-scroller' ).scrollTop );
+			sessionStorage.setItem( 'sidebar-scroll-top', sidebarScroller.scrollTop );
 		} );
+
 
 		// Toggle the mobile nav.
 		document.querySelector( '.menu-toggle' ).addEventListener( 'click', () => {

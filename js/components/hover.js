@@ -79,6 +79,9 @@ document.addEventListener( 'mousemove', () => {
 
 			pointerDirectionX = ox/6;
 			pointerDirectionY = oy/6;
+
+			pointerDirectionX = Math.max( Math.min( pointerDirectionX, 2 ), -2 );
+			pointerDirectionY = Math.max( Math.min( pointerDirectionY, 2 ), -2 );
 		}
 
 		lastMouseX = event.pageX;

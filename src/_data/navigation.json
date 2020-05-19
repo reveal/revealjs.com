@@ -175,7 +175,7 @@
       "label": "Other",
       "items": [
         {
-          "label": "Upgrade Instructions",
+          "label": "Upgrading to 4.0",
           "url": "/upgrading/"
         },
         {

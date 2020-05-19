@@ -49,6 +49,7 @@ href
 td
 js
 h.v
+v3
 
 RevealHighlight
 RevealMarkdown
@@ -65,7 +66,10 @@ zoom.js
 reveal.js
 reveal.js.
 revealjs.com
+reveal.css
+reset.css
 
+rollup
 monokai
 monokai.css
 mathjax
