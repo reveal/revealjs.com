@@ -1,14 +1,19 @@
 <div class="hidden extras inset-0 lg:-mb-0 sticky top-16 h-full w-1/5 lg:block">
 	<div class="text-sm px-6 pl-10 pt-8">
-		<!--<div class="mb-4 pb-4 border-b border-gray-300">
+		{% if helpers.environment == "production" %}
+		<div class="mb-4 pb-4 border-b border-gray-300">
 			<script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CKYI553M&placement=revealjscom" id="_carbonads_js"></script>
-		</div>-->
-		<div>
+		</div>
+		{% endif %}
+		<div class="mb-4 pb-4 border-b border-gray-300">
 			<a href="https://slides.com">
 				<img src="/images/slides-symbol-512x512.png" width="100">
 				<p class="block mb-2 text-gray-700">Slides.com — the official reveal.js presentation editor.</p>
 				<span class="text-pink-700 border-pink-200 hover:text-pink-900">Try it for free <span class="exernal-link-icon">{% include "images/right-arrow.svg" %}</span></span>
 			</a>
+		</div>
+		<div class="text-gray-500">
+			<p>Version 4.0.0-rc1</p>
 		</div>
 	</div>
 </div>

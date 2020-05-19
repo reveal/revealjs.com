@@ -69,7 +69,7 @@ a, button {
 #carbonads .carbon-poweredby {
     display: block;
     margin-top: 10px;
-    color: #aaa;
+    @apply text-gray-500;
 }
 
 
