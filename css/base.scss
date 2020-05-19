@@ -15,7 +15,7 @@ html {
 }
 
 a, button {
-    touch-action: manipulation;
+    touch-action: manipulation !important;
     -webkit-tap-highlight-color: darken( #edf2f7, 15% );
 }
 
