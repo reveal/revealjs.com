@@ -66,6 +66,10 @@ a, button {
     box-shadow: none;
 }
 
+#carbonads .carbon-text {
+    @apply text-gray-700;
+}
+
 #carbonads .carbon-poweredby {
     display: block;
     margin-top: 10px;
