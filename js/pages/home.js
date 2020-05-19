@@ -31,4 +31,12 @@ export default () => {
 
 	}
 
+	// There's a number of links to revealjs.com?print-pdf out
+	// there to demonstrate the PDF export feature. This new
+	// site no longer has a printable presentation on the home
+	// page so we redirect those links to /demo?print-pdf.
+	if( /print\-pdf/.test( location.search ) ) {
+		window.location = '/demo' + window.location.search;
+	}
+
 }

@@ -35,13 +35,16 @@ function setup() {
 
 	setupInlineDecks();
 	setupPrefetch();
-	setupSearch();
 
 	if( PAGE_ID === 'home' ) {
 		setupHome();
+		setupSearch();
 	}
 	else if( PAGE_ID === 'demo' ) {
 		setupDemo();
+	}
+	else {
+		setupSearch();
 	}
 
 }
