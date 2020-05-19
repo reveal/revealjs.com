@@ -100,7 +100,7 @@ export default async () => {
 
 	}
 
-	let setFixedResultPosition = throttle( () => {
+	let updateFixedPosition = throttle( () => {
 
 		let bounds = searchInput.getBoundingClientRect();
 		searchResults.style.top = Math.round( bounds.bottom ) + 'px';
@@ -118,8 +118,8 @@ export default async () => {
 			// but on the homepage the header is pushed down from the
 			// top of the screen... et voilà:
 			if( document.querySelector( '.header' ).offsetTop > 0 && getComputedStyle( searchResults ).position === 'fixed' ) {
-				document.addEventListener( 'scroll', setFixedResultPosition );
-				setFixedResultPosition();
+				document.addEventListener( 'scroll', updateFixedPosition );
+				updateFixedPosition();
 			}
 			else {
 				searchResults.style.top = '';
@@ -151,7 +151,6 @@ export default async () => {
 			document.removeEventListener( 'mousedown', onDocumentMouseDown );
 			document.removeEventListener( 'keydown', onDocumentKeyDown );
 			document.removeEventListener( 'scroll', updateFixedPosition );
-
 		}
 
 	}
@@ -209,6 +208,13 @@ export default async () => {
 		else if( event.key === 'Enter' ) {
 			searchInput.blur();
 			hide();
+
+			// If there are results, but no result is focused, open the
+			// first one
+			let results = document.querySelectorAll( '.search-result' );
+			if( results.length && document.activeElement.matches( '.search-result' ) === false ) {
+				window.location = results[0].getAttribute( 'href' );
+			}
 		}
 		else if( event.key === 'ArrowUp' || ( event.key === 'Tab' && event.shiftKey ) ) {
 			moveFocus( -1 );
