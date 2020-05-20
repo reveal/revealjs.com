@@ -15,6 +15,14 @@ let transform = ( element, x, y, scale ) => {
 	element.style.transform = 'scale('+scale+') translate('+x+'px,'+y+'px)';
 }
 
+let transformOrigin = ( element, x, y ) => {
+	let tx = ( event.offsetX / element.offsetWidth ) * 100;
+	let ty = ( event.offsetY / element.offsetHeight ) * 100;
+	tx = Math.min( Math.max( tx, 0 ), 100 );
+	ty = Math.min( Math.max( ty, 0 ), 100 );
+	element.style.transformOrigin = Math.round(tx) + '% ' + Math.round(ty) + '%';
+}
+
 let bindDirectionalHovers = ( element, childSelector ) => {
 
 	let children = Array.from( element.querySelectorAll( childSelector ) );
@@ -25,9 +33,7 @@ let bindDirectionalHovers = ( element, childSelector ) => {
 
 		// Move the children into their start positions
 		children.forEach( childElement => {
-			let tx = ( event.offsetX / childElement.offsetWidth ) * 100;
-			let ty = ( event.offsetY / childElement.offsetHeight ) * 100;
-			childElement.style.transformOrigin = tx + '% ' + ty + '%';
+			transformOrigin( childElement, event.offsetX, event.offsetY );
 
 			let scale = Date.now() - lastMouseLeave < 200 ? 1 : 0.7;
 
@@ -55,11 +61,8 @@ let bindDirectionalHovers = ( element, childSelector ) => {
 		// direction of the mouse
 		element.classList.remove( 'hover' );
 		children.forEach( childElement => {
-			let tx = ( event.offsetX / childElement.offsetWidth ) * 100;
-			let ty = ( event.offsetY / childElement.offsetHeight ) * 100;
-			childElement.style.transformOrigin = tx + '% ' + ty + '%';
-
-			transform( childElement, 16 * pointerDirectionX, 16 * pointerDirectionY );
+			transformOrigin( childElement, event.offsetX, event.offsetY );
+			transform( childElement, 16 * pointerDirectionX, 16 * pointerDirectionY, 0.7 );
 		} );
 
 	}, false );
