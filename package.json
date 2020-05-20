@@ -42,6 +42,6 @@
   },
   "dependencies": {
     "highlight.js": "^10.0.3",
-    "reveal.js": "github:hakimel/reveal.js#master"
+    "reveal.js": "github:hakimel/reveal.js#dev"
   }
 }
