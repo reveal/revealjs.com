@@ -1,6 +1,10 @@
 {
     "name": "reveal.js",
     "url": "https://revealjs.com",
+    "urls": {
+        "twitter": "https://twitter.com/revealjs",
+        "github": "https://github.com/hakimel/reveal.js"
+    },
     "author": {
         "name": "Hakim El Hattab",
         "email": "hakim.elhattab@gmail.com",
