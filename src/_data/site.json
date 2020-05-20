@@ -3,7 +3,8 @@
     "url": "https://revealjs.com",
     "urls": {
         "twitter": "https://twitter.com/revealjs",
-        "github": "https://github.com/hakimel/reveal.js"
+        "github": "https://github.com/hakimel/reveal.js",
+        "personal_twitter": "https://twitter.com/hakimel"
     },
     "author": {
         "name": "Hakim El Hattab",
