@@ -1,5 +1,7 @@
 import lunr from 'lunr';
+import trim from 'lodash/trim';
 import throttle from 'lodash/throttle';
+import debounce from 'lodash/debounce';
 import setupHovers from 'components/hover.js';
 
 // Based on:
@@ -35,7 +37,7 @@ export default async () => {
 
 	}
 
-	function search( searchTerm ) {
+	let search = debounce( searchTerm => {
 
 		// Make sure we're loaded
 		if( docs ) {
@@ -53,7 +55,7 @@ export default async () => {
 			}
 		}
 
-	}
+	}, 250 );
 
 	function renderSearchResult( searchTerm, result ) {
 
@@ -66,17 +68,30 @@ export default async () => {
 
 		if( contentMatch ) {
 			let start = contentMatch.index;
-			let end = start + contentMatch.length;
-			let value = result.content.slice( start - 40, end + 120 );
+			let end = start + contentMatch[0].length;
+			
+			// Include surrounding text
+			start = Math.max( start - 30, 0 );
+			end = Math.max( end + 110, result.content.length );
+
+			let value = result.content.slice( start, end ).trim();
 
 			if( value.length > 0 ) {
-				content = '<p class="excerpt mt-2">...' + highlightWords( value, searchTermMatcher ) + '...</p>';
+				value = value.replace( /\s*[\n]+\s*/g, '\n' );
+				value = value.replace( /^\s+|\s+$/g, '' );
+				content = [
+					'<p class="excerpt mt-2">',
+						start > 0 ? '...' : '',
+						highlightWords( value, searchTermMatcher ),
+						end < result.content.length ? '...' : '',
+					'</p>'
+				].join('');
 			}
 		}
 
 		return `
 			<a href="${result.url}" class="search-result block z-10 m-0 p-2 outline-none border-2 border-transparent rounded focus:border-blue-400">
-				<p class="font-semibold text-base">${title}</p>
+				<p class="font-medium text-base">${title}</p>
 				${content}
 			</a>
 			<div class="divider border-t border-gray-200 my-2"></div>

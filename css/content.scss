@@ -1,7 +1,7 @@
 // documentation page
 .article {
     h1, h2, h3, h4 {
-        @apply font-semibold leading-tight mt-6 mb-2;
+        @apply font-medium leading-tight mt-6 mb-2;
     }
 
     h1 {
@@ -111,7 +111,7 @@
     @apply m-4 -mx-4 border border-gray-300 rounded text-base;
 
     th {
-      @apply p-4 align-top border-b border-gray-300 font-semibold;
+      @apply p-4 align-top border-b border-gray-300 font-medium;
     }
 
     td {
