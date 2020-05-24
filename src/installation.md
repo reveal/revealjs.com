@@ -8,7 +8,7 @@ layout: default
 
 We provide three different ways to install reveal.js depending on your use case and technical experience.
 1. The [basic setup](#basic-setup) is the easiest way to get started. No need to set up any build tools.
-1. The [full setup](#full-setup) gives you access to all reveal.js features and plugins such as speaker notes as well as the build tools needed to make changes to the source code.
+1. The [full setup](#full-setup) gives you access to the build tools needed to make changes to the reveal.js source code. It includes a web server which is required if you want to load external Markdown files (the basic setup paired with your own choice of local web server works too).
 1. If you want to use reveal.js as a dependency in your project, you can [install from npm](#installing-from-npm).
 
 #### Next Steps
@@ -27,7 +27,7 @@ That's it 🚀
 
 ## Full Setup <span class="text-gray-500 font-normal">- Recommended</span>{id="full-setup"}
 
-Some reveal.js features, like external Markdown and speaker notes, require that presentations run from a local web server. The following instructions will set up such a server as well as all of the development tasks needed to make edits to the reveal.js source code.
+Some reveal.js features, like external Markdown, require that presentations run from a local web server. The following instructions will set up such a server as well as all of the development tasks needed to make edits to the reveal.js source code.
 
 1. Install [Node.js](https://nodejs.org/) (10.0.0 or later)
 
