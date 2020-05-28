@@ -17,7 +17,7 @@ Below is an example of how the plugin can be configured. If you don't intend to 
 <script>
   Reveal.initialize({
     math: {
-      mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+      mathjax: 'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
       config: 'TeX-AMS_HTML-full',
       // pass other options into `MathJax.Hub.Config()`
       TeX: { Macros: { RR: "{\\bf R}" } }
