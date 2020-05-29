@@ -23,13 +23,7 @@ module.exports = eleventyConfig => {
 
     // Include our static assets
     eleventyConfig.addPassthroughCopy('images')
-
-    // Temporarily expose reveal.js assets at their
-    // previous locations to allow existing versions
-    // of pandoc to keep working
-    eleventyConfig.addPassthroughCopy({'node_modules/reveal.js/dist': '/js'})
-    eleventyConfig.addPassthroughCopy({'node_modules/reveal.js/dist': '/css'})
-    eleventyConfig.addPassthroughCopy({'node_modules/reveal.js/plugin': '/plugin'})
+    eleventyConfig.addPassthroughCopy('version')
 
     eleventyConfig.addPlugin(syntaxHighlight, {
         alwaysWrapLineHighlights: false
