@@ -68,7 +68,7 @@ If you add an `<iframe>` inside your slide it's constrained by the size of the s
 
 ### Iframe Post Message
 
-reveal.js automatically pushes two [post messages](https://developer.mozilla.org/en-US/docs/Web/Window.postMessage) to embedded iframes. `slide:start` when the slide containing the iframe is made visible and `slide:stop` when it is hidden.
+reveal.js automatically pushes two [post messages](https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage) to embedded iframes. `slide:start` when the slide containing the iframe is made visible and `slide:stop` when it is hidden.
 
 ```js
 // JavaScript inside of an iframe embedded within reveal.js
