@@ -23,7 +23,7 @@ module.exports = eleventyConfig => {
 
     // Include our static assets
     eleventyConfig.addPassthroughCopy('images')
-    eleventyConfig.addPassthroughCopy('version')
+    eleventyConfig.addPassthroughCopy('demos')
 
     eleventyConfig.addPlugin(syntaxHighlight, {
         alwaysWrapLineHighlights: false
