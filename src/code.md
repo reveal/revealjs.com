@@ -141,3 +141,17 @@ You can step through multiple code highlights on the same code block. Delimit ea
     </section>
   </div>
 </div>
+
+## HTML Entities <span class="r-version-badge new">4.1.0</span>
+Content added inside of a `<code>` block is parsed as HTML by the web browser. If you have HTML characters (<>) in your code you will need to escape them ($lt; $gt;).
+
+To avoid having to escape these characters manually, you can wrap your code in `<script type="text/template">` and we'll handle it for you.
+
+```html
+<pre><code><script type="text/template">
+sealed class Either<out A, out B> {
+  data class Left<out A>(val a: A) : Either<A, Nothing>()
+  data class Right<out B>(val b: B) : Either<Nothing, B>()
+}
+</script></code></pre>
+```
