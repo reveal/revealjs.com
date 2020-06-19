@@ -13,8 +13,8 @@ Our JS and CSS assets have moved. In your presentation HTML, update the followin
 | Old location                      | New location
 | :-                                | :-
 | js/reveal.js                      | dist/reveal.js
-| js/reset.css                      | dist/reset.css
-| js/reveal.css                     | dist/reveal.css
+| css/reset.css                     | dist/reset.css
+| css/reveal.css                    | dist/reveal.css
 | css/theme/&lt;theme-name&gt;.css  | dist/theme/&lt;theme-name&gt;.css
 | lib/css/monokai.css               | plugin/highlight/monokai.css
 {.key-value}
