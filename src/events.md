@@ -27,7 +27,7 @@ We also add a `.ready` class to the `.reveal` element so that you can hook into 
 The `Reveal.initialize` method also returns a [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) which resolves when the presentation is ready. The following is synonymous to adding a listener for the `ready` event:
 
 ```javascript
-Reveal.initialize.then( () => {
+Reveal.initialize().then( () => {
   // reveal.js is ready
 } )
 ```
