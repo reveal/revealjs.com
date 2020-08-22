@@ -8,7 +8,7 @@ layout: default
 
 Presentations can be exported to PDF via a special print stylesheet. Here's an example of an exported presentation that's been uploaded to SlideShare: https://slideshare.net/hakimel/revealjs-300.
 
-Note: This feature requires has only been confirmed to work in [Google Chrome](https://google.com/chrome) and [Chromium](https://www.chromium.org/Home).
+Note: This feature has only been confirmed to work in [Google Chrome](https://google.com/chrome) and [Chromium](https://www.chromium.org/Home).
 
 ## Instructions
 
