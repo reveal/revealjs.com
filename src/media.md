@@ -6,7 +6,7 @@ layout: default
 
 # Media
 
-We provide convenient mechanics for autoplaying and lazy loading HTML media elements and iframes based on slide visibility and proximity. This works for [\<video\>](https://developer.mozilla.org/en-US/docs/Web/HTMLVideoElement), [\<audio\>](https://developer.mozilla.org/en-US/docs/Web/HTMLAudioElement) and [\<iframe\>](https://developer.mozilla.org/en-US/docs/Web/HTMLIframeElement) elements.
+We provide convenient mechanics for autoplaying and lazy loading HTML media elements and iframes based on slide visibility and proximity. This works for [\<video\>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video), [\<audio\>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio) and [\<iframe\>](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe) elements.
 
 ## Autoplay
 
