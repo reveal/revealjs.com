@@ -54,6 +54,34 @@ If you want to show each of the stacked elements individually you can adjust the
   </div>
 </div>
 
+## Fit Text
+
+The `r-fix-text` class makes text as large as possible without overflowing the slide. This is great when you want BIG text without having to manually find the right font size. Powered by [fitty](https://github.com/rikschennink/fitty) ❤️
+
+```html
+<h2 class="r-fit-text">BIG</h2>
+```
+<div class="reveal reveal-example">
+  <div class="slides">
+    <section>
+      <h2 class="r-fit-text">BIG</h2>
+    </section>
+  </div>
+</div>
+
+```html
+<h2 class="r-fit-text">FIT TEXT</h2>
+<h2 class="r-fit-text">CAN BE USED FOR MULTIPLE HEADLINES</h2>
+```
+<div class="reveal reveal-example">
+  <div class="slides">
+    <section>
+      <h2 class="r-fit-text">FIT TEXT</h2>
+      <h2 class="r-fit-text">CAN BE USED FOR MULTIPLE HEADLINES</h2>
+    </section>
+  </div>
+</div>
+
 
 ## Stretch
 
