@@ -66,7 +66,7 @@
         @apply text-xs p-px text-gray-500 float-right;
     }
     .r-version-badge.new:before {
-        content: 'New in ';
+        content: 'Added in';
     }
     .r-version-badge.deprecated:before {
         content: 'Deprecated in ';

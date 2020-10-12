@@ -51,6 +51,10 @@
         {
           "label": "Layout",
           "url": "/layout/"
+        },
+        {
+          "label": "Slide Visibility",
+          "url": "/slide-visibility/"
         }
       ]
     },

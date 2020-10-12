@@ -60,14 +60,6 @@ The reveal.js viewport is the wrapper DOM element that determines the size of yo
 
 The viewport is always decorated with a `reveal-viewport` class reveal.js is initialized.
 
-## Slide Visibility
-When preparing a presentation it can sometimes be helpful to prepare optional slides that you may or may not have time to show. This is easily done by appending a few slides at the end of the presentation, however this means that the reveal.js progress bar and slide numbering will hint that there are additional slides.
-
-To "hide" those slides from reveal.js' numbering system you can add a `data-visibility` attribute to the slide.
-```html
-<section data-visibility="uncounted"></section>
-```
-
 ## Slide States
 
 If you set `data-state="make-it-pop"` on a slide `<section>`, "make-it-pop" will be applied as a class on the [viewport element](#viewport) when that slide is opened. This allows you to apply broad style changes to the page based on the active slide.
