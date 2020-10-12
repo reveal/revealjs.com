@@ -17,7 +17,7 @@ Our JS and CSS assets have moved. In your presentation HTML, update the followin
 | css/reveal.css                    | dist/reveal.css
 | css/theme/&lt;theme-name&gt;.css  | dist/theme/&lt;theme-name&gt;.css
 | lib/css/monokai.css               | plugin/highlight/monokai.css
-| lib/js/head.min.js (only <3.8.0)               | Deleted and does not required
+| lib/js/head.min.js  				| Deleted in 3.8.0
 {.key-value}
 
 
