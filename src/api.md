@@ -50,11 +50,11 @@ Reveal.getScale();
 // Returns an object with the scaled presentationWidth & presentationHeight
 Reveal.getComputedSlideSize();
 
-Reveal.getIndices();        // { h: 0, v: 0, f: 0 }
-Reveal.getProgress();       // (0 == first slide, 1 == last slide)
+Reveal.getIndices(slide=currentSlide);  // Coordinates of the slide (e.g. { h: 0, v: 0, f: 0 })
+Reveal.getProgress();                   // (0 == first slide, 1 == last slide)
 
-// Returns the speaker notes for the current slide
-Reveal.getSlideNotes();
+// Returns the speaker notes for the slide
+Reveal.getSlideNotes(slide=currentSlide);
 ```
 
 ### Slides
