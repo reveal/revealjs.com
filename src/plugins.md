@@ -83,10 +83,10 @@ Dependencies are loaded in the order they appear.
 ```js
 Reveal.initialize({
   dependencies: [
-    { src: plugin/markdown/markdown.js’, condition: () => {
+    { src: 'plugin/markdown/markdown.js', condition: () => {
         return !!document.querySelector( ’[data-markdown]’ );
     } },
-    { src: plugin/highlight/highlight.js’, async: true }
+    { src: 'plugin/highlight/highlight.js', async: true }
   ]
 });
 ```
