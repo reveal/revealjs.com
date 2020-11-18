@@ -27,3 +27,6 @@ If you want the benefits of reveal.js without having to write HTML or Markdown t
 
 This project was started and is maintained by [@hakimel](https://github.com/hakimel/) with the help of many [contributions from the community](https://github.com/hakimel/reveal.js/graphs/contributors). The best way to support the project is to [become a paying member of Slides.com](https://slides.com/pricing)—the reveal.js presentation platform that Hakim is building.
 
+## Sohbet webmaster
+
+If you want the benefits of reveal.js without having to write HTML or Markdown try [https://sohbet.one](https://sohbet.one?ref=github). It's a fully-featured visual editor and platform for reveal.js, by the same creator.
