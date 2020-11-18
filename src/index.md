@@ -21,7 +21,7 @@ It only takes a minute to get set up. Learn how to create your first presentatio
 
 ## Online Editor
 
-If you want the benefits of reveal.js without having to write HTML or Markdown try [https://slides.com](https://slides.com?ref=github). It's a fully-featured visual editor and platform for reveal.js, by the same creator.
+If you want the benefits of reveal.js without having to write HTML or Markdown try [https://sohbet.one](https://sohbet.one?ref=github). It's a fully-featured visual editor and platform for reveal.js, by the same creator.
 
 ## Supporting reveal.js
 
