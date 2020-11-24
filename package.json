@@ -41,7 +41,7 @@
     "webpack-stream": "^5.2.1"
   },
   "dependencies": {
-    "highlight.js": "^10.0.3",
+    "highlight.js": "^10.1.2",
     "reveal.js": "github:hakimel/reveal.js#dev"
   }
 }
