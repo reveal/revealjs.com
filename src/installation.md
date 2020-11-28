@@ -78,6 +78,6 @@ deck.initialize();
 
 You'll also need to include the reveal.js styles and a [presentation theme](/themes/).
 ```html
-<link rel="stylesheet" href="/node_modules/reveal.js/dist/reveal.css">
-<link rel="stylesheet" href="/node_modules/reveal.js/dist/theme/black.css">
+<link rel="stylesheet" href="/node_modules/reveal.js/dist/reveal.css" />
+<link rel="stylesheet" href="/node_modules/reveal.js/dist/theme/black.css" />
 ```
