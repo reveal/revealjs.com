@@ -50,6 +50,8 @@ td
 js
 h.v
 v3
+lt
+grey
 
 RevealHighlight
 RevealMarkdown
@@ -69,6 +71,7 @@ revealjs.com
 reveal.css
 reset.css
 
+fitty
 rollup
 monokai
 monokai.css
@@ -79,3 +82,4 @@ slides.com
 decktape
 slideshare
 highlight.js
+head.min.js

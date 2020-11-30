@@ -1,6 +1,6 @@
 {
   "name": "revealjs.com",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "The official reveal.js website",
   "scripts": {
     "test": "mdspell -r -n -a --en-us 'src/*.md' 'src/**/*.md'",
@@ -29,13 +29,14 @@
     "gulp": "^4.0.2",
     "gulp-postcss": "^8.0.0",
     "gulp-rename": "^2.0.0",
-    "gulp-sass": "^4.0.2",
+    "gulp-sass": "^4.1.0",
     "html-minifier": "^4.0.0",
     "lodash": "^4.17.15",
     "lunr": "^2.3.8",
     "markdown-it-anchor": "^5.3.0",
     "markdown-it-attrs": "^3.0.2",
     "markdown-spellcheck": "^1.3.1",
+    "node-sass": "^5.0.0",
     "prism-themes": "^1.4.0",
     "tailwindcss": "^1.4.6",
     "webpack-stream": "^5.2.1"
