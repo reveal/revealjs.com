@@ -1,6 +1,30 @@
+$demoHeight: 65vh;
+
 .reveal-demo {
-	height: 65vh;
+	height: $demoHeight;
     max-height: 900px;
+}
+
+.highlight-demo .reveal-demo .reveal {
+    position: relative;
+    z-index: 100;
+}
+
+.highlight-demo .reveal-demo:after {
+    content: 'The header is a live demo. Scroll to access docs.';
+    position: fixed;
+    display: grid;
+    place-items: center;
+    z-index: 99;
+    top: $demoHeight;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: #ccc;
+    font-weight: 600;
+    padding: 0 1rem;
+    background: rgba( 0, 0, 0, 0.85 );
+    backdrop-filter: blur(3px);
 }
 
 .reveal {

@@ -31,12 +31,30 @@ export default () => {
 
 	}
 
+	function highlightDemo() {
+
+		let scrollListener = () => {
+			if( window.scrollY ) {
+				document.documentElement.classList.remove( 'highlight-demo' );
+				document.removeEventListener( 'scroll', scrollListener );
+			}
+		}
+
+		document.documentElement.classList.add( 'highlight-demo' );
+		document.addEventListener( 'scroll', scrollListener );
+
+	}
+
 	// There's a number of links to revealjs.com?print-pdf out
 	// there to demonstrate the PDF export feature. This new
 	// site no longer has a printable presentation on the home
 	// page so we redirect those links to /demo?print-pdf.
 	if( /print\-pdf/.test( location.search ) ) {
 		window.location = '/demo' + window.location.search;
+	}
+
+	if( /demo/.test( location.search ) ) {
+		highlightDemo();
 	}
 
 }
