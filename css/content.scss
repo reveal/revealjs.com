@@ -1,7 +1,7 @@
 // documentation page
 .article {
     h1, h2, h3, h4 {
-        @apply font-medium leading-tight mt-6 mb-2;
+        @apply font-semibold leading-tight mt-6 mb-2;
     }
 
     h1 {
@@ -139,6 +139,11 @@
         width: 100%;
     }
 
+}
+
+.article>form,
+.article>iframe {
+    @apply my-4;
 }
 
 

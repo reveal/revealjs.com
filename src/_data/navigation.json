@@ -4,12 +4,17 @@
       "label": "Getting Started",
       "items": [
         {
-          "label": "Demo",
-          "url": "/?demo"
+          "label": "Home",
+          "url": "/"
         },
         {
-          "label": "Overview",
-          "url": "/"
+          "label": "Demo",
+          "url": "/?demo",
+          "class": "demo-link"
+        },
+        {
+          "label": "Video Course",
+          "url": "/course"
         },
         {
           "label": "Installation",

@@ -12,7 +12,10 @@ export default () => {
 		margin: 0.1,
 		plugins: [ Markdown, Highlight, Zoom ]
 	});
-	deck.initialize().then( setupHeader );
+	deck.initialize().then( () => {
+		setupHeader();
+		setupDemoLink();
+	} );
 
 	function setupHeader() {
 
@@ -28,6 +31,17 @@ export default () => {
 			document.addEventListener( 'scroll', throttle( updateVisibility, 100 ) )
 
 		}
+
+	}
+
+	function setupDemoLink() {
+
+		const anchor = document.querySelector( '.demo-link' )
+		anchor.addEventListener( 'click', event => {
+			event.preventDefault();
+			window.scrollTo(0,0);
+			highlightDemo();
+		} );
 
 	}
 
