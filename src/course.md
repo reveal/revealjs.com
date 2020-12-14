@@ -8,7 +8,7 @@ hidden: true
 
 # Mastering reveal.js
 
-<iframe width="100%" height="405" src="https://www.youtube.com/embed/_b-NCWpP51U?color=white&modestbranding=1&rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" height="405" src="https://www.youtube.com/embed/WTFbYkqng2U?color=white&modestbranding=1&rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 I'm excited to announce the upcoming **Mastering reveal.js** video course! It's going to cover everything you need to learn reveal.js from the ground up and extend all the way to advanced customization and features. You'll learn how to efficiently work with nested slides, create rich transitions with Auto-Animate, customize keyboarding bindings, extend reveal.js using its API and much more.
 
