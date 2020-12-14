@@ -38,3 +38,6 @@ We automatically generate our production build at deploy-time but it's also poss
 ```
 npm run production
 ```
+
+### Note
+reveal.js is installed from the [dev branch](https://github.com/hakimel/reveal.js/tree/dev). If it gets stuck on an old version, remove the reveal.js entry from `package.lock.json` and rerun `npm install`.
