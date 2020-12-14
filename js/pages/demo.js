@@ -11,4 +11,7 @@ export default () => {
 	});
 	deck.initialize();
 
+	// Make the Reveal object globally available on the /demo page
+	window.Reveal = deck;
+
 }
