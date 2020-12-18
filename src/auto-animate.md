@@ -8,15 +8,13 @@ layout: default
 
 reveal.js can automatically animate elements across slides. All you need to do is add `data-auto-animate` to two adjacent slide `<section>` elements and Auto-Animate will animate all matching elements between the two.
 
-Here's a simple example to give you a better idea of how it can be used. The resulting animation will be the word "Magic" sliding 100px downwards.
+Here's a simple example to give you a better idea of how it can be used.
 ```html
 <section data-auto-animate>
-  <h1 style="margin-top: 100px;">Auto</h1>
-  <h1 style="opacity: 0;">Animate</h1>
+  <h1>Auto-Animate</h1>
 </section>
 <section data-auto-animate>
-  <h1>Auto</h1>
-  <h1>Animate</h1>
+  <h1 style="margin-top: 100px; color: red;">Auto-Animate</h1>
 </section>
 ```
 <div class="reveal reveal-example">
@@ -31,6 +29,31 @@ Here's a simple example to give you a better idea of how it can be used. The res
 </div>
 
 This example uses the `margin-top` property to move the element but internally reveal.js will use a CSS transform to ensure smooth movement. This same approach to animation works with most animatable CSS properties meaning you can transition things like `position`, `font-size`, `line-height`, `color`, `background-color`, `padding` and `margin`.
+
+### Movement Animations
+
+Animations are not limited to changes in style. Auto-Animate can also be used to automatically move elements into their new position as content is added, removed or rearranged on a slide. All without a single line of inline CSS.
+
+```html
+<section data-auto-animate>
+  <h1>Implicit</h1>
+</section>
+<section data-auto-animate>
+  <h1>Implicit</h1>
+  <h1>Animation</h1>
+</section>
+```
+<div class="reveal reveal-example">
+  <div class="slides">
+    <section data-auto-animate>
+      <h1>Implicit</h1>
+    </section>
+    <section data-auto-animate>
+      <h1>Implicit</h1>
+      <h1>Animation</h1>
+    </section>
+  </div>
+</div>
 
 ## How Elements are Matched
 When you navigate between two auto-animated slides we'll do our best to automatically find matching elements in the two slides. For text, we consider it a match if both the text contents and node type are identical. For images, videos and iframes we compare the `src` attribute. We also take into account the order in which the element appears in the DOM.
