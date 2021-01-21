@@ -27,7 +27,7 @@ Reveal.initialize.then( () => {
 
 To run multiple presentations side-by-side on the same page you can create instances of the `Reveal` class. The `Reveal` constructor accepts two arguments; the `.reveal` HTML element root of the presentation and an optional [config object](/config/).
 
-Note that you will also need to set the [embedded](/presentation-size/#embedded) config option to true. This flag makes the presentations size themselves according to their `.reveal` root element size, rather than the browser viewport.
+Note that you will also need to set the [embedded](/presentation-size/#embedded) config option to true. This flag makes the presentations size themselves according to their `.reveal` root element size, rather than the browser viewport. You will also need to manually define the `width` and `height` CSS properties for each `.reveal .deck*` element in order to see them appear.
 
 By default reveal.js will capture all keyboard events in the document. For embedded presentations we recommend initializing with `keyboardCondition: 'focused'` so that keyboard events are only captured when the presentation has been focused by the viewer.
 
