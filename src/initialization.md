@@ -18,7 +18,7 @@ If you only have a single presentation on the page we recommend initializing rev
 
 The `initialize` method returns a promise which will resolve as soon as the presentation is ready and can be interacted with via the API.
 ```js
-Reveal.initialize.then( () => {
+Reveal.initialize().then( () => {
   // reveal.js is ready
 } )
 ```

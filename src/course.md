@@ -16,7 +16,7 @@ If there's a specific topic you'd like to see covered or if you have any other c
 
 ### Stay up to date
 
-Subscribe below if you want to be notified when the course is ready 🙌 Recording started early 2021 and I'm <em>hoping</em> to have it done before the summer. No promises on release date though—it will be released when it's ready 😁
+Subscribe below if you want to be notified when the course is ready 🙌 Recording started in 2021 and I'm aiming for a release around late spring or early summer 🚀
 
 <style>.gumroad-follow-form-embed { zoom: 1; } .gumroad-follow-form-embed:before, .gumroad-follow-form-embed:after { display: table; line-height: 0; content: ""; } .gumroad-follow-form-embed:after { clear: both; } .gumroad-follow-form-embed * { margin: 0; padding: 0; outline: 0; box-sizing: border-box !important; float: left !important; } .gumroad-follow-form-embed input { border-radius: 4px; border-top-right-radius: 0; border-bottom-right-radius: 0; line-height: 1rem; background: #fff; border-right: 0; padding: 10px; background-position: top right; background-repeat: no-repeat; text-rendering: optimizeLegibility; font-smoothing: antialiased; -webkit-appearance: none; -moz-appearance: caret; width: 65% !important; height: 40px !important; } .gumroad-follow-form-embed button { line-height: 1rem; border-radius: 4px; border-top-left-radius: 0; border-bottom-left-radius: 0; display: inline-block; padding: 11px 15px 12px; cursor: pointer; height: 40px !important; width: 35% !important; } </style>
 <form action="https://gumroad.com/follow_from_embed_form" class="form gumroad-follow-form-embed" method="post">
