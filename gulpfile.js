@@ -6,6 +6,8 @@ const rename = require('gulp-rename')
 const postcss = require('gulp-postcss')
 const webpack = require('webpack-stream')
 
+sass.compiler = require('sass');
+
 gulp.task('js', () => gulp.src(['js/main.js'])
     .pipe(webpack({
         mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
