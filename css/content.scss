@@ -108,10 +108,10 @@
 .article>table {
     display: block;
     overflow: auto;
-    @apply m-4 -mx-4 border border-gray-300 rounded text-base;
+    @apply m-4 -mx-4 border rounded text-base;
 
     th {
-      @apply p-4 align-top border-b border-gray-300 font-medium;
+      @apply p-4 align-top border-b font-medium;
     }
 
     td {
@@ -131,12 +131,25 @@
     &.nowrap-2nd th:nth-child(2),
     &.nowrap-2nd td:nth-child(2),
     &.key-value th:first-child,
-    &.key-value td:first-child {
+    &.key-value td:first-child,
+    &.toc th:first-child {
         white-space: nowrap;
     }
 
     &.key-value td:nth-child(2) {
         width: 100%;
+    }
+
+    &.toc td:nth-child(1) {
+        width: 100%;
+    }
+
+    &.toc strong {
+        @apply py-2;
+    }
+
+    &.hide-header th {
+        display: none;
     }
 
 }
@@ -191,7 +204,116 @@
 .article .reveal h2 { font-size: 1.6em; }
 .article .reveal h3 { font-size: 1.3em; }
 
-
 .anchorjs-link:after {
     @apply text-gray-400;
 }
+
+.extras .gumroad-button,
+.article .gumroad-button {
+    display: inline-block !important;
+    font-family: inherit !important;
+    background-image: none !important;
+    box-shadow: none !important;
+    @apply text-gray-900 bg-yellow-400 text-xl font-medium px-4 py-2 my-2 rounded #{!important};
+}
+.extras .gumroad-button-logo,
+.article .gumroad-button-logo {
+    display: none !important;
+}
+
+
+.buy-course {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    @apply my-8;
+}
+.buy-course-thumb {
+    display: flex;
+    width: 33%;
+    max-width: 240px;
+    background: #111;
+    @apply rounded-l-lg;
+}
+.buy-course-action {
+    display: flex;
+    flex-shrink: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    @apply border border-l-0 border-r-0 p-4 pt-2 pl-10 pr-5;
+}
+.buy-course-price {
+    font-size: 3.5rem;
+    line-height: 1.2;
+}
+.buy-course-price sup {
+    font-size: 0.5em;
+    top: -0.7em;
+}
+.buy-course-price .old-price {
+    position: relative;
+    font-size: 0.7em;
+    color: #999;
+    vertical-align: middle;
+}
+.buy-course-price .old-price:before {
+    content: '';
+    position: absolute;
+    background: #999;
+    display: block;
+    height: 3px;
+    left: -6px;
+    right: -6px;
+    top: 45%;
+}
+.buy-course-data {
+    display: flex;
+    flex-shrink: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    @apply border border-l-0 p-4 pr-10 pl-5 rounded-lg rounded-l-none;
+}
+.buy-course-data ul {
+    list-style: none;
+}
+.buy-course-data li:before {
+    content: '';
+    margin-right: 10px;
+    background-image: url("/images/icons/checkmark.svg");
+    background-size: contain;
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+}
+
+@media screen and (max-width: 700px) {
+    .buy-course-thumb {
+        display: none;
+    }
+
+    .buy-course-action {
+        @apply border-l rounded-l-lg;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .buy-course {
+        flex-direction: column;
+    }
+
+    .buy-course-action {
+        @apply border border-b-0 rounded-t-lg rounded-b-none px-6;
+    }
+
+    .buy-course-data {
+        @apply border border-t-0 rounded-b-lg rounded-t-none px-6;
+    }
+}
+
+
+
+
