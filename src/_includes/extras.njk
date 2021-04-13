@@ -10,10 +10,19 @@
 		<div class="mb-4 pb-4 border-b border-gray-300">
 			<a href="https://slides.com">
 				<img src="/images/slides-symbol-512x512.png" width="100" height="100">
-				<p class="block mb-2 text-gray-700">Slides.com — the official reveal.js presentation editor.</p>
+				<p class="block mb-2 text-gray-700">Slides.com — the reveal.js presentation editor.</p>
 				<span class="text-pink-700 hover:text-pink-900">Try it for free <span class="exernal-link-icon">{% include "images/icons/arrow-right.svg" %}</span></span>
 			</a>
 		</div>
+		{% if id != "course" %}
+		<div class="mb-4 pb-4 border-b border-gray-300">
+			<a href="/course">
+				<img src="/images/docs/mastering.svg" width="140" height="140">
+				<p class="block my-2 text-gray-700">Mastering reveal.js — the official video course.</p>
+				<span class="text-pink-700 hover:text-pink-900">Learn more <span class="exernal-link-icon">{% include "images/icons/arrow-right.svg" %}</span></span>
+			</a>
+		</div>
+		{% endif %}
 		<div class="text-gray-500">
 			<div class="mt-2">
 				v4.1.0

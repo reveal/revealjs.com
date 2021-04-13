@@ -13,7 +13,7 @@ hide_ads: true
 
 This video course that will teach you how to everything you need to know to create great looking presentations with reveal.js.
 
-We'll start from the basics of installing reveal.js, creating slides and configuring your presentation. Then we'll work our way up to more interesting topics like presenting syntax highlighted code, animating slide content with Auto-Animate and using the speaker view. In the advanced videos we'll explore the reveal.js JavaScript API, plugin creation and how to customize keyboard bindings. (See [full list of videos](#contents).)
+We'll start from the basics of installing reveal.js, creating slides and configuring your presentation. Then we'll work our way up to more interesting topics like presenting syntax highlighted code, animating slide content with Auto-Animate and using the speaker view. In the advanced videos we'll explore the reveal.js JavaScript API, plugin creation and how to customize keyboard bindings. (See [full list of videos](#table-of-contents).)
 
 
 ### Who is this for?
@@ -36,7 +36,7 @@ I released the first version of reveal.js 10 years ago (!) and couldn't have ima
 			<span class="old-price"><sup>$</sup>99</span>
 			<span><sup>$</sup>79</span>
 		</p>
-		<a class="gumroad-button" href="https://gum.co/reveal-js/v0sz80d?wanted=true" target="_blank">Buy course</a>
+		<a class="gumroad-button" href="https://gum.co/reveal-js/v0sz80d?wanted=true" target="_blank" data-gumroad-single-product="true">Buy course</a>
 	</div>
 	<div class="buy-course-data">
 		<ul>
@@ -50,7 +50,7 @@ I released the first version of reveal.js 10 years ago (!) and couldn't have ima
 </div>
 <script src="https://gumroad.com/js/gumroad.js"></script>
 
-The course is sold via [Gumroad](https://gumroad.com/l/reveal-js). VAT is added at the time of purchase, if applicable. 100% money back if the course isn't a good fit for you—no questions asked.
+The course is sold via [Gumroad](https://gumroad.com/). VAT is added at the time of purchase, if applicable. 100% money back if the course isn't a good fit for you—no questions asked.
 
 ## Table of Contents
 The course is divided into relatively short videos so that you can easily skip topics that aren't relevant to you or that you are already familiar with. The total runtime is 5.5 hours.
