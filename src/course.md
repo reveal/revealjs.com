@@ -65,24 +65,24 @@ The course is divided into relatively short videos so that you can easily skip t
 | &nbsp; Working with vertical slides. | 9:05
 | &nbsp; Creating slides using Markdown. | 16:34
 | **Content Creation**  |
-| &nbsp; Adding text, images, videos and iframes to your slides | 10:47
-| &nbsp; Layout your slide content using stacks and auto-sized text | 13:58
-| &nbsp; Fullscreen background images, videos, colors and iframes | 16:26
-| &nbsp; Presenting syntax highlighted code | 21:51
-| &nbsp; Using Fragments to build up slides in steps | 13:14
-| &nbsp; Animating your content with Auto-Animate | 17:01
+| &nbsp; Adding text, images, videos and iframes to your slides. | 10:47
+| &nbsp; Layout slide content using stacks and auto-sized text. | 13:58
+| &nbsp; Fullscreen background images, videos, colors and iframes. | 16:26
+| &nbsp; Presenting syntax highlighted code. | 21:51
+| &nbsp; Using Fragments to build up slides in steps. | 13:14
+| &nbsp; Animating slide content with Auto-Animate. | 17:01
 | **Configuration & Features**  |
-| &nbsp; Presentation size and scale | 14:34
-| &nbsp; Slide transitions | 12:36
-| &nbsp; Theming your content and creating your own theme | 16:12
-| &nbsp; Speaker notes & using the speaker view | 11:27
-| &nbsp; Slide numbers & URLs | 19:55
-| &nbsp; Converting your presentation to PDF | 10:23
+| &nbsp; Presentation size and scale. | 14:34
+| &nbsp; Slide transitions. | 12:36
+| &nbsp; Theming your content and creating your own theme. | 16:12
+| &nbsp; Speaker notes & using the speaker view. | 11:27
+| &nbsp; Slide numbers & URLs. | 19:55
+| &nbsp; Converting your presentation to PDF. | 10:23
 | **Advanced (JS)** |
-| &nbsp; Initialization & running multiple presentations | 19:06
-| &nbsp; Plugins; where to find and how to create them | 14:52
-| &nbsp; Using the reveal.js API to control your presentation | 40:32
-| &nbsp; Customizing keyboard shortcuts | 15:04
-| &nbsp; Working with the source code | 21:09
+| &nbsp; Initialization & running multiple presentations. | 19:06
+| &nbsp; Plugins; where to find and how to create them. | 14:52
+| &nbsp; Using the reveal.js API to control your presentation. | 40:32
+| &nbsp; Customizing keyboard shortcuts. | 15:04
+| &nbsp; Working with the source code. | 21:09
 {.toc .hide-header}
 
