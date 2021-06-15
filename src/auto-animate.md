@@ -90,6 +90,8 @@ You can override specific animation settings such as easing and duration either 
 | data-auto-animate-unmatched      | true       | Determines whether elements with no matching auto-animate target should fade in. Set to false to make them appear instantly.
 | data-auto-animate-duration       | 1.0        | Animation duration in seconds.
 | data-auto-animate-delay          | 0          | Animation delay in seconds (can only be set for specific elements, not at the slide level).
+| data-auto-animate-id             | _absent_   | An [id](#auto-animate-id-%26-restart) tying auto-animate slides together.
+| data-auto-animate-restart        | _absent_   | [Breaks apart](#auto-animate-id-%26-restart) two adjacent auto-animate slides (even with the same id).
 
 If you'd like to change the defaults for the whole deck, use the following config options:
 ```javascript
@@ -99,6 +101,56 @@ Reveal.initialize({
   autoAnimateUnmatched: false
 })
 ```
+
+## Auto-Animate Id & Restart
+When you want separate groups of auto-animated slides right next to each other you can use the `data-auto-animate-id` and `data-auto-animate-restart` attributes.
+
+With `data-auto-animate-id` you can specify arbitrary ids for your slides. Two adjacent slides will only auto-animate if they have the same id or if both don't have one.
+
+Another way to control auto-animate is the `data-auto-animate-restart` attribute. Applying this attribute to a slide will prevent auto-animate between the previous slide and it (even if they have the same id) but _not_ between it and the next slide.
+
+```html
+<section data-auto-animate>
+	<h1>Group A</h1>
+</section>
+<section data-auto-animate>
+	<h1 style="color: #3B82F6;">Group A</h1>
+</section>
+<section data-auto-animate data-auto-animate-id="two">
+	<h1>Group B</h1>
+</section>
+<section data-auto-animate data-auto-animate-id="two">
+	<h1 style="color: #10B981;">Group B</h1>
+</section>
+<section data-auto-animate data-auto-animate-id="two" data-auto-animate-restart>
+	<h1>Group C</h1>
+</section>
+<section data-auto-animate data-auto-animate-id="two">
+	<h1 style="color: #EC4899;">Group C</h1>
+</section>
+```
+<div class="reveal reveal-example">
+	<div class="slides">
+		<section data-auto-animate>
+			<h1>Group A</h1>
+		</section>
+		<section data-auto-animate>
+			<h1 style="color: #3B82F6;">Group A</h1>
+		</section>
+		<section data-auto-animate data-auto-animate-id="two">
+			<h1>Group B</h1>
+		</section>
+		<section data-auto-animate data-auto-animate-id="two">
+			<h1 style="color: #10B981;">Group B</h1>
+		</section>
+		<section data-auto-animate data-auto-animate-id="two" data-auto-animate-restart>
+			<h1>Group C</h1>
+		</section>
+		<section data-auto-animate data-auto-animate-id="two">
+			<h1 style="color: #EC4899;">Group C</h1>
+		</section>
+	</div>
+</div>
 
 ## Events
 
