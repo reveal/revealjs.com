@@ -32,7 +32,7 @@
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^4.1.0",
     "html-minifier": "^4.0.0",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
     "lunr": "^2.3.8",
     "markdown-it-anchor": "^6.0.1",
     "markdown-it-attrs": "^3.0.3",
