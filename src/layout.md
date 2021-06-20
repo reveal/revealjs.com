@@ -85,7 +85,7 @@ The `r-fit-text` class makes text as large as possible without overflowing the s
 
 ## Stretch
 
-The `r-stretch` layout helper lets you resize an element, like an image or video, to cover the remaining vertical space in a slide. For example, in the below example our slide contains a **title**, an **image** and a **byline**. Because the **image** has the `.r-stretch` class, it's height is set to the slide height minus the combined height of the **title** and **byline**.
+The `r-stretch` layout helper lets you resize an element, like an image or video, to cover the remaining vertical space in a slide. For example, in the below example our slide contains a **title**, an **image** and a **byline**. Because the **image** has the `.r-stretch` class, its height is set to the slide height minus the combined height of the **title** and **byline**.
 
 ```html
 <h2>Stretch Example</h2>
