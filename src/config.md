@@ -218,7 +218,7 @@ Reveal.initialize({
   postMessage: true,
 
   // Dispatches all reveal.js events to the parent window through postMessage
-  postMessageEvents: false,
+  postMessageEvents: true,
 
   // Focuses body when page changes visibility to ensure keyboard shortcuts work
   focusBodyOnPageVisibilityChange: true,
@@ -255,7 +255,7 @@ Reveal.initialize({
   mobileViewDistance: 2,
 
   // The display mode that will be used to show slides
-  display: 'block',
+  display: 'show',
 
   // Hide cursor if inactive
   hideInactiveCursor: true,
