@@ -44,7 +44,7 @@ These plugins are distributed together with the reveal.js repo. Here's a complet
 | RevealSearch       | Press CTRL+Shift+F to search slide content.<br><span class="text-gray-600">plugin/search/search.js</span>
 | RevealNotes        | Show a [speaker view](/speaker-view/) in a separate window.<br><span class="text-gray-600">plugin/notes/notes.js</span>
 | RevealMath         | Render [math equations](/math/).<br><span class="text-gray-600">plugin/math/math.js</span>
-| RevealZoom         | Alt+click to zoom in on elements.<br><span class="text-gray-600">plugin/zoom/zoom.js</span>
+| RevealZoom         | Ctrl+click to zoom in on elements.<br><span class="text-gray-600">plugin/zoom/zoom.js</span>
 {.key-value}
 
 All of the above are available as ES modules if you swap `.js` for `.esm.js`.
