@@ -38,10 +38,10 @@ HTML will be escaped by default. To avoid this, add `data-noescape` to the `<cod
 </div>
 
 ## Theming
-Make sure that a syntax highlight theme is included in your document. We include Monokai by default, which is distributed with the reveal.js repo at [lib/css/monokai.css](https://github.com/hakimel/reveal.js/tree/master/lib/css/monokai.css). A full list of available themes can be found at <https://highlightjs.org/static/demo/>.
+Make sure that a syntax highlight theme is included in your document. We include Monokai by default, which is distributed with the reveal.js repo at [plugin/highlight/monokai.css](https://github.com/hakimel/reveal.js/tree/master/plugin/highlight/monokai.css). A full list of available themes can be found at <https://highlightjs.org/static/demo/>.
 
 ```html
-<link rel="stylesheet" href="lib/css/monokai.css">
+<link rel="stylesheet" href="plugin/highlight/monokai.css">
 <script src="plugin/highlight/highlight.js"></script>
 <script>
   Reveal.initialize({
