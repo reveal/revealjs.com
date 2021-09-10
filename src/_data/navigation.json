@@ -14,7 +14,8 @@
         },
         {
           "label": "Video Course",
-          "url": "/course"
+          "url": "/course",
+          "new": true
         },
         {
           "label": "Installation",

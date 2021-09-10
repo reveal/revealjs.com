@@ -15,6 +15,7 @@
                 <a href="{{ item.url | safe }}" class="nav-link -mx-1 p-1 {{ item.class }} {% if is_current_page %}selected{% endif %}"{% if is_current_page %} aria-current="page"{% endif %}>
                   {{ item.label }}
                   {% if item.external %}<span class="exernal-link-icon">{% include "images/icons/arrow-right.svg" %}</span>{% endif %}
+                  {% if item.new %}<span class="inline-block border border-gray-700 text-gray-700 leading-none p-0.5 ml-2 -mt-px rounded-sm align-middle" style="font-size: 0.65em;">NEW</span>{% endif %}
                 </a>
               </li>
 

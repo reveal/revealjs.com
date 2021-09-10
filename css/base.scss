@@ -118,3 +118,25 @@ a, button {
 .search-result .r-anchor-background {
     @apply bg-gray-200;
 }
+
+
+.homepage-promotion {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    padding: 0.5rem 0.5rem 0.5rem 0.75rem;
+    border: 1px solid rgba(255,255,255,0.75);
+    border-radius: 100px;
+    color: #fff;
+}
+.homepage-promotion span {
+    background: #fff;
+    color: #000;
+    border-radius: 100px;
+    margin-left: 0.75rem;
+    font-size: 0.8em;
+    padding: 0.25rem 0.5rem;
+}
+

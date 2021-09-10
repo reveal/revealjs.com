@@ -1,6 +1,7 @@
 $demoHeight: 65vh;
 
 .reveal-demo {
+    position: relative;
 	height: $demoHeight;
     max-height: 900px;
 }
