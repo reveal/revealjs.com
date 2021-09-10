@@ -1,12 +1,10 @@
 const pkg = require('./package.json')
 const path = require('path')
 const gulp = require('gulp')
-const sass = require('gulp-sass')
+const sass = require('gulp-sass')(require('sass'))
 const rename = require('gulp-rename')
 const postcss = require('gulp-postcss')
 const webpack = require('webpack-stream')
-
-sass.compiler = require('sass');
 
 gulp.task('js', () => gulp.src(['js/main.js'])
     .pipe(webpack({
