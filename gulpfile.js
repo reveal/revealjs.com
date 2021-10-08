@@ -1,10 +1,33 @@
 const pkg = require('./package.json')
 const path = require('path')
 const gulp = require('gulp')
-const sass = require('gulp-sass')(require('sass'))
+const sass = require('sass')
 const rename = require('gulp-rename')
 const postcss = require('gulp-postcss')
 const webpack = require('webpack-stream')
+const through = require('through2');
+
+// a custom pipeable step to transform Sass to CSS
+function compileSass() {
+  return through.obj( ( vinylFile, encoding, callback ) => {
+    const transformedFile = vinylFile.clone();
+
+    sass.render({
+        data: transformedFile.contents.toString(),
+        includePaths: ['css/']
+    }, ( err, result ) => {
+        if( err ) {
+            console.log( vinylFile.path );
+            console.log( err.formatted );
+        }
+        else {
+            transformedFile.extname = '.css';
+            transformedFile.contents = result.css;
+            callback( null, transformedFile );
+        }
+    });
+  });
+}
 
 gulp.task('js', () => gulp.src(['js/main.js'])
     .pipe(webpack({
@@ -29,7 +52,7 @@ gulp.task('js', () => gulp.src(['js/main.js'])
     .pipe(gulp.dest('./dist')))
 
 gulp.task('css', () => gulp.src(['css/main.scss'])
-    .pipe(sass())
+    .pipe(compileSass())
     .pipe(postcss())
     .pipe(rename('main.css'))
     .pipe(gulp.dest('./dist')))
