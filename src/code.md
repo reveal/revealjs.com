@@ -155,3 +155,29 @@ sealed class Either<out A, out B> {
 }
 </script></code></pre>
 ```
+
+## The highlight.js API & beforeHighlight <span class="r-version-badge new">4.2.0</span>
+If you want to interact with highlight.js before your code is highlighted you can use the `beforeHighlight` callback. For example, this can be useful if you want to register a new language via the [highlight.js API](https://highlightjs.readthedocs.io/en/latest/api.html).
+```js
+Reveal.initialize({
+  highlight: {
+    beforeHighlight: hljs => hljs.registerLanguage(/*...*/)
+  },
+  plugins: [ RevealHighlight ]
+})
+```
+
+## Manual Highlighting
+All of your code blocks are automatically syntax highlighted when reveal.js starts. If you want to disable this behavior and trigger highlighting on your own you can set the `highlightOnLoad` flag to false.
+```js
+Reveal.initialize({
+  highlight: {
+    highlightOnLoad: false
+  },
+  plugins: [ RevealHighlight ]
+}).then(() => {
+  const highlight = Reveal.getPlugin( 'highlight' );
+  highlight.highlightBlock( /* code block element to highlight */ );
+});
+```
+
