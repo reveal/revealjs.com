@@ -52,12 +52,16 @@ h.v
 v3
 lt
 grey
+e.g.
 
 RevealHighlight
 RevealMarkdown
 RevealSearch
 RevealNotes
 RevealMath
+RevealMath.KaTeX
+RevealMath.MathJax2
+RevealMath.MathJax3
 RevealZoom
 highlight.js
 markdown.js
@@ -70,7 +74,14 @@ reveal.js.
 revealjs.com
 reveal.css
 reset.css
+beforeHighlight
 
+katex
+mathjax2
+mathjax3
+url
+mathml
+commonhtml
 fitty
 rollup
 monokai

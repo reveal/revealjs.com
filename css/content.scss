@@ -27,10 +27,10 @@
     // :'(
     & > a,
     a:not([class]) {
-        @apply text-pink-700 border-b border-pink-200 no-underline break-words;
+        @apply text-pink-700 border-b border-pink-400 no-underline break-words;
 
         &:hover {
-            @apply text-pink-900 border-pink-300;
+            @apply text-pink-900 border-pink-600;
         }
     }
 
@@ -66,7 +66,7 @@
         @apply text-xs p-px text-gray-500 float-right;
     }
     .r-version-badge.new:before {
-        content: 'Added in';
+        content: 'Added in ';
     }
     .r-version-badge.deprecated:before {
         content: 'Deprecated in ';
@@ -124,6 +124,10 @@
 
     tr:nth-child(2n) {
       background-color: transparent;
+    }
+
+    &.full-width {
+        display: table;
     }
 
     &.nowrap-1st th:first-child,

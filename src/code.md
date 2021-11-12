@@ -91,6 +91,33 @@ You can enable line numbers by adding `data-line-numbers` to your `<code>` tags.
   </div>
 </div>
 
+#### Line Number Offset <span class="r-version-badge new">4.2.0</span>
+You can offset the line number if you want to showcase a excerpt of a longer set of code. In the example below, we set `data-ln-start-from="7"` to make the line numbers start from 7.
+
+```html
+<pre><code data-line-numbers data-ln-start-from="7">
+<tr>
+  <td>Oranges</td>
+  <td>$2</td>
+  <td>18</td>
+</tr>
+</code></pre>
+```
+<div class="reveal reveal-example">
+  <div class="slides">
+    <section>
+<pre><code data-line-numbers data-ln-start-from="7" data-trim data-noescape>
+&lt;tr&gt;
+  &lt;td>Oranges&lt;/td&gt;
+  &lt;td>$2&lt;/td&gt;
+  &lt;td>18&lt;/td&gt;
+&lt;/tr&gt;
+</code></pre>
+    </section>
+  </div>
+</div>
+
+
 ## Step-by-step Highlights
 
 You can step through multiple code highlights on the same code block. Delimit each of your highlight steps with the `|` character. For example `data-line-numbers="1|2-3|4,6-10"` will produce three steps. It will start by highlighting line 1, next step is lines 2-3, and finally line 4 and 6 through 10.
@@ -155,3 +182,29 @@ sealed class Either<out A, out B> {
 }
 </script></code></pre>
 ```
+
+## The highlight.js API & beforeHighlight <span class="r-version-badge new">4.2.0</span>
+If you want to interact with highlight.js before your code is highlighted you can use the `beforeHighlight` callback. For example, this can be useful if you want to register a new language via the [highlight.js API](https://highlightjs.readthedocs.io/en/latest/api.html).
+```js
+Reveal.initialize({
+  highlight: {
+    beforeHighlight: hljs => hljs.registerLanguage(/*...*/)
+  },
+  plugins: [ RevealHighlight ]
+})
+```
+
+## Manual Highlighting
+All of your code blocks are automatically syntax highlighted when reveal.js starts. If you want to disable this behavior and trigger highlighting on your own you can set the `highlightOnLoad` flag to false.
+```js
+Reveal.initialize({
+  highlight: {
+    highlightOnLoad: false
+  },
+  plugins: [ RevealHighlight ]
+}).then(() => {
+  const highlight = Reveal.getPlugin( 'highlight' );
+  highlight.highlightBlock( /* code block element to highlight */ );
+});
+```
+
