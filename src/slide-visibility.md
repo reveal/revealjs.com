@@ -30,6 +30,8 @@ When preparing a presentation it can sometimes be helpful to prepare optional sl
 
 To "hide" those slides from reveal.js' numbering system you can use `data-visibility="uncounted"`.
 
+**Note:** This only works for slides at the end of the presentation, after all of your main slides.
+
 ```html
 <section>Slide 1</section>
 <section>Slide 2</section>

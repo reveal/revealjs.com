@@ -74,3 +74,10 @@ import Reveal from 'reveal.js';
 Reveal.initialize();
 ```
 
+## Uninitializing reveal.js <span class="r-version-badge new">4.2.2</span> {id="destroy"}
+
+If you want to uninitialize reveal.js you can use the `destroy` API method. This will undo all changes that the framework has made to the DOM, remove all event listeners and unregister/destroy all plugins.
+
+```js
+Reveal.destroy();
+```
