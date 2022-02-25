@@ -11,12 +11,12 @@ The official reveal.js website and docs. Contributions are welcome!
 
 1. Install dependencies
    ```sh
-   $ npm install
+   $ yarn
    ```
 
 1. Start the development server
    ```sh
-   $ npm start
+   $ yarn start
    ```
 
 The development server will automatically reload as you make changes.
@@ -25,7 +25,7 @@ The development server will automatically reload as you make changes.
 There's a built-in task for spell checking.
 
 ```sh
-$ npm test
+$ yarn test
 ```
 
 ## Technologies
@@ -36,8 +36,8 @@ The site is hosted on Netlify and automatically deploys master when there are ne
 
 We automatically generate our production build at deploy-time but it's also possible to do it manually with:
 ```
-npm run production
+yarn run production
 ```
 
 ### Note
-reveal.js is installed from the [dev branch](https://github.com/hakimel/reveal.js/tree/dev). If it gets stuck on an old version, remove the reveal.js entry from `package.lock.json` and rerun `npm install`.
+reveal.js is installed from the [dev branch](https://github.com/hakimel/reveal.js/tree/dev). If it gets stuck on an old version, remove the reveal.js entry from `package.lock.json` and rerun `yarn`.

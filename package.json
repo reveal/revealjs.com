@@ -30,7 +30,6 @@
     "gulp": "^4.0.2",
     "gulp-postcss": "^9.0.1",
     "gulp-rename": "^2.0.0",
-    "gulp-sass": "^5.0.0",
     "html-minifier": "^4.0.0",
     "lodash": "^4.17.15",
     "lunr": "^2.3.8",
@@ -40,6 +39,7 @@
     "normalize.css": "^8.0.1",
     "prism-themes": "^1.4.0",
     "sass": "^1.39.2",
+    "postcss": "^8.4.7",
     "tailwindcss": "^2.0.1",
     "webpack-stream": "^5.2.1"
   },

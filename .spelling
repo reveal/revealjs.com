@@ -53,6 +53,9 @@ v3
 lt
 grey
 e.g.
+unregister
+uninitialize
+uninitializing
 
 RevealHighlight
 RevealMarkdown
