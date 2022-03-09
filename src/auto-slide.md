@@ -43,11 +43,11 @@ It's also possible to override the slide duration for individual slides and frag
 
 The `autoSlideMethod` config option can be used to override the default function used for navigation when auto-sliding.
 
-We step through all slides, both horizontal and [vertical](/vertical-slides/), by default. To only navigate along the top layer and ignore vertical slides, you can set this to `Reveal.navigateRight`.
+We step through all slides, both horizontal and [vertical](/vertical-slides/), by default. To only navigate along the top layer and ignore vertical slides, you can provide a method that calls `Reveal.right()`.
 
 ```js
 Reveal.configure({
-	autoSlideMethod: Reveal.navigateRight
+	autoSlideMethod: () => Reveal.right()
 });
 ````
 
