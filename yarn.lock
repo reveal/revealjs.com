@@ -6706,8 +6706,8 @@ reusify@^1.0.4:
   integrity sha512-U9nH88a3fc/ekCF1l0/UP1IosiuIjyTh7hBvXVMHYgVcfGvt897Xguj2UOLDeI5BG2m7/uwyaLVT6fbtCwTyzw==
 
 "reveal.js@github:hakimel/reveal.js#master":
-  version "4.2.1"
-  resolved "https://codeload.github.com/hakimel/reveal.js/tar.gz/e33c3c72f93d4c70ded3a90f5918f60082c96451"
+  version "4.3.1"
+  resolved "https://codeload.github.com/hakimel/reveal.js/tar.gz/0ca389721c5c7eff5db6f67159cbb1cdd51a3d7f"
 
 rgb-regex@^1.0.1:
   version "1.0.1"

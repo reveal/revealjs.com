@@ -14,18 +14,41 @@ All CSS color formats are supported, including hex values, keywords, `rgba()` or
 
 ```html/0,3
 <section data-background-color="aquamarine">
-  <h2>🐟</h2>
+  <h2>🍦</h2>
 </section>
 <section data-background-color="rgb(70, 70, 255)">
-  <h2>🐳</h2>
+  <h2>🍰</h2>
 </section>
 ```
 <div class="reveal reveal-example">
   <div class="slides">
     <section data-background-color="aquamarine">
-      <h2 style="font-size: 4em;">🐟</h2>
+      <h2 style="font-size: 4em;">🍦</h2>
     </section>
     <section data-background-color="rgb(70, 70, 255)">
+      <h2 style="font-size: 4em;">🍰</h2>
+    </section>
+  </div>
+</div>
+
+## Gradient Backgrounds
+
+All CSS gradient formats are supported, including `linear-gradient`, `radial-gradient` and `conic-gradient`.
+
+```html/0,3
+<section data-background-gradient="linear-gradient(to bottom, #283b95, #17b2c3)">
+  <h2>🐟</h2>
+</section>
+<section data-background-gradient="radial-gradient(#283b95, #17b2c3)">
+  <h2>🐳</h2>
+</section>
+```
+<div class="reveal reveal-example">
+  <div class="slides">
+    <section data-background-gradient="linear-gradient(to bottom, #283b95, #17b2c3)">
+      <h2 style="font-size: 4em;">🐟</h2>
+    </section>
+    <section data-background-gradient="radial-gradient(#283b95, #17b2c3)">
       <h2 style="font-size: 4em;">🐳</h2>
     </section>
   </div>
