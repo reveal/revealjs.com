@@ -50,7 +50,7 @@ Some reveal.js features, like external Markdown, require that presentations run 
 
 
 ### Development Server Port
-The development server defaults to port 8000. You can use the the `port` argument to switch to a different one:
+The development server defaults to port 8000. You can use the `port` argument to switch to a different one:
 ```shell
 npm start -- --port=8001
 ```
