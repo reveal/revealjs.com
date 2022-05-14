@@ -14,7 +14,10 @@
 
     <link rel="canonical" href="{{ site.url }}{{ page.url }}">
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" media="print" onload="this.onload=null;this.removeAttribute('media');" rel="stylesheet" data-application-font="inter">
+    <noscript>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" data-application-font="inter">
+    </noscript>
 </head>
 
 <body data-page="{{ id }}" class="text-gray-900 leading-normal bg-gray-100">
