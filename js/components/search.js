@@ -13,6 +13,7 @@ export default async () => {
 
 	const searchInput = document.querySelector( '.search-input' );
 	const searchResults = document.querySelector( '.search-results' );
+	const searchShortcutModifier = document.querySelector( '.search-shortcut-modifier' );
 
 	let docs;
 	let index;
@@ -69,7 +70,7 @@ export default async () => {
 		if( contentMatch ) {
 			let start = contentMatch.index;
 			let end = start + contentMatch[0].length;
-			
+
 			// Include surrounding text
 			start = Math.max( start - 30, 0 );
 			end = Math.max( end + 110, result.content.length );
@@ -204,8 +205,7 @@ export default async () => {
 
 	document.addEventListener( 'keydown', event => {
 
-		// '/'
-		if( event.keyCode === 191 ) {
+		if( event.key === '/' || ( event.key === 'k' && ( event.metaKey || event.ctrlKey ) ) ) {
 			searchInput.focus();
 			searchInput.select();
 			event.preventDefault();

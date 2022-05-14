@@ -18,21 +18,20 @@ const PAGE_ID = document.body.dataset.page;
 setupNavigation();
 setupHovers( '.header-nav a, .header-cta, .footer a, .sidebar a:not(.selected)' );
 setupAnchors();
+setupPage();
 
 if( document.readyState === 'complete' ) {
-	setup();
+	setupAd();
 }
 else if( document.readyState === 'interactive' ) {
 	document.onreadystatechange = function () {
 		if( document.readyState == 'complete' ) {
-			setup();
+			setupAd();
 		}
 	}
 }
 
-
-function setup() {
-
+function setupPage() {
 	setupInlineDecks();
 	setupPrefetch();
 
@@ -45,6 +44,16 @@ function setup() {
 	}
 	else {
 		setupSearch();
+	}
+}
+
+function setupAd() {
+
+	const adUnit = document.querySelector( '#_carbonads_js' );
+	if( adUnit && adUnit.hasAttribute( 'data-src' ) ) {
+		const adSource = adUnit.getAttribute( 'data-src' );
+		adUnit.removeAttribute( 'data-src' );
+		adUnit.setAttribute( 'src', adSource );
 	}
 
 }
