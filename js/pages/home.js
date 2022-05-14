@@ -30,7 +30,7 @@ export default () => {
 
 			updateVisibility();
 
-			document.addEventListener( 'scroll', throttle( updateVisibility, 100 ) )
+			document.addEventListener( 'scroll', throttle( updateVisibility, 100 ), {passive: true} )
 
 		}
 
@@ -57,7 +57,7 @@ export default () => {
 		}
 
 		document.documentElement.classList.add( 'highlight-demo' );
-		document.addEventListener( 'scroll', scrollListener );
+		document.addEventListener( 'scroll', scrollListener, {passive: true} );
 
 	}
 

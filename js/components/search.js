@@ -134,7 +134,7 @@ export default async () => {
 			// but on the homepage the header is pushed down from the
 			// top of the screen... et voilà:
 			if( document.querySelector( '.header' ).offsetTop > 0 && getComputedStyle( searchResults ).position === 'fixed' ) {
-				document.addEventListener( 'scroll', updateFixedPosition );
+				document.addEventListener( 'scroll', updateFixedPosition, {passive: true} );
 				updateFixedPosition();
 			}
 			else {

@@ -98,7 +98,7 @@ document.addEventListener( 'mousemove', () => {
 
 		pointerDirectionX = 0;
 		pointerDirectionY = 0;
-	} );
+	}, {passive: true} );
 
 export default selector => {
 
