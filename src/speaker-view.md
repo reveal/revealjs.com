@@ -41,6 +41,19 @@ This will only display in the notes window.
 </section>
 ```
 
+## Adding the Speaker Notes Plugin
+
+The plugin is already bundled with reveal.js. To enable the speaker notes plugin, add the plugin source to the `index.html` and add the plugin to the initialization of reveal.js.
+
+```html
+<script src="plugin/notes/notes.js"></script>
+<script>
+    Reveal.initialize({
+        plugins: [ RevealNotes ]
+    });
+</script>
+```
+
 ## Share and Print Speaker Notes
 
 Notes are only visible to the speaker inside of the speaker view. If you wish to share your notes with others you can initialize reveal.js with the `showNotes` configuration value set to `true`. Notes will appear along the bottom of the presentations.
