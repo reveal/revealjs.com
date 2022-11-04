@@ -220,8 +220,14 @@
     box-shadow: none !important;
     @apply text-gray-900 bg-yellow-400 text-xl font-medium px-4 py-2 my-2 rounded #{!important};
 }
+.extras .gumroad-button:hover,
+.article .gumroad-button:hover {
+    transform: none !important;
+}
 .extras .gumroad-button-logo,
-.article .gumroad-button-logo {
+.article .gumroad-button-logo,
+.extras .gumroad-button .logo-full,
+.article .gumroad-button .logo-full {
     display: none !important;
 }
 
