@@ -8,19 +8,20 @@ layout: default
 
 The framework comes with a few different themes included.
 
-| Name      | Effect
-| :-        | :-
-| black     | Black background, white text, blue links (default)
-| white     | White background, black text, blue links
-| league    | Gray background, white text, blue links
-| beige     | Beige background, dark text, brown links
-| sky       | Blue background, thin dark text, blue links
-| night     | Black background, thick white text, orange links
-| serif     | Cappuccino background, gray text, brown links
-| simple    | White background, black text, blue links
-| solarized | Cream-colored background, dark green text, blue links
-| blood     | Dark background, thick white text, red links
-| moon      | Dark blue background, thick grey text, blue links
+| Name                | Preview
+| :-                  | :-
+| black (default)     | <img src="/images/docs/themes/black.png" width="150" height="150" alt="Black background, white text, blue links">
+| white               | <img src="/images/docs/themes/white.png" width="150" height="150" alt="White background, black text, blue links">
+| league              | <img src="/images/docs/themes/league.png" width="150" height="150" alt="Gray background, white text, blue links">
+| beige               | <img src="/images/docs/themes/beige.png" width="150" height="150" alt="Beige background, dark text, brown links">
+| night               | <img src="/images/docs/themes/night.png" width="150" height="150" alt="Black background, thick white text, orange links">
+| serif               | <img src="/images/docs/themes/serif.png" width="150" height="150" alt="Cappuccino background, gray text, brown links">
+| simple              | <img src="/images/docs/themes/simple.png" width="150" height="150" alt="White background, black text, blue links">
+| solarized           | <img src="/images/docs/themes/solarized.png" width="150" height="150" alt="Cream-colored background, dark green text, blue links">
+| moon                | <img src="/images/docs/themes/moon.png" width="150" height="150" alt="Dark blue background, thick grey text, blue links">
+| dracula             | <img src="/images/docs/themes/dracula.png" width="150" height="150">
+| sky                 | <img src="/images/docs/themes/sky.png" width="150" height="150" alt="Blue background, thin dark text, blue links">
+| blood               | <img src="/images/docs/themes/blood.png" width="150" height="150" alt="Dark background, thick white text, red links">
 {.key-value}
 
 Each theme is available as a separate stylesheet. To change theme you will need to replace **black** below with your desired theme name in index.html:
