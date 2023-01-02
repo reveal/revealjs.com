@@ -12,7 +12,7 @@ It's possible and often times more convenient to write presentation content usin
 <section data-markdown>
   <textarea data-template>
     ## Slide 1
-    A paragraph with some text and a [link](http://hakim.se).
+    A paragraph with some text and a [link](https://hakim.se).
     ---
     ## Slide 2
     ---
@@ -25,7 +25,7 @@ It's possible and often times more convenient to write presentation content usin
     <section data-markdown data-separator="---">
         <script type="text/template">
 ## Slide 1
-A paragraph with some text and a [link](http://hakim.se).
+A paragraph with some text and a [link](https://hakim.se).
 ---
 ## Slide 2
 ---
