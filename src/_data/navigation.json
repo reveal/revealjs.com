@@ -113,6 +113,10 @@
           "url": "/slide-numbers/"
         },
         {
+          "label": "Jump to Slide",
+          "url": "/jump-to-slide/"
+        },
+        {
           "label": "Touch Navigation",
           "url": "/touch-navigation/"
         },

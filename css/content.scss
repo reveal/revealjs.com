@@ -68,6 +68,9 @@
     .r-version-badge.new:before {
         content: 'Added in ';
     }
+    .r-version-badge.coming:before {
+        content: 'Coming in ';
+    }
     .r-version-badge.deprecated:before {
         content: 'Deprecated in ';
     }
