@@ -37,6 +37,7 @@ The default fragment style is to start out invisible and fade in. This style can
 | fade-left               | Slide left while fading in |
 | fade-right              | Slide right while fading in |
 | fade-in-then-out        | Fades in, then out on the next step |
+| current-visible         | Fades in, then out on the next step |
 | fade-in-then-semi-out   | Fades in, then to 50% on the next step |
 | grow                    | Scale up |
 | semi-fade-out           | Fade out to 50% |
@@ -50,6 +51,7 @@ The default fragment style is to start out invisible and fade in. This style can
 | highlight-current-blue  | Turn text blue, then back to original on next step |
 {.key-value}
 
+Custom effects can be implemented by defining CSS styles for `.fragment.effectname` and `.fragment.effectname.visible` respectively, because the class `visible` is added to the fragment.
 
 ## Nested Fragments
 
