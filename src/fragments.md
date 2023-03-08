@@ -72,6 +72,23 @@ For example, the following defines a fragment style where elements are initially
   <p class="fragment custom blur">Three</p>
 </section>
 ```
+<div class="reveal reveal-example">
+  <div class="slides">
+    <style>
+      .fragment.blur {
+        filter: blur(5px);
+      }
+      .fragment.blur.visible {
+        filter: none;
+      }
+    </style>
+    <section>
+      <p class="fragment custom blur">One</p>
+      <p class="fragment custom blur">Two</p>
+      <p class="fragment custom blur">Three</p>
+    </section>
+  </div>
+</div>
 
 Note that we are adding a `custom` class to each fragment. This tells reveal.js to avoid applying its default fade-in fragment styles.
 
