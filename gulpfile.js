@@ -61,6 +61,6 @@ gulp.task('build', gulp.parallel('js', 'css'))
 
 gulp.task('default', () => {
     gulp.watch([ 'js/**.*', 'js/*/**.*' ], gulp.series('js'))
-    gulp.watch([ 'css/**.*' ], gulp.series('css'))
+    gulp.watch([ 'css/**.*', 'css/*/**.*' ], gulp.series('css'))
     gulp.parallel('js', 'css')()
 })

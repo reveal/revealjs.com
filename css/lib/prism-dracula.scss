@@ -9,7 +9,7 @@
 
 main {
 
-code[class*="language-"],
+code:not(.hljs)[class*="language-"],
 pre[class*="language-"] {
   color: #f8f8f2;
   background: none;
@@ -38,13 +38,13 @@ pre[class*="language-"] {
   border-radius: 0.3em;
 }
 
-:not(pre) > code[class*="language-"],
+:not(pre) > code:not(.hljs)[class*="language-"],
 pre[class*="language-"] {
   background: #282a36;
 }
 
 /* Inline code */
-:not(pre) > code[class*="language-"] {
+:not(pre) > code:not(.hljs)[class*="language-"] {
   padding: .1em;
   border-radius: .3em;
   white-space: normal;
