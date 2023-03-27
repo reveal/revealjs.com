@@ -10,7 +10,7 @@ It's possible and often times more convenient to write presentation content usin
 
 ```html
 <section data-markdown>
-  <textarea data-template>
+  <textarea data-template data-separator="---">
     ## Slide 1
     A paragraph with some text and a [link](https://hakim.se).
     ---
