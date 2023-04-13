@@ -51,7 +51,7 @@ The default fragment style is to start out invisible and fade in. This style can
 | highlight-current-blue  | Turn text blue, then back to original on next step |
 {.key-value}
 
-## Custom Fragments
+## Custom Fragments <span class="r-version-badge new">4.5.0</span>
 
 Custom effects can be implemented by defining CSS styles for `.fragment.effectname` and `.fragment.effectname.visible` respectively. The `visible` class is added to each fragment as they are stepped through in the presentation.
 
