@@ -126,6 +126,37 @@ Powerful syntax highlighting features are built into reveal.js. Using the bracke
   </div>
 </div>
 
+### Line Number Offset
+
+You can add a [line number offset](/code/#line-number-offset-4.2.0) by adding a number and a colon at the beginning of your highlights.
+
+```html
+<section data-markdown>
+  <textarea data-template>
+    ```js [712: 1-2|3|4]
+    let a = 1;
+    let b = 2;
+    let c = x => 1 + 2 + x;
+    c(3);
+    ```
+  </textarea>
+</section>
+```
+<div class="reveal reveal-example">
+  <div class="slides">
+    <section data-markdown>
+      <textarea data-template>
+        ```js [712: 1-2|3|4]
+        let a = 1;
+        let b = 2;
+        let c = x => 1 + 2 + x;
+        c(3);
+        ```
+      </textarea>
+    </section>
+  </div>
+</div>
+
 ## Configuring *marked*
 
 We use [marked](https://github.com/chjj/marked) to parse Markdown. To customize marked's rendering, you can pass in options when [configuring Reveal](/config/):
