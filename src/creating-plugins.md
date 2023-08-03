@@ -24,7 +24,7 @@ Here's an example plugin which shuffles all slides in a presentation when the T 
 
 ```js
 // toaster.js
-export default () => {
+export default () => ({
   id: 'toaster',
   init: ( deck ) => {
     deck.addKeyBinding( { keyCode: 84, key: 'T' }, () => {
@@ -32,7 +32,7 @@ export default () => {
       console.log('🍻');
     } );
   }
-}
+})
 ```
 
 ## Registering a Plugin
