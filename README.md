@@ -40,4 +40,4 @@ yarn run production
 ```
 
 ### Note
-reveal.js is installed from the [dev branch](https://github.com/hakimel/reveal.js/tree/dev). If it gets stuck on an old version, remove the reveal.js entry from `package.lock.json` and rerun `yarn`.
+reveal.js is installed from the [master branch](https://github.com/hakimel/reveal.js/). If it gets stuck on an old version, remove the reveal.js entry from `package.lock.json` and rerun `yarn`.
