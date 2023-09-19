@@ -64,7 +64,7 @@ Reveal.initialize({
   respondToHashChanges: true,
 
   // Enable support for jump-to-slide navigation shortcuts
-	jumpToSlide: true,
+  jumpToSlide: true,
 
   // Push each slide change to the browser history.  Implies `hash: true`
   history: false,
