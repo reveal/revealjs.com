@@ -22,18 +22,27 @@ Reveal.prev();
 Reveal.next();
 
 // Fragment navigation
+Reveal.navigateFragment( indexf ); // (-1 means all fragments are invisible)
 Reveal.prevFragment();
 Reveal.nextFragment();
 
 // Checks which directions we can navigate towards
 // {top: false, right: true, bottom: false, left: false}
 Reveal.availableRoutes();
+
+// Checks which fragment directions we can navigate towards
+// {prev: false, next: true}
+Reveal.availableFragments();
 ```
 
 ### Misc
 ```javascript
 // Call this if you add or remove slides to update controls, progress, etc
 Reveal.sync();
+// Call this to sync just one slide
+Reveal.syncSlide(slide=currentSlide);
+// Call this to sync just one slide's fragments
+Reveal.syncFragments(slide=currentSlide);
 
 // Call this to update the presentation scale based on available viewport
 Reveal.layout();
@@ -53,12 +62,27 @@ Reveal.getComputedSlideSize();
 Reveal.getIndices(slide=currentSlide);  // Coordinates of the slide (e.g. { h: 0, v: 0, f: 0 })
 Reveal.getProgress();                   // (0 == first slide, 1 == last slide)
 
+// Array of key:value maps of the attributes of each slide in the deck
+Reveal.getSlidesAttributes();
+
+// Returns the slide background element at the specified index
+Reveal.getSlideBackground( indexh, indexv )
+
 // Returns the speaker notes for the slide
 Reveal.getSlideNotes(slide=currentSlide);
+
+// Retrieves query string as a key:value map
+Reveal.getQueryHash();
+
+// Returns the path to the slide as represented in the URL
+Reveal.getSlidePath(slide=currentSlide);
 ```
 
 ### Slides
 ```javascript
+// Returns the slide element matching the specified index
+Reveal.getSlide( indexh, indexv )
+
 // Retrieves the previous and current slide elements
 Reveal.getPreviousSlide();
 Reveal.getCurrentSlide();
@@ -89,6 +113,7 @@ Reveal.hasNavigatedVertically();
 Reveal.isFirstSlide();
 Reveal.isLastSlide();
 Reveal.isVerticalSlide();
+Reveal.isLastVerticalSlide();
 ```
 
 ### Modes
@@ -113,6 +138,7 @@ Reveal.isPaused();
 Reveal.getRevealElement(); // <div class="reveal">
 Reveal.getSlidesElement(); // <div class="slides">
 Reveal.getViewportElement(); // <div class="reveal-viewport">
+Reveal.getBackgroundsElement(); // <div class="backgrounds">
 ```
 
 ## More Reading
