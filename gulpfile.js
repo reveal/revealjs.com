@@ -48,7 +48,7 @@ gulp.task('js', () => gulp.src(['js/main.js'])
             ]
         }
     }))
-    .pipe(rename('main.js'))
+    // .pipe(rename('main.js'))
     .pipe(gulp.dest('./dist')))
 
 gulp.task('css', () => gulp.src(['css/main.scss'])
