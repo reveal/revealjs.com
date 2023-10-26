@@ -114,7 +114,8 @@
         },
         {
           "label": "Jump to Slide",
-          "url": "/jump-to-slide/"
+          "url": "/jump-to-slide/",
+          "new": true
         },
         {
           "label": "Touch Navigation",

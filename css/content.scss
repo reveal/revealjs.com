@@ -170,9 +170,10 @@
 .article {
     // An inline presentation
     .reveal-example {
-        height: 280px;
+        height: 300px;
         box-sizing: content-box;
-        @apply my-4 -mx-4 p-4 rounded border-t border-gray-700;
+        width: calc(100% + 32px);
+        @apply my-4 -mx-4 rounded border-t border-gray-700;
 
         h1, h2, h3 {
             margin-top: 0;
