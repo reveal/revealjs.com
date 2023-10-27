@@ -6,15 +6,18 @@ layout: default
 
 # Scroll View <span class="r-version-badge new">5.0.0</span>
 
-As of reveal.js 5.0 any presentation can be viewed as a scrollable page. All of your animations, fragments and other reveal.js features continue to work just like they do in the normal slide view.
+As of reveal.js 5.0 any presentation can be viewed as a scrollable page. All of your animations, fragments and other features continue to work just like they do in the normal slide view.
 
-The scroll view is a better way to share your presentations. Slide decks are a great format for giving presentations, but they're not optimized for sharing and having viewers explore on their own.
+Slide decks are a great format for giving presentations, but scrollable web pages are easier for viewers to read on their own.
 
-This is why the scroll view exists. It lets you create a slide deck for presenting, and share in a format that's a pleasure to read.
+The scroll view gives you the best of both worlds—without any extra effort. Present in the format best suited for presenting, share in the format best suited for consumption.
+
+### What About Vertical Slides?
+The scroll view flattens your deck into a single linear flow. All slides will appear in the order they were authored and there is no diffentiation between horizontal and [vertical slides](/vertical-slides).
 
 ### Getting Started
 
-The scroll view is activated by initializing reveal.js with `view: 'scroll'`. Check out a demo of it in action.
+The scroll view is activated by initializing reveal.js with `view: "scroll"`. Here's a demo of it in action.
 ```js
 Reveal.initialize({
   // Activate the scroll view
