@@ -75,7 +75,7 @@ The scrollbar also shows individual fragments within your slides. Slides with fr
 By default, the scrollbar is automatically hidden when you stop scrolling. This behavior can be configured using `scrollProgress`.
 
 ```js
-// - 'auto':   Show the scrollbar while scrolling, hide while idle
+// - auto:     Show the scrollbar while scrolling, hide while idle
 // - true:     Always show the scrollbar
 // - false:    Never show the scrollbar
 scrollProgress: 'auto'
