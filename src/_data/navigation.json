@@ -109,6 +109,11 @@
           "url": "/speaker-view/"
         },
         {
+          "label": "Scroll View",
+          "url": "/scroll-view/",
+          "new": true
+        },
+        {
           "label": "Slide Numbers",
           "url": "/slide-numbers/"
         },
