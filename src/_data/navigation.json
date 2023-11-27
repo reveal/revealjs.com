@@ -13,13 +13,22 @@
           "class": "demo-link"
         },
         {
-          "label": "Video Course",
-          "url": "/course",
-          "new": true
-        },
-        {
           "label": "Installation",
           "url": "/installation/"
+        }
+      ]
+    },
+    {
+      "label": "Support",
+      "items": [
+        {
+          "label": "Video Course",
+          "url": "/course"
+        },
+        {
+          "label": "Sponsor reveal.js",
+          "url": "https://github.com/sponsors/hakimel",
+          "external": true
         }
       ]
     },
@@ -205,11 +214,6 @@
         {
           "label": "Changelog",
           "url": "https://github.com/hakimel/reveal.js/releases",
-          "external": true
-        },
-        {
-          "label": "3.9.2 Docs",
-          "url": "https://github.com/hakimel/reveal.js/blob/3.9.2/README.md",
           "external": true
         }
       ]
