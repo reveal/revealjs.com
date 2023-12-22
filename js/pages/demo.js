@@ -8,6 +8,7 @@ export default () => {
 
 	let deck = new Reveal( document.querySelector( '.reveal' ), {
 		hash: true,
+		scrollActivationWidth: null,
 		plugins: [ Markdown, Highlight, Notes, Zoom ]
 	});
 	deck.initialize();

@@ -11,6 +11,7 @@ export default () => {
 		embedded: true,
 		hash: true,
 		margin: 0.1,
+		scrollActivationWidth: null,
 		url: 'https://revealjs.com/demo',
 		plugins: [ Markdown, Highlight, Notes, Zoom ]
 	});

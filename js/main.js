@@ -93,6 +93,7 @@ function setupInlineDecks() {
 			width: 900,
 			height: 500,
 			hash: false,
+			scrollActivationWidth: null,
 			respondToHashChanges: false,
 			embedded: true,
 			progress: false,
