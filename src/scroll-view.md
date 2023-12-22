@@ -88,7 +88,7 @@ scrollProgress: 'auto'
 
 When scrolling reveal.js will automatically snap to the closest slide. This was picked as the default behavior because it's very comfortable to "flick" between slides this way on touch devices.
 
-If you prefer, you can change it to only snap when you're close to the top of a slide using (`proximity`). You can also disable snapping altogether by setting `scrollSnap` to `false`.
+If you prefer, you can change it to only snap when you're close to the top of a slide using `proximity`. You can also disable snapping altogether by setting `scrollSnap` to `false`.
 
 
 ```js
