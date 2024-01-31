@@ -6,7 +6,14 @@ layout: default
 
 # React
 
-## Incorporating Reveal.js into a Vite + React project
+Reveal.js can be used with React in a few different ways. 
+- Manually add Reveal.js markup and setup scripts to a React project
+- Install using `npm` and setup programmatically
+- Use third-party packages
+
+When it comes to React projects, the two most popular creation, setup, and build tools are Vite and CRA. Since CRA is no longer supported, we will focus on Vite.
+
+## Vite + React project
 
 ### Manual
 

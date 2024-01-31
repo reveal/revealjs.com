@@ -208,6 +208,10 @@
       "label": "Other",
       "items": [
         {
+          "label": "React Framework",
+          "url": "/react/"
+        },
+        {
           "label": "Upgrade Instructions",
           "url": "/upgrading/"
         },
