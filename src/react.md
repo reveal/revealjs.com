@@ -1,14 +1,14 @@
 ---
 id: react
-title: React
+title: React Framework
 layout: default
 ---
 
-# React
+# React Framework
 
-Reveal.js can be used with React in a few different ways. 
+Reveal.js can be added to a React project a few different ways. 
 - Manually add Reveal.js markup and setup scripts to a React project
-- Install using `npm` and setup programmatically
+- Install using `npm` and setup programmatically **(recommended)**
 - Use third-party packages
 
 When it comes to React projects, the two most popular creation, setup, and build tools are Vite and CRA. Since CRA is no longer supported, we will focus on Vite.
@@ -80,7 +80,7 @@ to `index.html`'s head element and add the scripts
 ```
 somewhere at the end of body element.
 
-Altogether, your `index.html` file would look like:
+Altogether, your `index.html` file should look like:
 
 ```html
 <!DOCTYPE html>
@@ -110,14 +110,10 @@ Altogether, your `index.html` file would look like:
 ```
 #### React Islands
 
-If you want to only sprinkle in components in specific
-slides, then I would make the react root element a separate element that sits
-outside of the reveal container div and then **use
-[portals](https://react.dev/reference/react-dom/createPortal) to place react
-component into specific sections.** 
+If you only want to sprinkle a few components into specific slides, we recommended you make the react root element a separate element that sits outside of the reveal container div and then **use [react portals](https://react.dev/reference/react-dom/createPortal) to place react component into specific sections.** 
 
-For a simple Vite project you might end up
-with an `index.html` that looks like: ```html
+For a simple Vite project you might end up with an `index.html` that looks like: 
+```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -143,11 +139,11 @@ with an `index.html` that looks like: ```html
     </script>
   </body>
 </html>
-````
+```
 
 #### Paths
 
-There is an issue with the examples provided so far and that is the paths for the reveal links and scripts. You need to make sure they are correct and they depend on how you added Reveal to your project. I would recommend using the `npm` installation method and then making sure reveal is included in the build (so it ends up in the `dist` directory).
+There is an potential issue with the examples provided so far and that is the paths for the reveal links and scripts. You need to make sure they are correct and they depend on how you added Reveal to your project. We would recommend using the `npm` installation method and then making sure reveal is included in the build (so it ends up in the `dist` directory).
 
 ### Programmatic
 
@@ -167,7 +163,7 @@ and if you are using typescript, you need to install the types as well:
 npm i --save-dev @types/reveal.js
 ```
 
-#### imports
+#### Imports
 
 You will need the following imports:
 
@@ -188,17 +184,24 @@ This case is particularly problematic because when the reveal deck is initialize
 ##### Solution example:
 
 ```ts
+// App.tsx
+import Reveal from "reveal.js";
+import "reveal.js/dist/reveal.css";
+import "reveal.js/dist/theme/black.css";
+
 function App() {
-    const deckDivRef = useRef<HTMLDivElement>(null) // keep deck container div in a ref
-    const deckRef = useRef<Reveal.Api>(null); // keep deck reveal instance in a ref
+    const deckDivRef = useRef<HTMLDivElement>(null) // keep reference to deck container div
+    const deckRef = useRef<Reveal.Api>(null); // keep reference to deck reveal instance
 
     useEffect(() => {
         const isInitializing = deckDivRef.current?.classList.contains("reveal");
         if (isInitializing) return; // escape useEffect if deckDiv already has "reveal" classes added
+
         deckDivRef.current.current!.classList.add("reveal"); // add "reveal" class
         deckRef.current = new Reveal(deckDivRef.current!, {
             backgroundTransition: "slide",
             transition: "slide",
+            // other config options
         });
         deckRef.current.initialize().then(() => {
             // good place for event handlers and plugin setups
@@ -213,7 +216,7 @@ function App() {
                 console.warn("destroy call failed.");
             }
         };
-    }, []); // only launch useEffect at first render
+    }, []); // only launch useEffect after first render
 
     return (
         <div ref={deckDivRef }>
@@ -224,18 +227,18 @@ function App() {
         </div>
     );
 }
+
+export default App;
 ```
 
 Note the use of the reference to the `div` element in the `Reveal` constructor. This is important if you want to add multiple decks to the `App`.
 
-An alternative solution is to turn off StrictMode.
+***An alternative solution is to turn off StrictMode.***
 
-# Third party packages
+## Third party packages
 
 The following third-party packages might prove useful for adding Reveal.js presentations to React projects or to adding React components/apps to Reveal.js presentations:
 
 - [revealjs-react](https://github.com/blakeanedved/revealjs-react) - A React wrapper for the RevealJS Presentation Library.
 - [react-reveal-slides](https://github.com/bouzidanas/react-reveal-slides) - A React component for creating Reveal.js presentations entirely in React.
 - [revealjs-react-boilerplate](https://github.com/cberthou/revealjs-react-boilerplate) - A boilerplate for creating revealJS presentations using React.
-
-
