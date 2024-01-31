@@ -11,7 +11,7 @@ Reveal.js can be added to a React project a few different ways.
 - Install using `npm` and setup programmatically **(recommended)**
 - Use third-party packages
 
-When it comes to React projects, the two most popular creation, setup, and build tools are Vite and CRA. Since CRA is no longer supported, we will focus on Vite.
+When it comes to React projects, the two most popular creation, setup, and build tools are Vite and CRA. Since CRA is no longer officially supported, we will focus on Vite.
 
 ## Vite + React project
 
@@ -42,7 +42,7 @@ Starting with a very simple presentation:
 
 #### React everywhere
 
-If you want to create the presentation contents entirely in React (which you can), then make the Reveal slide deck container (div with `class="reveal"`) the `#root` of your React App. The simplest way is to replace the root div in the project's `index.html` with the slide deck container (with contents) and then just add `id="root"` to the container.
+If you want to create the presentation contents entirely in React (which you can), then make the Reveal slide deck container (div with `class="reveal"`) the `#root` of your React App. The simplest way is to replace the root `div` in the project's `index.html` with the slide deck container (with contents) and then just add `id="root"` to the container.
 
 Using the example above, you would replace:
 
@@ -61,7 +61,7 @@ with:
 </div>
 ```
 
-Next, add in the other parts of your presentation's html that is missing from your Vite project's `index.html` file.
+Next, add in the other parts of your presentation's html that is missing from your Vite project's `index.html` document.
 
 Continuing with our example, you would need to add:
 
@@ -70,7 +70,7 @@ Continuing with our example, you would need to add:
 <link rel="stylesheet" href="dist/theme/white.css" />
 ```
 
-to `index.html`'s head element and add the scripts
+to `index.html` document's head element and add the scripts
 
 ```html
 <script src="dist/reveal.js"></script>
@@ -78,7 +78,7 @@ to `index.html`'s head element and add the scripts
   Reveal.initialize();
 </script>
 ```
-somewhere at the end of body element.
+somewhere at the end of the body.
 
 Altogether, your `index.html` file should look like:
 
