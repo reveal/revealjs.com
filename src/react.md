@@ -238,7 +238,7 @@ Note the use of the reference to the `div` element in the `Reveal` constructor. 
 
 ## Third party packages
 
-The following third-party packages might prove useful for adding Reveal.js presentations to React projects or to adding React components/apps to Reveal.js presentations:
+The following third-party packages might prove useful for adding Reveal.js presentations to React projects or for adding React components/apps to Reveal.js presentations:
 
 - [revealjs-react](https://github.com/blakeanedved/revealjs-react) - A React wrapper for the RevealJS Presentation Library.
 - [react-reveal-slides](https://github.com/bouzidanas/react-reveal-slides) - A React component for creating Reveal.js presentations entirely in React.
