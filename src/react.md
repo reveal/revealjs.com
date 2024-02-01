@@ -111,7 +111,7 @@ Altogether, your `index.html` file should look like:
 ```
 #### React Islands
 
-If you only want to sprinkle a few components into specific slides, we recommended you make the react root element a separate element that sits outside of the reveal container div and then **use [react portals](https://react.dev/reference/react-dom/createPortal) to place react component into specific sections.** 
+If you only want to sprinkle a few components into specific slides, we recommend you make the react root element a separate element that sits outside of the reveal container div and then **use [react portals](https://react.dev/reference/react-dom/createPortal) to place react component into specific sections.** 
 
 For a simple Vite project you might end up with an `index.html` that looks like: 
 ```html
