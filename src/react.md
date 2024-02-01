@@ -7,9 +7,9 @@ layout: default
 # React Framework
 
 Reveal.js can be added to a React project a few different ways. 
-- Manually add Reveal.js markup and setup scripts to a React project
-- Install using `npm` and setup programmatically **(recommended)**
-- Use third-party packages
+1. Manually add Reveal.js markup and setup scripts to a React project
+2. Install using `npm` and setup programmatically **(recommended)**
+3. Use third-party packages
 
 When it comes to React projects, the two most popular creation, setup, and build tools are Vite and CRA. Since CRA is no longer officially supported, we will focus on Vite.
 
