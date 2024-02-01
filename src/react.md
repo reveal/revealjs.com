@@ -42,7 +42,7 @@ Starting with a very simple presentation:
 
 #### React everywhere
 
-If you want to create the presentation contents entirely in React (which you can), then make the Reveal slide deck container (div with `class="reveal"`) the `#root` of your React App. The simplest way is to replace the root `div` in the project's `index.html` with the slide deck container (with contents) and then just add `id="root"` to the container.
+If you want to create a presentation entirely in React (which you can), then make the Reveal slide deck container (div with `class="reveal"`) the `#root` of your React App. The simplest way is to replace the root `div` in the project's `index.html` with the slide deck container (with contents) and then just add `id="root"` to the container.
 
 Using the example above, you would replace:
 
