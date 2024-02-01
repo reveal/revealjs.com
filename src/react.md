@@ -174,53 +174,56 @@ import "reveal.js/dist/reveal.css";
 import "reveal.js/dist/theme/black.css"; // "black" theme is just an example
 ```
 
-Finally, execute the code provided in the [initialization section of the Reveal.js docs](https://revealjs.com/initialization/). Make sure to use what is relevant to your case. You can find a simple example in the following section.
-
 #### Initialization
 
-It is recommended to use refs to maintain a handle on the slide deck container `div` and the corresponding `reveal` instance. These refs can help make sure every slide deck is only initialized once. But in some circumstances, even this isnt enough! For example, if react is in `StrictMode`, you might still end up with re-initialization of slide decks.
+Finally, add the code provided in the [initialization section of the Reveal.js docs](https://revealjs.com/initialization/). Make sure to use what is relevant to your case. You can find an example in a later section.
 
-This case is particularly problematic because when the reveal deck is initialized the first time, no flag (like `isReady`) is set or callback called even though Reveal has made the changes to the DOM. Fortunately, the changes to the DOM can be used to determine if a slide deck has been previously initialized. 
+If you decide to intialize the slide deck inside an app or component function where slide deck containers are in the returned JSX, we recommended you use a `useEffect` hook to do so. This will ensure that initialization happens after the containers are first rendered.
 
-##### Solution example:
+It is also recommended to use refs to maintain a handle on the slide deck container `div` and the corresponding `reveal` instance. These refs can help make sure each slide deck is only initialized once. 
+
+#### Example:
 
 ```ts
 // App.tsx
+import { useEffect, useRef } from "react";
 import Reveal from "reveal.js";
 import "reveal.js/dist/reveal.css";
 import "reveal.js/dist/theme/black.css";
 
 function App() {
     const deckDivRef = useRef<HTMLDivElement>(null) // keep reference to deck container div
-    const deckRef = useRef<Reveal.Api>(null); // keep reference to deck reveal instance
+    const deckRef = useRef<Reveal.Api | null>(null); // keep reference to deck reveal instance
 
     useEffect(() => {
-        const isInitialized = deckDivRef.current?.classList.contains("reveal");
-        if (isInitialized) return; // escape useEffect if deckDiv already has "reveal" classes added
+        // Prevents double initialization in strict mode
+        if (deckRef.current) return;
 
-        deckDivRef.current.current!.classList.add("reveal"); // add "reveal" class
         deckRef.current = new Reveal(deckDivRef.current!, {
-            backgroundTransition: "slide",
             transition: "slide",
             // other config options
         });
+
         deckRef.current.initialize().then(() => {
             // good place for event handlers and plugin setups
-        };
+        });
 
         return () => {
-            // code to run on component unmount goes here
-            if (!deckRef.current) return;
             try {
-                deckRef.current!.destroy();
+                if (deckRef.current) {
+                    deckRef.current.destroy();
+                    deckRef.current = null;
+                }
             } catch (e) {
-                console.warn("destroy call failed.");
+                console.warn("Reveal.js destroy call failed.");
             }
         };
-    }, []); // only launch useEffect after first render
+    }, []);
 
     return (
-        <div ref={deckDivRef }>
+        // Your presentation is sized based on the width and height of
+        // our parent element. Make sure the parent is not 0-height.
+        <div className="reveal" ref={deckDivRef}>
             <div className="slides">
                 <section>Slide 1</section>
                 <section>Slide 2</section>
@@ -233,8 +236,6 @@ export default App;
 ```
 
 Note the use of `deckDivRef` in the `Reveal` constructor. This is important if you want to add multiple decks to the `App`.
-
-***An alternative solution is to turn off StrictMode.***
 
 ## Third party packages
 
