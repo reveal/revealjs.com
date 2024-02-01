@@ -176,7 +176,7 @@ import "reveal.js/dist/theme/black.css"; // "black" theme is just an example
 
 #### Initialization
 
-Finally, add the code provided in the [initialization section of the Reveal.js docs](https://revealjs.com/initialization/). Make sure to use what is relevant to your case.
+Finally, add the [initialization code](https://revealjs.com/initialization/) most suitable to your project's needs.
 
 If you decide to intialize the slide deck inside an app or component function where slide deck containers are in the returned JSX, we recommended you use a `useEffect` hook to do so. This will ensure that initialization happens after the containers are first rendered.
 
