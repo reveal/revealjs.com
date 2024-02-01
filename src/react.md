@@ -13,7 +13,7 @@ Reveal.js can be added to a React project a few different ways.
 
 When it comes to React projects, the two most popular creation, setup, and build tools are Vite and CRA. Since CRA is no longer officially supported, we will focus on Vite.
 
-## Vite + React project
+## Vite + React
 
 ### Manual
 
