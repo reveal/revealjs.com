@@ -195,8 +195,8 @@ function App() {
     const deckRef = useRef<Reveal.Api>(null); // keep reference to deck reveal instance
 
     useEffect(() => {
-        const isInitializing = deckDivRef.current?.classList.contains("reveal");
-        if (isInitializing) return; // escape useEffect if deckDiv already has "reveal" classes added
+        const isInitialized = deckDivRef.current?.classList.contains("reveal");
+        if (isInitialized) return; // escape useEffect if deckDiv already has "reveal" classes added
 
         deckDivRef.current.current!.classList.add("reveal"); // add "reveal" class
         deckRef.current = new Reveal(deckDivRef.current!, {
