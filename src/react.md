@@ -232,7 +232,7 @@ function App() {
 export default App;
 ```
 
-Note the use of the reference to the `div` element in the `Reveal` constructor. This is important if you want to add multiple decks to the `App`.
+Note the use of `deckDivRef` in the `Reveal` constructor. This is important if you want to add multiple decks to the `App`.
 
 ***An alternative solution is to turn off StrictMode.***
 
