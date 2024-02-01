@@ -150,7 +150,7 @@ There is an potential issue with the examples provided so far and that is the pa
 
 Instead of editing the `index.html` file, you can add and initialize reveal in a Javascript/Typescript source file like `main.tsx` or `app.tsx`. 
 
-You can add and initialize globally - outside of app/component functions - or inside one of them. In the latter case, you have to be careful not to stack initializations. Only initialize a slide deck once. If you need to reconfigure, use the `configure` function or `destroy` the deck before initializing again.
+You can do so globally i.e. outside of app/component functions or inside one of them. In the latter case, you have to be careful not to stack initializations. Only initialize a slide deck once. If you need to reconfigure, use the `configure` function or `destroy` the deck before initializing again.
 
 To begin, install reveal using `npm`:
 
