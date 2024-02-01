@@ -44,13 +44,13 @@ Starting with a very simple presentation:
 
 If you want to create a presentation entirely in React (which you can), then make the Reveal slide deck container (div with `class="reveal"`) the `#root` of your React App. The simplest way is to replace the root `div` in the project's `index.html` with the slide deck container (with contents) and then just add `id="root"` to the container.
 
-Using the example above, you would replace:
+Using the example above, you would replace
 
 ```html
 <div id="root"></div>
 ```
 
-with:
+inside `index.html` with
 
 ```html
 <div id="root" class="reveal">
@@ -60,10 +60,11 @@ with:
   </div>
 </div>
 ```
+from our example.
 
 Next, add in the other parts of your presentation's html that is missing from your Vite project's `index.html` document.
 
-Continuing with our example, you would need to add:
+Continuing with our example, you would need to add
 
 ```html
 <link rel="stylesheet" href="dist/reveal.css" />
