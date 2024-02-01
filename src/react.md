@@ -180,7 +180,7 @@ Finally, execute the code provided in the [initialization section of the Reveal.
 
 It is recommended to use refs to maintain a handle on the slide deck container `div` and the corresponding `reveal` instance. These refs can help make sure every slide deck is only initialized once. But in some circumstances, even this isnt enough! For example, if react is in `StrictMode`, you might still end up with re-initialization of slide decks.
 
-This case is particularly problematic because when the reveal deck is initialized, no flag (like `isReady`) is set or callback called even though Reveal has made the changes to the DOM. Fortunately, the changes to the DOM can be used to determine if a slide deck has been previously initialized. 
+This case is particularly problematic because when the reveal deck is initialized the first time, no flag (like `isReady`) is set or callback called even though Reveal has made the changes to the DOM. Fortunately, the changes to the DOM can be used to determine if a slide deck has been previously initialized. 
 
 ##### Solution example:
 
