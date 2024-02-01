@@ -192,7 +192,7 @@ import "reveal.js/dist/reveal.css";
 import "reveal.js/dist/theme/black.css";
 
 function App() {
-    const deckDivRef = useRef<HTMLDivElement>(null) // keep reference to deck container div
+    const deckDivRef = useRef<HTMLDivElement>(null); // keep reference to deck container div
     const deckRef = useRef<Reveal.Api | null>(null); // keep reference to deck reveal instance
 
     useEffect(() => {
