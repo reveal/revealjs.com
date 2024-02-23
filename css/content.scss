@@ -84,7 +84,7 @@
 .article {
     pre[class*="language-"] {
         @apply mx-4 my-2 -mx-4 p-4;
-        max-height: 50vh;
+        font-size: 0.8125em;
     }
 
     ol pre[class*="language-"],
