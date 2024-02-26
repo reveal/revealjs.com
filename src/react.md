@@ -7,7 +7,7 @@ layout: default
 # React Framework
 
 Reveal.js can be added to a React project a few different ways.
-1. [Install and setup reveal.js via npm](#installing-from-npm) **(recommended)**
+1. [Install and setup reveal.js via npm](#installing-from-npm)
 2. [Use third-party packages](#third-party-packages)
 
 ## Installing From npm

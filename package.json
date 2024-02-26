@@ -5,6 +5,7 @@
   "scripts": {
     "test": "mdspell -r -n -a --en-us 'src/*.md' 'src/**/*.md'",
     "start": "NODE_ENV=development npx @11ty/eleventy --config=eleventy.config.js --serve & gulp",
+    "dev": "yarn start",
     "production": "NODE_ENV=production gulp build && NODE_ENV=production npx @11ty/eleventy --config=eleventy.config.js"
   },
   "repository": {
