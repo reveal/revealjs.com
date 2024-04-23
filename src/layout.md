@@ -16,18 +16,18 @@ The `r-stack` layout helper lets you center and place multiple elements on top o
 
 ```html
 <div class="r-stack">
-  <img class="fragment" src="https://placekitten.com/450/300" width="450" height="300">
-  <img class="fragment" src="https://placekitten.com/300/450" width="300" height="450">
-  <img class="fragment" src="https://placekitten.com/400/400" width="400" height="400">
+  <img class="fragment" src="https://picsum.photos/450/300" width="450" height="300">
+  <img class="fragment" src="https://picsum.photos/300/450" width="300" height="450">
+  <img class="fragment" src="https://picsum.photos/400/400" width="400" height="400">
 </div>
 ```
 <div class="reveal reveal-example">
   <div class="slides">
     <section>
       <div class="r-stack">
-        <img class="fragment" src="https://placekitten.com/450/300" width="450" height="300">
-        <img class="fragment" src="https://placekitten.com/300/450" width="300" height="450">
-        <img class="fragment" src="https://placekitten.com/400/400" width="400" height="400">
+        <img class="fragment" src="https://picsum.photos/450/300" width="450" height="300">
+        <img class="fragment" src="https://picsum.photos/300/450" width="300" height="450">
+        <img class="fragment" src="https://picsum.photos/400/400" width="400" height="400">
       </div>
     </section>
   </div>
@@ -37,18 +37,18 @@ If you want to show each of the stacked elements individually you can adjust the
 
 ```html
 <div class="r-stack">
-  <img class="fragment fade-out" data-fragment-index="0" src="https://placekitten.com/450/300" width="450" height="300">
-  <img class="fragment current-visible" data-fragment-index="0" src="https://placekitten.com/300/450" width="300" height="450">
-  <img class="fragment" src="https://placekitten.com/400/400" width="400" height="400">
+  <img class="fragment fade-out" data-fragment-index="0" src="https://picsum.photos/450/300" width="450" height="300">
+  <img class="fragment current-visible" data-fragment-index="0" src="https://picsum.photos/300/450" width="300" height="450">
+  <img class="fragment" src="https://picsum.photos/400/400" width="400" height="400">
 </div>
 ```
 <div class="reveal reveal-example">
   <div class="slides">
     <section>
       <div class="r-stack">
-        <img class="fragment fade-out" data-fragment-index="0" src="https://placekitten.com/450/300" width="450" height="300">
-        <img class="fragment current-visible" data-fragment-index="0" src="https://placekitten.com/300/450" width="300" height="450">
-        <img class="fragment" src="https://placekitten.com/400/400" width="400" height="400">
+        <img class="fragment fade-out" data-fragment-index="0" src="https://picsum.photos/450/300" width="450" height="300">
+        <img class="fragment current-visible" data-fragment-index="0" src="https://picsum.photos/300/450" width="300" height="450">
+        <img class="fragment" src="https://picsum.photos/400/400" width="400" height="400">
       </div>
     </section>
   </div>
