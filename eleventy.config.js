@@ -5,20 +5,12 @@ const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const i18n = require("eleventy-plugin-i18n");
 
 module.exports = eleventyConfig => {
-    // i18n support
-
-    module.exports = function (eleventyConfig) {
-        eleventyConfig.addPlugin(i18n, {
-            // translations: {
-            //     hello: {
-            //         "en-US": "Hello",
-            //     },
-            // },
-            fallbackLocales: {
-                "*": "en-US",
-            },
-        });
-    };
+    // i18n translations
+    eleventyConfig.addPlugin(i18n, {
+        fallbackLocales: {
+            "*": "en",
+        },
+    });
 
     // Minify our HTML
     eleventyConfig.addTransform("htmlmin", (content, outputPath) => {
@@ -91,15 +83,11 @@ module.exports = eleventyConfig => {
             .trim();
     });
 
-    // eleventyConfig.addWatchTarget("js/");
-    // eleventyConfig.addWatchTarget("css/");
-
     return {
         templateFormats: ["md", "njk"],
         markdownTemplateEngine: "njk",
         htmlTemplateEngine: "njk",
         passthroughFileCopy: true,
-
         dir: {
             input: "src",
             output: "dist",

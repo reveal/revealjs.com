@@ -17,7 +17,14 @@
     <nav class="header-nav hidden lg:flex">
 
       <ul class="menu flex flex-col lg:flex-row items-center list-reset text-base">
-
+        <li class="relative header-lang">
+          <a class="inline-block py-3 px-5 text-gray-800 hover:text-gray-900 rounded align-middle">
+            {% include "images/icons/translate.svg" %}
+            </a>   <div class="header-lang-select absolute px-2 py-2 text-gray-800 hover:text-gray-900 rounded align-middle focus:outline-none">
+        <a href="/en-US" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200">English</a>
+        <a href="/zh-TW" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200">中文</a>
+      </div>
+        </li>
         <li>
           <a class="inline-block py-3 px-5 text-gray-800 hover:text-gray-900 rounded align-middle" href="{{ site.urls.twitter }}">
             {% include "images/icons/twitter.svg" %}
