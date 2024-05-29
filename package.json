@@ -4,9 +4,9 @@
     "description": "The official reveal.js website",
     "scripts": {
         "test": "mdspell -r -n -a --en-us 'src/*.md' 'src/**/*.md'",
-        "start": "NODE_ENV=development npx @11ty/eleventy --config=eleventy.config.js --serve & gulp",
+        "start": "NODE_ENV=development yarn eleventy --config=eleventy.config.js --serve & gulp",
         "dev": "yarn start",
-        "production": "NODE_ENV=production gulp build && NODE_ENV=production npx @11ty/eleventy --config=eleventy.config.js"
+        "production": "NODE_ENV=production gulp build && NODE_ENV=production yarn eleventy --config=eleventy.config.js"
     },
     "repository": {
         "type": "git",
