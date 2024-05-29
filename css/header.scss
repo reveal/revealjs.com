@@ -81,6 +81,7 @@
     background-color: rgb(226 232 240 / var(--tw-bg-opacity));
     cursor: pointer;
     transform-origin: top;
+    white-space: nowrap;
 }
 .header-lang:hover .header-lang-select {
     display: block;

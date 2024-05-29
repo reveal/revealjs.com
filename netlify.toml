@@ -1,11 +1,5 @@
 [[redirects]]
-  from = "/*"
-  to = "/zh-Hant/:splat"
-  status = 200
-  conditions = {Language = ["zh-Hant"]}
-
-[[redirects]]
-  from = "/*"
-  to = "/en/:splat"
-  status = 200
-
+  from = "/en/*"
+  to = "/:splat"
+  status = 301
+  force = true

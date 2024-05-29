@@ -3,10 +3,12 @@
 const htmlmin = require("html-minifier");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const i18n = require("eleventy-plugin-i18n");
+const translations = require("./src/_data/i18n");
 
 module.exports = eleventyConfig => {
     // i18n translations
     eleventyConfig.addPlugin(i18n, {
+        translations,
         fallbackLocales: {
             "*": "en",
         },

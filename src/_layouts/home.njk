@@ -23,14 +23,17 @@
 <body data-page="{{ id }}" class="text-gray-900 leading-normal bg-gray-100">
 
     <section id="demo" class="reveal-demo overflow-hidden outline-none text-center" tabindex="-1">
+        {% if locale %}
+         {% include "demo."+locale+".html" %}
+        {% else %}
         {% include "demo.html" %}
+        {% endif %}
         {#
         <a class="homepage-promotion" href="/course">
             Become a pro in the reveal.js video course <span>Learn more</span>
         </a>
         #}
     </section>
-
     {% include "header.njk" %}
 
     <div class="w-full max-w-screen-xl mx-auto px-6 relative">

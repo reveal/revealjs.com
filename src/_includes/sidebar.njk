@@ -5,15 +5,15 @@
         {% for section in navigation.sections %}
 
           <li class="level-1 mb-4">
-            <span class="block text-sm sm:text-xs mb-2 uppercase font-semibold text-gray-500">{{ section.label }}</span>
+            <span class="block text-sm sm:text-xs mb-2 uppercase font-semibold text-gray-500">{{ section.label | i18n }}</span>
             <ul>
 
               {% for item in section.items %}
               {% set is_current_page = page.url | replace('/', '') == item.url | replace('/', '') %}
 
               <li class="level-2 mb-px">
-                <a href="{{ item.url | safe }}" class="nav-link -mx-1 p-1 {{ item.class }} {% if is_current_page %}selected{% endif %}"{% if is_current_page %} aria-current="page"{% endif %}>
-                  {{ item.label }}
+                <a href="{% if locale %}/{{ locale }}{% endif %}{{ item.url | safe }}" class="nav-link -mx-1 p-1 {{ item.class }} {% if is_current_page %}selected{% endif %}"{% if is_current_page %} aria-current="page"{% endif %}>
+                  {{ item.label | i18n }}
                   {% if item.external %}<span class="exernal-link-icon">{% include "images/icons/arrow-right.svg" %}</span>{% endif %}
                   {% if item.new %}<span class="inline-block border border-gray-700 text-gray-700 leading-none p-0.5 ml-2 -mt-px rounded-sm align-middle" style="font-size: 0.65em;">NEW</span>{% endif %}
                 </a>

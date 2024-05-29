@@ -1,10 +1,10 @@
 module.exports = [
     {
       label: 'English',
-      code: 'en-US'
+      code: 'en'
     },
     {
       label: '繁體中文',
-      code: 'zh-TW'
+      code: 'zh-Hant'
     }
   ];
