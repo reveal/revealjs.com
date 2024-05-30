@@ -1,58 +1,59 @@
 ---
+
 id: keyboard
-title: Keyboard
+title: 鍵盤綁定
 layout: default
 ---
 
-# Keyboard Bindings
+# 鍵盤綁定
 
-If you're unhappy with any of the default keyboard bindings you can override them using the `keyboard` config option.
+如果您對任何默認的鍵盤綁定不滿意，可以使用 `keyboard` 配置選項來覆蓋它們。
 
 ```javascript/1-5
 Reveal.configure({
   keyboard: {
-    27: () => { console.log('esc') }, // do something custom when ESC is pressed
-    13: 'next', // go to the next slide when the ENTER key is pressed
-    32: null // don't do anything when SPACE is pressed (i.e. disable a reveal.js default binding)
+    27: () => { console.log('esc') }, // 當按下 ESC 時執行自定義操作
+    13: 'next', // 當按下 ENTER 鍵時進入下一張幻燈片
+    32: null // 當按下 SPACE 時不執行任何操作（即禁用 reveal.js 的默認綁定）
   }
 });
 ```
 
-The keyboard object is a map of key codes and their corresponding *action*. The action can be of three different types.
+鍵盤對象是鍵碼及其對應*動作*的映射。動作可以有三種不同的類型。
 
-| Type          | Action
+| 類型          | 動作
 | :-            | :-
-| Function      | Triggers a callback function.
-| String        | Calls the given method name in the [reveal.js API](/api/).
-| null          | Disables the key (blocks the default reveal.js action)
+| 函數          | 觸發一個回調函數。
+| 字符串        | 調用 [reveal.js API](/api/) 中的指定方法名。
+| null          | 禁用該鍵（阻止默認的 reveal.js 動作）
 {.key-value}
 
-## Adding Keyboard Bindings via JavaScript
+## 通過 JavaScript 添加鍵盤綁定
 
-Custom key bindings can also be added and removed using Javascript. Custom key bindings will override the default keyboard bindings, but will in turn be overridden by the user defined bindings in the `keyboard` config option.
+也可以使用 JavaScript 添加和移除自定義鍵盤綁定。自定義鍵盤綁定將覆蓋默認的鍵盤綁定，但會被 `keyboard` 配置選項中用戶定義的綁定覆蓋。
 
 ```javascript
 Reveal.addKeyBinding( binding, callback );
 Reveal.removeKeyBinding( keyCode );
 ```
 
-For example
+例如
 
 ```javascript
-// The binding parameter provides the following properties
-//      keyCode: the keycode for binding to the callback
-//          key: the key label to show in the help overlay
-//  description: the description of the action to show in the help overlay
-Reveal.addKeyBinding( { keyCode: 84, key: 'T', description: 'Start timer' }, () => {
-  // start timer
+// 綁定參數提供以下屬性
+//      keyCode: 用於綁定到回調的鍵碼
+//          key: 在幫助覆蓋中顯示的鍵標籤
+//  description: 在幫助覆蓋中顯示的操作描述
+Reveal.addKeyBinding( { keyCode: 84, key: 'T', description: '啟動計時器' }, () => {
+  // 啟動計時器
 } )
 
-// The binding parameter can also be a direct keycode without providing the help description
+// 綁定參數也可以是直接的鍵碼，無需提供幫助描述
 Reveal.addKeyBinding( 82, () => {
-  // reset timer
+  // 重置計時器
 } )
 ```
 
-This allows plugins to add key bindings directly to Reveal so they can:
-- Make use of Reveal's pre-processing logic for key handling (for example, ignoring key presses when paused)
-- Be included in the help overlay (optional)
+這允許插件直接向 Reveal 添加鍵盤綁定，使它們可以：
+- 利用 Reveal 的鍵處理預處理邏輯（例如，在暫停時忽略按鍵）
+- 包括在幫助覆蓋中（可選）

@@ -1,71 +1,71 @@
 ---
+
 id: installation
-title: Installation
+title: 安裝
 layout: default
 ---
 
-# Installation
+# 安裝
 
-We provide three different ways to install reveal.js depending on your use case and technical experience.
-1. The [basic setup](#basic-setup) is the easiest way to get started. No need to set up any build tools.
-1. The [full setup](#full-setup) gives you access to the build tools needed to make changes to the reveal.js source code. It includes a web server which is required if you want to load external Markdown files (the basic setup paired with your own choice of local web server works too).
-1. If you want to use reveal.js as a dependency in your project, you can [install from npm](#installing-from-npm).
+我們提供三種不同的安裝 reveal.js 的方式，取決於您的使用情況和技術經驗。
+1. [基本設置](#basic-setup) 是開始使用的最簡單方法。無需設置任何構建工具。
+1. [完整設置](#full-setup) 可讓您訪問更改 reveal.js 源代碼所需的構建工具。它包括一個網絡服務器，如果您想要加載外部 Markdown 文件則需要此服務器（基本設置配合您自選的本地網絡服務器也可以）。
+1. 如果您想在項目中使用 reveal.js 作為依賴項，您可以[從 npm 安裝](#installing-from-npm)。
 
-#### Next Steps
+#### 下一步
 
-Once reveal.js is installed, we recommend checking out the [Markup](/markup/) and [Config Option](/config/) guides.
+安裝完 reveal.js 後，我們推薦查看 [Markup](/markup/) 和 [配置選項](/config/) 指南。
 
-## Basic Setup
+## 基本設置
 
-We make a point of distributing reveal.js in a way that it can be used by as many people as possible. The basic setup is our most broadly accessible way to get started and only requires that you have a web browser. There's no need to go through a build process or install any dependencies.
+我們力求以盡可能多的人都能使用的方式分發 reveal.js。基本設置是我們開始使用的最廣泛訪問方式，只需要您擁有一個網絡瀏覽器。無需經過構建過程或安裝任何依賴。
 
-1. Download the latest reveal.js version <https://github.com/hakimel/reveal.js/archive/master.zip>
-1. Unzip and replace the example contents in index.html with your own
-1. Open index.html in a browser to view it
+1. 下載最新版本的 reveal.js <https://github.com/hakimel/reveal.js/archive/master.zip>
+1. 解壓並替換 index.html 中的示例內容為您自己的
+1. 在瀏覽器中打開 index.html 查看
 
-That's it 🚀
+就是這樣 🚀
 
-## Full Setup <span class="text-gray-500 font-normal">- Recommended</span>{id="full-setup"}
+## 完整設置 <span class="text-gray-500 font-normal">- 推薦</span>{id="full-setup"}
 
-Some reveal.js features, like external Markdown, require that presentations run from a local web server. The following instructions will set up such a server as well as all of the development tasks needed to make edits to the reveal.js source code.
+某些 reveal.js 功能，如外部 Markdown，要求簡報從本地網絡服務器運行。以下指令將設置這樣的服務器以及完成對 reveal.js 源代碼所需的所有開發任務。
 
-1. Install [Node.js](https://nodejs.org/) (10.0.0 or later)
+1. 安裝 [Node.js](https://nodejs.org/) (10.0.0 或更高版本)
 
-1. Clone the reveal.js repository
+1. 克隆 reveal.js 倉庫
    ```shell
    $ git clone https://github.com/hakimel/reveal.js.git
    ```
 
-1. Move to the reveal.js folder and install dependencies
+1. 移動到 reveal.js 文件夾並安裝依賴
    ```shell
    $ cd reveal.js && npm install
    ```
 
-1. Serve the presentation and monitor source files for changes
+1. 提供簡報並監控源文件的更改
    ```shell
    $ npm start
    ```
 
-1. Open <http://localhost:8000> to view your presentation
+1. 打開 <http://localhost:8000> 查看您的簡報
 
-
-### Development Server Port
-The development server defaults to port 8000. You can use the `port` argument to switch to a different one:
+### 開發服務器端口
+開發服務器默認使用 8000 端口。您可以使用 `port` 參數切換到不同的端口：
 ```shell
 npm start -- --port=8001
 ```
 
-## Installing From npm
+## 從 npm 安裝
 
-The framework is published to, and can be installed from, [npm](https://www.npmjs.com/package/reveal.js). Note that reveal.js is targeted at the browser and includes CSS, fonts and other assets so the npm dependency use case may be limited.
+框架發布到並可從 [npm](https://www.npmjs.com/package/reveal.js) 安裝。請注意，reveal.js 面向瀏覽器並包含 CSS、字體及其他資源，因此 npm 依賴使用案例可能受限。
 
 ```shell
 npm install reveal.js
-# or
+# 或者
 yarn add reveal.js
 ```
 
-Once installed, you can include reveal.js as an ES module:
+安裝後，您可以將 reveal.js 作為 ES 模塊導入：
 ```js
 import Reveal from 'reveal.js';
 import Markdown from 'reveal.js/plugin/markdown/markdown.esm.js';
@@ -76,7 +76,9 @@ let deck = new Reveal({
 deck.initialize();
 ```
 
-You'll also need to include the reveal.js styles and a [presentation theme](/themes/).
+您
+
+還需要包括 reveal.js 的樣式和一個[簡報主題](/themes/)。
 ```html
 <link rel="stylesheet" href="/node_modules/reveal.js/dist/reveal.css">
 <link rel="stylesheet" href="/node_modules/reveal.js/dist/theme/black.css">

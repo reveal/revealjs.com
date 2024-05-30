@@ -1,14 +1,14 @@
 ---
 id: touch-navigation
-title: Touch Navigation
+title: 觸摸導航
 layout: default
 ---
 
-# Touch Navigation
+# 觸摸導航
 
-You can swipe to navigate through a presentation on any touch-enabled device. Horizontal swipes change between horizontal slides, vertical swipes change between vertical slides.
+您可以在任何支持觸摸的設備上通過滑動來導航演示文稿。水平滑動更改水平幻燈片，垂直滑動更改垂直幻燈片。
 
-If you wish to disable this you can set the `touch` config option to false when initializing.
+如果您希望禁用此功能，可以在初始化時將 `touch` 配置選項設置為 false。
 
 ```javascript
 Reveal.initialize({
@@ -16,12 +16,12 @@ Reveal.initialize({
 })
 ```
 
-If there's some part of your content that needs to remain accessible to touch events you'll need to highlight this by adding a `data-prevent-swipe` attribute to the element. One common example where this is useful is elements that need to be scrolled.
+如果您的內容中有部分需要保持對觸摸事件的可訪問性，您需要通過向元素添加 `data-prevent-swipe` 屬性來突出顯示這一點。一個常見的例子是需要滾動的元素。
 
 ```html
 <section>
   <p data-prevent-swipe>
-    Can't change slides by swiping across this element.
+    無法通過滑動此元素更改幻燈片。
   </p>
 </section>
 ```

@@ -1,61 +1,62 @@
 ---
+
 id: pdf-export
-title: PDF Export
+title: PDF 輸出
 layout: default
 ---
 
-# PDF Export
+# PDF 輸出
 
-Presentations can be exported to PDF via a special print stylesheet. Here's an example of an exported presentation that's been uploaded to SlideShare: https://slideshare.net/hakimel/revealjs-300.
+簡報可以通過特殊的列印樣式表導出為 PDF。這裡有一個已經上傳到 SlideShare 的導出簡報的例子：https://slideshare.net/hakimel/revealjs-300。
 
-Note: This feature has only been confirmed to work in [Google Chrome](https://google.com/chrome) and [Chromium](https://www.chromium.org/Home).
+注意：此功能目前僅確認在 [Google Chrome](https://google.com/chrome) 和 [Chromium](https://www.chromium.org/Home) 中工作。
 
-## Instructions
+## 操作說明
 
-1. Open your presentation with `print-pdf` included in the query string, for example: `http://localhost:8000/?print-pdf`. You can test this at [revealjs.com/demo?print-pdf](/demo/?print-pdf).
-1. Open the in-browser print dialog (CTRL/CMD+P).
-1. Change the **Destination** setting to **Save as PDF**.
-1. Change the **Layout** to **Landscape**.
-1. Change the **Margins** to **None**.
-1. Enable the **Background graphics** option.
-1. Click **Save** 🎉
+1. 使用包含 `print-pdf` 的查詢字符串打開你的簡報，例如：`http://localhost:8000/?print-pdf`。你可以在 [revealjs.com/demo?print-pdf](/demo/?print-pdf) 測試這個功能。
+1. 打開瀏覽器中的列印對話框（CTRL/CMD+P）。
+1. 將 **目的地** 設置更改為 **保存為 PDF**。
+1. 將 **佈局** 更改為 **橫向**。
+1. 將 **邊距** 更改為 **無**。
+1. 啟用 **背景圖形** 選項。
+1. 點擊 **保存** 🎉
 
 ![Chrome Print Settings](https://s3.amazonaws.com/hakim-static/reveal-js/pdf-print-settings-2.png)
 
-## Speaker Notes
+## 演講者筆記
 
-Your [speaker notes](/speaker-view/) can be included in the PDF export by enabling the `showNotes`.
+你的[演講者筆記](/speaker-view/)可以通過啟用 `showNotes` 選項包含在 PDF 輸出中。
 
 ```js
 Reveal.configure({ showNotes: true });
 ```
 
-Notes are printed in an overlay box on top of the slide. If you'd rather print them on a separate page, after the slide, set `showNotes` to `"separate-page"`.
+筆記將在幻燈片上方的一個覆蓋框中列印。如果你希望將它們列印在幻燈片後面的單獨頁面上，將 `showNotes` 設置為 `"separate-page"`。
 
 ```js
 Reveal.configure({ showNotes: 'separate-page' });
 ```
 
-## Page Numbers
+## 頁碼
 
-If you want to number printed pages, make sure to enable [slide numbers](/slide-numbers/).
+如果你想在列印頁面上加上頁碼，請確保啟用[幻燈片編號](/slide-numbers/)。
 
-## Page Size
+## 頁面大小
 
-Export dimensions are inferred from the configured [presentation size](/presentation-size/). Slides that are too tall to fit within a single page will expand onto multiple pages. You can limit how many pages a slide may expand to using the `pdfMaxPagesPerSlide` config option. For example, to ensures that no slide ever grows to more than one printed page you can set it to 1.
+導出尺寸是從配置的[簡報大小](/presentation-size/)中推斷出來的。如果幻燈片過高無法放在單一頁面內，它將擴展到多個頁面。你可以使用 `pdfMaxPagesPerSlide` 配置選項來限制一個幻燈片可能擴展到的頁面數量。例如，要確保沒有任何幻燈片超過一頁，你可以將它設置為 1。
 ```js
 Reveal.configure({ pdfMaxPagesPerSlide: 1 })
 ```
 
-## Separate Pages for Fragments
-[Fragments](/fragments/) are printed on separate slides by default. Meaning if you have a slide with three fragment steps, it will generate three separate slides where the fragments appear incrementally.
+## 分段的單獨頁面
+[分段](/fragments/) 默認在單獨的幻燈片上列印。這意味著，如果你有一個包含三個分段步驟的幻燈片，它將生成三個單獨的幻燈片，其中的分段會逐步顯示。
 
-If you prefer printing all fragments in their visible states on the same slide you can use the `pdfSeparateFragments` config option.
+如果你喜歡在同一幻燈片上列印所有可見狀態的分段，你可以使用 `pdfSeparateFragments` 配置選項。
 
 ```js
 Reveal.configure({ pdfSeparateFragments: false });
 ```
 
-## Alternative Ways to Export
+## 替代的導出方式
 
-You can also use [decktape](https://github.com/astefanutti/decktape) to convert your presentation to PDF via the command line.
+你也可以使用 [decktape](https://github.com/astefanutti/decktape) 通過命令行將你的簡報轉換為 PDF。

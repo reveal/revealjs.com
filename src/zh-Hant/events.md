@@ -1,20 +1,21 @@
 ---
+
 id: events
-title: Events
+title: 事件
 layout: default
 ---
 
-# Events
+# 事件
 
-We dispatch a number of events to make it easy for you to react to changes in the presentation. `Reveal.on()` is used to add event listeners, and `Reveal.off()` is used to remove them.
+我們發送許多事件，以便您可以輕鬆地響應簡報中的變化。使用 `Reveal.on()` 添加事件監聽器，使用 `Reveal.off()` 移除它們。
 
 ```js
 Reveal.on( 'eventname', callbackFunction );
 ```
 
-## Ready
+## 就緒
 
-The `ready` event is fired when reveal.js has loaded all non-async dependencies and is ready to accept API calls. To check if reveal.js is already 'ready' you can call `Reveal.isReady()`.
+當 reveal.js 加載了所有非異步依賴並準備好接受 API 調用時，會觸發 `ready` 事件。要檢查 reveal.js 是否已經「就緒」，你可以調用 `Reveal.isReady()`。
 
 ```javascript
 Reveal.on( 'ready', event => {
@@ -22,22 +23,21 @@ Reveal.on( 'ready', event => {
 } );
 ```
 
-We also add a `.ready` class to the `.reveal` element so that you can hook into this with CSS.
+我們還會在 `.reveal` 元素上添加一個 `.ready` 類，以便您可以用 CSS 掛鉤進這個狀態。
 
-The `Reveal.initialize` method also returns a [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) which resolves when the presentation is ready. The following is synonymous to adding a listener for the `ready` event:
+`Reveal.initialize` 方法還返回一個 [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)，當簡報準備好時解析。以下與添加 `ready` 事件的監聽器同義：
 
 ```javascript
 Reveal.initialize().then( () => {
-  // reveal.js is ready
+// reveal.js 已準備好
 } )
 ```
 
+## 幻燈片變更
 
-## Slide Changed
+每次幻燈片變更時，都會觸發 `slidechanged` 事件。事件對象包含當前幻燈片的索引值以及對前一幻燈片和當前幻燈片 HTML 元素的引用。
 
-The `slidechanged` event is fired each time the slide changes. The event object holds the index values of the current slide as well as a reference to the previous and current slide HTML elements.
-
-Some libraries, like MathJax (see [#226](https://github.com/hakimel/reveal.js/issues/226#issuecomment-10261609)), get confused by the transforms and display states of slides. Often times, this can be fixed by calling their update or render function from this callback.
+一些庫，如 MathJax（參見 [#226](https://github.com/hakimel/reveal.js/issues/226#issuecomment-10261609)），可能會對幻燈片的變形和顯示狀態感到困惑。通常，這可以通過從此回調調用它們的更新或渲染函數來修復。
 
 ```javascript
 Reveal.on( 'slidechanged', event => {
@@ -45,9 +45,9 @@ Reveal.on( 'slidechanged', event => {
 } );
 ```
 
-## Slide Transition End
+## 幻燈片轉換結束
 
-The `slidechanged` event fires instantly as soon as the slide changes. If you'd rather invoke your event listener when the slide has finished transitioning and is fully visible, you can use the `slidetransitionend` event. The `slidetransitionend` event includes the same event data as `slidechanged`.
+`slidechanged` 事件在幻燈片變更時立即觸發。如果您寧願在幻燈片轉換完成並完全可見時調用事件監聽器，您可以使用 `slidetransitionend` 事件。`slidetransitionend` 事件包含與 `slidechanged` 相同的事件數據。
 
 ```javascript
 Reveal.on( 'slidetransitionend', event => {
@@ -55,10 +55,9 @@ Reveal.on( 'slidetransitionend', event => {
 });
 ```
 
+## 調整大小
 
-## Resize
-
-The `resize` event is fired when reveal.js changes the scale of the presentation.
+當 reveal.js 更改簡報的縮放比例時，會觸發 `resize` 事件。
 
 ```javascript
 Reveal.on( 'resize', event => {
@@ -66,7 +65,7 @@ Reveal.on( 'resize', event => {
 } );
 ```
 
-## Feature-specific Events
-- [Overview mode events](/overview/#events)
-- [Fragment events](/fragments/#events)
-- [Auto-Slide events](/auto-slide/#events)
+## 特定功能的事件
+- [概覽模式事件](/overview/#events)
+- [片段事件](/fragments/#events)
+- [自動播放事件](/auto-slide/#events)

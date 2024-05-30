@@ -1,33 +1,34 @@
 ---
+
 id: jump-to-slide
-title: Jump to Slide
+title: 跳轉到幻燈片
 layout: default
 ---
 
-# Jump to Slide <span class="r-version-badge coming">4.5.0</span>
+# 跳轉到幻燈片 <span class="r-version-badge coming">4.5.0</span>
 
-You can skip ahead to a specific slide using reveal.js' jump-to-slide shortcut. Here's how it works:
+您可以使用 reveal.js 的跳轉到幻燈片快捷方式直接跳到特定的幻燈片。以下是操作方法：
 
-1. Press G to activate
-2. Type a slide number or id
-3. Press Enter to confirm
+1. 按 G 啟動
+2. 輸入幻燈片編號或 id
+3. 按 Enter 確認
 
-## Navigating to Slide Number
+## 導航到幻燈片編號
 
-When jumping to a slide you can either enter numeric value or a string. If you provide a number reveal.js will navigate to the desired slide number. If you type a string, reveal.js will try to locate a slide with a matching `id` and navigate to it.
+當跳轉到一個幻燈片時，您可以輸入數字值或字符串。如果您提供一個數字，reveal.js 將導航到所需的幻燈片編號。如果您輸入一個字符串，reveal.js 將嘗試定位一個具有匹配 `id` 的幻燈片並導航到它。
 
-Here are a couple of examples of different input and their resulting navigation.
+這裡有一些不同輸入及其導航結果的範例。
 
-| Input          | Result
+| 輸入          | 結果
 | :-             | :-
-| 5              | Navigate to slide number 5
-| 6/2            | Navigate to horizontal slide 6, vertical slide 2
-| the-end        | Navigate to a slide with this id (`<section id="the-end">`)
+| 5              | 導航到幻燈片編號 5
+| 6/2            | 導航到水平幻燈片 6，垂直幻燈片 2
+| the-end        | 導航到具有此 id 的幻燈片（`<section id="the-end">`）
 {.key-value}
 
-## Disable Jump to Slide
+## 禁用跳轉到幻燈片
 
-Jump to Slide is enabled by default but if you want to turn it off you can set the `jumpToSlide` config value to `false`.
+跳轉到幻燈片默認情況下是啟用的，但如果您想關閉它，您可以將 `jumpToSlide` 配置值設置為 `false`。
 
 ```javascript
 Reveal.initialize({

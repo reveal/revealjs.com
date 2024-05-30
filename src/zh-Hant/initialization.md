@@ -1,14 +1,15 @@
 ---
+
 id: initialization
-title: Initialization
+title: 初始化
 layout: default
 ---
 
-# Initialization
+# 初始化
 
-The most common reveal.js use case is to have a single presentation which covers the full viewport. As of 4.0 we also support running [multiple presentations](#multiple-presentations) in parallel on the same page as well as including the library as an [ES module](#es-module).
+最常見的 reveal.js 使用情景是有一個覆蓋整個視口的單一簡報。從 4.0 版本開始，我們也支持在同一頁面上同時運行[多個簡報](#multiple-presentations)，以及將庫作為一個[ES 模塊](#es-module)引入。
 
-If you only have a single presentation on the page we recommend initializing reveal.js using the global `Reveal` object. The `Reveal.initialize` method accepts one argument; a reveal.js [config object](/config/).
+如果你的頁面上只有一個簡報，我們建議使用全局的 `Reveal` 對象來初始化 reveal.js。`Reveal.initialize` 方法接受一個參數；一個 reveal.js 的[配置對象](/config/)。
 ```html
 <script src="dist/reveal.js"></script>
 <script>
@@ -16,20 +17,20 @@ If you only have a single presentation on the page we recommend initializing rev
 </script>
 ```
 
-The `initialize` method returns a promise which will resolve as soon as the presentation is ready and can be interacted with via the API.
+`initialize` 方法返回一個 promise，當簡報準備好並可以通過 API 進行交互時，此 promise 將解析。
 ```js
 Reveal.initialize().then( () => {
-  // reveal.js is ready
+  // reveal.js 已準備好
 } )
 ```
 
-## Multiple Presentations <span class="r-version-badge new">4.0.0</span> {id="multiple-presentations"}
+## 多個簡報 <span class="r-version-badge new">4.0.0</span> {id="multiple-presentations"}
 
-To run multiple presentations side-by-side on the same page you can create instances of the `Reveal` class. The `Reveal` constructor accepts two arguments; the `.reveal` HTML element root of the presentation and an optional [config object](/config/).
+要在同一頁面上並排運行多個簡報，你可以創建 `Reveal` 類的實例。`Reveal` 構造函數接受兩個參數；簡報的 `.reveal` HTML 元素根以及一個可選的[配置對象](/config/)。
 
-Note that you will also need to set the [embedded](/presentation-size/#embedded) config option to true. This flag makes the presentations size themselves according to their `.reveal` root element size, rather than the browser viewport. You will also need to manually define the `width` and `height` CSS properties for each `.reveal .deck*` element in order to see them appear.
+請注意，你還需要將[嵌入式](/presentation-size/#embedded)配置選項設置為真。這個標誌使得簡報按照它們的 `.reveal` 根元素的大小進行自我調整，而不是按照瀏覽器視口。你還需要手動為每個 `.reveal .deck*` 元素定義 `width` 和 `height` 的 CSS 屬性，才能看到它們顯示出來。
 
-By default reveal.js will capture all keyboard events in the document. For embedded presentations we recommend initializing with `keyboardCondition: 'focused'` so that keyboard events are only captured when the presentation has been focused by the viewer.
+默認情況下，reveal.js 會捕獲文檔中的所有鍵盤事件。對於嵌入式簡報，我們建議使用 `keyboardCondition: 'focused'` 初始化，這樣鍵盤事件只有在觀眾聚焦簡報時才會被捕獲。
 
 ```html
 <div class="reveal deck1">...</div>
@@ -39,7 +40,7 @@ By default reveal.js will capture all keyboard events in the document. For embed
 <script>
   let deck1 = new Reveal( document.querySelector( '.deck1' ), {
     embedded: true,
-    keyboardCondition: 'focused' // only react to keys when focused
+    keyboardCondition: 'focused' // 只有在聚焦時才反應按鍵
   } );
   deck1.initialize();
 
@@ -50,13 +51,15 @@ By default reveal.js will capture all keyboard events in the document. For embed
 </script>
 ```
 
-## ES Module <span class="r-version-badge new">4.0.0</span> {id="es-module"}
+## ES 模塊 <span class="r-version-badge new">4.0.0</span> {id="es-module"}
 
-We provide two JavaScript bundles depending your use case. Our default presentation boilerplate uses `dist/reveal.js` which has broad cross browser support (ES5) and exposes Reveal to the global window (UMD).
+我們提供兩個 JavaScript 包，取決於你的使用情況。我們的默認簡報模板使用 `dist/reveal.js`，它支持廣泛的跨瀏覽器（ES5）並將 Reveal 暴露到全局窗口（UMD）。
 
-The second bundle is `dist/reveal.esm.js` which makes it possible to import reveal.js as an ES module. This version can be used either directly in the browser with `<script type="module">` or bundled in your own build process.
+第二個包是 `dist/reveal.esm.js`，它允許將 reveal.js 作為 ES 模塊導入。這個版本可以直接在瀏覽器中使用 `<script type="module">` 或在你自己的構建過程中
 
-Here's how to import and initialize the ES module version of reveal.js as well as the Markdown plugin:
+捆綁使用。
+
+以下是如何導入並初始化 reveal.js 的 ES 模塊版本以及 Markdown 插件：
 
 ```html
 <script type="module">
@@ -68,15 +71,15 @@ Here's how to import and initialize the ES module version of reveal.js as well a
 </script>
 ```
 
-If you're [installing reveal.js from npm](/installation/#installing-from-npm) and bundling it you should be able to use:
+如果你是[從 npm 安裝 reveal.js](/installation/#installing-from-npm)並且捆綁它，你應該能夠使用：
 ```js
 import Reveal from 'reveal.js';
 Reveal.initialize();
 ```
 
-## Uninitializing reveal.js <span class="r-version-badge new">4.3.0</span> {id="destroy"}
+## 取消初始化 reveal.js <span class="r-version-badge new">4.3.0</span> {id="destroy"}
 
-If you want to uninitialize reveal.js you can use the `destroy` API method. This will undo all changes that the framework has made to the DOM, remove all event listeners and unregister/destroy all plugins.
+如果你想取消初始化 reveal.js，你可以使用 `destroy` API 方法。這將撤銷框架對 DOM 做出的所有更改，移除所有事件監聽器並註銷/銷毀所有插件。
 
 ```js
 Reveal.destroy();

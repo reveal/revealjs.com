@@ -1,18 +1,19 @@
 ---
+
 id: layout
-title: Layout
+title: 布局
 layout: default
 ---
 
-# Layout
+# 布局
 
-We provide a few different helper classes for controlling the layout and styling your content. We're aiming to add more of these in upcoming versions so keep an eye out for that.
+我們提供了幾種不同的輔助類，用於控制布局並設計您的內容。我們目標是在即將到來的版本中添加更多這些類，因此請密切關注。
 
-If you're looking to change the sizing, scaling and centering of your presentation please see [Presentation Size](/presentation-size/).
+如果您希望更改簡報的尺寸、縮放和居中，請參見[簡報大小](/presentation-size/)。
 
-## Stack
+## 堆疊
 
-The `r-stack` layout helper lets you center and place multiple elements on top of each other. This is intended to be used together with [fragments](/fragments/) to incrementally reveal elements.
+`r-stack` 布局輔助讓您可以居中並將多個元素疊加在一起。這意味著要與[片段](/fragments/)一起使用，以逐步揭示元素。
 
 ```html
 <div class="r-stack">
@@ -33,7 +34,7 @@ The `r-stack` layout helper lets you center and place multiple elements on top o
   </div>
 </div>
 
-If you want to show each of the stacked elements individually you can adjust the fragment settings:
+如果您希望逐個顯示堆疊的元素，可以調整片段設置：
 
 ```html
 <div class="r-stack">
@@ -54,62 +55,64 @@ If you want to show each of the stacked elements individually you can adjust the
   </div>
 </div>
 
-## Fit Text
+## 適應文字
 
-The `r-fit-text` class makes text as large as possible without overflowing the slide. This is great when you want BIG text without having to manually find the right font size. Powered by [fitty](https://github.com/rikschennink/fitty) ❤️
+`r-fit-text` 類使文字盡可能大而不超出幻燈片。當您希望文字很大而不需要手動找到正確的字體大小時，這非常合適。由 [fitty](https://github.com/rikschennink/fitty) ❤️ 提供支持
 
 ```html
-<h2 class="r-fit-text">BIG</h2>
+<h2 class="r-fit-text">大</h2>
 ```
 <div class="reveal reveal-example">
   <div class="slides">
     <section>
-      <h2 class="r-fit-text">BIG</h2>
+      <h2 class="r-fit-text">大</h2>
     </section>
   </div>
 </div>
 
 ```html
-<h2 class="r-fit-text">FIT TEXT</h2>
-<h2 class="r-fit-text">CAN BE USED FOR MULTIPLE HEADLINES</h2>
+<h2 class="r-fit-text">適應文字</h2>
+<h2 class="r-fit-text">可用於多個標題</h2>
 ```
 <div class="reveal reveal-example">
   <div class="slides">
     <section>
-      <h2 class="r-fit-text">FIT TEXT</h2>
-      <h2 class="r-fit-text">CAN BE USED FOR MULTIPLE HEADLINES</h2>
+      <h2 class="r-fit-text">適應文字</h2>
+      <h2 class="r-fit-text">可用於多個標題</h2>
     </section>
   </div>
-</div>
+</div
+
+>
 
 
-## Stretch
+## 拉伸
 
-The `r-stretch` layout helper lets you resize an element, like an image or video, to cover the remaining vertical space in a slide. For example, in the below example our slide contains a **title**, an **image** and a **byline**. Because the **image** has the `.r-stretch` class, its height is set to the slide height minus the combined height of the **title** and **byline**.
+`r-stretch` 布局輔助讓您可以調整元素（如圖片或視頻）的大小，以覆蓋幻燈片中剩餘的垂直空間。例如，在下面的例子中，我們的幻燈片包含一個**標題**、一個**圖片**和一個**作者行**。因為**圖片**具有 `.r-stretch` 類，其高度設置為幻燈片高度減去**標題**和**作者行**的組合高度。
 
 ```html
-<h2>Stretch Example</h2>
+<h2>拉伸範例</h2>
 <img class="r-stretch" src="/images/slides-symbol-512x512.png">
-<p>Image byline</p>
+<p>圖片說明</p>
 ```
 <div class="reveal reveal-example">
   <div class="slides">
     <section>
-      <h2>Stretch Example</h2>
+      <h2>拉伸範例</h2>
       <img class="r-stretch" style="display: inline-block;" src="/images/slides-symbol-512x512.png">
-      <p>Image byline</p>
+      <p>圖片說明</p>
     </section>
   </div>
 </div>
 
-#### Stretch Limitations
-- Only direct descendants of a slide section can be stretched
-- Only one descendant per slide section can be stretched
+#### 拉伸限制
+- 只有幻燈片部分的直接後代才可以拉伸
+- 每個幻燈片部分只能拉伸一個後代
 
 
-## Frame
+## 框架
 
-Decorate any element with `r-frame` to make it stand out against the background. If the framed element is placed inside an anchor, we'll apply a hover effect to the border.
+用 `r-frame` 裝飾任何元素，使其在背景中脫穎而出。如果被框架的元素放置在錨點內，我們將對邊框應用懸停效果。
 
 ```html
 <img src="logo.svg" width="200">

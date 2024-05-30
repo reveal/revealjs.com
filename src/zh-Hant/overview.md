@@ -1,32 +1,33 @@
 ---
+
 id: overview
-title: Overview
+title: 概覽模式
 layout: default
 ---
 
-# Overview Mode
+# 概覽模式
 
-Press the »ESC« or »O« keys to toggle the overview mode on and off. While you're in this mode, you can still navigate between slides, as if you were at 1,000 feet above your presentation.
+按下「ESC」或「O」鍵來開啟或關閉概覽模式。當你處於這種模式時，你仍然可以在幻燈片之間導航，就像你在你的簡報上方1000英尺高的地方一樣。
 
-<picture><img src="/images/docs/overview.png" alt="Slide layout with vertical slides"></picture>
+<picture><img src="/images/docs/overview.png" alt="具有垂直幻燈片的幻燈片布局"></picture>
 
 ## API
 
-You can use the `toggleOverview()` API method to activate or deactivate the overview mode from JavaScript.
+你可以使用`toggleOverview()` API方法從JavaScript中激活或停用概覽模式。
 
 ```js
-// Switch to the opposite of the current state
+// 切換到當前狀態的相反狀態
 Reveal.toggleOverview();
 
-// Activate the overview mode
+// 激活概覽模式
 Reveal.toggleOverview( true );
 
-// Deactivate the overview mode
+// 停用概覽模式
 Reveal.toggleOverview( false );
 ```
 
-## Events
-We fire events when the overview mode is activated and deactivated.
+## 事件
+當概覽模式被激活和停用時，我們會觸發事件。
 
 ```javascript
 Reveal.on( 'overviewshown', event => { /* ... */ } );

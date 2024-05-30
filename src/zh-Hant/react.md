@@ -1,52 +1,53 @@
 ---
+
 id: react
-title: React Framework
+title: React 框架
 layout: default
 ---
 
-# React Framework
+# React 框架
 
-Reveal.js can be added to a React project a few different ways.
-1. [Install and setup reveal.js via npm](#installing-from-npm)
-2. [Use third-party packages](#third-party-packages)
+有幾種不同的方式可以將 Reveal.js 添加到 React 項目中。
+1. [通過 npm 安裝並設置 Reveal.js](#installing-from-npm)
+2. [使用第三方套件](#third-party-packages)
 
-## Installing From npm
+## 通過 npm 安裝
 
-You can add and initialize reveal.js in a JavaScript/TypeScript source file like `main.tsx` or `app.tsx`.
+你可以在像 `main.tsx` 或 `app.tsx` 這樣的 JavaScript/TypeScript 源文件中添加和初始化 Reveal.js。
 
-You can do so globally i.e. outside of app/component functions or inside one of them. In the latter case, you have to be careful not to stack initializations. Only initialize a slide deck once. If you need to reconfigure, use the `configure` function or `destroy` the deck before initializing again.
+你可以全局地執行，即在應用/組件函數之外，或者在其中之一內部。在後一種情況下，你必須小心不要堆疊初始化。只初始化一次幻燈片集。如果需要重新配置，請使用 `configure` 函數或在再次初始化之前 `destroy` 幻燈片集。
 
-To begin, install reveal using `npm`:
+首先，使用 `npm` 安裝 Reveal：
 
 ```bash
 npm install reveal.js
 ```
 
-If you are using TypeScript, you need to install the types as well:
+如果你正在使用 TypeScript，你需要安裝類型：
 
 ```bash
 npm i --save-dev @types/reveal.js
 ```
 
-#### Imports
+#### 導入
 
-You will need the following imports:
+你將需要以下導入：
 
 ```ts
 import Reveal from "reveal.js";
 import "reveal.js/dist/reveal.css";
-import "reveal.js/dist/theme/black.css"; // "black" theme is just an example
+import "reveal.js/dist/theme/black.css"; // "black" 主題只是一個例子
 ```
 
-#### Initialization
+#### 初始化
 
-Finally, add the [initialization code](https://revealjs.com/initialization/) most suitable to your project's needs.
+最後，添加最適合你項目需求的[初始化代碼](https://revealjs.com/initialization/)。
 
-If you decide to intialize the slide deck inside an app or component function where slide deck containers are in the returned JSX, we recommended you use a `useEffect` hook to do so. This will ensure that initialization happens after the containers are first rendered.
+如果你決定在返回 JSX 的應用或組件函數內部初始化幻燈片集，我們建議你使用 `useEffect` 鉤子來進行。這將確保在容器首次渲染後進行初始化。
 
-It is also recommended to use refs to maintain a handle on the slide deck container `div` and the corresponding `reveal` instance. These refs can help make sure each slide deck is only initialized once.
+還建議使用 refs 來維護對幻燈片集容器 `div` 和相應的 `reveal` 實例的引用。這些 refs 可以幫助確保每個幻燈片集只初始化一次。
 
-#### Here's a full working example:
+#### 下面是一個完整的工作示例：
 
 ```ts
 // App.tsx
@@ -56,20 +57,20 @@ import "reveal.js/dist/reveal.css";
 import "reveal.js/dist/theme/black.css";
 
 function App() {
-    const deckDivRef = useRef<HTMLDivElement>(null); // reference to deck container div
-    const deckRef = useRef<Reveal.Api | null>(null); // reference to deck reveal instance
+    const deckDivRef = useRef<HTMLDivElement>(null); // 幻燈片集容器 div 的引用
+    const deckRef = useRef<Reveal.Api | null>(null); // 幻燈片集 reveal 實例的引用
 
     useEffect(() => {
-        // Prevents double initialization in strict mode
+        // 防止在嚴格模式下重複初始化
         if (deckRef.current) return;
 
         deckRef.current = new Reveal(deckDivRef.current!, {
             transition: "slide",
-            // other config options
+            // 其他配置選項
         });
 
         deckRef.current.initialize().then(() => {
-            // good place for event handlers and plugin setups
+            // 事件處理器和插件設置的好位置
         });
 
         return () => {
@@ -79,18 +80,17 @@ function App() {
                     deckRef.current = null;
                 }
             } catch (e) {
-                console.warn("Reveal.js destroy call failed.");
+                console.warn("Reveal.js destroy 調用失敗。");
             }
         };
     }, []);
 
     return (
-        // Your presentation is sized based on the width and height of
-        // our parent element. Make sure the parent is not 0-height.
+        // 你的簡報大小是基於父元素的寬度和高度。確保父元素高度不為0。
         <div className="reveal" ref={deckDivRef}>
             <div className="slides">
-                <section>Slide 1</section>
-                <section>Slide 2</section>
+                <section>幻燈片 1</section>
+                <section>幻燈片 2</section>
             </div>
         </div>
     );
@@ -99,16 +99,18 @@ function App() {
 export default App;
 ```
 
-Note the use of `deckDivRef` in the `Reveal` constructor. This is important if you want to add multiple decks to the the same React app.
+注意在 `Reveal` 構造器中使用 `deckDivRef`。如果你想在同一個 React 應用中添加多個幻燈片集，這一點非常重要。
 
 ## React Portals
 
-If you only want to sprinkle a few components into specific slides, we recommend keeping the reveal.js DOM tree outside of React and using [React Portals](https://react.dev/reference/react-dom/createPortal) to place react component into specific sections.
+如果你只想
 
-## Third Party Packages
+在特定幻燈片中添加一些組件，我們建議將 Reveal.js 的 DOM 樹保持在 React 之外，並使用 [React Portals](https://react.dev/reference/react-dom/createPortal) 將 react 組件放置在特定部分。
 
-The following third-party packages might prove useful for adding Reveal.js presentations to React projects or for adding React components/apps to Reveal.js presentations:
+## 第三方套件
 
-- [revealjs-react](https://github.com/blakeanedved/revealjs-react) - A React wrapper for the RevealJS Presentation Library.
-- [react-reveal-slides](https://github.com/bouzidanas/react-reveal-slides) - A React component for creating Reveal.js presentations entirely in React.
-- [revealjs-react-boilerplate](https://github.com/cberthou/revealjs-react-boilerplate) - A boilerplate for creating revealJS presentations using React.
+以下第三方套件可能對於將 Reveal.js 簡報添加到 React 項目中或將 React 組件/應用添加到 Reveal.js 簡報中非常有用：
+
+- [revealjs-react](https://github.com/blakeanedved/revealjs-react) - RevealJS 簡報庫的 React 包裝器。
+- [react-reveal-slides](https://github.com/bouzidanas/react-reveal-slides) - 一個用於完全在 React 中創建 Reveal.js 簡報的 React 組件。
+- [revealjs-react-boilerplate](https://github.com/cberthou/revealjs-react-boilerplate) - 使用 React 創建 revealJS 簡報的模板。

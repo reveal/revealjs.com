@@ -1,23 +1,24 @@
 ---
+
 id: presentation-state
-title: Presentation State
+title: 簡報狀態
 layout: default
 ---
 
-# Presentation State
+# 簡報狀態
 
-The presentation's current state can be fetched by using the `getState` method. A state object contains all of the information required to put the presentation back as it was when `getState` was first called. Sort of like a snapshot. It's a simple object that can easily be stringified and persisted or sent over the wire.
+可以通過使用 `getState` 方法來獲取簡報的當前狀態。狀態對象包含將簡報恢復到首次調用 `getState` 時的所有必要信息。有點像快照。它是一個簡單的對象，可以輕易地被序列化並持久化或通過網絡發送。
 
 ```javascript
-// Move to slide 1
+// 移動到第1張幻燈片
 Reveal.slide( 1 );
 
 let state = Reveal.getState();
 // {indexh: 1, indexv: 0, indexf: undefined, paused: false, overview: false}
 
-// Move to slide 3
+// 移動到第3張幻燈片
 Reveal.slide( 3 );
 
-// This restores the saved state, placing on slide 1 again
+// 這將恢復保存的狀態，再次放置在第1張幻燈片
 Reveal.setState( state );
 ```

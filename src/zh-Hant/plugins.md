@@ -1,16 +1,17 @@
 ---
+
 id: plugins
-title: Plugins
+title: 插件
 layout: default
 ---
 
-# Plugins
+# 插件
 
-Plugins can be used to extend reveal.js with additional functionality. To make use of a plugin, you'll need to do two things:
-1. Include the plugin script in the document. (Some plugins may require styles as well.)
-1. Tell reveal.js about the plugin by including it in the `plugins` array when initializing.
+插件可用於為 reveal.js 增加額外功能。要使用插件，您需要執行兩件事：
+1. 在文檔中包含插件腳本。（有些插件可能還需要樣式。）
+1. 通過在初始化時將其包含在 `plugins` 數組中來告訴 reveal.js 關於插件。
 
-Here's an example:
+這是一個示例：
 ```html
 <script src="plugin/markdown/markdown.js"></script>
 <script>
@@ -20,7 +21,7 @@ Here's an example:
 </script>
 ```
 
-If you're using ES modules, we also provide module exports for all built-in plugins:
+如果您使用 ES 模塊，我們也為所有內置插件提供了模塊導出：
 ```html
 <script type="module">
   import Reveal from 'dist/reveal.esm.js';
@@ -31,27 +32,27 @@ If you're using ES modules, we also provide module exports for all built-in plug
 </script>
 ```
 
-## Built-in Plugins
+## 內置插件
 
-A few common plugins which add support for [Markdown](/markdown/), [code highlighting](/code/) and [speaker notes](/speaker-view/) are included in our default [presentation boilerplate](https://github.com/hakimel/reveal.js/blob/master/index.html).
+一些常見的插件，包括支持 [Markdown](/markdown/)、[代碼高亮](/code/) 和 [演講者筆記](/speaker-view/)，均包含在我們默認的[演示文稿模板](https://github.com/hakimel/reveal.js/blob/master/index.html)中。
 
-These plugins are distributed together with the reveal.js repo. Here's a complete list of all built-in plugins.
+這些插件與 reveal.js 存儲庫一起分發。這是所有內置插件的完整列表。
 
-| Name               | Description
+| 名稱               | 描述
 | :-                 | :-
-| RevealHighlight    | Syntax highlighted [code](/code/).<br><span class="text-gray-600">plugin/highlight/highlight.js</span>
-| RevealMarkdown     | Write content using [Markdown](/markdown/).<br><span class="text-gray-600">plugin/markdown/markdown.js</span>
-| RevealSearch       | Press CTRL+Shift+F to search slide content.<br><span class="text-gray-600">plugin/search/search.js</span>
-| RevealNotes        | Show a [speaker view](/speaker-view/) in a separate window.<br><span class="text-gray-600">plugin/notes/notes.js</span>
-| RevealMath         | Render [math equations](/math/).<br><span class="text-gray-600">plugin/math/math.js</span>
-| RevealZoom         | Alt+click to zoom in on elements (CTRL+click in Linux).<br><span class="text-gray-600">plugin/zoom/zoom.js</span>
+| RevealHighlight    | 語法高亮的[代碼](/code/)。<br><span class="text-gray-600">plugin/highlight/highlight.js</span>
+| RevealMarkdown     | 使用 [Markdown](/markdown/) 編寫內容。<br><span class="text-gray-600">plugin/markdown/markdown.js</span>
+| RevealSearch       | 按 CTRL+Shift+F 搜索幻燈片內容。<br><span class="text-gray-600">plugin/search/search.js</span>
+| RevealNotes        | 在單獨窗口中顯示[演講者視圖](/speaker-view/)。<br><span class="text-gray-600">plugin/notes/notes.js</span>
+| RevealMath         | 呈現[數學方程式](/math/)。<br><span class="text-gray-600">plugin/math/math.js</span>
+| RevealZoom         | Alt+點擊元素放大（Linux 中使用 CTRL+點擊）。<br><span class="text-gray-600">plugin/zoom/zoom.js</span>
 {.key-value}
 
-All of the above are available as ES modules if you swap `.js` for `.esm.js`.
+如果您換用 `.js` 為 `.esm.js`，以上所有插件都可以作為 ES 模塊獲得。
 
 ## API
 
-We provide API methods for checking which plugins that are currently registered. It's also possible to retrieve a reference to any registered plugin instance if you want to manually call a method on them.
+我們提供了 API 方法來檢查哪些插件目前已註冊。如果您想手動調用插件上的方法，也可以檢索任何已註冊插件實例的參考。
 
 
 ```js
@@ -74,11 +75,13 @@ Reveal.getPlugins()
 // }
 ```
 
-## Dependencies <span class="r-version-badge deprecated">4.0.0</span> {id=dependencies}
+## 依賴 <span class="r-version-badge deprecated">4.0.0</span> {id=dependencies}
 
-This functionality is left in for backwards compatibility but has been deprecated as of reveal.js 4.0.0. In older versions we used a built-in dependency loader to load plugins. We moved away from this because how scripts are best loaded and bundled may vary greatly depending on use case. If you need to load a dependency, include it using a `<script defer>` tag instead.
+這個功能是為了向後兼容而保留的，但從 reveal.js 4.0.0 開始已被廢棄。在舊版本中，我們使用內置的
 
-Dependencies are loaded in the order they appear.
+依賴加載器來加載插件。我們停用這一功能是因為腳本的最佳加載和捆綁方式可能會根據使用案例大不相同。如果您需要加載一個依賴，請使用 `<script defer>` 標籤包含它。
+
+依賴按照它們出現的順序加載。
 
 ```js
 Reveal.initialize({
@@ -91,8 +94,8 @@ Reveal.initialize({
 });
 ```
 
-The following properties are available for each dependency object:
-- **src**: Path to the script to load
-- **async**: [optional] Flags if the script should load after reveal.js has started, defaults to false
-- **callback**: [optional] Function to execute when the script has loaded
-- **condition**: [optional] Function which must return true for the script to be loaded
+每個依賴對象都有以下屬性：
+- **src**: 要加載的腳本的路徑
+- **async**: [可選] 標記腳本是否應該在 reveal.js 啟動後加載，默認為 false
+- **callback**: [可選] 腳本加載完成時執行的函數
+- **condition**: [可選] 必須返回 true 才會加載腳本的函數

@@ -1,12 +1,13 @@
 ---
+
 id: markup
-title: Markup
+title: 標記
 layout: default
 ---
 
-# Markup
+# 標記
 
-Here's a barebones example of a fully working reveal.js presentation:
+這是一個完全運作的 reveal.js 簡報的基本示例：
 ```html
 <html>
   <head>
@@ -16,8 +17,8 @@ Here's a barebones example of a fully working reveal.js presentation:
   <body>
     <div class="reveal">
       <div class="slides">
-        <section>Slide 1</section>
-        <section>Slide 2</section>
+        <section>幻燈片 1</section>
+        <section>幻燈片 2</section>
       </div>
     </div>
     <script src="dist/reveal.js"></script>
@@ -28,41 +29,41 @@ Here's a barebones example of a fully working reveal.js presentation:
 </html>
 ```
 
-The presentation markup hierarchy needs to be `.reveal > .slides > section` where the `section` element represents one slide and can be repeated indefinitely.
+簡報的標記層次結構需要是 `.reveal > .slides > section`，其中 `section` 元素代表一個幻燈片，可以無限重復。
 
-If you place multiple `section` elements inside of another `section` they will be shown as [vertical slides](/vertical-slides/). The first of the vertical slides is the "root" of the others (at the top), and will be included in the horizontal sequence. For example:
+如果您在另一個 `section` 內放置多個 `section` 元素，它們將被顯示為[垂直幻燈片](/vertical-slides/)。垂直幻燈片的第一個是其他幻燈片的“根”（在頂部），並將包括在水平序列中。例如：
 
 ```html
 <div class="reveal">
   <div class="slides">
-    <section>Horizontal Slide</section>
+    <section>水平幻燈片</section>
     <section>
-      <section>Vertical Slide 1</section>
-      <section>Vertical Slide 2</section>
+      <section>垂直幻燈片 1</section>
+      <section>垂直幻燈片 2</section>
     </section>
   </div>
 </div>
 ```
 <div class="reveal reveal-example">
   <div class="slides">
-    <section>Horizontal Slide</section>
+    <section>水平幻燈片</section>
     <section>
-      <section>Vertical Slide 1</section>
-      <section>Vertical Slide 2</section>
+      <section>垂直幻燈片 1</section>
+      <section>垂直幻燈片 2</section>
     </section>
   </div>
 </div>
 
-It's also possible to write presentations using [Markdown](/markdown/).
+同樣可以使用 [Markdown](/markdown/) 編寫簡報。
 
-## Viewport
-The reveal.js viewport is the wrapper DOM element that determines the size of your presentation on a web page. By default, this will be the `body` element. If you're including multiple presentations on the same page each presentations `.reveal` element will act as their viewport.
+## 視口
+reveal.js 的視口是確定簡報在網頁上的大小的包裝器 DOM 元素。默認情況下，這將是 `body` 元素。如果您在同一頁面上包含多個簡報，每個簡報的 `.reveal` 元素將作為它們的視口。
 
-The viewport is always decorated with a `reveal-viewport` class reveal.js is initialized.
+視口在 reveal.js 初始化時始終帶有 `reveal-viewport` 類。
 
-## Slide States
+## 幻燈片狀態
 
-If you set `data-state="make-it-pop"` on a slide `<section>`, "make-it-pop" will be applied as a class on the [viewport element](#viewport) when that slide is opened. This allows you to apply broad style changes to the page based on the active slide.
+如果您在幻燈片 `<section>` 上設置了 `data-state="make-it-pop"`，當該幻燈片打開時，"make-it-pop" 將作為類應用於[視口元素](#viewport)。這允許您根據活動幻燈片對頁面應用廣泛的風格更改。
 
 ```html
 <section data-state="make-it-pop"></section>
@@ -75,7 +76,7 @@ If you set `data-state="make-it-pop"` on a slide `<section>`, "make-it-pop" will
 }
 ```
 
-You can also listen to these changes in state via JavaScript:
+您還可以通過 JavaScript 監聽這些狀態變化：
 
 ```javascript
 Reveal.on( 'make-it-pop', () => {

@@ -1,11 +1,12 @@
 ---
+
 id: multiplex
-title: Multiplex
+title: 多重廣播
 layout: default
 ---
 
-# Multiplex
+# 多重廣播
 
-The multiplex plugin allows your audience to follow the slides of the presentation you are controlling on their own phone, tablet or laptop. When you change slides in your master presentations everyone will follow and see the same content on their own device.
+多重廣播插件允許你的觀眾在自己的手機、平板或筆記本電腦上跟隨你控制的簡報中的幻燈片。當你在主簡報中更換幻燈片時，每個人都會同步看到相同的內容。
 
-This plugin was previously part of reveal.js core but as of 4.0.0 it has graduated to its own repository at <https://github.com/reveal/multiplex>.
+這個插件之前是reveal.js核心的一部分，但從4.0.0版本開始，它已經成為了自己的存儲庫，在<https://github.com/reveal/multiplex>。

@@ -1,12 +1,12 @@
 ---
 id: math
-title: Math
+title: 數學
 layout: default
 ---
 
-# Math
+# 數學
 
-The Math plugin lets you include beautifully typeset math formulas in your slides. To get started, make sure that reveal.js is initialized with the math plugin enabled.
+數學插件允許你在幻燈片中包含美觀的排版數學公式。首先，確保reveal.js已經初始化並啟用了數學插件。
 
 ```html
 <script src="plugin/math/math.js"></script>
@@ -15,14 +15,13 @@ The Math plugin lets you include beautifully typeset math formulas in your slide
 </script>
 ```
 
-We're using the KaTeX typesetter in this example but you can also choose from [MathJax 2](#mathjax-2) or [3](#mathjax-3-4.2.0).
+在此示例中，我們使用了KaTeX排版器，但你也可以選擇使用[MathJax 2](#mathjax-2)或[3](#mathjax-3-4.2.0)。
 
-Now that the plugin is registered we can start adding [LaTeX](https://en.wikipedia.org/wiki/LaTeX) formulas to our slides.
-
+現在插件已註冊，我們可以開始在幻燈片中添加[LaTeX](https://en.wikipedia.org/wiki/LaTeX)公式。
 
 ```html
 <section>
-  <h2>The Lorenz Equations</h2>
+  <h2>洛倫茲方程</h2>
   \[\begin{aligned}
   \dot{x} &amp; = \sigma(y-x) \\
   \dot{y} &amp; = \rho x - y - xz \\
@@ -33,7 +32,7 @@ Now that the plugin is registered we can start adding [LaTeX](https://en.wikiped
 <div class="reveal reveal-example">
   <div class="slides">
     <section>
-      <h2>The Lorenz Equations</h2>
+      <h2>洛倫茲方程</h2>
       \[\begin{aligned}
       \dot{x} &amp; = \sigma(y-x) \\
       \dot{y} &amp; = \rho x - y - xz \\
@@ -44,7 +43,7 @@ Now that the plugin is registered we can start adding [LaTeX](https://en.wikiped
 </div>
 
 ## Markdown
-If you want to include math inside of a presentation written in Markdown you need to wrap the formula in backticks. This prevents syntax conflicts between LaTeX and Markdown. For example:
+如果你想在Markdown寫的簡報中包含數學公式，你需要用反引號將公式包起來。這樣可以避免LaTeX和Markdown語法之間的衝突。例如：
 
 ```html
 <section data-markdown>
@@ -52,8 +51,8 @@ If you want to include math inside of a presentation written in Markdown you nee
 </section>
 ```
 
-## Typesetting Libraries
-The math plugin offers three choices of math typesetting libraries that you can use to render your math. Each variant is its own plugin that can be accessed via `RevealMath.<Variant>`. If you don't have a preference, we recommend going with KaTeX.
+## 排版庫
+數學插件提供了三種數學排版庫供你選擇用於渲染你的數學公式。每個變體都是獨立的插件，可以通過 `RevealMath.<Variant>` 訪問。如果你沒有特別偏好，我們建議使用KaTeX。
 
 | Library  | Plugin Name | Config Property
 | :-       | :-          | :-
@@ -64,7 +63,7 @@ The math plugin offers three choices of math typesetting libraries that you can 
 
 ### KaTeX <span class="r-version-badge new">4.2.0</span>
 
-Adjust options through the `katex` configuration object. Below is how the plugin is configured by default. If you don't intend to change these values you do not need to include the `katex` config option at all.
+通过 `katex` 配置對象調整選項。以下是默認的插件配置。如果你不打算更改這些值，則無需包括 `katex` 配置選項。
 
 ```js
 Reveal.initialize({
@@ -82,9 +81,11 @@ Reveal.initialize({
 });
 ```
 
-Note that by default the latest KaTeX is loaded from a remote server (https://cdn.jsdelivr.net/npm/katex). To use a fixed version set `version` to, for example, `0.13.18`.
+注意，默認情況下最新的KaTeX從遠程服務器
 
-If you want to use KaTeX offline you'll need to download a copy of the library (e.g. with npm) and use the `local` configuration option (the `version` option will then be ignored), for example:
+加載（https://cdn.jsdelivr.net/npm/katex）。要使用固定版本，將 `version` 設為例如 `0.13.18`。
+
+如果你想離線使用KaTeX，你需要下載庫的副本（例如通過npm）並使用 `local` 配置選項（則 `version` 選項將被忽略），例如：
 
 ```js
 Reveal.initialize({
@@ -97,7 +98,7 @@ Reveal.initialize({
 
 ### MathJax 2
 
-Adjust options through the `mathjax2` configuration object. Below is how the plugin is configured by default. If you don't intend to change these values you do not need to include the `mathjax2` config option at all.
+通過 `mathjax2` 配置對象調整選項。以下是默認的插件配置。如果你不打算更改這些值，則無需包括 `mathjax2` 配置選項。
 
 ```js
 Reveal.initialize({
@@ -114,13 +115,13 @@ Reveal.initialize({
 });
 ```
 
-Note that the latest MathJax 2 is loaded from a remote server. To use a fixed version set mathjax to, for example, https://cdn.jsdelivr.net/npm/mathjax@2.7.8/MathJax.js.
+注意，最新的MathJax 2從遠程服務器加載。要使用固定版本，將mathjax設為例如https://cdn.jsdelivr.net/npm/mathjax@2.7.8/MathJax.js。
 
-If you want to use MathJax offline you'll need to download a copy of the library (e.g. with npm) and point `mathjax` to the local copy.
+如果你想離線使用MathJax，你需要下載庫的副本（例如通過npm）並將 `mathjax` 指向本地副本。
 
 ### MathJax 3 <span class="r-version-badge new">4.2.0</span>
 
-Adjust options through the `mathjax3` configuration object. Below is how the plugin is configured by default. If you don't intend to change these values you do not need to include the `mathjax3` config option at all.
+通過 `mathjax3` 配置對象調整選項。以下是默認的插件配置。如果你不打算更改這些值，則無需包括 `mathjax3` 配置選項。
 
 ```js
 Reveal.initialize({
@@ -137,6 +138,6 @@ Reveal.initialize({
 });
 ```
 
-Note that the latest MathJax 3 is loaded from a remote server. To use a fixed version set `mathjax` to, for example, <https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js>. Additionally, the config is now part of of the url, by default `tex-mml-chtml` is loaded which recognizes mathematics in both TeX and MathML notation, and generates output using HTML with CSS (the CommonHTML output format). This is one of the most general configurations, but it is also one of the largest, so you might want to consider a smaller one that is more tailored to your needs, e.g. `tex-svg`.
+注意，最新的MathJax 3從遠程服務器加載。要使用固定版本，將 `mathjax` 設為例如 <https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js>。此外，配置現在是URL的一部分，默认加载 `tex-mml-chtml`，它能识别TeX和MathML表示的数学，并使用HTML和CSS生成输出（CommonHTML输出格式）。這是一個非常通用的配置，但它也是最大的之一，因此你可能需要考虑一个更小的，更符合你需求的配置，例如 `tex-svg`。
 
-If you want to use MathJax offline you'll need to download a copy of the library (e.g. with npm) and adjust `mathjax` accordingly.
+如果你想離線使用MathJax，你需要下載庫的副本（例如通過npm）並相應地調整 `mathjax`。

@@ -1,25 +1,26 @@
 ---
+
 id: creating-plugins
-title: Creating Plugins
+title: 創建插件
 layout: default
 ---
 
-# Creating a Plugin <span class="r-version-badge new">4.0.0</span>
+# 創建插件 <span class="r-version-badge new">4.0.0</span>
 
-We provide a lightweight specification and API for plugins. This is used by our default plugins like [code highlighting](/code/) and [Markdown](/markdown/) but can also be used to create your own plugins.
+我們提供了一個輕量級的插件規範和API。這被我們的預設插件如[代碼高亮](/code/)和[Markdown](/markdown/)使用，但也可以用來創建你自己的插件。
 
-## Plugin Definition
+## 插件定義
 
-Plugins are objects that contain the following properties.
+插件是包含以下屬性的對象。
 
-| Property    | Value
+| 屬性    | 值
 | :-          | :-
-| id <span class="r-var-type">String</span>     | The plugins unique ID. This can be used to retrieve the plugin instance via `Reveal.getPlugin(<id>)`.
-| init <span class="r-var-type">Function</span>      | An optional function that is called when the plugin should run. It's invoked with one argument; a reference to the [presentation instance](/api/) that the plugin was registered with.<br><br>The init function can optionally return a [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). If a Promise is returned, reveal.js will wait for it to resolve before the presentation finishes initialization and fires the [ready event](/events/#ready).
-| destroy <span class="r-var-type">Function</span>      | Optional function that is called when the reveal.js instance that this plugin is registered to is uninitialized.
+| id <span class="r-var-type">字符串</span>     | 插件的唯一ID。這可以用來通過 `Reveal.getPlugin(<id>)` 檢索插件實例。
+| init <span class="r-var-type">函數</span>      | 可選的函數，當插件應該運行時被調用。它被調用時有一個參數；插件註冊的[簡報實例](/api/)的引用。<br><br>init 函數可以選擇性地返回一個 [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)。如果返回了Promise，reveal.js將等待它解析完成，然後簡報初始化完成並觸發[準備好的事件](/events/#ready)。
+| destroy <span class="r-var-type">函數</span>      | 可選的函數，當這個插件註冊的reveal.js實例被卸載時調用。
 {.key-value}
 
-Here's an example plugin which shuffles all slides in a presentation when the T key is pressed. Note that we export a function that returns a new plugin object. This is done because there may be [multiple presentation instances on the same page](/initialization/#multiple-presentations), and each should have their own instance of our plugin.
+這裡是一個示例插件，當按下T鍵時，它會在簡報中洗牌所有幻燈片。注意，我們導出一個返回新插件對象的函數。這樣做是因為同一頁面上可能有[多個簡報實例](/initialization/#multiple-presentations)，而每個實例都應該擁有我們插件的自己的實例。
 
 
 ```js
@@ -35,9 +36,9 @@ export default () => ({
 })
 ```
 
-## Registering a Plugin
+## 註冊插件
 
-Plugins are registered by including them in the `plugins` array of the [config options](/config/). You can also register a plugin at runtime using `Reveal.registerPlugin( Plugin )`.
+插件通過將它們包含在[配置選項](/config/)的 `plugins` 數組中來註冊。你也可以在運行時使用 `Reveal.registerPlugin( Plugin )` 註冊插件。
 
 ```js
 import Reveal from 'dist/reveal.esm.js';
@@ -48,8 +49,8 @@ Reveal.initialize({
 });
 ```
 
-### Async Plugins
-If your plugin needs to run asynchronous code before reveal.js finishes initializing it can return a Promise. Here's an example plugin that will delay initialization for three seconds.
+### 異步插件
+如果你的插件需要在reveal.js完成初始化之前運行異步代碼，它可以返回一個Promise。這裡是一個會延遲初始化三秒的示例插件。
 
 ```js
 let WaitForIt = {

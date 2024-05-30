@@ -1,16 +1,17 @@
 ---
+
 id: backgrounds
-title: Backgrounds
+title: 背景
 layout: default
 ---
 
-# Slide Backgrounds
+# 幻燈片背景
 
-Slides are contained within a limited portion of the screen by default to allow them to fit any display and scale uniformly. You can apply full page backgrounds outside of the slide area by adding a `data-background` attribute to your `<section>` elements. Four different types of backgrounds are supported: color, image, video and iframe.
+預設情況下，幻燈片內容會被限制在屏幕的一部分以適應任何顯示設備並均勻縮放。你可以通過在 `<section>` 元素上添加 `data-background` 屬性，應用全頁背景在幻燈片區域之外。支持四種不同類型的背景：顏色、圖片、視頻和 iframe。
 
-## Color Backgrounds
+## 顏色背景
 
-All CSS color formats are supported, including hex values, keywords, `rgba()` or `hsl()`.
+支持所有 CSS 顏色格式，包括十六進制值、關鍵字、`rgba()` 或 `hsl()` 等。
 
 ```html/0,3
 <section data-background-color="aquamarine">
@@ -31,9 +32,9 @@ All CSS color formats are supported, including hex values, keywords, `rgba()` or
   </div>
 </div>
 
-## Gradient Backgrounds
+## 漸變背景
 
-All CSS gradient formats are supported, including `linear-gradient`, `radial-gradient` and `conic-gradient`.
+支持所有 CSS 漸變格式，包括 `linear-gradient`、`radial-gradient` 和 `conic-gradient`。
 
 ```html/0,3
 <section data-background-gradient="linear-gradient(to bottom, #283b95, #17b2c3)">
@@ -54,17 +55,17 @@ All CSS gradient formats are supported, including `linear-gradient`, `radial-gra
   </div>
 </div>
 
-## Image Backgrounds
+## 圖片背景
 
-By default, background images are resized to cover the full page. Available options:
+預設情況下，背景圖片被調整大小以覆蓋整個頁面。可用選項包括：
 
-| Attribute | Default <div style="width:80px"></div> | Description |
+| 屬性 | 預設值 | 描述 |
 | :------------------------------- | :--------- | :---------- |
-| data-background-image            |            | URL of the image to show. GIFs restart when the slide opens. |
-| data-background-size             | cover      | See [background-size](https://developer.mozilla.org/docs/Web/CSS/background-size) on MDN.  |
-| data-background-position         | center     | See [background-position](https://developer.mozilla.org/docs/Web/CSS/background-position) on MDN. |
-| data-background-repeat           | no-repeat  | See [background-repeat](https://developer.mozilla.org/docs/Web/CSS/background-repeat) on MDN. |
-| data-background-opacity          | 1          | Opacity of the background image on a 0-1 scale. 0 is transparent and 1 is fully opaque. |
+| data-background-image            |            | 顯示的圖片的URL。幻燈片開啟時，GIF將重新開始。 |
+| data-background-size             | cover      | 參見 MDN 上的 [background-size](https://developer.mozilla.org/docs/Web/CSS/background-size)。 |
+| data-background-position         | center     | 參見 MDN 上的 [background-position](https://developer.mozilla.org/docs/Web/CSS/background-position)。 |
+| data-background-repeat           | no-repeat  | 參見 MDN 上的 [background-repeat](https://developer.mozilla.org/docs/Web/CSS/background-repeat)。 |
+| data-background-opacity          | 1          | 背景圖片的透明度，0-1 範圍。0 是透明的，1 是完全不透明的。 |
 {.nowrap-1st}
 
 ```html/0,3-4
@@ -73,21 +74,23 @@ By default, background images are resized to cover the full page. Available opti
 </section>
 <section data-background-image="http://example.com/image.png" 
           data-background-size="100px" data-background-repeat="repeat">
-  <h2>This background image will be sized to 100px and repeated</h2>
+  <h2>這張背景圖將被設置為100px並重複</h2>
 </section>
 ```
 
-## Video Backgrounds
+## 視頻背景
 
-Automatically plays a full size video behind the slide.
+自動播放全尺寸視頻作
 
-| Attribute | Default | Description |
+為幻燈片背景。
+
+| 屬性 | 預設值 | 描述 |
 | :---------------------------     | :------ | :---------- |
-| data-background-video            |         | A single video source, or a comma separated list of video sources. |
-| data-background-video-loop       | false   | Flags if the video should play repeatedly. |
-| data-background-video-muted      | false   | Flags if the audio should be muted. |
-| data-background-size             | cover   | Use `cover` for full screen and some cropping or `contain` for letterboxing. |
-| data-background-opacity          | 1       | Opacity of the background video on a 0-1 scale. 0 is transparent and 1 is fully opaque. |
+| data-background-video            |         | 一個視頻源或逗號分隔的多個視頻源。 |
+| data-background-video-loop       | false   | 標記視頻是否應重複播放。 |
+| data-background-video-muted      | false   | 標記音頻是否應靜音。 |
+| data-background-size             | cover   | 使用 `cover` 全屏和部分裁剪，或 `contain` 以信箱格式顯示。 |
+| data-background-opacity          | 1       | 背景視頻的透明度，0-1 範圍。0 是透明的，1 是完全不透明的。 |
 {.nowrap-1st}
 
 ```html/0-1
@@ -105,14 +108,14 @@ Automatically plays a full size video behind the slide.
   </div>
 </div>
 
-## Iframe Backgrounds
+## Iframe 背景
 
-Embeds a web page as a slide background that covers 100% of the reveal.js width and height. The iframe is in the background layer, behind your slides, and as such it's not possible to interact with it by default. To make your background interactive, you can add the `data-background-interactive` attribute.
+在幻燈片背景中嵌入一個網頁，覆蓋 100% 的 reveal.js 寬度和高度。iframe 位於背景層，位於你的幻燈片後面，因此默認情況下無法與之互動。若要使你的背景可互動，可以添加 `data-background-interactive` 屬性。
 
-| Attribute | Default | Description
+| 屬性 | 預設值 | 描述 |
 | :- | :- | :-
-| data-background-iframe       |       | URL of the iframe to load
-| data-background-interactive  | false | Include this attribute to make it possible to interact with the iframe contents. Enabling this will prevent interaction with the slide content.
+| data-background-iframe       |       | 要加載的 iframe 的 URL |
+| data-background-interactive  | false | 添加此屬性可以與 iframe 內容互動。啟用此功能將阻止與幻燈片內容的互動。 |
 {.nowrap-1st}
 
 ```html/0-1
@@ -122,31 +125,33 @@ Embeds a web page as a slide background that covers 100% of the reveal.js width 
 </section>
 ```
 
-Iframes are lazy-loaded when they become visible. If you'd like to preload iframes ahead of time, you can append a `data-preload` attribute to the slide `<section>`. You can also enable preloading globally for all iframes using the `preloadIframes` configuration option.
+iframes 會在變得可見時懶加載。如果你想提前預加載 iframes，你可以在幻燈片 `<section>` 上添加 `data-preload` 屬性。你也可以使用 `preloadiframes` 配置選項為所有 iframes 啟用全局預加載。
 
-## Background Transitions
+## 背景過渡
 
-We'll use a cross fade to transition between slide backgrounds by default. This can be changed using the [`backgroundTransition`](/transitions/#background-transitions) config option.
+我們將使用交叉淡入來過渡幻燈片背景，這是預設設置。可以使用 [`backgroundTransition`](/transitions/#background-transitions) 配置選項更改此設置。
 
 
-## Parallax Background
+## 視差背景
 
-If you want to use a parallax scrolling background, set the first two properties below when initializing reveal.js (the other two are optional).
+如果你想使用視差滾動背景，初始化 reveal.js 時設置下面的前兩個屬性（另外兩個是可選的）。
 
 ```javascript/1-11
 Reveal.initialize({
-  // Parallax background image
-  parallaxBackgroundImage: '', // e.g. "https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg"
+  // 視差背景圖片
+  parallaxBackgroundImage: '', // 例如 "https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg"
 
-  // Parallax background size
-  parallaxBackgroundSize: '', // CSS syntax, e.g. "2100px 900px" - currently only pixels are supported (don't use % or auto)
+  // 視差背景大小
+  parallaxBackgroundSize: '', // CSS 語法，例如 "2100px 900px" - 目前只支持像素（不要使用 % 或 auto）
 
-  // Number of pixels to move the parallax background per slide
-  // - Calculated automatically unless specified
-  // - Set to 0 to disable movement along an axis
+  // 每張幻燈片移動視差背景的像素數
+  // - 除非指定，否則自動計算
+  // - 設置為 0 禁用沿軸移動
+
+
   parallaxBackgroundHorizontal: 200,
   parallaxBackgroundVertical: 50
 });
 ```
 
-Make sure that the background size is much bigger than screen size to allow for some scrolling. [View example](/demo?parallaxBackgroundImage=https%3A%2F%2Fs3.amazonaws.com%2Fhakim-static%2Freveal-js%2Freveal-parallax-1.jpg&parallaxBackgroundSize=2100px%20900px).
+確保背景大小遠大於屏幕大小，以允許一定的滾動。[查看示範](/demo?parallaxBackgroundImage=https%3A%2F%2Fs3.amazonaws.com%2Fhakim-static%2Freveal-js%2Freveal-parallax-1.jpg&parallaxBackgroundSize=2100px%20900px).

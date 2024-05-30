@@ -1,28 +1,27 @@
 ---
 id: upgrading
-title: Upgrade Instructions
+title: 升級指南
 layout: default
 ---
 
-# Upgrading From Version 3 to 4.0
-We make a strong effort to avoid breaking changes but there are a couple in version 4.0. If you want to migrate an existing presentation follow these instructions.
+# 從版本 3 升級到 4.0
+我們盡力避免破壞性更改，但在版本 4.0 中有一些變更。如果您想遷移現有的演示文稿，請按照以下指南操作。
 
-### Update Asset Locations
-Our JS and CSS assets have moved. In your presentation HTML, update the following `<script>` and `<link>` paths:
+### 更新資產位置
+我們的 JS 和 CSS 資產已經移動。在您的演示文稿 HTML 中，更新以下 `<script>` 和 `<link>` 的路徑：
 
-| Old location                      | New location
-| :-                                | :-
-| js/reveal.js                      | dist/reveal.js
-| css/reset.css                     | dist/reset.css
-| css/reveal.css                    | dist/reveal.css
-| css/theme/&lt;theme-name&gt;.css  | dist/theme/&lt;theme-name&gt;.css
-| lib/css/monokai.css               | plugin/highlight/monokai.css
-| lib/js/head.min.js  				| Deleted in 3.8.0
+| 舊位置                           | 新位置
+| :-                               | :-
+| js/reveal.js                     | dist/reveal.js
+| css/reset.css                    | dist/reset.css
+| css/reveal.css                   | dist/reveal.css
+| css/theme/&lt;theme-name&gt;.css | dist/theme/&lt;theme-name&gt;.css
+| lib/css/monokai.css              | plugin/highlight/monokai.css
+| lib/js/head.min.js               | 在 3.8.0 中刪除
 {.key-value}
 
-
-### Remove Print CSS from `<head>`
-In your presentation HTML, remove the following script from the `<head>`. These styles are now baked into the reveal.css file.
+### 從 `<head>` 中移除打印 CSS
+在您的演示文稿 HTML 中，從 `<head>` 移除以下腳本。這些樣式現已整合入 reveal.css 文件中。
 
 ```html
 <script>
@@ -34,8 +33,8 @@ In your presentation HTML, remove the following script from the `<head>`. These 
 </script>
 ```
 
-### Plugin Registration
-If you keep a copy of the v3 /plugin directory there are *no breaking changes*. If you want to switch to the latest plugin versions, you'll need to update your `Reveal.initialize()` call to use the [new plugin registration syntax](/plugins/). Plugins are also available as ES modules.
+### 插件註冊
+如果您保留了 v3 /plugin 目錄的副本，則*沒有破壞性更改*。如果您想切換到最新的插件版本，您需要更新您的 `Reveal.initialize()` 調用，以使用[新的插件註冊語法](/plugins/)。插件也可作為 ES 模塊使用。
 
 ```html
 <script src="dist/reveal.js"></script>
@@ -48,12 +47,11 @@ If you keep a copy of the v3 /plugin directory there are *no breaking changes*. 
 </script>
 ```
 
-
-### Removed Multiplex and Notes Server
-The Multiplex and Notes Server plugins have moved out of reveal.js core to their own repositories. See their corresponding README's for usage instructions.
+### 移除 Multiplex 和 Notes Server
+Multiplex 和 Notes Server 插件已從 reveal.js 核心移出到它們自己的存儲庫中。請查看它們相應的 README 文件以獲取使用指南。
 - https://github.com/reveal/multiplex
 - https://github.com/reveal/notes-server
 
-### Other
-- Removed `Reveal.navigateTo`, use `Reveal.slide` instead.
-- We've switched build systems to gulp & rollup. Make sure to `npm install` to get the latest dependencies. The server is still started with `npm start`, just like before.
+### 其他
+- 移除了 `Reveal.navigateTo`，改用 `Reveal.slide`。
+- 我們已切換到 gulp 和 rollup 作為構建系統。確保執行 `npm install` 以獲得最新的依賴項。服務器仍然使用 `npm start` 啟動，與之前相同。

@@ -1,181 +1,172 @@
 ---
+
 id: config
-title: Config
+title: 配置
 layout: default
 ---
 
-# Configuration Options
+# 配置選項
 
-Presentation behavior can be fine-tuned using a wide array of configuration options. These objects can be included where you [initialize](/initialization/) reveal.js. It's also possible to [change config values at runtime](#reconfiguring).
+可以通過使用大量的配置選項來微調簡報行為。這些選項可以在您[初始化](/initialization/) reveal.js 時包含進去。也可以在運行時[更改配置值](#reconfiguring)。
 
-Note that **all** configuration values are **optional** and will default to the values specified below.
+注意，**所有**配置值都是**可選的**，將默認為下面指定的值。
 
 ```javascript
 Reveal.initialize({
 
-  // Display presentation control arrows
+  // 顯示簡報控制箭頭
   controls: true,
 
-  // Help the user learn the controls by providing hints, for example by
-  // bouncing the down arrow when they first encounter a vertical slide
+  // 通過提供提示來幫助用戶學習控制，例如當他們首次遇到垂直幻燈片時使下箭頭彈跳
   controlsTutorial: true,
 
-  // Determines where controls appear, "edges" or "bottom-right"
+  // 決定控制出現的位置，"edges" 或 "bottom-right"
   controlsLayout: 'bottom-right',
 
-  // Visibility rule for backwards navigation arrows; "faded", "hidden"
-  // or "visible"
+  // 向後導航箭頭的可見性規則；"faded", "hidden" 或 "visible"
   controlsBackArrows: 'faded',
 
-  // Display a presentation progress bar
+  // 顯示簡報進度條
   progress: true,
 
-  // Display the page number of the current slide
-  // - true:    Show slide number
-  // - false:   Hide slide number
+  // 顯示當前幻燈片的頁碼
+  // - true:    顯示幻燈片編號
+  // - false:   隱藏幻燈片編號
   //
-  // Can optionally be set as a string that specifies the number formatting:
-  // - "h.v":   Horizontal . vertical slide number (default)
-  // - "h/v":   Horizontal / vertical slide number
-  // - "c":   Flattened slide number
-  // - "c/t":   Flattened slide number / total slides
+  // 可選地設置為指定編號格式的字符串：
+  // - "h.v":   水平 . 垂直幻燈片編號（默認）
+  // - "h/v":   水平 / 垂直幻燈片編號
+  // - "c":     扁平化幻燈片編號
+  // - "c/t":   扁平化幻燈片編號 / 總幻燈片數
   //
-  // Alternatively, you can provide a function that returns the slide
-  // number for the current slide. The function should take in a slide
-  // object and return an array with one string [slideNumber] or
-  // three strings [n1,delimiter,n2]. See #formatSlideNumber().
+  // 或者，您可以提供一個返回當前幻燈片的幻燈片編號的函數。
+  // 該函數應該接受一個幻燈片對象並返回一個字符串[幻燈片編號]或
+  // 三個字符串[n1,delimiter,n2]。見 #formatSlideNumber()。
   slideNumber: false,
 
-  // Can be used to limit the contexts in which the slide number appears
-  // - "all":      Always show the slide number
-  // - "print":    Only when printing to PDF
-  // - "speaker":  Only in the speaker view
+  // 可用於限制幻燈片編號出現的上下文
+  // - "all":      總是顯示幻燈片編號
+  // - "print":    僅在打印到PDF時
+  // - "speaker":  僅在演講者視圖中
   showSlideNumber: 'all',
 
-  // Use 1 based indexing for # links to match slide number (default is zero
-  // based)
+  // 使用基於1的索引為 # 鏈接以匹配幻燈片編號（默認是基於0的）
   hashOneBasedIndex: false,
 
-  // Add the current slide number to the URL hash so that reloading the
-  // page/copying the URL will return you to the same slide
+  // 將當前幻燈片編號添加到URL哈希中，以便重新加載頁面/複製URL將返回到相同的幻燈片
   hash: false,
 
-  // Flags if we should monitor the hash and change slides accordingly
+  // 標記是否應監控哈希並相應地更改幻燈片
   respondToHashChanges: true,
 
-  // Enable support for jump-to-slide navigation shortcuts
+  // 啟用跳轉到幻燈片的導航快捷方式
   jumpToSlide: true,
 
-  // Push each slide change to the browser history.  Implies `hash: true`
+  // 將每次幻燈片更改推送到瀏覽器歷史記錄。意味著 `hash: true`
   history: false,
 
-  // Enable keyboard shortcuts for navigation
+  // 啟用用於導航的鍵盤快捷
+
+鍵
   keyboard: true,
 
-  // Optional function that blocks keyboard events when retuning false
+  // 可選函數，當返回 false 時阻止鍵盤事件
   //
-  // If you set this to 'focused', we will only capture keyboard events
-  // for embedded decks when they are in focus
+  // 如果您將此設置為 'focused'，我們只會在嵌入式幻燈片聚焦時捕獲鍵盤事件
   keyboardCondition: null,
 
-  // Disables the default reveal.js slide layout (scaling and centering)
-  // so that you can use custom CSS layout
+  // 禁用默認的 reveal.js 幻燈片佈局（縮放和居中）
+  // 以便您可以使用自定義 CSS 佈局
   disableLayout: false,
 
-  // Enable the slide overview mode
+  // 啟用幻燈片概覽模式
   overview: true,
 
-  // Vertical centering of slides
+  // 幻燈片的垂直居中
   center: true,
 
-  // Enables touch navigation on devices with touch input
+  // 啟用具有觸控輸入的設備上的觸控導航
   touch: true,
 
-  // Loop the presentation
+  // 循環播放簡報
   loop: false,
 
-  // Change the presentation direction to be RTL
+  // 將簡報方向更改為從右到左
   rtl: false,
 
-  // Changes the behavior of our navigation directions.
+  // 更改我們的導航方向的行為。
   //
   // "default"
-  // Left/right arrow keys step between horizontal slides, up/down
-  // arrow keys step between vertical slides. Space key steps through
-  // all slides (both horizontal and vertical).
+  // 左/右箭頭鍵在水平幻燈片之間步進，上/下箭頭鍵在垂直幻燈片之間步進。空格鍵步進
+  // 通過所有幻燈片（水平和垂直）。
   //
   // "linear"
-  // Removes the up/down arrows. Left/right arrows step through all
-  // slides (both horizontal and vertical).
+  // 移除上/下箭頭。左/右箭頭步進通過所有幻燈片（水平和垂直）。
   //
   // "grid"
-  // When this is enabled, stepping left/right from a vertical stack
-  // to an adjacent vertical stack will land you at the same vertical
-  // index.
+  // 啟用時，從一個垂直堆疊向相鄰的垂直堆疊進行左/右步進時，將使您處於相同的垂直
+  // 索引。
   //
-  // Consider a deck with six slides ordered in two vertical stacks:
+  // 考慮一個有六張幻燈片按兩個垂直堆疊排序的套件：
   // 1.1    2.1
   // 1.2    2.2
   // 1.3    2.3
   //
-  // If you're on slide 1.3 and navigate right, you will normally move
-  // from 1.3 -> 2.1. If "grid" is used, the same navigation takes you
-  // from 1.3 -> 2.3.
+  // 如果您在幻燈片1.3上並向右導航，您通常會從1.3 -> 2.1。如果使用 "grid"，相同的導航將帶您
+  // 從1.3 -> 2.3。
   navigationMode: 'default',
 
-  // Randomizes the order of slides each time the presentation loads
+  // 每次加載簡報時隨機化幻燈片的順序
   shuffle: false,
 
-  // Turns fragments on and off globally
+  // 全局開啟或關閉片段
   fragments: true,
 
-  // Flags whether to include the current fragment in the URL,
-  // so that reloading brings you to the same fragment position
+  // 標記是否將當前片段包含在URL中，
+  // 以便重新加載後您會回到相同的片段位置
   fragmentInURL: true,
 
-  // Flags if the presentation is running in an embedded mode,
-  // i.e. contained within a limited portion of the screen
+  // 標記簡報是否在嵌入模式下運行，
+  // 即包含在屏幕的有限部分內
   embedded: false,
 
-  // Flags if we should show a help overlay when the question-mark
-  // key is pressed
+  // 標記是否應在按下問號鍵時顯示幫助覆蓋
   help: true,
 
-  // Flags if it should be possible to pause the presentation (blackout)
+  // 標記是否應該可以暫停簡報（黑屏）
   pause: true,
 
-  // Flags if speaker notes should be visible to all viewers
+  // 標記是否應向所有觀眾顯示演講者筆記
   showNotes: false,
 
-  // Global override for autolaying embedded media (video/audio/iframe)
-  // - null:   Media will only autoplay if data-autoplay is present
-  // - true:   All media will autoplay, regardless of individual setting
-  // - false:  No media will autoplay, regardless of individual setting
+  // 全局覆蓋用於自動播放嵌入式媒體（視頻/音頻/iframe）
+  // - null:   媒體只有在存在 data-autoplay 時才會自動播放
+  // - true:   所有媒體將自動播放，無論個別設定如何
+  // - false:  無論個別設定如何，都不會自動播放媒體
   autoPlayMedia: null,
 
-  // Global override for preloading lazy-loaded iframes
-  // - null:   Iframes with data-src AND data-preload will be loaded when within
-  //           the viewDistance, iframes with only data-src will be loaded when visible
-  // - true:   All iframes with data-src will be loaded when within the viewDistance
-  // - false:  All iframes with data-src will be loaded only when visible
+  // 全球覆蓋用於預加載懶加載 iframes
+  // - null:   帶有 data-src 和 data-preload 的 iframes 將在進入 viewDistance 範圍內時加載，只帶有 data-src 的 iframes 將在可見時加載
+  // - true:   所有帶有 data-src 的 iframes 將在進入 viewDistance 範圍內時加載
+  // - false:  所有帶有 data-src 的 iframes 將只在可見時加載
   preloadIframes: null,
 
-  // Can be used to globally disable auto-animation
+  // 可用於全球禁用自動動畫
   autoAnimate: true,
 
-  // Optionally provide a custom element matcher that will be
-  // used to dictate which elements we can animate between.
+  // 可選提供一個自定義元素匹配器，
+  // 將用於決定我們可以在哪些元素之間進行動畫。
   autoAnimateMatcher: null,
 
-  // Default settings for our auto-animate transitions, can be
-  // overridden per-slide or per-element via data arguments
+  // 我們自動動畫過渡的預設設定，可以通過數據參數
+  // 在每張幻燈片或每個元素上進行覆蓋
   autoAnimateEasing: 'ease',
   autoAnimateDuration: 1.0,
   autoAnimateUnmatched: true,
 
-  // CSS properties that can be auto-animated. Position & scale
-  // is matched separately so there's no need to include styles
-  // like top/right/bottom/left, width/height or margin.
+  // 可以自動動畫的 CSS 屬性。位置 & 縮放
+  // 分別匹配，因此無需包括
+  // 像 top/right/bottom/left, width/height 或 margin 這樣的樣式。
   autoAnimateStyles: [
     'opacity',
     'color',
@@ -191,92 +182,89 @@ Reveal.initialize({
     'outline-offset'
   ],
 
-  // Controls automatic progression to the next slide
-  // - 0:      Auto-sliding only happens if the data-autoslide HTML attribute
-  //           is present on the current slide or fragment
-  // - 1+:     All slides will progress automatically at the given interval
-  // - false:  No auto-sliding, even if data-autoslide is present
+  // 控制自動進入下一幻燈片
+  // - 0:      自動播放只在當前幻燈片或片段上存在 data-autoslide HTML 屬性時發生
+  // - 1+:     所有幻燈片將以給定間隔自動進行
+  // - false:  即使存在 data-autoslide，也不進行自動播放
   autoSlide: 0,
 
-  // Stop auto-sliding after user input
+  // 用戶輸入後停止自動播放
   autoSlideStoppable: true,
 
-  // Use this method for navigation when auto-sliding (defaults to navigateNext)
+  // 自動播放時用於導航的方法（默認為 navigateNext）
   autoSlideMethod: null,
 
-  // Specify the average time in seconds that you think you will spend
-  // presenting each slide. This is used to show a pacing timer in the
-  // speaker view
+  // 指定你認為你將花在每張幻燈片上的平均時間（秒）。這用於在演講者視圖中顯示配速計時器
   defaultTiming: null,
 
-  // Enable slide navigation via mouse wheel
+  // 啟用通過鼠標滾輪進行幻燈片導航
   mouseWheel: false,
 
-  // Opens links in an iframe preview overlay
-  // Add `data-preview-link` and `data-preview-link="false"` to customise each link
-  // individually
+  // 在 iframe 預覽覆蓋層中打開鏈接
+  // 添加 `data-preview-link` 和 `data-preview-link="false"` 以自定義每個鏈接
   previewLinks: false,
 
-  // Exposes the reveal.js API through window.postMessage
+  // 通過 window.postMessage 暴露 reveal.js API
+
+
   postMessage: true,
 
-  // Dispatches all reveal.js events to the parent window through postMessage
+  // 通過 postMessage 將所有 reveal.js 事件派發給父窗口
   postMessageEvents: false,
 
-  // Focuses body when page changes visibility to ensure keyboard shortcuts work
+  // 當頁面可見性改變時聚焦 body 以確保鍵盤快捷鍵工作
   focusBodyOnPageVisibilityChange: true,
 
-  // Transition style
+  // 過渡樣式
   transition: 'slide', // none/fade/slide/convex/concave/zoom
 
-  // Transition speed
+  // 過渡速度
   transitionSpeed: 'default', // default/fast/slow
 
-  // Transition style for full page slide backgrounds
+  // 全頁幻燈片背景的過渡樣式
   backgroundTransition: 'fade', // none/fade/slide/convex/concave/zoom
 
-  // The maximum number of pages a single slide can expand onto when printing
-  // to PDF, unlimited by default
+  // 單張幻燈片可以擴展到多個頁面時打印到PDF的最大頁數，
+  // 預設為無限制
   pdfMaxPagesPerSlide: Number.POSITIVE_INFINITY,
 
-  // Prints each fragment on a separate slide
+  // 打印每個片段到一張幻燈片
   pdfSeparateFragments: true,
 
-  // Offset used to reduce the height of content within exported PDF pages.
-  // This exists to account for environment differences based on how you
-  // print to PDF. CLI printing options, like phantomjs and wkpdf, can end
-  // on precisely the total height of the document whereas in-browser
-  // printing has to end one pixel before.
+  // 用於減少導出PDF頁面內容高度的偏移量。
+  // 這存在於根據您如何打印到PDF來解釋環境差異。
+  // CLI打印選項，如 phantomjs 和 wkpdf，可以精確地
+  // 結束在文檔的總高度，而在瀏覽器中打印必須在
+  // 一個像素之前結束。
   pdfPageHeightOffset: -1,
 
-  // Number of slides away from the current that are visible
+  // 離當前幻燈片可見的幻燈片數
   viewDistance: 3,
 
-  // Number of slides away from the current that are visible on mobile
-  // devices. It is advisable to set this to a lower number than
-  // viewDistance in order to save resources.
+  // 在移動設備上離當前幻燈片可見的幻燈片數。
+  // 建議將此數字設置為比 viewDistance 更低的數字以節省資源。
   mobileViewDistance: 2,
 
-  // The display mode that will be used to show slides
+  // 用於顯示幻燈片的顯示模式
   display: 'block',
 
-  // Hide cursor if inactive
+  // 如果不活動則隱藏光標
   hideInactiveCursor: true,
 
-  // Time before the cursor is hidden (in ms)
+  // 隱藏光標的時間（毫秒）
   hideCursorTime: 5000
 
 });
 ```
 
-## Reconfiguring
+## 重新配置
 
-The configuration can be updated after initialization using the `configure` method.
+使用 `configure` 方法可以在初始化後更新配置。
 
 ```javascript
-// Turn autoSlide off
+// 關閉 autoSlide
 Reveal.configure({ autoSlide: 0 });
 
-// Start auto-sliding every 5s
+// 每5秒開始自動播放
 Reveal.configure({ autoSlide: 5000 });
 ```

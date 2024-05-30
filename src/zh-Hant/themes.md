@@ -1,39 +1,39 @@
 ---
 id: themes
-title: Themes
+title: 主題
 layout: default
 ---
 
-# Themes
+# 主題
 
-The framework comes with a few different themes included.
+該框架附帶了幾種不同的主題。
 
-| Name                | Preview
+| 名稱                | 預覽
 | :-                  | :-
-| black (default)     | <img src="/images/docs/themes/black.png" width="150" height="150" alt="Black background, white text, blue links">
-| white               | <img src="/images/docs/themes/white.png" width="150" height="150" alt="White background, black text, blue links">
-| league              | <img src="/images/docs/themes/league.png" width="150" height="150" alt="Gray background, white text, blue links">
-| beige               | <img src="/images/docs/themes/beige.png" width="150" height="150" alt="Beige background, dark text, brown links">
-| night               | <img src="/images/docs/themes/night.png" width="150" height="150" alt="Black background, thick white text, orange links">
-| serif               | <img src="/images/docs/themes/serif.png" width="150" height="150" alt="Cappuccino background, gray text, brown links">
-| simple              | <img src="/images/docs/themes/simple.png" width="150" height="150" alt="White background, black text, blue links">
-| solarized           | <img src="/images/docs/themes/solarized.png" width="150" height="150" alt="Cream-colored background, dark green text, blue links">
-| moon                | <img src="/images/docs/themes/moon.png" width="150" height="150" alt="Dark blue background, thick grey text, blue links">
+| black (默認)         | <img src="/images/docs/themes/black.png" width="150" height="150" alt="黑色背景，白色文字，藍色鏈接">
+| white               | <img src="/images/docs/themes/white.png" width="150" height="150" alt="白色背景，黑色文字，藍色鏈接">
+| league              | <img src="/images/docs/themes/league.png" width="150" height="150" alt="灰色背景，白色文字，藍色鏈接">
+| beige               | <img src="/images/docs/themes/beige.png" width="150" height="150" alt="米色背景，深色文字，棕色鏈接">
+| night               | <img src="/images/docs/themes/night.png" width="150" height="150" alt="黑色背景，粗白色文字，橙色鏈接">
+| serif               | <img src="/images/docs/themes/serif.png" width="150" height="150" alt="卡布奇諾背景，灰色文字，棕色鏈接">
+| simple              | <img src="/images/docs/themes/simple.png" width="150" height="150" alt="白色背景，黑色文字，藍色鏈接">
+| solarized           | <img src="/images/docs/themes/solarized.png" width="150" height="150" alt="奶油色背景，深綠色文字，藍色鏈接">
+| moon                | <img src="/images/docs/themes/moon.png" width="150" height="150" alt="深藍背景，粗灰色文字，藍色鏈接">
 | dracula             | <img src="/images/docs/themes/dracula.png" width="150" height="150">
-| sky                 | <img src="/images/docs/themes/sky.png" width="150" height="150" alt="Blue background, thin dark text, blue links">
-| blood               | <img src="/images/docs/themes/blood.png" width="150" height="150" alt="Dark background, thick white text, red links">
+| sky                 | <img src="/images/docs/themes/sky.png" width="150" height="150" alt="藍色背景，細深色文字，藍色鏈接">
+| blood               | <img src="/images/docs/themes/blood.png" width="150" height="150" alt="深色背景，粗白色文字，紅色鏈接">
 {.key-value}
 
-Each theme is available as a separate stylesheet. To change theme you will need to replace **black** below with your desired theme name in index.html:
+每個主題都可作為一個單獨的樣式表使用。若要更換主題，您需要在 index.html 中將以下 **black** 替換為您想要的主題名稱：
 
 ```html
 <link rel="stylesheet" href="dist/theme/black.css">
 ```
 
-## Custom Properties
-All theme variables are exposed as CSS custom properties in the pseudo-class `:root`. See [the list of exposed variables](https://github.com/hakimel/reveal.js/blob/master/css/theme/template/exposer.scss).
+## 自定義屬性
+所有主題變量都作為 CSS 自定義屬性在偽類 `:root` 中暴露。查看[暴露變量列表](https://github.com/hakimel/reveal.js/blob/master/css/theme/template/exposer.scss)。
 
-## Creating a Theme
-If you want to add a theme of your own see the instructions here: [/css/theme/README.md](https://github.com/hakimel/reveal.js/blob/master/css/theme/README.md).
+## 創建主題
+如果您想添加自己的主題，請參見此處的指南：[/css/theme/README.md](https://github.com/hakimel/reveal.js/blob/master/css/theme/README.md)。
 
-Alternatively, if you want a clean start, you can opt to start from a blank CSS document and customize everything from the ground up.
+或者，如果您想要一個全新的開始，您可以選擇從一個空白的 CSS 文件開始，並從頭開始自定義一切。

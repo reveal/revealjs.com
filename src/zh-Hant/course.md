@@ -1,31 +1,30 @@
 ---
+
 id: course
-title: Mastering reveal.js
-description: An upcoming video course covering the reveal.js basics all the way up to advanced customization and features.
+title: 精通 reveal.js
+description: 一個即將推出的視頻課程，涵蓋從 reveal.js 基礎到高級自定義和功能的所有內容。
 layout: default
 hidden: true
 hide_ads: true
 ---
 
-# Mastering reveal.js
+# 精通 reveal.js
 
 <iframe width="100%" height="405" src="https://www.youtube.com/embed/6-uWaBcqguc?color=white&controls=1&modestbranding=1&rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-This video course that will teach you how to everything you need to know to create great looking presentations with reveal.js.
+這個視頻課程將教你如何使用 reveal.js 創建精美的簡報。
 
-We'll start from the basics of installing reveal.js, creating slides and configuring your presentation. Then we'll work our way up to more interesting topics like presenting syntax highlighted code, animating slide content with Auto-Animate and using the speaker view. In the advanced videos we'll explore the reveal.js JavaScript API, plugin creation and how to customize keyboard bindings. (See [full list of videos](#table-of-contents).)
+我們將從安裝 reveal.js、創建幻燈片和配置你的簡報的基礎開始。然後，我們將進一步探討更有趣的話題，如展示語法高亮代碼、使用自動動畫讓幻燈片內容動起來，以及使用演講者視圖。在高級視頻中，我們將探索 reveal.js JavaScript API、插件創建和如何自定義鍵盤綁定。（見[完整視頻列表](#table-of-contents)。）
 
+### 這是為誰設計的？
+這個課程面向剛接觸 reveal.js 的人，以及那些已經理解基礎但準備探索完整功能集的你。
 
-### Who is this for?
-The course is aimed at people who are new to reveal.js as well as those of you who already understand the fundamentals but are ready to explore the full feature set.
+你需要對 HTML、CSS 和 JavaScript 有基本的了解。HTML 是 reveal.js 的骨幹，在整個課程中廣泛使用。CSS 和 JavaScript 主要用於高級視頻，涵蓋如創建自定義主題、使用 reveal.js API 和編輯源代碼等主題。
 
-You'll need to have a basic understanding of HTML, CSS and JavaScript. HTML is the backbone of reveal.js and used extensively throughout the course. CSS and JavaScript are mostly used for advanced videos on topics such as creating custom themes, working with the reveal.js API and editing the source code.
+### 誰來講解？
+👋 我是 Hakim——一名瑞典前端開發人員和 reveal.js 的創建者。我共同創辦並目前在 [Slides.com](https://slides.com) 工作——一個基於 reveal.js 構建的簡報平台和圖形編輯器。除此之外，我喜歡在 [hakim.se](https://hakim.se) 上進行視覺演示和實驗。
 
-
-### Who is presenting?
-👋 I'm Hakim—a Swedish front-end developer and the creator of reveal.js. I co-founded and am currently working on [Slides.com](https://slides.com)—a presentation platform and graphical editor built on top of reveal.js. Beyond that I love to work on visual demos and experiments at [hakim.se](https://hakim.se).
-
-I released the first version of reveal.js 10 years ago (!) and couldn't have imagined that it would eventually grow to be used by hundreds of thousands of people. I hope you'll join in and experience first hand why so many choose to create their presentations with reveal.js!
+我在10年前 (!) 發布了 reveal.js 的第一個版本，當時沒有想到它最終會被成千上萬的人使用。我希望你能加入進來，親身體驗為什麼這麼多人選擇使用 reveal.js 創建他們的簡報！
 
 <div class="buy-course">
 	<div class="buy-course-thumb">
@@ -36,53 +35,53 @@ I released the first version of reveal.js 10 years ago (!) and couldn't have ima
 			<span class="old-price"><sup>$</sup>99</span>
 			<span><sup>$</sup>79</span>
 		</p>
-		<a class="gumroad-button" href="https://gum.co/reveal-js/v0sz80d?wanted=true" target="_blank" data-gumroad-single-product="true">Buy course</a>
+		<a class="gumroad-button" href="https://gum.co/reveal-js/v0sz80d?wanted=true" target="_blank" data-gumroad-single-product="true">購買課程</a>
 	</div>
 	<div class="buy-course-data">
 		<ul>
-			<li>22 videos</li>
-			<li>5h 39m total runtime</li>
-			<li>Stream in HD</li>
-			<li>Download in 4K</li>
-			<li>Free updates</li>
+			<li>22視頻</li>
+			<li>總時長5小時39分鐘</li>
+			<li>以高清格式流媒體</li>
+			<li>以4K格式下載</li>
+			<li>免費更新</li>
 		</ul>
+
+
 	</div>
 </div>
 <script src="https://gumroad.com/js/gumroad.js"></script>
 
-The course is sold via [Gumroad](https://gumroad.com/). VAT is added at the time of purchase, if applicable. 100% money back if the course isn't a good fit for you—no questions asked.
+課程通過 [Gumroad](https://gumroad.com/) 銷售。購買時將添加增值稅（如果適用）。如果課程不適合你——無需問題退款保證100%。
 
-## Table of Contents
-The course is divided into relatively short videos so that you can easily skip topics that aren't relevant to you or that you are already familiar with. The total runtime is 5.5 hours.
+## 目錄
+課程分為相對較短的視頻，以便你可以輕鬆跳過與你無關或你已熟悉的主題。總時長為5.5小時。
 
-
-| Getting Started   | <!-- -->  |
+| 起步             | <!-- -->  |
 | :-                | -:        |
-| **Getting Started** | Duration  |
-| &nbsp; Installing reveal.js and setting up the development server. | 5:40
-| &nbsp; Creating slides, linking between them and saving drafts. | 10:04
-| &nbsp; Configuring your presentation. | 8:23
-| &nbsp; Working with vertical slides. | 9:05
-| &nbsp; Creating slides using Markdown. | 16:34
-| **Content Creation**  |
-| &nbsp; Adding text, images, videos and iframes to your slides. | 10:47
-| &nbsp; Layout slide content using stacks and auto-sized text. | 13:58
-| &nbsp; Fullscreen background images, videos, colors and iframes. | 16:26
-| &nbsp; Presenting syntax highlighted code. | 21:51
-| &nbsp; Using Fragments to build up slides in steps. | 13:14
-| &nbsp; Animating slide content with Auto-Animate. | 17:01
-| **Configuration & Features**  |
-| &nbsp; Presentation size and scale. | 14:34
-| &nbsp; Slide transitions. | 12:36
-| &nbsp; Theming your content and creating your own theme. | 16:12
-| &nbsp; Speaker notes & using the speaker view. | 11:27
-| &nbsp; Slide numbers & URLs. | 19:55
-| &nbsp; Converting your presentation to PDF. | 10:23
-| **Advanced (JS)** |
-| &nbsp; Initialization & running multiple presentations. | 19:06
-| &nbsp; Plugins; where to find and how to create them. | 14:52
-| &nbsp; Using the reveal.js API to control your presentation. | 40:32
-| &nbsp; Customizing keyboard shortcuts. | 15:04
-| &nbsp; Working with the source code. | 21:09
+| **起步** | 時長  |
+| &nbsp; 安裝 reveal.js 和設置開發服務器。 | 5:40
+| &nbsp; 創建幻燈片，互相鏈接並保存草稿。 | 10:04
+| &nbsp; 配置你的簡報。 | 8:23
+| &nbsp; 使用垂直幻燈片。 | 9:05
+| &nbsp; 使用 Markdown 創建幻燈片。 | 16:34
+| **內容創建**  |
+| &nbsp; 向幻燈片添加文本、圖片、視頻和 iframe。 | 10:47
+| &nbsp; 使用棧和自動大小文本佈局幻燈片內容。 | 13:58
+| &nbsp; 全屏背景圖片、視頻、顏色和 iframe。 | 16:26
+| &nbsp; 展示語法高亮代碼。 | 21:51
+| &nbsp; 使用 Fragments 逐步構建幻燈片。 | 13:14
+| &nbsp; 使用 Auto-Animate 動畫幻燈片內容。 | 17:01
+| **配置與功能**  |
+| &nbsp; 簡報大小和比例。 | 14:34
+| &nbsp; 幻燈片過渡。 | 12:36
+| &nbsp; 主題化你的內容並創建你自己的主題。 | 16:12
+| &nbsp; 演講者筆記和使用演講者視圖。 | 11:27
+| &nbsp; 幻燈片編號與 URL。 | 19:55
+| &nbsp; 將你的簡報轉換為 PDF。 | 10:23
+| **高級 (JS)** |
+| &nbsp; 初始化和運行多個簡報。 | 19:06
+| &nbsp; 插件；在哪裡找到以及如何創建它們。 | 14:52
+| &nbsp; 使用 reveal.js API 控制你的簡報。 | 40:32
+| &nbsp; 自定義鍵盤快捷鍵。 | 15:04
+| &nbsp; 與源代碼一起工作。 | 21:09
 {.toc .hide-header}
-

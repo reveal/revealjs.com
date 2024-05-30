@@ -1,15 +1,15 @@
 ---
 id: auto-slide
-title: Auto-Slide
+title: 自動播放
 layout: default
 ---
 
-# Auto-Slide
+# 自動播放
 
-Presentations can be configured to step through slides automatically, without any user input. To enable this you will need to specify an interval for slide changes using the `autoSlide` config option. The interval is provided in milliseconds.
+簡報可以設定為自動播放幻燈片，無需任何用戶輸入。要啟用此功能，您需要使用 `autoSlide` 配置選項指定幻燈片變更的間隔時間。間隔以毫秒為單位。
 
 ```javascript
-// Slide every five seconds
+// 每五秒自動切換一張幻燈片
 Reveal.initialize({
   autoSlide: 5000,
   loop: true
@@ -17,42 +17,42 @@ Reveal.initialize({
 ```
 <div class="reveal reveal-example" data-config='{"autoSlide": 5000, "loop": true}'>
   <div class="slides">
-    <section>Slide 1</section>
-    <section>Slide 2</section>
-    <section>Slide 3</section>
+    <section>幻燈片 1</section>
+    <section>幻燈片 2</section>
+    <section>幻燈片 3</section>
   </div>
 </div>
 
-A play/pause control element will automatically appear for auto-sliding decks. Sliding is automatically paused if the user starts interacting with the deck. It's also possible to pause or resume sliding by pressing »A« on the keyboard (won't work in the embedded demo here).
+對於自動播放的幻燈片集，將自動出現播放/暫停控制元件。如果用戶開始與幻燈片集互動，播放將自動暫停。您還可以通過鍵盤上的「A」鍵來暫停或恢復播放（在這裡的嵌入式演示中不適用）。
 
-You can disable the auto-slide controls and prevent sliding from being paused by specifying `autoSlideStoppable: false` in your [config options](/config/).
+您可以通過在[配置選項](/config/)中指定 `autoSlideStoppable: false` 來禁用自動播放控制，防止播放被暫停。
 
-## Slide Timing
+## 幻燈片計時
 
-It's also possible to override the slide duration for individual slides and fragments by using the `data-autoslide` attribute.
+也可以使用 `data-autoslide` 屬性設定幻燈片設定持續時間。
 
 ```html
 <section data-autoslide="2000">
-  <p>After 2 seconds the first fragment will be shown.</p>
-  <p class="fragment" data-autoslide="10000">After 10 seconds the next fragment will be shown.</p>
-  <p class="fragment">Now, the fragment is displayed for 2 seconds before the next slide is shown.</p>
+  <p>2秒後將顯示第一個片段。</p>
+  <p class="fragment" data-autoslide="10000">10秒後將顯示下一個片段。</p>
+  <p class="fragment">現在，片段顯示2秒後將顯示下一個幻燈片。</p>
 </section>
 ```
 
-## Auto-Slide Method
+## 自動播放方法
 
-The `autoSlideMethod` config option can be used to override the default function used for navigation when auto-sliding.
+`autoSlideMethod` 屬性可以更改自動撥放的方向。
 
-We step through all slides, both horizontal and [vertical](/vertical-slides/), by default. To only navigate along the top layer and ignore vertical slides, you can provide a method that calls `Reveal.right()`.
+我們預設將按順序播放所有幻燈片，包括水平和[垂直](/vertical-slides/)幻燈片。如果您只想沿頂層導航並忽略垂直幻燈片，您可以提供一個調用 `Reveal.right()` 的方法。
 
 ```js
 Reveal.configure({
 	autoSlideMethod: () => Reveal.right()
 });
-````
+```
 
-## Events
-We fire events whenever auto-sliding is paused or resumed.
+## 事件
+每當自動播放被暫停或恢復時，都會觸發事件。
 
 ```javascript
 Reveal.on( 'autoslideresumed', event => { /* ... */ } );

@@ -1,16 +1,17 @@
 ---
+
 id: code
-title: Presenting Code
+title: 展示代碼
 layout: default
 ---
 
-# Presenting Code
+# 展示代碼
 
-reveal.js includes a powerful set of features aimed at presenting syntax highlighted code — powered by [highlight.js](https://highlightjs.org/). This functionality lives in the highlight plugin and is included in our default presentation boilerplate.
+reveal.js 包含一套強大的功能，旨在展示語法高亮的代碼 — 由 [highlight.js](https://highlightjs.org/) 提供支持。這些功能位於 highlight 插件中，並包含在我們的預設簡報模板中。
 
-Below is an example with clojure code that will be syntax highlighted. When the `data-trim` attribute is present, surrounding whitespace within the `<code>` is automatically removed.
+下面是一個將被語法高亮的 clojure 代碼示例。當 `<code>` 標籤存在 `data-trim` 屬性時，會自動移除代碼周圍的空白。
 
-HTML will be escaped by default. To avoid this, add `data-noescape` to the `<code>` element.
+預設會對 HTML 進行轉義。要避免這一點，可以在 `<code>` 元素上添加 `data-noescape` 屬性。
 
 ```html
 <section>
@@ -37,8 +38,8 @@ HTML will be escaped by default. To avoid this, add `data-noescape` to the `<cod
   </div>
 </div>
 
-## Theming
-Make sure that a syntax highlight theme is included in your document. We include Monokai by default, which is distributed with the reveal.js repo at [plugin/highlight/monokai.css](https://github.com/hakimel/reveal.js/tree/master/plugin/highlight/monokai.css). A full list of available themes can be found at <https://highlightjs.org/static/demo/>.
+## 主題
+確保在你的文檔中包含了一個語法高亮主題。我們預設包含了 Monokai，它隨 reveal.js 儲存在 [plugin/highlight/monokai.css](https://github.com/hakimel/reveal.js/tree/master/plugin/highlight/monokai.css) 中。可用的主題完整列表可以在 <https://highlightjs.org/static/demo/> 上找到。
 
 ```html
 <link rel="stylesheet" href="plugin/highlight/monokai.css">
@@ -50,9 +51,9 @@ Make sure that a syntax highlight theme is included in your document. We include
 </script>
 ```
 
-## Line Numbers & Highlights
+## 行號與高亮
 
-You can enable line numbers by adding `data-line-numbers` to your `<code>` tags. If you want to highlight specific lines you can provide a comma separated list of line numbers using the same attribute. For example, in the following example lines 3 and 8-10 are highlighted:
+你可以通過在你的 `<code>` 標籤上添加 `data-line-numbers` 屬性來啟用行號。如果你想高亮特定行，可以使用同一屬性提供以逗號分隔的行號列表。例如，在以下示例中，第3行和第8-10行被高亮：
 
 ```html
 <pre><code data-line-numbers="3,8-10">
@@ -91,10 +92,12 @@ You can enable line numbers by adding `data-line-numbers` to your `<code>` tags.
   </div>
 </div>
 
-#### Line Number Offset <span class="r-version-badge new">4.2.0</span>
-You can offset the line number if you want to showcase a excerpt of a longer set of code. In the example below, we set `data-ln-start-from="7"` to make the line numbers start from 7.
+#### 行號偏移 <span class="r-version-badge new">4.2.0</span>
+如果你想展示一長串代碼的片段，你可以偏移行號。在下面的示例中，我們設置 `data-ln-start-from="7"` 使行號從7開始。
 
 ```html
+
+
 <pre><code data-line-numbers data-ln-start-from="7">
 <tr>
   <td>Oranges</td>
@@ -118,9 +121,9 @@ You can offset the line number if you want to showcase a excerpt of a longer set
 </div>
 
 
-## Step-by-step Highlights
+## 分步高亮
 
-You can step through multiple code highlights on the same code block. Delimit each of your highlight steps with the `|` character. For example `data-line-numbers="1|2-3|4,6-10"` will produce three steps. It will start by highlighting line 1, next step is lines 2-3, and finally line 4 and 6 through 10.
+你可以在同一代碼塊上分步進行多次代碼高亮。用 `|` 字符分隔每個高亮步驟。例如 `data-line-numbers="1|2-3|4,6-10"` 會產生三個步驟。開始時高亮第1行，下一步是第2-3行，最後是第4行和第6到10行。
 
 ```html
 <pre><code data-line-numbers="3-5|8-10|13-15">
@@ -168,43 +171,3 @@ You can step through multiple code highlights on the same code block. Delimit ea
     </section>
   </div>
 </div>
-
-## HTML Entities <span class="r-version-badge new">4.1.0</span>
-Content added inside of a `<code>` block is parsed as HTML by the web browser. If you have HTML characters (<>) in your code you will need to escape them ($lt; $gt;).
-
-To avoid having to escape these characters manually, you can wrap your code in `<script type="text/template">` and we'll handle it for you.
-
-```html
-<pre><code><script type="text/template">
-sealed class Either<out A, out B> {
-  data class Left<out A>(val a: A) : Either<A, Nothing>()
-  data class Right<out B>(val b: B) : Either<Nothing, B>()
-}
-</script></code></pre>
-```
-
-## The highlight.js API & beforeHighlight <span class="r-version-badge new">4.2.0</span>
-If you want to interact with highlight.js before your code is highlighted you can use the `beforeHighlight` callback. For example, this can be useful if you want to register a new language via the [highlight.js API](https://highlightjs.readthedocs.io/en/latest/api.html).
-```js
-Reveal.initialize({
-  highlight: {
-    beforeHighlight: hljs => hljs.registerLanguage(/*...*/)
-  },
-  plugins: [ RevealHighlight ]
-})
-```
-
-## Manual Highlighting
-All of your code blocks are automatically syntax highlighted when reveal.js starts. If you want to disable this behavior and trigger highlighting on your own you can set the `highlightOnLoad` flag to false.
-```js
-Reveal.initialize({
-  highlight: {
-    highlightOnLoad: false
-  },
-  plugins: [ RevealHighlight ]
-}).then(() => {
-  const highlight = Reveal.getPlugin( 'highlight' );
-  highlight.highlightBlock( /* code block element to highlight */ );
-});
-```
-
