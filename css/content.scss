@@ -1,6 +1,11 @@
+/** @format */
+
 // documentation page
 .article {
-    h1, h2, h3, h4 {
+    h1,
+    h2,
+    h3,
+    h4 {
         @apply font-semibold leading-tight mt-6 mb-2;
     }
 
@@ -34,11 +39,15 @@
         }
     }
 
-    b, strong {
+    b,
+    strong {
         font-weight: 600;
     }
 
-    p, ol, ul, picture {
+    p,
+    ol,
+    ul,
+    picture {
         @apply my-2;
     }
 
@@ -66,13 +75,13 @@
         @apply text-xs p-px text-gray-500 float-right;
     }
     .r-version-badge.new:before {
-        content: 'Added in ';
+        content: "Added in ";
     }
     .r-version-badge.coming:before {
-        content: 'Coming in ';
+        content: "Coming in ";
     }
     .r-version-badge.deprecated:before {
-        content: 'Deprecated in ';
+        content: "Deprecated in ";
     }
 
     .r-var-type {
@@ -108,25 +117,25 @@
     }
 }
 
-.article>table {
+.article > table {
     display: block;
     overflow: auto;
     @apply m-4 -mx-4 border rounded text-base;
 
     th {
-      @apply p-4 align-top border-b font-medium;
+        @apply p-4 align-top border-b font-medium;
     }
 
     td {
-      @apply p-4 align-top border-0;
+        @apply p-4 align-top border-0;
     }
 
     tr {
-      background-color: #fff;
+        background-color: #fff;
     }
 
     tr:nth-child(2n) {
-      background-color: transparent;
+        background-color: transparent;
     }
 
     &.full-width {
@@ -158,14 +167,12 @@
     &.hide-header th {
         display: none;
     }
-
 }
 
-.article>form,
-.article>iframe {
+.article > form,
+.article > iframe {
     @apply my-4;
 }
-
 
 .article {
     // An inline presentation
@@ -175,7 +182,9 @@
         width: calc(100% + 32px);
         @apply my-4 -mx-4 rounded border-t border-gray-700;
 
-        h1, h2, h3 {
+        h1,
+        h2,
+        h3 {
             margin-top: 0;
             line-height: 1.25;
         }
@@ -204,13 +213,19 @@
     }
 
     .reveal-example.focused:before {
-        content: '';
+        content: "";
         @apply absolute block inset-0 border-2 border-pink-400 pointer-events-none rounded-b;
     }
 }
-.article .reveal h1 { font-size: 2.5em; }
-.article .reveal h2 { font-size: 1.6em; }
-.article .reveal h3 { font-size: 1.3em; }
+.article .reveal h1 {
+    font-size: 2.5em;
+}
+.article .reveal h2 {
+    font-size: 1.6em;
+}
+.article .reveal h3 {
+    font-size: 1.3em;
+}
 
 .anchorjs-link:after {
     @apply text-gray-400;
@@ -234,7 +249,6 @@
 .article .gumroad-button .logo-full {
     display: none !important;
 }
-
 
 .buy-course {
     display: flex;
@@ -273,7 +287,7 @@
     vertical-align: middle;
 }
 .buy-course-price .old-price:before {
-    content: '';
+    content: "";
     position: absolute;
     background: #999;
     display: block;
@@ -295,7 +309,7 @@
     list-style: none;
 }
 .buy-course-data li:before {
-    content: '';
+    content: "";
     margin-right: 10px;
     background-image: url("/images/icons/checkmark.svg");
     background-size: contain;
@@ -327,7 +341,3 @@
         @apply border border-t-0 rounded-b-lg rounded-t-none px-6;
     }
 }
-
-
-
-

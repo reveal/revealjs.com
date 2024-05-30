@@ -211,4 +211,16 @@ module.exports = {
         "zh-Hant": "變更日誌",
         en: "Changelog",
     },
+    "Edit this page": {
+        "zh-Hant": "編輯這個頁面",
+        en: "Edit this page",
+    },
+    "Created by @hakimel": {
+        "zh-Hant": "由 @hakimel 創建",
+        en: "Created by @hakimel",
+    },
+    "Languages": {
+        "zh-Hant": "語言",
+        en: "Languages",
+    },
 };

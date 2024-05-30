@@ -34,6 +34,9 @@
     transform: translateY(20px);
     visibility: hidden;
 }
+.sidebar-language{
+    display: none;
+}
 
 @media (max-width: 1024px) {
     .header-logo {
@@ -44,6 +47,9 @@
     .header-cta {
         opacity: 0;
         visibility: hidden;
+    }
+    .sidebar-language{
+        display: block;
     }
 }
 

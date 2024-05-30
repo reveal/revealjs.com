@@ -2,12 +2,27 @@
   <div class="sidebar-inner overflow-hidden h-full">
     <nav class="sidebar-scroller text-base sm:text-sm inset-0 overflow-y-auto overflow-x-hidden px-6 py-8 h-full">
       <ul>
+         <li class="level-1 mb-4 sidebar-language">
+            <span class="block text-sm sm:text-xs mb-2 uppercase font-semibold text-gray-500">{{ 'Languages' | i18n }}</span>
+            <ul>
+              {% for localeI in locales -%}
+                <li class="level-2 mb-px">
+                <a href="/{{ localeI.code }}/{{ pageUrl }}" class="nav-link -mx-1 p-1">
+                  {{ localeI.label }}
+                </a>
+              </li>
+              {% endfor -%}
+            </ul>
+          </li>
+
+
+
+        
         {% for section in navigation.sections %}
 
           <li class="level-1 mb-4">
             <span class="block text-sm sm:text-xs mb-2 uppercase font-semibold text-gray-500">{{ section.label | i18n }}</span>
             <ul>
-
               {% for item in section.items %}
               {% set is_current_page = page.url | replace('/', '') == item.url | replace('/', '') %}
 
@@ -23,7 +38,6 @@
 
             </ul>
           </li>
-
         {% endfor %}
       </ul>
     </nav>
