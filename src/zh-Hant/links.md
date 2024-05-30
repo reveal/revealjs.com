@@ -1,5 +1,4 @@
 ---
-
 id: links
 title: 內部鏈接
 layout: default

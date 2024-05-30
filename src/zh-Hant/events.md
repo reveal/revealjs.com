@@ -1,5 +1,4 @@
 ---
-
 id: events
 title: 事件
 layout: default

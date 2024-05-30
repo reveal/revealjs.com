@@ -1,5 +1,4 @@
 ---
-
 id: initialization
 title: 初始化
 layout: default

@@ -1,5 +1,4 @@
 ---
-
 id: markdown
 title: Markdown
 layout: default

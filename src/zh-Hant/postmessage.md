@@ -1,5 +1,4 @@
 ---
-
 id: postmessage
 title: postMessage API
 layout: default

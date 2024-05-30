@@ -1,5 +1,4 @@
 ---
-
 id: presentation-size
 title: 簡報尺寸
 layout: default

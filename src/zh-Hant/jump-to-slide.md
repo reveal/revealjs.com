@@ -1,5 +1,4 @@
 ---
-
 id: jump-to-slide
 title: 跳轉到幻燈片
 layout: default

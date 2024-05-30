@@ -1,5 +1,4 @@
 ---
-
 id: course
 title: 精通 reveal.js
 description: 一個即將推出的視頻課程，涵蓋從 reveal.js 基礎到高級自定義和功能的所有內容。

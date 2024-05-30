@@ -1,5 +1,4 @@
 ---
-
 id: backgrounds
 title: 背景
 layout: default
@@ -61,7 +60,7 @@ layout: default
 
 | 屬性 | 預設值 | 描述 |
 | :------------------------------- | :--------- | :---------- |
-| data-background-image            |            | 顯示的圖片的URL。幻燈片開啟時，GIF將重新開始。 |
+| data-background-image            |            | 顯示的圖片的 URL。幻燈片開啟時，GIF 將重新開始。 |
 | data-background-size             | cover      | 參見 MDN 上的 [background-size](https://developer.mozilla.org/docs/Web/CSS/background-size)。 |
 | data-background-position         | center     | 參見 MDN 上的 [background-position](https://developer.mozilla.org/docs/Web/CSS/background-position)。 |
 | data-background-repeat           | no-repeat  | 參見 MDN 上的 [background-repeat](https://developer.mozilla.org/docs/Web/CSS/background-repeat)。 |
@@ -108,7 +107,7 @@ layout: default
   </div>
 </div>
 
-## Iframe 背景
+## iframe 背景
 
 在幻燈片背景中嵌入一個網頁，覆蓋 100% 的 reveal.js 寬度和高度。iframe 位於背景層，位於你的幻燈片後面，因此默認情況下無法與之互動。若要使你的背景可互動，可以添加 `data-background-interactive` 屬性。
 
@@ -125,7 +124,7 @@ layout: default
 </section>
 ```
 
-iframes 會在變得可見時懶加載。如果你想提前預加載 iframes，你可以在幻燈片 `<section>` 上添加 `data-preload` 屬性。你也可以使用 `preloadiframes` 配置選項為所有 iframes 啟用全局預加載。
+iframe 會在變得可見時懶加載。如果你想提前預加載 iframe，你可以在幻燈片 `<section>` 上添加 `data-preload` 屬性。你也可以使用 `preloadiframes` 配置選項為所有 iframes 啟用全局預加載。
 
 ## 背景過渡
 

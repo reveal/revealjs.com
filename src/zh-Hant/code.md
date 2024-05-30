@@ -1,5 +1,4 @@
 ---
-
 id: code
 title: 展示代碼
 layout: default
@@ -7,11 +6,11 @@ layout: default
 
 # 展示代碼
 
-reveal.js 包含一套強大的功能，旨在展示語法高亮的代碼 — 由 [highlight.js](https://highlightjs.org/) 提供支持。這些功能位於 highlight 插件中，並包含在我們的預設簡報模板中。
+reveal.js 有一個強大的功能，就是為程式碼添加顏色 — 由 [highlight.js](https://highlightjs.org/) 提供支持。這些功能位於 highlight 插件中，並包含在我們的預設簡報模板中。
 
-下面是一個將被語法高亮的 clojure 代碼示例。當 `<code>` 標籤存在 `data-trim` 屬性時，會自動移除代碼周圍的空白。
+下面是一個將被語法高亮的 clojure 程式碼範例。當 `<code>` 標籤存在 `data-trim` 屬性時，會自動移除代碼周圍的空白。
 
-預設會對 HTML 進行轉義。要避免這一點，可以在 `<code>` 元素上添加 `data-noescape` 屬性。
+預設會對 HTML 進行轉換。要避免這一點，可以在 `<code>` 元素上添加 `data-noescape` 屬性。
 
 ```html
 <section>

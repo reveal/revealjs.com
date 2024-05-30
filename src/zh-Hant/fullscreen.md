@@ -1,5 +1,4 @@
 ---
-
 id: fullscreen
 title: 全螢幕
 layout: default

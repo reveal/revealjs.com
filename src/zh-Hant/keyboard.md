@@ -1,5 +1,4 @@
 ---
-
 id: keyboard
 title: 鍵盤綁定
 layout: default

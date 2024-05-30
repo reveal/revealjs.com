@@ -1,5 +1,4 @@
 ---
-
 id: creating-plugins
 title: 創建插件
 layout: default

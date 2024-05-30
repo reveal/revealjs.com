@@ -1,5 +1,4 @@
 ---
-
 id: presentation-state
 title: 簡報狀態
 layout: default

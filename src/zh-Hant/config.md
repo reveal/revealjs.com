@@ -1,5 +1,4 @@
 ---
-
 id: config
 title: 配置
 layout: default
@@ -7,9 +6,9 @@ layout: default
 
 # 配置選項
 
-可以通過使用大量的配置選項來微調簡報行為。這些選項可以在您[初始化](/initialization/) reveal.js 時包含進去。也可以在運行時[更改配置值](#reconfiguring)。
+可以通過使用大量的參數來微調簡報。這些選項可以在您[初始化](/initialization/) reveal.js 時包含進去。也可以在運行時[更改屬性值](#reconfiguring)。
 
-注意，**所有**配置值都是**可選的**，將默認為下面指定的值。
+注意，**所有**屬性值都是**可選的**，以下顯示默認值。
 
 ```javascript
 Reveal.initialize({
@@ -46,7 +45,7 @@ Reveal.initialize({
 
   // 可用於限制幻燈片編號出現的上下文
   // - "all":      總是顯示幻燈片編號
-  // - "print":    僅在打印到PDF時
+  // - "print":    僅在打印到 PDF 時
   // - "speaker":  僅在演講者視圖中
   showSlideNumber: 'all',
 
@@ -151,7 +150,7 @@ Reveal.initialize({
   // - false:  所有帶有 data-src 的 iframes 將只在可見時加載
   preloadIframes: null,
 
-  // 可用於全球禁用自動動畫
+  // 可用於全域禁用自動動畫
   autoAnimate: true,
 
   // 可選提供一個自定義元素匹配器，
@@ -232,8 +231,8 @@ Reveal.initialize({
   pdfSeparateFragments: true,
 
   // 用於減少導出PDF頁面內容高度的偏移量。
-  // 這存在於根據您如何打印到PDF來解釋環境差異。
-  // CLI打印選項，如 phantomjs 和 wkpdf，可以精確地
+  // 這存在於根據您如何打印到 PDF 來解釋環境差異。
+  // CLI 打印選項，如 phantomjs 和 wkpdf，可以精確地
   // 結束在文檔的總高度，而在瀏覽器中打印必須在
   // 一個像素之前結束。
   pdfPageHeightOffset: -1,
