@@ -37,6 +37,7 @@ $ yarn test
 ## Formatting
 
 We use [Prettier](https://prettier.io/) to ensure consistent code formatting. The rules are as follows:
+
 - Single quotes for strings.
 - 2-space indentation.
 

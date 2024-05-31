@@ -15,8 +15,8 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Install dependencies
+      - name: Install Prettier
         run: npm install prettier
 
       - name: Run Prettier check
-        run: npx prettier --check .
+        run: npx prettier --check --ignore-path .prettierignore .
