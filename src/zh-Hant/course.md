@@ -23,9 +23,9 @@ hide_ads: true
 
 ### 誰來講解？
 
-👋 我是 Hakim——一名瑞典前端開發人員和 reveal.js 的創建者。我共同創辦並目前在 [Slides.com](https://slides.com) 工作——一個基於 reveal.js 構建的簡報平台和圖形編輯器。除此之外，我喜歡在 [hakim.se](https://hakim.se) 上進行視覺演示和實驗。
+👋 我是 Hakim——一名瑞典前端開發人員和 reveal.js 的創建者。目前在我創辦的 [Slides.com](https://slides.com) 工作——一個基於 reveal.js 構建的簡報平台和圖形編輯器。除此之外，我喜歡在 [hakim.se](https://hakim.se) 上進行視覺演示和實驗。
 
-我在10年前 (!) 發布了 reveal.js 的第一個版本，當時沒有想到它最終會被成千上萬的人使用。我希望你能加入進來，親身體驗為什麼這麼多人選擇使用 reveal.js 創建他們的簡報！
+我在 10 年前 (!) 發布了 reveal.js 的第一個版本，當時沒有想到它最終會被成千上萬的人使用。我希望你能加入進來，親身體驗為什麼這麼多人選擇使用 reveal.js 創建他們的簡報！
 
 <div class="buy-course">
 	<div class="buy-course-thumb">
@@ -40,10 +40,10 @@ hide_ads: true
 	</div>
 	<div class="buy-course-data">
 		<ul>
-			<li>22視頻</li>
-			<li>總時長5小時39分鐘</li>
+			<li>22 視頻</li>
+			<li>總時長 5 小時 39 分鐘</li>
 			<li>以高清格式流媒體</li>
-			<li>以4K格式下載</li>
+			<li>以 4K 格式下載</li>
 			<li>免費更新</li>
 		</ul>
 
@@ -52,11 +52,11 @@ hide_ads: true
 </div>
 <script src="https://gumroad.com/js/gumroad.js"></script>
 
-課程通過 [Gumroad](https://gumroad.com/) 銷售。購買時將添加增值稅（如果適用）。如果課程不適合你——無需問題退款保證100%。
+課程通過 [Gumroad](https://gumroad.com/) 銷售。購買時將添加增值稅（如果適用）。如果課程不適合你——保證 100% 無條件退款。
 
 ## 目錄
 
-課程分為相對較短的視頻，以便你可以輕鬆跳過與你無關或你已熟悉的主題。總時長為5.5小時。
+課程被拆為相對較短的影片，以便你可以輕鬆跳過與你無關或你已熟悉的主題。總時長為 5.5 小時。
 
 | 起步                                           | <!-- --> |
 | :--------------------------------------------- | -------: |

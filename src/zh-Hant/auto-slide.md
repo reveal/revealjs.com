@@ -34,9 +34,9 @@ Reveal.initialize({
 
 ```html
 <section data-autoslide="2000">
-  <p>2秒後將顯示第一個片段。</p>
-  <p class="fragment" data-autoslide="10000">10秒後將顯示下一個片段。</p>
-  <p class="fragment">現在，片段顯示2秒後將顯示下一個幻燈片。</p>
+  <p>2 秒後將顯示第一個片段。</p>
+  <p class="fragment" data-autoslide="10000">10 秒後將顯示下一個片段。</p>
+  <p class="fragment">現在，片段顯示 2 秒後將顯示下一個幻燈片。</p>
 </section>
 ```
 

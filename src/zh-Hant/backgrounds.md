@@ -76,7 +76,7 @@ layout: default
 </section>
 <section data-background-image="http://example.com/image.png"
           data-background-size="100px" data-background-repeat="repeat">
-  <h2>這張背景圖將被設置為100px並重複</h2>
+  <h2>這張背景圖將被設置為 100px 並重複</h2>
 </section>
 ```
 

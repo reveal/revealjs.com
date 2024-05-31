@@ -6,7 +6,7 @@ layout: default
 
 # 數學
 
-數學插件允許你在幻燈片中包含美觀的排版數學公式。首先，確保reveal.js已經初始化並啟用了數學插件。
+數學插件允許你在幻燈片中包含美觀的排版數學公式。首先，確保 reveal.js 已經初始化並啟用了數學插件。
 
 ```html
 <script src="plugin/math/math.js"></script>
@@ -15,7 +15,7 @@ layout: default
 </script>
 ```
 
-在此示例中，我們使用了KaTeX排版器，但你也可以選擇使用[MathJax 2](#mathjax-2)或[3](#mathjax-3-4.2.0)。
+在此示例中，我們使用了 KaTeX 排版器，但你也可以選擇使用[MathJax 2](#mathjax-2)或[3](#mathjax-3-4.2.0)。
 
 現在插件已註冊，我們可以開始在幻燈片中添加[LaTeX](https://en.wikipedia.org/wiki/LaTeX)公式。
 
@@ -42,7 +42,7 @@ layout: default
 
 ## Markdown
 
-如果你想在Markdown寫的簡報中包含數學公式，你需要用反引號將公式包起來。這樣可以避免LaTeX和Markdown語法之間的衝突。例如：
+如果你想在 Markdown 寫的簡報中包含數學公式，你需要用反引號將公式包起來。這樣可以避免 LaTeX 和 Markdown 語法之間的衝突。例如：
 
 ```html
 <section data-markdown>`$$ J(\theta_0,\theta_1) = \sum_{i=0} $$`</section>
@@ -50,7 +50,7 @@ layout: default
 
 ## 排版庫
 
-數學插件提供了三種數學排版庫供你選擇用於渲染你的數學公式。每個變體都是獨立的插件，可以通過 `RevealMath.<Variant>` 訪問。如果你沒有特別偏好，我們建議使用KaTeX。
+數學插件提供了三種數學排版庫供你選擇用於渲染你的數學公式。每個變體都是獨立的插件，可以通過 `RevealMath.<Variant>` 訪問。如果你沒有特別偏好，我們建議使用 KaTeX。
 
 | Library                                               | Plugin Name         | Config Property              |
 | :---------------------------------------------------- | :------------------ | :--------------------------- |
@@ -80,11 +80,11 @@ Reveal.initialize({
 });
 ```
 
-注意，默認情況下最新的KaTeX從遠程服務器
+注意，默認情況下最新的 KaTeX 從遠程服務器
 
 加載（https://cdn.jsdelivr.net/npm/katex）。要使用固定版本，將 `version` 設為例如 `0.13.18`。
 
-如果你想離線使用KaTeX，你需要下載庫的副本（例如通過npm）並使用 `local` 配置選項（則 `version` 選項將被忽略），例如：
+如果你想離線使用 KaTeX，你需要下載庫的副本（例如通過 npm）並使用 `local` 配置選項（則 `version` 選項將被忽略），例如：
 
 ```js
 Reveal.initialize({
@@ -117,9 +117,9 @@ Reveal.initialize({
 });
 ```
 
-注意，最新的MathJax 2從遠程服務器加載。要使用固定版本，將mathjax設為例如https://cdn.jsdelivr.net/npm/mathjax@2.7.8/MathJax.js。
+注意，最新的 MathJax 2 從遠程服務器加載。要使用固定版本，將 mathjax 設為例如 https://cdn.jsdelivr.net/npm/mathjax@2.7.8/MathJax.js。
 
-如果你想離線使用MathJax，你需要下載庫的副本（例如通過npm）並將 `mathjax` 指向本地副本。
+如果你想離線使用 MathJax，你需要下載庫的副本（例如通過 npm）並將 `mathjax` 指向本地副本。
 
 ### MathJax 3 <span class="r-version-badge new">4.2.0</span>
 
@@ -143,6 +143,6 @@ Reveal.initialize({
 });
 ```
 
-注意，最新的MathJax 3從遠程服務器加載。要使用固定版本，將 `mathjax` 設為例如 <https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js>。此外，配置現在是URL的一部分，默认加载 `tex-mml-chtml`，它能识别TeX和MathML表示的数学，并使用HTML和CSS生成输出（CommonHTML输出格式）。這是一個非常通用的配置，但它也是最大的之一，因此你可能需要考虑一个更小的，更符合你需求的配置，例如 `tex-svg`。
+注意，最新的 MathJax 3 從遠程服務器加載。要使用固定版本，將 `mathjax` 設為例如 <https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js>。此外，配置現在是 URL 的一部分，默认加载 `tex-mml-chtml`，它能识别 TeX 和 MathML 表示的数学，并使用 HTML 和 CSS 生成输出（CommonHTML 输出格式）。這是一個非常通用的配置，但它也是最大的之一，因此你可能需要考虑一个更小的，更符合你需求的配置，例如 `tex-svg`。
 
-如果你想離線使用MathJax，你需要下載庫的副本（例如通過npm）並相應地調整 `mathjax`。
+如果你想離線使用 MathJax，你需要下載庫的副本（例如通過 npm）並相應地調整 `mathjax`。

@@ -39,8 +39,8 @@ Reveal.initialize({
   // - "c/t":   扁平化幻燈片編號 / 總幻燈片數
   //
   // 或者，您可以提供一個返回當前幻燈片的幻燈片編號的函數。
-  // 該函數應該接受一個幻燈片對象並返回一個字符串[幻燈片編號]或
-  // 三個字符串[n1,delimiter,n2]。見 #formatSlideNumber()。
+  // 該函數應該接受一個幻燈片對象並返回一個字符串 [幻燈片編號] 或
+  // 三個字符串 [n1,delimiter,n2]。見 #formatSlideNumber()。
   slideNumber: false,
 
   // 可用於限制幻燈片編號出現的上下文
@@ -49,10 +49,10 @@ Reveal.initialize({
   // - "speaker":  僅在演講者視圖中
   showSlideNumber: 'all',
 
-  // 使用基於1的索引為 # 鏈接以匹配幻燈片編號（默認是基於0的）
+  // 使用基於 1 的索引為 # 鏈接以匹配幻燈片編號（默認是基於 0 的）
   hashOneBasedIndex: false,
 
-  // 將當前幻燈片編號添加到URL哈希中，以便重新加載頁面/複製URL將返回到相同的幻燈片
+  // 將當前幻燈片編號添加到 URL 哈希中，以便重新加載頁面/複製 URL 將返回到相同的幻燈片
   hash: false,
 
   // 標記是否應監控哈希並相應地更改幻燈片
@@ -111,8 +111,8 @@ Reveal.initialize({
   // 1.2    2.2
   // 1.3    2.3
   //
-  // 如果您在幻燈片1.3上並向右導航，您通常會從1.3 -> 2.1。如果使用 "grid"，相同的導航將帶您
-  // 從1.3 -> 2.3。
+  // 如果您在幻燈片 1.3 上並向右導航，您通常會從 1.3 -> 2.1。如果使用 "grid"，相同的導航將帶您
+  // 從 1.3 -> 2.3。
   navigationMode: 'default',
 
   // 每次加載簡報時隨機化幻燈片的順序
@@ -121,7 +121,7 @@ Reveal.initialize({
   // 全局開啟或關閉片段
   fragments: true,
 
-  // 標記是否將當前片段包含在URL中，
+  // 標記是否將當前片段包含在 URL 中，
   // 以便重新加載後您會回到相同的片段位置
   fragmentInURL: true,
 
@@ -223,14 +223,14 @@ Reveal.initialize({
   // 全頁幻燈片背景的過渡樣式
   backgroundTransition: 'fade', // none/fade/slide/convex/concave/zoom
 
-  // 單張幻燈片可以擴展到多個頁面時打印到PDF的最大頁數，
+  // 單張幻燈片可以擴展到多個頁面時打印到 PDF 的最大頁數，
   // 預設為無限制
   pdfMaxPagesPerSlide: Number.POSITIVE_INFINITY,
 
   // 打印每個片段到一張幻燈片
   pdfSeparateFragments: true,
 
-  // 用於減少導出PDF頁面內容高度的偏移量。
+  // 用於減少導出 PDF 頁面內容高度的偏移量。
   // 這存在於根據您如何打印到 PDF 來解釋環境差異。
   // CLI 打印選項，如 phantomjs 和 wkpdf，可以精確地
   // 結束在文檔的總高度，而在瀏覽器中打印必須在
@@ -264,6 +264,6 @@ Reveal.initialize({
 // 關閉 autoSlide
 Reveal.configure({ autoSlide: 0 });
 
-// 每5秒開始自動播放
+// 每 5 秒開始自動播放
 Reveal.configure({ autoSlide: 5000 });
 ```

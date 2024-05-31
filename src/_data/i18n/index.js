@@ -131,7 +131,7 @@ module.exports = {
     en: 'Touch Navigation',
   },
   'PDF Export': {
-    'zh-Hant': 'PDF導出',
+    'zh-Hant': 'PDF 導出',
     en: 'PDF Export',
   },
   'Overview Mode': {

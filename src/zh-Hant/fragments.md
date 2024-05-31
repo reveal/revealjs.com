@@ -39,9 +39,9 @@ layout: default
 | fade-right              | 向右滑動同時淡入               |
 | fade-in-then-out        | 先淡入，然後在下一步淡出       |
 | current-visible         | 在下一步先淡入，然後淡出       |
-| fade-in-then-semi-out   | 先淡入，然後在下一步淡到50%    |
+| fade-in-then-semi-out   | 先淡入，然後在下一步淡到 50%    |
 | grow                    | 放大                           |
-| semi-fade-out           | 淡出到50%                      |
+| semi-fade-out           | 淡出到 50%                      |
 | shrink                  | 縮小                           |
 | strike                  | 中劃線                         |
 | highlight-red           | 文本變紅                       |

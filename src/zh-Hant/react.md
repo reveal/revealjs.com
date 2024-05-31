@@ -86,7 +86,7 @@ function App() {
     }, []);
 
     return (
-        // 你的簡報大小是基於父元素的寬度和高度。確保父元素高度不為0。
+        // 你的簡報大小是基於父元素的寬度和高度。確保父元素高度不為 0。
         <div className="reveal" ref={deckDivRef}>
             <div className="slides">
                 <section>幻燈片 1</section>

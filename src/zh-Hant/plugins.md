@@ -47,7 +47,7 @@ layout: default
 | RevealSearch    | 按 CTRL+Shift+F 搜索幻燈片內容。<br><span class="text-gray-600">plugin/search/search.js</span>             |
 | RevealNotes     | 在單獨窗口中顯示[演講者視圖](/speaker-view/)。<br><span class="text-gray-600">plugin/notes/notes.js</span> |
 | RevealMath      | 呈現[數學方程式](/math/)。<br><span class="text-gray-600">plugin/math/math.js</span>                       |
-| RevealZoom      | Alt+點擊元素放大（Linux 中使用 CTRL+點擊）。<br><span class="text-gray-600">plugin/zoom/zoom.js</span>     |
+| RevealZoom      | Alt+ 點擊元素放大（Linux 中使用 CTRL+ 點擊）。<br><span class="text-gray-600">plugin/zoom/zoom.js</span>     |
 
 {.key-value}
 

@@ -6,13 +6,13 @@ layout: default
 
 # 概覽模式
 
-按下「ESC」或「O」鍵來開啟或關閉概覽模式。當你處於這種模式時，你仍然可以在幻燈片之間導航，就像你在你的簡報上方1000英尺高的地方一樣。
+按下「ESC」或「O」鍵來開啟或關閉概覽模式。當你處於這種模式時，你仍然可以在幻燈片之間導航，就像你在你的簡報上方 1000 英尺高的地方一樣。
 
 <picture><img src="/images/docs/overview.png" alt="具有垂直幻燈片的幻燈片布局"></picture>
 
 ## API
 
-你可以使用`toggleOverview()` API方法從JavaScript中激活或停用概覽模式。
+你可以使用`toggleOverview()` API 方法從 JavaScript 中激活或停用概覽模式。
 
 ```js
 // 切換到當前狀態的相反狀態
