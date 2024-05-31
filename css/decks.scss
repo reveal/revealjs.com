@@ -1,57 +1,62 @@
 $demoHeight: 65vh;
 
 .reveal-demo {
-    position: relative;
-	height: $demoHeight;
-    max-height: 900px;
+  position: relative;
+  height: $demoHeight;
+  max-height: 900px;
 }
 
 .highlight-demo .reveal-demo .reveal {
-    position: relative;
-    z-index: 100;
+  position: relative;
+  z-index: 100;
 }
 
 .highlight-demo .reveal-demo:after {
-    content: 'The header is a live demo. Scroll to access docs.';
-    position: fixed;
-    display: grid;
-    place-items: center;
-    z-index: 99;
-    top: $demoHeight;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    color: #eee;
-    font-weight: 600;
-    padding: 0 1rem;
-    background: rgba( 0, 0, 0, 0.9 );
-    backdrop-filter: blur(4px);
+  content: 'The header is a live demo. Scroll to access docs.';
+  position: fixed;
+  display: grid;
+  place-items: center;
+  z-index: 99;
+  top: $demoHeight;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: #eee;
+  font-weight: 600;
+  padding: 0 1rem;
+  background: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(4px);
 }
 
 .reveal {
-    font-size: 36px;
-    background-color: darken(desaturate(#2d234c, 10%),10%);
+  font-size: 36px;
+  background-color: darken(desaturate(#2d234c, 10%), 10%);
 }
 
 .reveal a,
 .reveal .controls button,
 .reveal .progress span {
-    @apply text-pink-500;
+  @apply text-pink-500;
 }
 
 .reveal .progress {
-    height: 6px;
+  height: 6px;
 }
 
-.reveal h1, h2, h3, h4, p, ul {
-	font-family: 'Inter', system-ui !important;
+.reveal h1,
+h2,
+h3,
+h4,
+p,
+ul {
+  font-family: 'Inter', system-ui !important;
 }
 
 .reveal iframe {
-    margin-left: auto;
-    margin-right: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .reveal img {
-    display: inline-block;
+  display: inline-block;
 }
