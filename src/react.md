@@ -7,6 +7,7 @@ layout: default
 # React Framework
 
 Reveal.js can be added to a React project a few different ways.
+
 1. [Install and setup reveal.js via npm](#installing-from-npm)
 2. [Use third-party packages](#third-party-packages)
 
@@ -33,9 +34,9 @@ npm i --save-dev @types/reveal.js
 You will need the following imports:
 
 ```ts
-import Reveal from "reveal.js";
-import "reveal.js/dist/reveal.css";
-import "reveal.js/dist/theme/black.css"; // "black" theme is just an example
+import Reveal from 'reveal.js';
+import 'reveal.js/dist/reveal.css';
+import 'reveal.js/dist/theme/black.css'; // "black" theme is just an example
 ```
 
 #### Initialization

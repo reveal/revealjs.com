@@ -5,6 +5,7 @@ layout: default
 ---
 
 # Slide Visibility
+
 The `data-visibility` attribute can be used to hide slides. It can also be used to mark slides as "uncounted" in reveal.js' internal numbering system, which affects the visible slide number and progress bar.
 
 ## Hidden Slides <span class="r-version-badge new">4.1.0</span>
@@ -16,6 +17,7 @@ To hide a slide from view, add `data-visibility="hidden"`. Hidden slides are rem
 <section data-visibility="hidden">Slide 2</section>
 <section>Slide 3</section>
 ```
+
 <div class="reveal reveal-example" data-config='{"slideNumber": "c/t"}'>
   <div class="slides">
     <section>Slide 1</section>
@@ -37,6 +39,7 @@ To "hide" those slides from reveal.js' numbering system you can use `data-visibi
 <section>Slide 2</section>
 <section data-visibility="uncounted">Slide 3</section>
 ```
+
 <div class="reveal reveal-example" data-config='{"slideNumber": "c/t", "progress": true}'>
   <div class="slides">
     <section>Slide 1</section>
@@ -44,4 +47,3 @@ To "hide" those slides from reveal.js' numbering system you can use `data-visibi
     <section data-visibility="uncounted">Slide 3</section>
   </div>
 </div>
-

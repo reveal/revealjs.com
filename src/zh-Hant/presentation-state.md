@@ -10,14 +10,14 @@ layout: default
 
 ```javascript
 // 移動到第1張幻燈片
-Reveal.slide( 1 );
+Reveal.slide(1);
 
 let state = Reveal.getState();
 // {indexh: 1, indexv: 0, indexf: undefined, paused: false, overview: false}
 
 // 移動到第3張幻燈片
-Reveal.slide( 3 );
+Reveal.slide(3);
 
 // 這將恢復保存的狀態，再次放置在第1張幻燈片
-Reveal.setState( state );
+Reveal.setState(state);
 ```

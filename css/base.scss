@@ -6,134 +6,146 @@ $easeOutQuint: cubic-bezier(0.23, 1, 0.32, 1);
 $easeInOutQuint: cubic-bezier(0.86, 0, 0.07, 1);
 
 html {
-    font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont,
-        "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
-        "Helvetica Neue", sans-serif;
-    font-size: 16px;
+  font-family:
+    'Inter',
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Open Sans',
+    'Helvetica Neue',
+    sans-serif;
+  font-size: 16px;
 }
 
 :target {
-    scroll-margin-top: $headerHeight + $headerMargin;
+  scroll-margin-top: $headerHeight + $headerMargin;
 }
 
 a,
 button {
-    touch-action: manipulation !important;
-    -webkit-tap-highlight-color: darken(#edf2f7, 15%);
+  touch-action: manipulation !important;
+  -webkit-tap-highlight-color: darken(#edf2f7, 15%);
 }
 
 .no-transition,
 .no-transition * {
-    transition: none !important;
+  transition: none !important;
 }
 
 // sidebar
 .nav-link {
-    @apply text-gray-700 w-full inline-block;
+  @apply text-gray-700 w-full inline-block;
 }
 
 .nav-link:hover {
-    @apply text-gray-900;
+  @apply text-gray-900;
 }
 
 .nav-link.selected {
-    @apply text-yellow-900 bg-yellow-400 rounded;
+  @apply text-yellow-900 bg-yellow-400 rounded;
 }
 
 // External links
 .exernal-link-icon {
-    @apply inline-block ml-1 align-text-bottom opacity-75;
+  @apply inline-block ml-1 align-text-bottom opacity-75;
 }
 
 .exernal-link-icon svg {
-    height: 1rem;
+  height: 1rem;
 }
 .exernal-link-icon path {
-    @apply fill-current;
+  @apply fill-current;
 }
 
 // Advertising
 #carbonads {
-    width: 100%;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    z-index: 10;
-    text-align: left;
-    @apply text-sm;
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  z-index: 10;
+  text-align: left;
+  @apply text-sm;
 }
 
 #carbonads .carbon-img img {
-    width: 130px;
-    height: 100px;
-    margin: 0 0 10px 0;
-    border: 0;
-    box-shadow: none;
+  width: 130px;
+  height: 100px;
+  margin: 0 0 10px 0;
+  border: 0;
+  box-shadow: none;
 }
 
 #carbonads .carbon-text {
-    @apply text-gray-700;
+  @apply text-gray-700;
 }
 
 #carbonads .carbon-poweredby {
-    display: block;
-    margin-top: 10px;
-    @apply text-gray-500;
+  display: block;
+  margin-top: 10px;
+  @apply text-gray-500;
 }
 
 // Directional hover effect
 .r-anchor {
-    position: relative;
+  position: relative;
 }
 
 .r-anchor-label {
-    position: relative;
-    z-index: 2;
+  position: relative;
+  z-index: 2;
 }
 
 .r-anchor-background {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    opacity: 0;
-    pointer-events: none;
-    visibility: hidden;
-    border-radius: 0.25rem;
-    z-index: -1;
-    @apply bg-gray-300;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  border-radius: 0.25rem;
+  z-index: -1;
+  @apply bg-gray-300;
 
-    transition: opacity 0.2s $easeOutQuint, visibility 0.2s $easeOutQuint,
-        transform 0.3s $easeOutQuint;
+  transition:
+    opacity 0.2s $easeOutQuint,
+    visibility 0.2s $easeOutQuint,
+    transform 0.3s $easeOutQuint;
 }
 
 .r-anchor.hover .r-anchor-background {
-    opacity: 1;
-    transform: none !important;
-    visibility: visible;
+  opacity: 1;
+  transform: none !important;
+  visibility: visible;
 
-    transition: transform 0.3s $easeOutQuint;
+  transition: transform 0.3s $easeOutQuint;
 }
 
 .search-result .r-anchor-background {
-    @apply bg-gray-200;
+  @apply bg-gray-200;
 }
 
 .homepage-promotion {
-    display: flex;
-    align-items: center;
-    position: absolute;
-    bottom: 2rem;
-    left: 2rem;
-    padding: 0.5rem 0.5rem 0.5rem 0.75rem;
-    border: 1px solid rgba(255, 255, 255, 0.75);
-    border-radius: 100px;
-    color: #fff;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  padding: 0.5rem 0.5rem 0.5rem 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  border-radius: 100px;
+  color: #fff;
 }
 .homepage-promotion span {
-    background: #fff;
-    color: #000;
-    border-radius: 100px;
-    margin-left: 0.75rem;
-    font-size: 0.8em;
-    padding: 0.25rem 0.5rem;
+  background: #fff;
+  color: #000;
+  border-radius: 100px;
+  margin-left: 0.75rem;
+  font-size: 0.8em;
+  padding: 0.25rem 0.5rem;
 }

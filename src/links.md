@@ -20,6 +20,7 @@ You can create links from one slide to another. Start by giving your target slid
 	<a href="#/0">Back to the first</a>
 </section>
 ```
+
 <div class="reveal reveal-example" data-config='{"respondToHashChanges": true}'>
   <div class="slides">
     <section>
@@ -57,7 +58,7 @@ You can add relative navigation links that work similarly to the built in direct
 <!-- Previous vertical OR horizontal slide -->
 <button class="navigate-prev">Prev</button>
 
- <!-- Next vertical OR horizontal slide -->
+<!-- Next vertical OR horizontal slide -->
 <button class="navigate-next">Next</button>
 ```
 

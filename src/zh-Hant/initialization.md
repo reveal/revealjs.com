@@ -9,6 +9,7 @@ layout: default
 最常見的 reveal.js 使用情景是有一個覆蓋整個視口的單一簡報。從 4.0 版本開始，我們也支持在同一頁面上同時運行[多個簡報](#multiple-presentations)，以及將庫作為一個[ES 模塊](#es-module)引入。
 
 如果你的頁面上只有一個簡報，我們建議使用全局的 `Reveal` 對象來初始化 reveal.js。`Reveal.initialize` 方法接受一個參數；一個 reveal.js 的[配置對象](/config/)。
+
 ```html
 <script src="dist/reveal.js"></script>
 <script>
@@ -17,10 +18,11 @@ layout: default
 ```
 
 `initialize` 方法返回一個 promise，當簡報準備好並可以通過 API 進行交互時，此 promise 將解析。
+
 ```js
-Reveal.initialize().then( () => {
+Reveal.initialize().then(() => {
   // reveal.js 已準備好
-} )
+});
 ```
 
 ## 多個簡報 <span class="r-version-badge new">4.0.0</span> {id="multiple-presentations"}
@@ -37,15 +39,15 @@ Reveal.initialize().then( () => {
 
 <script src="dist/reveal.js"></script>
 <script>
-  let deck1 = new Reveal( document.querySelector( '.deck1' ), {
+  let deck1 = new Reveal(document.querySelector('.deck1'), {
     embedded: true,
-    keyboardCondition: 'focused' // 只有在聚焦時才反應按鍵
-  } );
+    keyboardCondition: 'focused', // 只有在聚焦時才反應按鍵
+  });
   deck1.initialize();
 
-  let deck2 = new Reveal( document.querySelector( '.deck2' ), {
-    embedded: true
-  } );
+  let deck2 = new Reveal(document.querySelector('.deck2'), {
+    embedded: true,
+  });
   deck2.initialize();
 </script>
 ```
@@ -65,12 +67,13 @@ Reveal.initialize().then( () => {
   import Reveal from 'dist/reveal.esm.js';
   import Markdown from 'plugin/markdown/markdown.esm.js';
   Reveal.initialize({
-    plugins: [ Markdown ]
+    plugins: [Markdown],
   });
 </script>
 ```
 
 如果你是[從 npm 安裝 reveal.js](/installation/#installing-from-npm)並且捆綁它，你應該能夠使用：
+
 ```js
 import Reveal from 'reveal.js';
 Reveal.initialize();

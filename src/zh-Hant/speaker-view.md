@@ -48,9 +48,9 @@ Note:
 ```html
 <script src="plugin/notes/notes.js"></script>
 <script>
-    Reveal.initialize({
-        plugins: [ RevealNotes ]
-    });
+  Reveal.initialize({
+    plugins: [RevealNotes],
+  });
 </script>
 ```
 

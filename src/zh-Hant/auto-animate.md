@@ -9,6 +9,7 @@ layout: default
 reveal.js 可以自動在幻燈片之間添加動畫。你只需在兩個相鄰的幻燈片 `<section>` 元素上添加 `data-auto-animate`，自動動畫將會對兩者間的所有匹配元素進行動畫處理。
 
 這裡有一個簡單的例子，讓你更好地理解如何使用它。
+
 ```html
 <section data-auto-animate>
   <h1>自動動畫</h1>
@@ -17,6 +18,7 @@ reveal.js 可以自動在幻燈片之間添加動畫。你只需在兩個相鄰�
   <h1 style="margin-top: 100px; color: red;">自動動畫</h1>
 </section>
 ```
+
 <div class="reveal reveal-example">
   <div class="slides">
     <section data-auto-animate>
@@ -43,6 +45,7 @@ reveal.js 可以自動在幻燈片之間添加動畫。你只需在兩個相鄰�
   <h1>動畫</h1>
 </section>
 ```
+
 <div class="reveal reveal-example">
   <div class="slides">
     <section data-auto-animate>
@@ -56,6 +59,7 @@ reveal.js 可以自動在幻燈片之間添加動畫。你只需在兩個相鄰�
 </div>
 
 ## 元素如何匹配
+
 當你在兩個自動動畫幻燈片之間導航時，我們將盡力自動找到兩個幻燈片中的匹配元素。對於文本，如果文本內容和節點類型都相同，我們將其視為匹配。對於圖片、視頻和 iframes，我們比較 `src` 屬性。除此以外我們還會考慮元素在 DOM 中出現的順序。
 
 在無法自動匹配的情況下，你可以給你想要動畫之間的對象添加匹配的 `data-id` 屬性。我們優先匹配 `data-id` 值而不是自動匹配。
@@ -70,8 +74,8 @@ reveal.js 可以自動在幻燈片之間添加動畫。你只需在兩個相鄰�
   <div data-id="box" style="height: 200px; background: blue;"></div>
 </section>
 ```
-<div class="reveal reveal-example">
 
+<div class="reveal reveal-example">
 
   <div class="slides">
     <section data-auto-animate>
@@ -84,27 +88,30 @@ reveal.js 可以自動在幻燈片之間添加動畫。你只需在兩個相鄰�
 </div>
 
 ## 動畫設定
+
 你可以覆蓋特定的動畫設定，例如動畫曲線和持續時間，無論是對整個簡報、每張幻燈片還是每個動畫元素。以下配置屬性可以用來改變特定幻燈片或元素的設置：
 
-| 屬性                                 | 默認值    | 描述 
-| :--------------------------------- | ---------: | :---------- 
-| data-auto-animate-easing           | ease       | 一個 CSS [easing-function](https://developer.mozilla.org/zh-CN/docs/Web/CSS/easing-function)。
-| data-auto-animate-unmatched        | true       | 決定沒有匹配的自動動畫目標元素是否應該淡入。設置為 false 使它們立即出現。
-| data-auto-animate-duration         | 1.0        | 動畫持續時間，以秒為單位。
-| data-auto-animate-delay            | 0          | 動畫延遲，以秒為單位（只能為特定元素設置，不能在幻燈片層面設置）。
-| data-auto-animate-id               | _absent_   | 將自動動畫幻燈片綁定在一起的 [id](#auto-animate-id-%26-restart)。
-| data-auto-animate-restart          | _absent_   | [分隔](#auto-animate-id-%26-restart) 兩個相鄰的自動動畫幻燈片（即使它們有相同的 id）。
+| 屬性                        |   默認值 | 描述                                                                                           |
+| :-------------------------- | -------: | :--------------------------------------------------------------------------------------------- |
+| data-auto-animate-easing    |     ease | 一個 CSS [easing-function](https://developer.mozilla.org/zh-CN/docs/Web/CSS/easing-function)。 |
+| data-auto-animate-unmatched |     true | 決定沒有匹配的自動動畫目標元素是否應該淡入。設置為 false 使它們立即出現。                      |
+| data-auto-animate-duration  |      1.0 | 動畫持續時間，以秒為單位。                                                                     |
+| data-auto-animate-delay     |        0 | 動畫延遲，以秒為單位（只能為特定元素設置，不能在幻燈片層面設置）。                             |
+| data-auto-animate-id        | _absent_ | 將自動動畫幻燈片綁定在一起的 [id](#auto-animate-id-%26-restart)。                              |
+| data-auto-animate-restart   | _absent_ | [分隔](#auto-animate-id-%26-restart) 兩個相鄰的自動動畫幻燈片（即使它們有相同的 id）。         |
 
 如果你想改變整個套件的默認設置，可以使用以下配置選項：
+
 ```javascript
 Reveal.initialize({
   autoAnimateEasing: 'ease-out',
   autoAnimateDuration: 0.8,
-  autoAnimateUnmatched: false
-})
+  autoAnimateUnmatched: false,
+});
 ```
 
 ## Auto-Animate Id & Restart
+
 當你希望分離一組組幻燈片相鄰的自動動畫，可以使用 `data-auto-animate-id` 和 `data-auto-animate-restart` 屬性。
 
 使用 `data-auto-animate-id`，你可以為幻燈片指定任意 id。只有當兩個相鄰幻燈片具有相同的 id 或兩者都沒有 id 時，自動動畫才會被啟動。
@@ -113,22 +120,22 @@ Reveal.initialize({
 
 ```html
 <section data-auto-animate>
-	<h1>組 A</h1>
+  <h1>組 A</h1>
 </section>
 <section data-auto-animate>
-	<h1 style="color: #3B82F6;">組 A</h1>
+  <h1 style="color: #3B82F6;">組 A</h1>
 </section>
 <section data-auto-animate data-auto-animate-id="two">
-	<h1>組 B</h1>
+  <h1>組 B</h1>
 </section>
 <section data-auto-animate data-auto-animate-id="two">
-	<h1 style="color: #10B981;">組 B</h1>
+  <h1 style="color: #10B981;">組 B</h1>
 </section>
 <section data-auto-animate data-auto-animate-id="two" data-auto-animate-restart>
-	<h1>組 C</h1>
+  <h1>組 C</h1>
 </section>
 <section data-auto-animate data-auto-animate-id="two">
-	<h1 style="color: #EC4899;">組 C</h1>
+  <h1 style="color: #EC4899;">組 C</h1>
 </section>
 ```
 
@@ -160,13 +167,15 @@ Reveal.initialize({
 每次你在兩個自動動畫幻燈片之間切換，都會發送 `autoanimate` 事件。
 
 ```javascript
-Reveal.on( 'autoanimate', event => {
+Reveal.on('autoanimate', (event) => {
   // event.fromSlide, event.toSlide
-} );
+});
 ```
 
 ## 範例：在程式碼區塊之間進行動畫
+
 我們支持在程式碼區塊之間進行動畫。確保程式碼區塊啟用了 `data-line-numbers`，並且全部都具有匹配的 `data-id` 值。
+
 ```html
 <section data-auto-animate>
   <pre data-id="code-animation"><code data-trim data-line-numbers>
@@ -200,6 +209,7 @@ Reveal.on( 'autoanimate', event => {
   </code></pre>
 </section>
 ```
+
 <div class="reveal reveal-example">
   <div class="slides">
     <section data-auto-animate>
@@ -233,11 +243,14 @@ Reveal.on( 'autoanimate', event => {
         let c = planets.reduce( circumferenceReducer, 0 )
       </code></pre>
     </section>
+
   </div>
 </div>
 
 ## 示例：在列表之間進行動畫
+
 我們單獨處裡每一個列表項目，讓你可以在不同項目之間進行動畫。
+
 ```html/2-4,10,12
 <section data-auto-animate>
   <ul>
@@ -249,7 +262,7 @@ Reveal.on( 'autoanimate', event => {
 <section data-auto-animate>
   <ul>
     <li>水星</li>
-   
+
 
  <li>地球</li>
     <li>木星</li>
@@ -258,6 +271,7 @@ Reveal.on( 'autoanimate', event => {
   </ul>
 </section>
 ```
+
 <div class="reveal reveal-example">
   <div class="slides">
     <section data-auto-animate>
@@ -280,6 +294,7 @@ Reveal.on( 'autoanimate', event => {
 </div>
 
 ## 進階：狀態屬性
+
 我們在有自動動畫的不同元素上添加了狀態屬性。如果你想進一步調整動畫行為，比如通過自定義 CSS，這些屬性可以被連接使用。
 
 在自動動畫開始之前，我們會在即將顯示的幻燈片 `<section>` 上添加 `data-auto-animate="pending"`。此時即將出現的幻燈片是可見的，所有動畫元素都已移至其起始位置。接下來我們切換到 `data-auto-animate="running"`，以表示元素開始朝其最終屬性進行動畫。

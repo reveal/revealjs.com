@@ -12,16 +12,14 @@ layout: default
 
 ```javascript
 Reveal.initialize({
-  touch: false
-})
+  touch: false,
+});
 ```
 
 如果您的內容中有部分需要保持對觸摸事件的可訪問性，您需要通過向元素添加 `data-prevent-swipe` 屬性來突出顯示這一點。一個常見的例子是需要滾動的元素。
 
 ```html
 <section>
-  <p data-prevent-swipe>
-    無法通過滑動此元素更改幻燈片。
-  </p>
+  <p data-prevent-swipe>無法通過滑動此元素更改幻燈片。</p>
 </section>
 ```

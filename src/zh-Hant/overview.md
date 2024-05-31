@@ -19,16 +19,21 @@ layout: default
 Reveal.toggleOverview();
 
 // 激活概覽模式
-Reveal.toggleOverview( true );
+Reveal.toggleOverview(true);
 
 // 停用概覽模式
-Reveal.toggleOverview( false );
+Reveal.toggleOverview(false);
 ```
 
 ## 事件
+
 當概覽模式被激活和停用時，我們會觸發事件。
 
 ```javascript
-Reveal.on( 'overviewshown', event => { /* ... */ } );
-Reveal.on( 'overviewhidden', event => { /* ... */ } );
+Reveal.on('overviewshown', (event) => {
+  /* ... */
+});
+Reveal.on('overviewhidden', (event) => {
+  /* ... */
+});
 ```

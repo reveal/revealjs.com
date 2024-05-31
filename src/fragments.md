@@ -17,6 +17,7 @@ The default fragment style is to start out invisible and fade in. This style can
 <p class="fragment fade-in-then-out">Fade in, then out</p>
 <p class="fragment fade-up">Slide up while fading in</p>
 ```
+
 <div class="reveal reveal-example">
   <div class="slides">
     <section>
@@ -29,26 +30,27 @@ The default fragment style is to start out invisible and fade in. This style can
   </div>
 </div>
 
-| Name                    | Effect     |
-| :-                      |:-          |
-| fade-out                | Start visible, fade out |
-| fade-up                 | Slide up while fading in |
-| fade-down               | Slide down while fading in |
-| fade-left               | Slide left while fading in |
-| fade-right              | Slide right while fading in |
-| fade-in-then-out        | Fades in, then out on the next step |
-| current-visible         | Fades in, then out on the next step |
-| fade-in-then-semi-out   | Fades in, then to 50% on the next step |
-| grow                    | Scale up |
-| semi-fade-out           | Fade out to 50% |
-| shrink                  | Scale down |
-| strike                  | Strike through |
-| highlight-red           | Turn text red |
-| highlight-green         | Turn text green |
-| highlight-blue          | Turn text blue |
-| highlight-current-red   | Turn text red, then back to original on next step |
+| Name                    | Effect                                              |
+| :---------------------- | :-------------------------------------------------- |
+| fade-out                | Start visible, fade out                             |
+| fade-up                 | Slide up while fading in                            |
+| fade-down               | Slide down while fading in                          |
+| fade-left               | Slide left while fading in                          |
+| fade-right              | Slide right while fading in                         |
+| fade-in-then-out        | Fades in, then out on the next step                 |
+| current-visible         | Fades in, then out on the next step                 |
+| fade-in-then-semi-out   | Fades in, then to 50% on the next step              |
+| grow                    | Scale up                                            |
+| semi-fade-out           | Fade out to 50%                                     |
+| shrink                  | Scale down                                          |
+| strike                  | Strike through                                      |
+| highlight-red           | Turn text red                                       |
+| highlight-green         | Turn text green                                     |
+| highlight-blue          | Turn text blue                                      |
+| highlight-current-red   | Turn text red, then back to original on next step   |
 | highlight-current-green | Turn text green, then back to original on next step |
-| highlight-current-blue  | Turn text blue, then back to original on next step |
+| highlight-current-blue  | Turn text blue, then back to original on next step  |
+
 {.key-value}
 
 ## Custom Fragments <span class="r-version-badge new">4.5.0</span>
@@ -72,6 +74,7 @@ For example, the following defines a fragment style where elements are initially
   <p class="fragment custom blur">Three</p>
 </section>
 ```
+
 <div class="reveal reveal-example">
   <div class="slides">
     <style>
@@ -100,7 +103,6 @@ If you want all elements to remain blurred except the current fragment, you can 
 }
 ```
 
-
 ## Nested Fragments
 
 Multiple fragments can be applied to the same element sequentially by wrapping it, this will fade in the text on the first step, turn it red on the second and fade out on the third.
@@ -108,12 +110,11 @@ Multiple fragments can be applied to the same element sequentially by wrapping i
 ```html
 <span class="fragment fade-in">
   <span class="fragment highlight-red">
-    <span class="fragment fade-out">
-      Fade in > Turn red > Fade out
-    </span>
+    <span class="fragment fade-out"> Fade in > Turn red > Fade out </span>
   </span>
 </span>
 ```
+
 <div class="reveal reveal-example">
   <div class="slides">
     <section>
@@ -137,6 +138,7 @@ By default fragments will be stepped through in the order that they appear in th
 <p class="fragment" data-fragment-index="1">Appears first</p>
 <p class="fragment" data-fragment-index="2">Appears second</p>
 ```
+
 <div class="reveal reveal-example">
   <div class="slides">
     <section>
@@ -152,10 +154,10 @@ By default fragments will be stepped through in the order that they appear in th
 When a fragment is either shown or hidden reveal.js will dispatch an event.
 
 ```javascript
-Reveal.on( 'fragmentshown', event => {
+Reveal.on('fragmentshown', (event) => {
   // event.fragment = the fragment DOM element
-} );
-Reveal.on( 'fragmenthidden', event => {
+});
+Reveal.on('fragmenthidden', (event) => {
   // event.fragment = the fragment DOM element
-} );
+});
 ```

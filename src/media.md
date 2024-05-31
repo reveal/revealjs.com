@@ -13,15 +13,18 @@ We provide convenient mechanics for autoplaying and lazy loading HTML media elem
 Add `data-autoplay` to your media element if you want it to automatically start playing when the slide is shown:
 
 ```html
-<video data-autoplay src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"></video>
+<video
+  data-autoplay
+  src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"
+></video>
 ```
 
 If you want to enable or disable autoplay globally, for all embedded media, you can use the `autoPlayMedia` configuration option. If you set this option to `true` ALL media will autoplay regardless of individual `data-autoplay` attributes. If you set it to `autoPlayMedia: false` NO media will autoplay.
 
 ```js
 Reveal.initialize({
-	autoPlayMedia: true
-})
+  autoPlayMedia: true,
+});
 ```
 
 Note that embedded HTML `<video>`/`<audio>` and YouTube/Vimeo iframes are automatically paused when you navigate away from a slide. This can be disabled by decorating your element with a `data-ignore` attribute.
@@ -59,7 +62,6 @@ You can override this behavior with the `data-preload` attribute. The iframe bel
 
 You can also change the default globally with the `preloadIframes` configuration option. If set to `true` ALL iframes with a `data-src` attribute will be preloaded when within the `viewDistance` regardless of individual `data-preload` attributes. If set to `false`, all iframes will only be loaded when they become visible.
 
-
 ## Iframes
 
 Using iframes is a convenient way to include content from external sources, like a YouTube video or Google Sheet. reveal.js automatically detects YouTube and Vimeo embed URLs and autoplays them when the slide becomes visible.
@@ -72,12 +74,11 @@ reveal.js automatically pushes two [post messages](https://developer.mozilla.org
 
 ```js
 // JavaScript inside of an iframe embedded within reveal.js
-window.addEventListener( 'message', event => {
-	if( event.data === 'slide:start' ) {
-		// The slide containing this iframe is visible
-	}
-	else if( event.data === 'slide:stop' ) {
-		// The slide containing this iframe is not visible
-	}
-} );
+window.addEventListener('message', (event) => {
+  if (event.data === 'slide:start') {
+    // The slide containing this iframe is visible
+  } else if (event.data === 'slide:stop') {
+    // The slide containing this iframe is not visible
+  }
+});
 ```

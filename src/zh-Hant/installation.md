@@ -7,6 +7,7 @@ layout: default
 # 安裝
 
 我們提供三種不同的安裝 reveal.js 的方式，取決於您的使用情況和技術經驗。
+
 1. [基本設置](#basic-setup) 是開始使用的最簡單方法。無需設置任何構建工具。
 1. [完整設置](#full-setup) 可讓您訪問更改 reveal.js 源代碼所需的構建工具。它包括一個網絡服務器，如果您想要加載外部 Markdown 文件則需要此服務器（基本設置配合您自選的本地網絡服務器也可以）。
 1. 如果您想在項目中使用 reveal.js 作為依賴項，您可以[從 npm 安裝](#installing-from-npm)。
@@ -32,16 +33,19 @@ layout: default
 1. 安裝 [Node.js](https://nodejs.org/) (10.0.0 或更高版本)
 
 1. 克隆 reveal.js 倉庫
+
    ```shell
    $ git clone https://github.com/hakimel/reveal.js.git
    ```
 
 1. 移動到 reveal.js 文件夾並安裝依賴
+
    ```shell
    $ cd reveal.js && npm install
    ```
 
 1. 提供簡報並監控源文件的更改
+
    ```shell
    $ npm start
    ```
@@ -49,7 +53,9 @@ layout: default
 1. 打開 <http://localhost:8000> 查看您的簡報
 
 ### 開發服務器端口
+
 開發服務器默認使用 8000 端口。您可以使用 `port` 參數切換到不同的端口：
+
 ```shell
 npm start -- --port=8001
 ```
@@ -65,20 +71,22 @@ yarn add reveal.js
 ```
 
 安裝後，您可以將 reveal.js 作為 ES 模塊導入：
+
 ```js
 import Reveal from 'reveal.js';
 import Markdown from 'reveal.js/plugin/markdown/markdown.esm.js';
 
 let deck = new Reveal({
-   plugins: [ Markdown ]
-})
+  plugins: [Markdown],
+});
 deck.initialize();
 ```
 
 您
 
 還需要包括 reveal.js 的樣式和一個[簡報主題](/themes/)。
+
 ```html
-<link rel="stylesheet" href="/node_modules/reveal.js/dist/reveal.css">
-<link rel="stylesheet" href="/node_modules/reveal.js/dist/theme/black.css">
+<link rel="stylesheet" href="/node_modules/reveal.js/dist/reveal.css" />
+<link rel="stylesheet" href="/node_modules/reveal.js/dist/theme/black.css" />
 ```

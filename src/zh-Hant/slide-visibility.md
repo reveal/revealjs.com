@@ -5,6 +5,7 @@ layout: default
 ---
 
 # 幻燈片可見性
+
 `data-visibility` 屬性可以用來隱藏幻燈片。它還可以用來在 reveal.js 的內部編號系統中標記幻燈片為“未計數”，這會影響可見的幻燈片編號和進度條。
 
 ## 隱藏的幻燈片 <span class="r-version-badge new">4.1.0</span>
@@ -16,6 +17,7 @@ layout: default
 <section data-visibility="hidden">幻燈片 2</section>
 <section>幻燈片 3</section>
 ```
+
 <div class="reveal reveal-example" data-config='{"slideNumber": "c/t"}'>
   <div class="slides">
     <section>幻燈片 1</section>
@@ -37,6 +39,7 @@ layout: default
 <section>幻燈片 2</section>
 <section data-visibility="uncounted">幻燈片 3</section>
 ```
+
 <div class="reveal reveal-example" data-config='{"slideNumber": "c/t", "progress": true}'>
   <div class="slides">
     <section>幻燈片 1</section>

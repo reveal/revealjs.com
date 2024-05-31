@@ -17,6 +17,7 @@ layout: default
 <p class="fragment fade-in-then-out">先淡入，然後淡出</p>
 <p class="fragment fade-up">向上滑動同時淡入</p>
 ```
+
 <div class="reveal reveal-example">
   <div class="slides">
     <section>
@@ -29,26 +30,27 @@ layout: default
   </div>
 </div>
 
-| 名稱                    | 效果     |
-| :-                      |:-          |
-| fade-out                | 開始可見，然後淡出 |
-| fade-up                 | 向上滑動同時淡入 |
-| fade-down               | 向下滑動同時淡入 |
-| fade-left               | 向左滑動同時淡入 |
-| fade-right              | 向右滑動同時淡入 |
-| fade-in-then-out        | 先淡入，然後在下一步淡出 |
-| current-visible         | 在下一步先淡入，然後淡出 |
-| fade-in-then-semi-out   | 先淡入，然後在下一步淡到50% |
-| grow                    | 放大 |
-| semi-fade-out           | 淡出到50% |
-| shrink                  | 縮小 |
-| strike                  | 中劃線 |
-| highlight-red           | 文本變紅 |
-| highlight-green         | 文本變綠 |
-| highlight-blue          | 文本變藍 |
+| 名稱                    | 效果                           |
+| :---------------------- | :----------------------------- |
+| fade-out                | 開始可見，然後淡出             |
+| fade-up                 | 向上滑動同時淡入               |
+| fade-down               | 向下滑動同時淡入               |
+| fade-left               | 向左滑動同時淡入               |
+| fade-right              | 向右滑動同時淡入               |
+| fade-in-then-out        | 先淡入，然後在下一步淡出       |
+| current-visible         | 在下一步先淡入，然後淡出       |
+| fade-in-then-semi-out   | 先淡入，然後在下一步淡到50%    |
+| grow                    | 放大                           |
+| semi-fade-out           | 淡出到50%                      |
+| shrink                  | 縮小                           |
+| strike                  | 中劃線                         |
+| highlight-red           | 文本變紅                       |
+| highlight-green         | 文本變綠                       |
+| highlight-blue          | 文本變藍                       |
 | highlight-current-red   | 文本變紅，然後在下一步恢復原樣 |
 | highlight-current-green | 文本變綠，然後在下一步恢復原樣 |
 | highlight-current-blue  | 文本變藍，然後在下一步恢復原樣 |
+
 {.key-value}
 
 ## 自定義片段 <span class="r-version-badge new">4.5.0</span>
@@ -72,6 +74,7 @@ layout: default
   <p class="fragment custom blur">三</p>
 </section>
 ```
+
 <div class="reveal reveal-example">
   <div class="slides">
     <style>
@@ -85,10 +88,10 @@ layout: default
     <section>
       <p class="fragment custom blur">一</p>
 
-
       <p class="fragment custom blur">二</p>
       <p class="fragment custom blur">三</p>
     </section>
+
   </div>
 </div>
 
@@ -102,7 +105,6 @@ layout: default
 }
 ```
 
-
 ## 嵌套片段
 
 可以通過包裝同一元素來順序應用多個片段，這將在第一步淡入文本，在第二步將其變紅，在第三步淡出。
@@ -110,12 +112,11 @@ layout: default
 ```html
 <span class="fragment fade-in">
   <span class="fragment highlight-red">
-    <span class="fragment fade-out">
-      淡入 > 變紅 > 淡出
-    </span>
+    <span class="fragment fade-out"> 淡入 > 變紅 > 淡出 </span>
   </span>
 </span>
 ```
+
 <div class="reveal reveal-example">
   <div class="slides">
     <section>
@@ -139,6 +140,7 @@ layout: default
 <p class="fragment" data-fragment-index="1">第一個出現</p>
 <p class="fragment" data-fragment-index="2">第二個出現</p>
 ```
+
 <div class="reveal reveal-example">
   <div class="slides">
     <section>
@@ -154,10 +156,10 @@ layout: default
 當片段被顯示或隱藏時，reveal.js 將發送事件。
 
 ```javascript
-Reveal.on( 'fragmentshown', event => {
+Reveal.on('fragmentshown', (event) => {
   // event.fragment = 片段 DOM 元素
-} );
-Reveal.on( 'fragmenthidden', event => {
+});
+Reveal.on('fragmenthidden', (event) => {
   // event.fragment = 片段 DOM 元素
-} );
+});
 ```

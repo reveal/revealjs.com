@@ -11,7 +11,7 @@ layout: default
 ```html
 <script src="plugin/math/math.js"></script>
 <script>
-  Reveal.initialize({ plugins: [ RevealMath.KaTeX ] });
+  Reveal.initialize({ plugins: [RevealMath.KaTeX] });
 </script>
 ```
 
@@ -22,13 +22,11 @@ layout: default
 ```html
 <section>
   <h2>洛倫茲方程</h2>
-  \[\begin{aligned}
-  \dot{x} &amp; = \sigma(y-x) \\
-  \dot{y} &amp; = \rho x - y - xz \\
-  \dot{z} &amp; = -\beta z + xy
-  \end{aligned} \]
+  \[\begin{aligned} \dot{x} &amp; = \sigma(y-x) \\ \dot{y} &amp; = \rho x - y -
+  xz \\ \dot{z} &amp; = -\beta z + xy \end{aligned} \]
 </section>
 ```
+
 <div class="reveal reveal-example">
   <div class="slides">
     <section>
@@ -43,22 +41,23 @@ layout: default
 </div>
 
 ## Markdown
+
 如果你想在Markdown寫的簡報中包含數學公式，你需要用反引號將公式包起來。這樣可以避免LaTeX和Markdown語法之間的衝突。例如：
 
 ```html
-<section data-markdown>
-  `$$ J(\theta_0,\theta_1) = \sum_{i=0} $$`
-</section>
+<section data-markdown>`$$ J(\theta_0,\theta_1) = \sum_{i=0} $$`</section>
 ```
 
 ## 排版庫
+
 數學插件提供了三種數學排版庫供你選擇用於渲染你的數學公式。每個變體都是獨立的插件，可以通過 `RevealMath.<Variant>` 訪問。如果你沒有特別偏好，我們建議使用KaTeX。
 
-| Library  | Plugin Name | Config Property
-| :-       | :-          | :-
-| [KaTeX](https://katex.org/)                             | RevealMath.KaTeX         | [katex](#katex-4.2.0)
-| [MathJax 2](https://docs.mathjax.org/en/v2.7-latest/)   | RevealMath.MathJax2      | [mathjax2](#mathjax-2)
-| [MathJax 3](https://www.mathjax.org/)                   | RevealMath.MathJax3      | [mathjax3](#mathjax-3-4.2.0)
+| Library                                               | Plugin Name         | Config Property              |
+| :---------------------------------------------------- | :------------------ | :--------------------------- |
+| [KaTeX](https://katex.org/)                           | RevealMath.KaTeX    | [katex](#katex-4.2.0)        |
+| [MathJax 2](https://docs.mathjax.org/en/v2.7-latest/) | RevealMath.MathJax2 | [mathjax2](#mathjax-2)       |
+| [MathJax 3](https://www.mathjax.org/)                 | RevealMath.MathJax3 | [mathjax3](#mathjax-3-4.2.0) |
+
 {.full-width}
 
 ### KaTeX <span class="r-version-badge new">4.2.0</span>
@@ -70,14 +69,14 @@ Reveal.initialize({
   katex: {
     version: 'latest',
     delimiters: [
-      {left: '$$', right: '$$', display: true},
-      {left: '$', right: '$', display: false},
-      {left: '\\(', right: '\\)', display: false},
-      {left: '\\[', right: '\\]', display: true}
-   ],
-   ignoredTags: ['script', 'noscript', 'style', 'textarea', 'pre']
- },
- plugins: [ RevealMath.KaTeX ]
+      { left: '$$', right: '$$', display: true },
+      { left: '$', right: '$', display: false },
+      { left: '\\(', right: '\\)', display: false },
+      { left: '\\[', right: '\\]', display: true },
+    ],
+    ignoredTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+  },
+  plugins: [RevealMath.KaTeX],
 });
 ```
 
@@ -92,7 +91,7 @@ Reveal.initialize({
   katex: {
     local: 'node_modules/katex',
   },
-  plugins: [ RevealMath.KaTeX ]
+  plugins: [RevealMath.KaTeX],
 });
 ```
 
@@ -107,11 +106,14 @@ Reveal.initialize({
     config: 'TeX-AMS_HTML-full',
     // pass other options into `MathJax.Hub.Config()`
     tex2jax: {
-      inlineMath: [ [ '$', '$' ], [ '\\(', '\\)' ] ],
-      skipTags: [ 'script', 'noscript', 'style', 'textarea', 'pre' ]
-    }
+      inlineMath: [
+        ['$', '$'],
+        ['\\(', '\\)'],
+      ],
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    },
   },
-  plugins: [ RevealMath.MathJax2 ]
+  plugins: [RevealMath.MathJax2],
 });
 ```
 
@@ -128,13 +130,16 @@ Reveal.initialize({
   mathjax3: {
     mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js',
     tex: {
-      inlineMath: [ [ '$', '$' ], [ '\\(', '\\)' ]  ]
+      inlineMath: [
+        ['$', '$'],
+        ['\\(', '\\)'],
+      ],
     },
     options: {
-      skipHtmlTags: [ 'script', 'noscript', 'style', 'textarea', 'pre' ]
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
     },
   },
-  plugins: [ RevealMath.MathJax3 ]
+  plugins: [RevealMath.MathJax3],
 });
 ```
 

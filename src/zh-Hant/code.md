@@ -23,6 +23,7 @@ reveal.js 有一個強大的功能，就是為程式碼添加顏色 — 由 [hig
   </code></pre>
 </section>
 ```
+
 <div class="reveal reveal-example">
   <div class="slides">
     <section>
@@ -38,14 +39,15 @@ reveal.js 有一個強大的功能，就是為程式碼添加顏色 — 由 [hig
 </div>
 
 ## 主題
+
 確保在你的文檔中包含了一個語法高亮主題。我們預設包含了 Monokai，它隨 reveal.js 儲存在 [plugin/highlight/monokai.css](https://github.com/hakimel/reveal.js/tree/master/plugin/highlight/monokai.css) 中。可用的主題完整列表可以在 <https://highlightjs.org/static/demo/> 上找到。
 
 ```html
-<link rel="stylesheet" href="plugin/highlight/monokai.css">
+<link rel="stylesheet" href="plugin/highlight/monokai.css" />
 <script src="plugin/highlight/highlight.js"></script>
 <script>
   Reveal.initialize({
-    plugins: [ RevealHighlight ]
+    plugins: [RevealHighlight],
   });
 </script>
 ```
@@ -70,6 +72,7 @@ reveal.js 有一個強大的功能，就是為程式碼添加顏色 — 由 [hig
 </table>
 </code></pre>
 ```
+
 <div class="reveal reveal-example">
   <div class="slides">
     <section>
@@ -92,11 +95,10 @@ reveal.js 有一個強大的功能，就是為程式碼添加顏色 — 由 [hig
 </div>
 
 #### 行號偏移 <span class="r-version-badge new">4.2.0</span>
+
 如果你想展示一長串代碼的片段，你可以偏移行號。在下面的示例中，我們設置 `data-ln-start-from="7"` 使行號從7開始。
 
 ```html
-
-
 <pre><code data-line-numbers data-ln-start-from="7">
 <tr>
   <td>Oranges</td>
@@ -105,6 +107,7 @@ reveal.js 有一個強大的功能，就是為程式碼添加顏色 — 由 [hig
 </tr>
 </code></pre>
 ```
+
 <div class="reveal reveal-example">
   <div class="slides">
     <section>
@@ -118,7 +121,6 @@ reveal.js 有一個強大的功能，就是為程式碼添加顏色 — 由 [hig
     </section>
   </div>
 </div>
-
 
 ## 分步高亮
 
@@ -145,6 +147,7 @@ reveal.js 有一個強大的功能，就是為程式碼添加顏色 — 由 [hig
 </table>
 </code></pre>
 ```
+
 <div class="reveal reveal-example">
   <div class="slides">
     <section>

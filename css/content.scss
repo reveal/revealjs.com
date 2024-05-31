@@ -2,342 +2,342 @@
 
 // documentation page
 .article {
-    h1,
-    h2,
-    h3,
-    h4 {
-        @apply font-semibold leading-tight mt-6 mb-2;
-    }
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-semibold leading-tight mt-6 mb-2;
+  }
 
-    h1 {
-        @apply text-3xl mb-4;
-    }
+  h1 {
+    @apply text-3xl mb-4;
+  }
 
-    h2 {
-        @apply text-2xl mb-3;
-    }
+  h2 {
+    @apply text-2xl mb-3;
+  }
 
-    h3 {
-        @apply text-xl mb-3;
-    }
+  h3 {
+    @apply text-xl mb-3;
+  }
 
-    h4 {
-        @apply text-lg mb-1;
-    }
+  h4 {
+    @apply text-lg mb-1;
+  }
 
-    h1:first-child {
-        @apply mt-0;
-    }
+  h1:first-child {
+    @apply mt-0;
+  }
 
-    // :'(
-    & > a,
-    a:not([class]) {
-        @apply text-pink-700 border-b border-pink-400 no-underline break-words;
+  // :'(
+  & > a,
+  a:not([class]) {
+    @apply text-pink-700 border-b border-pink-400 no-underline break-words;
 
-        &:hover {
-            @apply text-pink-900 border-pink-600;
-        }
+    &:hover {
+      @apply text-pink-900 border-pink-600;
     }
+  }
 
-    b,
-    strong {
-        font-weight: 600;
-    }
+  b,
+  strong {
+    font-weight: 600;
+  }
 
-    p,
-    ol,
-    ul,
-    picture {
-        @apply my-2;
-    }
+  p,
+  ol,
+  ul,
+  picture {
+    @apply my-2;
+  }
 
-    ol {
-        @apply pl-4 list-decimal;
-    }
+  ol {
+    @apply pl-4 list-decimal;
+  }
 
-    ul {
-        @apply pl-4 list-disc;
-    }
+  ul {
+    @apply pl-4 list-disc;
+  }
 
-    li {
-        @apply mb-2;
-    }
+  li {
+    @apply mb-2;
+  }
 
-    li p {
-        @apply inline-block my-0;
-    }
+  li p {
+    @apply inline-block my-0;
+  }
 
-    picture {
-        @apply -mx-4 rounded overflow-hidden block;
-    }
+  picture {
+    @apply -mx-4 rounded overflow-hidden block;
+  }
 
-    .r-version-badge {
-        @apply text-xs p-px text-gray-500 float-right;
-    }
-    .r-version-badge.new:before {
-        content: "Added in ";
-    }
-    .r-version-badge.coming:before {
-        content: "Coming in ";
-    }
-    .r-version-badge.deprecated:before {
-        content: "Deprecated in ";
-    }
+  .r-version-badge {
+    @apply text-xs p-px text-gray-500 float-right;
+  }
+  .r-version-badge.new:before {
+    content: 'Added in ';
+  }
+  .r-version-badge.coming:before {
+    content: 'Coming in ';
+  }
+  .r-version-badge.deprecated:before {
+    content: 'Deprecated in ';
+  }
 
-    .r-var-type {
-        @apply text-gray-700 ml-2 text-sm border p-px px-1 rounded-sm;
-    }
+  .r-var-type {
+    @apply text-gray-700 ml-2 text-sm border p-px px-1 rounded-sm;
+  }
 }
 
 // code blocks
 .article {
-    pre[class*="language-"] {
-        @apply mx-4 my-2 -mx-4 p-4;
-        font-size: 0.8125em;
-    }
+  pre[class*='language-'] {
+    @apply mx-4 my-2 -mx-4 p-4;
+    font-size: 0.8125em;
+  }
 
-    ol pre[class*="language-"],
-    li pre[class*="language-"] {
-        @apply -ml-8;
-    }
+  ol pre[class*='language-'],
+  li pre[class*='language-'] {
+    @apply -ml-8;
+  }
 
-    code:not([class*="language-"]):not(.hljs) {
-        @apply rounded bg-gray-200 text-pink-900 p-1 py-px leading-relaxed;
-    }
+  code:not([class*='language-']):not(.hljs) {
+    @apply rounded bg-gray-200 text-pink-900 p-1 py-px leading-relaxed;
+  }
 
-    pre mark {
-        background: transparent;
-        color: currentColor;
-    }
-    code:not(.hljs) .highlight-line {
-        opacity: 0.4;
-    }
-    code:not(.hljs) .highlight-line-active {
-        opacity: 1;
-    }
+  pre mark {
+    background: transparent;
+    color: currentColor;
+  }
+  code:not(.hljs) .highlight-line {
+    opacity: 0.4;
+  }
+  code:not(.hljs) .highlight-line-active {
+    opacity: 1;
+  }
 }
 
 .article > table {
-    display: block;
-    overflow: auto;
-    @apply m-4 -mx-4 border rounded text-base;
+  display: block;
+  overflow: auto;
+  @apply m-4 -mx-4 border rounded text-base;
 
-    th {
-        @apply p-4 align-top border-b font-medium;
-    }
+  th {
+    @apply p-4 align-top border-b font-medium;
+  }
 
-    td {
-        @apply p-4 align-top border-0;
-    }
+  td {
+    @apply p-4 align-top border-0;
+  }
 
-    tr {
-        background-color: #fff;
-    }
+  tr {
+    background-color: #fff;
+  }
 
-    tr:nth-child(2n) {
-        background-color: transparent;
-    }
+  tr:nth-child(2n) {
+    background-color: transparent;
+  }
 
-    &.full-width {
-        display: table;
-    }
+  &.full-width {
+    display: table;
+  }
 
-    &.nowrap-1st th:first-child,
-    &.nowrap-1st td:first-child,
-    &.nowrap-2nd th:nth-child(2),
-    &.nowrap-2nd td:nth-child(2),
-    &.key-value th:first-child,
-    &.key-value td:first-child,
-    &.toc th:first-child {
-        white-space: nowrap;
-    }
+  &.nowrap-1st th:first-child,
+  &.nowrap-1st td:first-child,
+  &.nowrap-2nd th:nth-child(2),
+  &.nowrap-2nd td:nth-child(2),
+  &.key-value th:first-child,
+  &.key-value td:first-child,
+  &.toc th:first-child {
+    white-space: nowrap;
+  }
 
-    &.key-value td:nth-child(2) {
-        width: 100%;
-    }
+  &.key-value td:nth-child(2) {
+    width: 100%;
+  }
 
-    &.toc td:nth-child(1) {
-        width: 100%;
-    }
+  &.toc td:nth-child(1) {
+    width: 100%;
+  }
 
-    &.toc strong {
-        @apply py-2;
-    }
+  &.toc strong {
+    @apply py-2;
+  }
 
-    &.hide-header th {
-        display: none;
-    }
+  &.hide-header th {
+    display: none;
+  }
 }
 
 .article > form,
 .article > iframe {
-    @apply my-4;
+  @apply my-4;
 }
 
 .article {
-    // An inline presentation
-    .reveal-example {
-        height: 300px;
-        box-sizing: content-box;
-        width: calc(100% + 32px);
-        @apply my-4 -mx-4 rounded border-t border-gray-700;
+  // An inline presentation
+  .reveal-example {
+    height: 300px;
+    box-sizing: content-box;
+    width: calc(100% + 32px);
+    @apply my-4 -mx-4 rounded border-t border-gray-700;
 
-        h1,
-        h2,
-        h3 {
-            margin-top: 0;
-            line-height: 1.25;
-        }
-
-        pre {
-            font-size: 28px;
-            width: 100%;
-        }
-
-        a {
-            @apply no-underline border-none;
-        }
+    h1,
+    h2,
+    h3 {
+      margin-top: 0;
+      line-height: 1.25;
     }
 
-    pre + .reveal-example {
-        @apply -mt-2 rounded-t-none;
+    pre {
+      font-size: 28px;
+      width: 100%;
     }
 
-    // Input/output (code/deck) wrapper
-    .reveal-example-wrapper pre[class*="language-"] {
-        @apply mb-0 rounded-b-none;
+    a {
+      @apply no-underline border-none;
     }
+  }
 
-    .reveal-example-wrapper .reveal-example {
-        @apply mt-0 rounded-t-none;
-    }
+  pre + .reveal-example {
+    @apply -mt-2 rounded-t-none;
+  }
 
-    .reveal-example.focused:before {
-        content: "";
-        @apply absolute block inset-0 border-2 border-pink-400 pointer-events-none rounded-b;
-    }
+  // Input/output (code/deck) wrapper
+  .reveal-example-wrapper pre[class*='language-'] {
+    @apply mb-0 rounded-b-none;
+  }
+
+  .reveal-example-wrapper .reveal-example {
+    @apply mt-0 rounded-t-none;
+  }
+
+  .reveal-example.focused:before {
+    content: '';
+    @apply absolute block inset-0 border-2 border-pink-400 pointer-events-none rounded-b;
+  }
 }
 .article .reveal h1 {
-    font-size: 2.5em;
+  font-size: 2.5em;
 }
 .article .reveal h2 {
-    font-size: 1.6em;
+  font-size: 1.6em;
 }
 .article .reveal h3 {
-    font-size: 1.3em;
+  font-size: 1.3em;
 }
 
 .anchorjs-link:after {
-    @apply text-gray-400;
+  @apply text-gray-400;
 }
 
 .extras .gumroad-button,
 .article .gumroad-button {
-    display: inline-block !important;
-    font-family: inherit !important;
-    background-image: none !important;
-    box-shadow: none !important;
-    @apply text-gray-900 bg-yellow-400 text-xl font-medium px-4 py-2 my-2 rounded #{!important};
+  display: inline-block !important;
+  font-family: inherit !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  @apply text-gray-900 bg-yellow-400 text-xl font-medium px-4 py-2 my-2 rounded #{!important};
 }
 .extras .gumroad-button:hover,
 .article .gumroad-button:hover {
-    transform: none !important;
+  transform: none !important;
 }
 .extras .gumroad-button-logo,
 .article .gumroad-button-logo,
 .extras .gumroad-button .logo-full,
 .article .gumroad-button .logo-full {
-    display: none !important;
+  display: none !important;
 }
 
 .buy-course {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    @apply my-8;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  @apply my-8;
 }
 .buy-course-thumb {
-    display: flex;
-    width: 33%;
-    max-width: 240px;
-    background: #111;
-    @apply rounded-l-lg;
+  display: flex;
+  width: 33%;
+  max-width: 240px;
+  background: #111;
+  @apply rounded-l-lg;
 }
 .buy-course-action {
-    display: flex;
-    flex-shrink: 0;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #fff;
-    @apply border border-l-0 border-r-0 p-4 pt-2 pl-10 pr-5;
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  @apply border border-l-0 border-r-0 p-4 pt-2 pl-10 pr-5;
 }
 .buy-course-price {
-    font-size: 3.5rem;
-    line-height: 1.2;
+  font-size: 3.5rem;
+  line-height: 1.2;
 }
 .buy-course-price sup {
-    font-size: 0.5em;
-    top: -0.7em;
+  font-size: 0.5em;
+  top: -0.7em;
 }
 .buy-course-price .old-price {
-    position: relative;
-    font-size: 0.7em;
-    color: #999;
-    vertical-align: middle;
+  position: relative;
+  font-size: 0.7em;
+  color: #999;
+  vertical-align: middle;
 }
 .buy-course-price .old-price:before {
-    content: "";
-    position: absolute;
-    background: #999;
-    display: block;
-    height: 3px;
-    left: -6px;
-    right: -6px;
-    top: 45%;
+  content: '';
+  position: absolute;
+  background: #999;
+  display: block;
+  height: 3px;
+  left: -6px;
+  right: -6px;
+  top: 45%;
 }
 .buy-course-data {
-    display: flex;
-    flex-shrink: 0;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #fff;
-    @apply border border-l-0 p-4 pr-10 pl-5 rounded-lg rounded-l-none;
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  @apply border border-l-0 p-4 pr-10 pl-5 rounded-lg rounded-l-none;
 }
 .buy-course-data ul {
-    list-style: none;
+  list-style: none;
 }
 .buy-course-data li:before {
-    content: "";
-    margin-right: 10px;
-    background-image: url("/images/icons/checkmark.svg");
-    background-size: contain;
-    display: inline-block;
-    width: 1em;
-    height: 1em;
+  content: '';
+  margin-right: 10px;
+  background-image: url('/images/icons/checkmark.svg');
+  background-size: contain;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
 }
 
 @media screen and (max-width: 700px) {
-    .buy-course-thumb {
-        display: none;
-    }
+  .buy-course-thumb {
+    display: none;
+  }
 
-    .buy-course-action {
-        @apply border-l rounded-l-lg;
-    }
+  .buy-course-action {
+    @apply border-l rounded-l-lg;
+  }
 }
 
 @media screen and (max-width: 480px) {
-    .buy-course {
-        flex-direction: column;
-    }
+  .buy-course {
+    flex-direction: column;
+  }
 
-    .buy-course-action {
-        @apply border border-b-0 rounded-t-lg rounded-b-none px-6;
-    }
+  .buy-course-action {
+    @apply border border-b-0 rounded-t-lg rounded-b-none px-6;
+  }
 
-    .buy-course-data {
-        @apply border border-t-0 rounded-b-lg rounded-t-none px-6;
-    }
+  .buy-course-data {
+    @apply border border-t-0 rounded-b-lg rounded-t-none px-6;
+  }
 }

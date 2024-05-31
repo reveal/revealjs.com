@@ -17,12 +17,12 @@ layout: default
 當 reveal.js 在一個 iframe 中運行時，它可以選擇將所有事件冒泡到父窗口。冒泡的事件是三個字段的字符串化 JSON：namespace, eventName 和 state。這是從父窗口訂閱它們的方法：
 
 ```javascript
-window.addEventListener( 'message', event => {
-  var data = JSON.parse( event.data );
-  if( data.namespace === 'reveal' && data.eventName === 'slidechanged' ) {
+window.addEventListener('message', (event) => {
+  var data = JSON.parse(event.data);
+  if (data.namespace === 'reveal' && data.eventName === 'slidechanged') {
     // 幻燈片已變更，查看 data.state 以獲得幻燈片號碼
   }
-} );
+});
 ```
 
 ## postMessage 回調

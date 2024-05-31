@@ -20,6 +20,7 @@ layout: default
   <h2>🍰</h2>
 </section>
 ```
+
 <div class="reveal reveal-example">
   <div class="slides">
     <section data-background-color="aquamarine">
@@ -43,6 +44,7 @@ layout: default
   <h2>🐳</h2>
 </section>
 ```
+
 <div class="reveal reveal-example">
   <div class="slides">
     <section data-background-gradient="linear-gradient(to bottom, #283b95, #17b2c3)">
@@ -58,20 +60,21 @@ layout: default
 
 預設情況下，背景圖片被調整大小以覆蓋整個頁面。可用選項包括：
 
-| 屬性 | 預設值 | 描述 |
-| :------------------------------- | :--------- | :---------- |
-| data-background-image            |            | 顯示的圖片的 URL。幻燈片開啟時，GIF 將重新開始。 |
-| data-background-size             | cover      | 參見 MDN 上的 [background-size](https://developer.mozilla.org/docs/Web/CSS/background-size)。 |
-| data-background-position         | center     | 參見 MDN 上的 [background-position](https://developer.mozilla.org/docs/Web/CSS/background-position)。 |
-| data-background-repeat           | no-repeat  | 參見 MDN 上的 [background-repeat](https://developer.mozilla.org/docs/Web/CSS/background-repeat)。 |
-| data-background-opacity          | 1          | 背景圖片的透明度，0-1 範圍。0 是透明的，1 是完全不透明的。 |
+| 屬性                     | 預設值    | 描述                                                                                                  |
+| :----------------------- | :-------- | :---------------------------------------------------------------------------------------------------- |
+| data-background-image    |           | 顯示的圖片的 URL。幻燈片開啟時，GIF 將重新開始。                                                      |
+| data-background-size     | cover     | 參見 MDN 上的 [background-size](https://developer.mozilla.org/docs/Web/CSS/background-size)。         |
+| data-background-position | center    | 參見 MDN 上的 [background-position](https://developer.mozilla.org/docs/Web/CSS/background-position)。 |
+| data-background-repeat   | no-repeat | 參見 MDN 上的 [background-repeat](https://developer.mozilla.org/docs/Web/CSS/background-repeat)。     |
+| data-background-opacity  | 1         | 背景圖片的透明度，0-1 範圍。0 是透明的，1 是完全不透明的。                                            |
+
 {.nowrap-1st}
 
 ```html/0,3-4
 <section data-background-image="http://example.com/image.png">
   <h2>Image</h2>
 </section>
-<section data-background-image="http://example.com/image.png" 
+<section data-background-image="http://example.com/image.png"
           data-background-size="100px" data-background-repeat="repeat">
   <h2>這張背景圖將被設置為100px並重複</h2>
 </section>
@@ -83,21 +86,23 @@ layout: default
 
 為幻燈片背景。
 
-| 屬性 | 預設值 | 描述 |
-| :---------------------------     | :------ | :---------- |
-| data-background-video            |         | 一個視頻源或逗號分隔的多個視頻源。 |
-| data-background-video-loop       | false   | 標記視頻是否應重複播放。 |
-| data-background-video-muted      | false   | 標記音頻是否應靜音。 |
-| data-background-size             | cover   | 使用 `cover` 全屏和部分裁剪，或 `contain` 以信箱格式顯示。 |
-| data-background-opacity          | 1       | 背景視頻的透明度，0-1 範圍。0 是透明的，1 是完全不透明的。 |
+| 屬性                        | 預設值 | 描述                                                       |
+| :-------------------------- | :----- | :--------------------------------------------------------- |
+| data-background-video       |        | 一個視頻源或逗號分隔的多個視頻源。                         |
+| data-background-video-loop  | false  | 標記視頻是否應重複播放。                                   |
+| data-background-video-muted | false  | 標記音頻是否應靜音。                                       |
+| data-background-size        | cover  | 使用 `cover` 全屏和部分裁剪，或 `contain` 以信箱格式顯示。 |
+| data-background-opacity     | 1      | 背景視頻的透明度，0-1 範圍。0 是透明的，1 是完全不透明的。 |
+
 {.nowrap-1st}
 
 ```html/0-1
-<section data-background-video="https://static.slid.es/site/homepage/v1/homepage-video-editor.mp4" 
+<section data-background-video="https://static.slid.es/site/homepage/v1/homepage-video-editor.mp4"
           data-background-video-loop data-background-video-muted>
   <h2>Video</h2>
 </section>
 ```
+
 <div class="reveal reveal-example">
   <div class="slides">
     <section data-background-video="https://static.slid.es/site/homepage/v1/homepage-video-editor.mp4" 
@@ -111,10 +116,11 @@ layout: default
 
 在幻燈片背景中嵌入一個網頁，覆蓋 100% 的 reveal.js 寬度和高度。iframe 位於背景層，位於你的幻燈片後面，因此默認情況下無法與之互動。若要使你的背景可互動，可以添加 `data-background-interactive` 屬性。
 
-| 屬性 | 預設值 | 描述 |
-| :- | :- | :-
-| data-background-iframe       |       | 要加載的 iframe 的 URL |
-| data-background-interactive  | false | 添加此屬性可以與 iframe 內容互動。啟用此功能將阻止與幻燈片內容的互動。 |
+| 屬性                        | 預設值 | 描述                                                                   |
+| :-------------------------- | :----- | :--------------------------------------------------------------------- |
+| data-background-iframe      |        | 要加載的 iframe 的 URL                                                 |
+| data-background-interactive | false  | 添加此屬性可以與 iframe 內容互動。啟用此功能將阻止與幻燈片內容的互動。 |
+
 {.nowrap-1st}
 
 ```html/0-1
@@ -129,7 +135,6 @@ iframe 會在變得可見時懶加載。如果你想提前預加載 iframe，你
 ## 背景過渡
 
 我們將使用交叉淡入來過渡幻燈片背景，這是預設設置。可以使用 [`backgroundTransition`](/transitions/#background-transitions) 配置選項更改此設置。
-
 
 ## 視差背景
 

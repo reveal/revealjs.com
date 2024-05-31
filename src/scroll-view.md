@@ -13,20 +13,23 @@ Slide decks are a great format for giving presentations, but scrollable web page
 The scroll view gives you the best of both worlds—without any extra effort. Present in the format best suited for presenting, share in the format best suited for consumption.
 
 ### What About Vertical Slides?
+
 The scroll view flattens your deck into a single linear flow. All slides will appear in the order they were authored and there is no diffentiation between horizontal and [vertical slides](/vertical-slides).
 
 ### Getting Started
 
 The scroll view is activated by initializing reveal.js with `view: "scroll"`. Here's a demo of it in action.
+
 ```js
 Reveal.initialize({
   // Activate the scroll view
   view: 'scroll',
 
   // Force the scrollbar to remain visible
-  scrollProgress: true
+  scrollProgress: true,
 });
 ```
+
 <div class="reveal reveal-example" data-config='{"view": "scroll", "scrollProgress": true}'>
   <div class="slides">
     <section>
@@ -55,6 +58,7 @@ Reveal.initialize({
 </div>
 
 ## URL Activation
+
 Want to enable scrolling for a deck without changing its config? Edit the URL and append `view=scroll` to the query string. For example, here's the main reveal.js demo in scroll view:  
 <https://revealjs.com/demo/?view=scroll>
 
@@ -63,9 +67,10 @@ Want to enable scrolling for a deck without changing its config? Edit the URL an
 The scroll view is great when browsing presentations on a mobile device. For that reason, we automatically enable the scroll view when the viewport reaches mobile widths.
 
 This is controlled through the `scrollActivationWidth` config value. If you want to disable the automatic scroll view initialize your presentation with that value set to `null` or `0`:
+
 ```js
 Reveal.initialize({
-  scrollActivationWidth: null
+  scrollActivationWidth: null,
 });
 ```
 
@@ -81,7 +86,7 @@ By default, the scrollbar is automatically hidden when you stop scrolling. This 
 // - auto:     Show the scrollbar while scrolling, hide while idle
 // - true:     Always show the scrollbar
 // - false:    Never show the scrollbar
-scrollProgress: 'auto'
+scrollProgress: 'auto';
 ```
 
 ## Scroll Snapping
@@ -90,14 +95,12 @@ When scrolling reveal.js will automatically snap to the closest slide. This was 
 
 If you prefer, you can change it to only snap when you're close to the top of a slide using `proximity`. You can also disable snapping altogether by setting `scrollSnap` to `false`.
 
-
 ```js
 // - false:      No snapping, scrolling is continuous
 // - proximity:  Snap when close to a slide
 // - mandatory:  Always snap to the closest slide
-scrollSnap: 'mandatory'
+scrollSnap: 'mandatory';
 ```
-
 
 ## Scroll Layout (experimental)
 
@@ -113,6 +116,7 @@ Reveal.initialize({
   scrollLayout: 'compact'
 });
 ```
+
 <div class="reveal reveal-example" data-config='{"view": "scroll", "width": 1000, "height": 300, "scrollLayout": "compact"}'>
   <div class="slides">
     <section>
@@ -138,6 +142,7 @@ Reveal.initialize({
   scrollLayout: 'full' // this is the default value
 });
 ```
+
 <div class="reveal reveal-example" data-config='{"view": "scroll", "width": 1000, "height": 300, "scrollLayout": "full"}'>
   <div class="slides">
     <section>

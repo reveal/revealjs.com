@@ -22,14 +22,15 @@ layout: default
 
 這是所有可用轉場樣式的完整列表。它們適用於幻燈片和幻燈片背景。
 
-| 名稱     | 效果
-| :-       | :-
-| none     | 瞬間切換背景
-| fade     | 交叉淡出 — *背景轉場的默認選擇*
-| slide    | 幻燈片之間滑動 — *幻燈片轉場的默認選擇*
-| convex   | 以凸角滑動
-| concave  | 以凹角滑動
-| zoom     | 放大進入的幻燈片，使其從屏幕中心向外成長
+| 名稱    | 效果                                     |
+| :------ | :--------------------------------------- |
+| none    | 瞬間切換背景                             |
+| fade    | 交叉淡出 — _背景轉場的默認選擇_          |
+| slide   | 幻燈片之間滑動 — _幻燈片轉場的默認選擇_  |
+| convex  | 以凸角滑動                               |
+| concave | 以凹角滑動                               |
+| zoom    | 放大進入的幻燈片，使其從屏幕中心向外成長 |
+
 {.key-value}
 
 ## 分離進出轉場
@@ -37,22 +38,13 @@ layout: default
 您還可以對同一幻燈片使用不同的進場和出場轉場，方法是在轉場名稱後附加 `-in` 或 `-out`。
 
 ```html
-<section data-transition="slide">
-    火車繼續前進……
-</section>
-<section data-transition="slide">
-    不斷前行……
-</section>
-<section data-transition="slide-in fade-out">
-    然後停下。
-</section>
-<section data-transition="fade-in slide-out">
-    （乘客進出）
-</section>
-<section data-transition="slide">
-    火車再次啟動。
-</section>
+<section data-transition="slide">火車繼續前進……</section>
+<section data-transition="slide">不斷前行……</section>
+<section data-transition="slide-in fade-out">然後停下。</section>
+<section data-transition="fade-in slide-out">（乘客進出）</section>
+<section data-transition="slide">火車再次啟動。</section>
 ```
+
 <div class="reveal reveal-example">
   <div class="slides">
     <section data-transition="slide">
@@ -76,9 +68,10 @@ layout: default
 ## 背景轉場
 
 我們預設使用交叉淡出來進行幻燈片背景之間的轉場。這可以在全局層面更改，或為特定幻燈片覆蓋。要更改所有幻燈片的背景轉場，請使用 `backgroundTransition` 配置選項。
+
 ```js
 Reveal.initialize({
-  backgroundTransition: 'slide'
+  backgroundTransition: 'slide',
 });
 ```
 
