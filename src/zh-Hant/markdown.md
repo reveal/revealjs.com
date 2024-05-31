@@ -20,6 +20,7 @@ layout: default
   </textarea>
 </section>
 ```
+
 <div class="reveal reveal-example">
   <div class="slides">
     <section data-markdown data-separator="---">
@@ -45,7 +46,7 @@ layout: default
 <script src="plugin/markdown/markdown.js"></script>
 <script>
   Reveal.initialize({
-    plugins: [ RevealMarkdown ]
+    plugins: [RevealMarkdown],
   });
 </script>
 ```
@@ -57,12 +58,14 @@ layout: default
 在本地使用時，此功能要求 reveal.js [從本地網絡服務器運行](/installation/#full-setup)。以下示例自定義了所有可用選項：
 
 ```html
-<section data-markdown="example.md"
-         data-separator="^\n\n\n"
-         data-separator-vertical="^\n\n"
-         data-separator-notes="^Note:"
-         data-charset="iso-8859-15">
-    <!--
+<section
+  data-markdown="example.md"
+  data-separator="^\n\n\n"
+  data-separator-vertical="^\n\n"
+  data-separator-notes="^Note:"
+  data-charset="iso-8859-15"
+>
+  <!--
         注意 Windows 使用 `\r\n` 而不是 `\n` 作為換行字符。
         為了支持所有操作系統的正則表達式，使用 `\r?\n` 而非 `\n`。
     -->
@@ -91,8 +94,8 @@ layout: default
 ```html
 <section data-markdown>
   <script type="text/template">
-  <!-- .slide: data-background="#ff0000" -->
-    Markdown 內容
+    <!-- .slide: data-background="#ff0000" -->
+      Markdown 內容
   </script>
 </section>
 ```
@@ -101,7 +104,7 @@ layout: default
 
 reveal.js 內置了強大的語法高亮功能。使用下面顯示的括號語法，您可以突出顯示個別行，甚至逐步進行多個獨立的高亮。[了解更多關於行高亮的信息](/code/#line-numbers-highlights)。
 
-```html
+````html
 <section data-markdown>
   <textarea data-template>
     ```js [1-2|3|4]
@@ -112,7 +115,8 @@ reveal.js 內置了強大的語法高亮功能。使用下面顯示的括號語�
     ```
   </textarea>
 </section>
-```
+````
+
 <div class="reveal reveal-example">
   <div class="slides">
     <section data-markdown>
@@ -132,7 +136,7 @@ reveal.js 內置了強大的語法高亮功能。使用下面顯示的括號語�
 
 您可以通過在高亮的開頭添加一個數字和冒號來添加[行號偏移](/code/#line-number-offset-4.2.0)。
 
-```html
+````html
 <section data-markdown>
   <textarea data-template>
     ```js [712: 1-2|3|4]
@@ -143,7 +147,8 @@ reveal.js 內置了強大的語法高亮功能。使用下面顯示的括號語�
     ```
   </textarea>
 </section>
-```
+````
+
 <div class="reveal reveal-example">
   <div class="slides">
     <section data-markdown>
@@ -159,7 +164,7 @@ reveal.js 內置了強大的語法高亮功能。使用下面顯示的括號語�
   </div>
 </div>
 
-## 配置 *marked*
+## 配置 _marked_
 
 我們使用 [marked](https://github.com/chjj/marked) 解析 Markdown。要自定義 marked 的渲染，您可以在[配置 Reveal](/config/)時傳入選項：
 
@@ -168,7 +173,7 @@ Reveal.initialize({
   // 傳入 marked 的選項
   // 見 https://marked.js.org/using_advanced#options
   markdown: {
-    smartypants: true
-  }
+    smartypants: true,
+  },
 });
 ```

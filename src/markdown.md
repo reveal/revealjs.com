@@ -20,6 +20,7 @@ It's possible and often times more convenient to write presentation content usin
   </textarea>
 </section>
 ```
+
 <div class="reveal reveal-example">
   <div class="slides">
     <section data-markdown data-separator="---">
@@ -45,24 +46,26 @@ This functionality is powered by the built-in Markdown plugin which in turn uses
 <script src="plugin/markdown/markdown.js"></script>
 <script>
   Reveal.initialize({
-    plugins: [ RevealMarkdown ]
+    plugins: [RevealMarkdown],
   });
 </script>
 ```
 
 ## External Markdown
 
-You can write your content as a separate file and have reveal.js load it at runtime. Note the separator arguments which determine how slides are delimited in the external file: the `data-separator` attribute defines a regular expression for horizontal slides (defaults to `^\r?\n---\r?\n$`, a newline-bounded horizontal rule)  and `data-separator-vertical` defines vertical slides (disabled by default). The `data-separator-notes` attribute is a regular expression for specifying the beginning of the current slide's speaker notes (defaults to `notes?:`, so it will match both "note:" and "notes:"). The `data-charset` attribute is optional and specifies which charset to use when loading the external file.
+You can write your content as a separate file and have reveal.js load it at runtime. Note the separator arguments which determine how slides are delimited in the external file: the `data-separator` attribute defines a regular expression for horizontal slides (defaults to `^\r?\n---\r?\n$`, a newline-bounded horizontal rule) and `data-separator-vertical` defines vertical slides (disabled by default). The `data-separator-notes` attribute is a regular expression for specifying the beginning of the current slide's speaker notes (defaults to `notes?:`, so it will match both "note:" and "notes:"). The `data-charset` attribute is optional and specifies which charset to use when loading the external file.
 
-When used locally, this feature requires that reveal.js [runs from a local web server](/installation/#full-setup).  The following example customizes all available options:
+When used locally, this feature requires that reveal.js [runs from a local web server](/installation/#full-setup). The following example customizes all available options:
 
 ```html
-<section data-markdown="example.md"
-         data-separator="^\n\n\n"
-         data-separator-vertical="^\n\n"
-         data-separator-notes="^Note:"
-         data-charset="iso-8859-15">
-    <!--
+<section
+  data-markdown="example.md"
+  data-separator="^\n\n\n"
+  data-separator-vertical="^\n\n"
+  data-separator-notes="^Note:"
+  data-charset="iso-8859-15"
+>
+  <!--
         Note that Windows uses `\r\n` instead of `\n` as its linefeed character.
         For a regex that supports all operating systems, use `\r?\n` instead of `\n`.
     -->
@@ -89,8 +92,8 @@ Special syntax (through HTML comments) is available for adding attributes to the
 ```html
 <section data-markdown>
   <script type="text/template">
-  <!-- .slide: data-background="#ff0000" -->
-    Markdown content
+    <!-- .slide: data-background="#ff0000" -->
+      Markdown content
   </script>
 </section>
 ```
@@ -99,7 +102,7 @@ Special syntax (through HTML comments) is available for adding attributes to the
 
 Powerful syntax highlighting features are built into reveal.js. Using the bracket syntax shown below, you can highlight individual lines and even walk through multiple separate highlights step-by-step. [Learn more about line highlights](/code/#line-numbers-highlights).
 
-```html
+````html
 <section data-markdown>
   <textarea data-template>
     ```js [1-2|3|4]
@@ -110,7 +113,8 @@ Powerful syntax highlighting features are built into reveal.js. Using the bracke
     ```
   </textarea>
 </section>
-```
+````
+
 <div class="reveal reveal-example">
   <div class="slides">
     <section data-markdown>
@@ -130,7 +134,7 @@ Powerful syntax highlighting features are built into reveal.js. Using the bracke
 
 You can add a [line number offset](/code/#line-number-offset-4.2.0) by adding a number and a colon at the beginning of your highlights.
 
-```html
+````html
 <section data-markdown>
   <textarea data-template>
     ```js [712: 1-2|3|4]
@@ -141,7 +145,8 @@ You can add a [line number offset](/code/#line-number-offset-4.2.0) by adding a 
     ```
   </textarea>
 </section>
-```
+````
+
 <div class="reveal reveal-example">
   <div class="slides">
     <section data-markdown>
@@ -157,7 +162,7 @@ You can add a [line number offset](/code/#line-number-offset-4.2.0) by adding a 
   </div>
 </div>
 
-## Configuring *marked*
+## Configuring _marked_
 
 We use [marked](https://github.com/chjj/marked) to parse Markdown. To customize marked's rendering, you can pass in options when [configuring Reveal](/config/):
 
@@ -166,7 +171,7 @@ Reveal.initialize({
   // Options which are passed into marked
   // See https://marked.js.org/using_advanced#options
   markdown: {
-    smartypants: true
-  }
+    smartypants: true,
+  },
 });
 ```

@@ -13,20 +13,23 @@ layout: default
 滾動視圖讓您兼得兩者之長——而不需額外努力。以最適合演示的格式進行演示，以最適合消費的格式進行分享。
 
 ### 垂直幻燈片怎麼辦？
+
 滾動視圖將您的套件扁平化為單一線性流程。所有幻燈片將按照其創建順序顯示，不會區分水平和[垂直幻燈片](/vertical-slides)。
 
 ### 入門
 
 滾動視圖通過初始化 reveal.js 並設置 `view: "scroll"` 來激活。這裡有一個實際操作的示範。
+
 ```js
 Reveal.initialize({
   // 激活滾動視圖
   view: 'scroll',
 
   // 強制滾動條始終可見
-  scrollProgress: true
+  scrollProgress: true,
 });
 ```
+
 <div class="reveal reveal-example" data-config='{"view": "scroll", "scrollProgress": true}'>
   <div class="slides">
     <section>
@@ -54,6 +57,7 @@ Reveal.initialize({
 </div>
 
 ## URL 激活
+
 想要為一套幻燈片啟用滾動視圖而不改變其配置？編輯 URL 並添加 `view=scroll` 到查詢字符串。例如，這裡是 reveal.js 主演示在滾動視圖中的效果：  
 <https://revealjs.com/demo/?view=scroll>
 
@@ -64,9 +68,10 @@ Reveal.initialize({
 這是通過 `scrollActivationWidth` 配置值控制的。如果您想要禁用自動滾動視圖，初始化您的
 
 演示文稿時將該值設為 `null` 或 `0`:
+
 ```js
 Reveal.initialize({
-  scrollActivationWidth: null
+  scrollActivationWidth: null,
 });
 ```
 
@@ -82,7 +87,7 @@ Reveal.initialize({
 // - auto:     滾動時顯示滾動條，閒置時隱藏
 // - true:     始終顯示滾動條
 // - false:    永不顯示滾動條
-scrollProgress: 'auto'
+scrollProgress: 'auto';
 ```
 
 ## 滾動捕捉
@@ -91,14 +96,12 @@ scrollProgress: 'auto'
 
 如果您喜歡，您可以將其更改為只在靠近幻燈片頂部時捕捉，使用 `proximity`。您也可以通過設置 `scrollSnap` 為 `false` 完全禁用捕捉。
 
-
 ```js
 // - false:      無捕捉，滾動連續
 // - proximity:  靠近幻燈片時捕捉
 // - mandatory:  始終捕捉到最接近的幻燈片
-scrollSnap: 'mandatory'
+scrollSnap: 'mandatory';
 ```
-
 
 ## 滾動布局 (實驗性)
 
@@ -111,9 +114,10 @@ scrollSnap: 'mandatory'
 ```js
 Reveal.initialize({
   view: 'scroll',
-  scrollLayout: 'compact'
+  scrollLayout: 'compact',
 });
 ```
+
 <div class="reveal reveal-example" data-config='{"view": "scroll", "width": 1000, "height": 300, "scrollLayout": "compact"}'>
   <div class="slides">
     <section>
@@ -129,7 +133,8 @@ Reveal.initialize({
       <h2>
 
 幻燈片四</h2>
-    </section>
+</section>
+
   </div>
 </div>
 
@@ -138,9 +143,10 @@ Reveal.initialize({
 ```js
 Reveal.initialize({
   view: 'scroll',
-  scrollLayout: 'full' // 這是默認值
+  scrollLayout: 'full', // 這是默認值
 });
 ```
+
 <div class="reveal reveal-example" data-config='{"view": "scroll", "width": 1000, "height: 300, "scrollLayout": "full"}'>
   <div class="slides">
     <section>

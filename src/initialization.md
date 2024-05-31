@@ -9,6 +9,7 @@ layout: default
 The most common reveal.js use case is to have a single presentation which covers the full viewport. As of 4.0 we also support running [multiple presentations](#multiple-presentations) in parallel on the same page as well as including the library as an [ES module](#es-module).
 
 If you only have a single presentation on the page we recommend initializing reveal.js using the global `Reveal` object. The `Reveal.initialize` method accepts one argument; a reveal.js [config object](/config/).
+
 ```html
 <script src="dist/reveal.js"></script>
 <script>
@@ -17,10 +18,11 @@ If you only have a single presentation on the page we recommend initializing rev
 ```
 
 The `initialize` method returns a promise which will resolve as soon as the presentation is ready and can be interacted with via the API.
+
 ```js
-Reveal.initialize().then( () => {
+Reveal.initialize().then(() => {
   // reveal.js is ready
-} )
+});
 ```
 
 ## Multiple Presentations <span class="r-version-badge new">4.0.0</span> {id="multiple-presentations"}
@@ -37,15 +39,15 @@ By default reveal.js will capture all keyboard events in the document. For embed
 
 <script src="dist/reveal.js"></script>
 <script>
-  let deck1 = new Reveal( document.querySelector( '.deck1' ), {
+  let deck1 = new Reveal(document.querySelector('.deck1'), {
     embedded: true,
-    keyboardCondition: 'focused' // only react to keys when focused
-  } );
+    keyboardCondition: 'focused', // only react to keys when focused
+  });
   deck1.initialize();
 
-  let deck2 = new Reveal( document.querySelector( '.deck2' ), {
-    embedded: true
-  } );
+  let deck2 = new Reveal(document.querySelector('.deck2'), {
+    embedded: true,
+  });
   deck2.initialize();
 </script>
 ```
@@ -63,12 +65,13 @@ Here's how to import and initialize the ES module version of reveal.js as well a
   import Reveal from 'dist/reveal.esm.js';
   import Markdown from 'plugin/markdown/markdown.esm.js';
   Reveal.initialize({
-    plugins: [ Markdown ]
+    plugins: [Markdown],
   });
 </script>
 ```
 
 If you're [installing reveal.js from npm](/installation/#installing-from-npm) and bundling it you should be able to use:
+
 ```js
 import Reveal from 'reveal.js';
 Reveal.initialize();

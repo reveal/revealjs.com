@@ -13,15 +13,18 @@ layout: default
 如果你希望媒體元素在幻燈片顯示時自動開始播放，請添加`data-autoplay`：
 
 ```html
-<video data-autoplay src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"></video>
+<video
+  data-autoplay
+  src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"
+></video>
 ```
 
 如果你想要全局啟用或禁用所有嵌入媒體的自動播放，可以使用`autoPlayMedia`配置選項。如果將此選項設置為`true`，所有媒體將無視個別的`data-autoplay`屬性而自動播放。如果設置為`autoPlayMedia: false`，則沒有媒體將自動播放。
 
 ```js
 Reveal.initialize({
-	autoPlayMedia: true
-})
+  autoPlayMedia: true,
+});
 ```
 
 請注意，嵌入的HTML `<video>`/`<audio>`和YouTube/Vimeo iframe在你離開幻燈片時會自動暫停。可以通過為你的元素添加一個`data-ignore`屬性來禁用此功能。

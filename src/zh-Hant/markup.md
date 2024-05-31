@@ -7,11 +7,12 @@ layout: default
 # 標記
 
 這是一個完全運作的 reveal.js 簡報的基本示例：
+
 ```html
 <html>
   <head>
-    <link rel="stylesheet" href="dist/reveal.css">
-    <link rel="stylesheet" href="dist/theme/white.css">
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/white.css" />
   </head>
   <body>
     <div class="reveal">
@@ -43,6 +44,7 @@ layout: default
   </div>
 </div>
 ```
+
 <div class="reveal reveal-example">
   <div class="slides">
     <section>水平幻燈片</section>
@@ -56,6 +58,7 @@ layout: default
 同樣可以使用 [Markdown](/markdown/) 編寫簡報。
 
 ## 視口
+
 reveal.js 的視口是確定簡報在網頁上的大小的包裝器 DOM 元素。默認情況下，這將是 `body` 元素。如果您在同一頁面上包含多個簡報，每個簡報的 `.reveal` 元素將作為它們的視口。
 
 視口在 reveal.js 初始化時始終帶有 `reveal-viewport` 類。
@@ -78,7 +81,7 @@ reveal.js 的視口是確定簡報在網頁上的大小的包裝器 DOM 元素�
 您還可以通過 JavaScript 監聽這些狀態變化：
 
 ```javascript
-Reveal.on( 'make-it-pop', () => {
+Reveal.on('make-it-pop', () => {
   console.log('✨');
-} );
+});
 ```

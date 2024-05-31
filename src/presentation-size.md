@@ -24,15 +24,16 @@ Reveal.initialize({
 
   // Bounds for smallest/largest possible scale to apply to content
   minScale: 0.2,
-  maxScale: 2.0
+  maxScale: 2.0,
 });
 ```
 
 ## Center
 
 Slides are vertically centered on the screen based on how much content they contain. To disable this and leave slides fixed at their configured height set `center` to `false`.
+
 ```js
-Reveal.initialize({ center: false })
+Reveal.initialize({ center: false });
 ```
 
 ## Embedded
@@ -40,14 +41,14 @@ Reveal.initialize({ center: false })
 By default, reveal.js will assume that it should cover the full browser viewport. If you want to embed your presentation within a smaller portion of a web page, or show [multiple presentations](/initialization/#multiple-presentations) on the same page, you can use the `embedded` [config option](/config/).
 
 ```js
-Reveal.initialize({ embedded: false })
+Reveal.initialize({ embedded: false });
 ```
 
 An embedded presentation will base its size on the dimensions of its `.reveal` root. If the size of that element changes from a source other than the window `resize` event, you can call `Reveal.layout()` to manually trigger a layout update.
 
 ```js
 // Change the size of our presentation
-document.querySelector( '.reveal' ).style.width = '50vw';
+document.querySelector('.reveal').style.width = '50vw';
 
 // Make reveal.js aware of the size change
 Reveal.layout();
@@ -59,6 +60,6 @@ If you want disable the built-in scaling and centering and Bring Your Own Layout
 
 ```javascript
 Reveal.initialize({
-  disableLayout: false
+  disableLayout: false,
 });
 ```

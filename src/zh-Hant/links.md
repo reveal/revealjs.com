@@ -20,6 +20,7 @@ layout: default
 	<a href="#/0">回到第一張</a>
 </section>
 ```
+
 <div class="reveal reveal-example" data-config='{"respondToHashChanges": true}'>
   <div class="slides">
     <section>

@@ -7,6 +7,7 @@ layout: default
 # React 框架
 
 有幾種不同的方式可以將 Reveal.js 添加到 React 項目中。
+
 1. [通過 npm 安裝並設置 Reveal.js](#installing-from-npm)
 2. [使用第三方套件](#third-party-packages)
 
@@ -33,9 +34,9 @@ npm i --save-dev @types/reveal.js
 你將需要以下導入：
 
 ```ts
-import Reveal from "reveal.js";
-import "reveal.js/dist/reveal.css";
-import "reveal.js/dist/theme/black.css"; // "black" 主題只是一個例子
+import Reveal from 'reveal.js';
+import 'reveal.js/dist/reveal.css';
+import 'reveal.js/dist/theme/black.css'; // "black" 主題只是一個例子
 ```
 
 #### 初始化

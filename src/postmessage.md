@@ -17,12 +17,12 @@ The framework has a built-in postMessage API that can be used when communicating
 When reveal.js runs inside of an iframe it can optionally bubble all of its events to the parent. Bubbled events are stringified JSON with three fields: namespace, eventName and state. Here's how you subscribe to them from the parent window:
 
 ```javascript
-window.addEventListener( 'message', event => {
-  var data = JSON.parse( event.data );
-  if( data.namespace === 'reveal' && data.eventName === 'slidechanged' ) {
+window.addEventListener('message', (event) => {
+  var data = JSON.parse(event.data);
+  if (data.namespace === 'reveal' && data.eventName === 'slidechanged') {
     // Slide changed, see data.state for slide number
   }
-} );
+});
 ```
 
 ## postMessage Callbacks

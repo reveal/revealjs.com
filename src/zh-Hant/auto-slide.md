@@ -12,9 +12,10 @@ layout: default
 // 每五秒自動切換一張幻燈片
 Reveal.initialize({
   autoSlide: 5000,
-  loop: true
+  loop: true,
 });
 ```
+
 <div class="reveal reveal-example" data-config='{"autoSlide": 5000, "loop": true}'>
   <div class="slides">
     <section>幻燈片 1</section>
@@ -47,14 +48,19 @@ Reveal.initialize({
 
 ```js
 Reveal.configure({
-	autoSlideMethod: () => Reveal.right()
+  autoSlideMethod: () => Reveal.right(),
 });
 ```
 
 ## 事件
+
 每當自動播放被暫停或恢復時，都會觸發事件。
 
 ```javascript
-Reveal.on( 'autoslideresumed', event => { /* ... */ } );
-Reveal.on( 'autoslidepaused', event => { /* ... */ } );
+Reveal.on('autoslideresumed', (event) => {
+  /* ... */
+});
+Reveal.on('autoslidepaused', (event) => {
+  /* ... */
+});
 ```

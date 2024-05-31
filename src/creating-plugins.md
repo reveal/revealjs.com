@@ -12,27 +12,27 @@ We provide a lightweight specification and API for plugins. This is used by our 
 
 Plugins are objects that contain the following properties.
 
-| Property    | Value
-| :-          | :-
-| id <span class="r-var-type">String</span>     | The plugins unique ID. This can be used to retrieve the plugin instance via `Reveal.getPlugin(<id>)`.
-| init <span class="r-var-type">Function</span>      | An optional function that is called when the plugin should run. It's invoked with one argument; a reference to the [presentation instance](/api/) that the plugin was registered with.<br><br>The init function can optionally return a [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). If a Promise is returned, reveal.js will wait for it to resolve before the presentation finishes initialization and fires the [ready event](/events/#ready).
-| destroy <span class="r-var-type">Function</span>      | Optional function that is called when the reveal.js instance that this plugin is registered to is uninitialized.
+| Property                                         | Value                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| :----------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| id <span class="r-var-type">String</span>        | The plugins unique ID. This can be used to retrieve the plugin instance via `Reveal.getPlugin(<id>)`.                                                                                                                                                                                                                                                                                                                                                                                                     |
+| init <span class="r-var-type">Function</span>    | An optional function that is called when the plugin should run. It's invoked with one argument; a reference to the [presentation instance](/api/) that the plugin was registered with.<br><br>The init function can optionally return a [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). If a Promise is returned, reveal.js will wait for it to resolve before the presentation finishes initialization and fires the [ready event](/events/#ready). |
+| destroy <span class="r-var-type">Function</span> | Optional function that is called when the reveal.js instance that this plugin is registered to is uninitialized.                                                                                                                                                                                                                                                                                                                                                                                          |
+
 {.key-value}
 
 Here's an example plugin which shuffles all slides in a presentation when the T key is pressed. Note that we export a function that returns a new plugin object. This is done because there may be [multiple presentation instances on the same page](/initialization/#multiple-presentations), and each should have their own instance of our plugin.
-
 
 ```js
 // toaster.js
 export default () => ({
   id: 'toaster',
-  init: ( deck ) => {
-    deck.addKeyBinding( { keyCode: 84, key: 'T' }, () => {
+  init: (deck) => {
+    deck.addKeyBinding({ keyCode: 84, key: 'T' }, () => {
       deck.shuffle();
       console.log('🍻');
-    } );
-  }
-})
+    });
+  },
+});
 ```
 
 ## Registering a Plugin
@@ -44,22 +44,23 @@ import Reveal from 'dist/reveal.esm.js';
 import Toaster from 'toaster.js';
 
 Reveal.initialize({
-  plugins: [ Toaster ]
+  plugins: [Toaster],
 });
 ```
 
 ### Async Plugins
+
 If your plugin needs to run asynchronous code before reveal.js finishes initializing it can return a Promise. Here's an example plugin that will delay initialization for three seconds.
 
 ```js
 let WaitForIt = {
-  id: "wait-for-it",
-  init: deck => {
-    return new Promise( resolve => setTimeout( resolve, 3000 ) )
-  }
-}
+  id: 'wait-for-it',
+  init: (deck) => {
+    return new Promise((resolve) => setTimeout(resolve, 3000));
+  },
+};
 
-Reveal.initialize({ plugins: [ WaitForIt ] }).then( () => {
-  console.log( "Three seconds later..." );
-} )
+Reveal.initialize({ plugins: [WaitForIt] }).then(() => {
+  console.log('Three seconds later...');
+});
 ```

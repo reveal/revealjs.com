@@ -18,11 +18,12 @@ layout: default
 
 這裡有一些不同輸入及其導航結果的範例。
 
-| 輸入          | 結果
-| :-             | :-
-| 5              | 導航到幻燈片編號 5
-| 6/2            | 導航到水平幻燈片 6，垂直幻燈片 2
-| the-end        | 導航到具有此 id 的幻燈片（`<section id="the-end">`）
+| 輸入    | 結果                                                 |
+| :------ | :--------------------------------------------------- |
+| 5       | 導航到幻燈片編號 5                                   |
+| 6/2     | 導航到水平幻燈片 6，垂直幻燈片 2                     |
+| the-end | 導航到具有此 id 的幻燈片（`<section id="the-end">`） |
+
 {.key-value}
 
 ## 禁用跳轉到幻燈片
@@ -31,6 +32,6 @@ layout: default
 
 ```javascript
 Reveal.initialize({
-  jumpToSlide: false
-})
+  jumpToSlide: false,
+});
 ```

@@ -43,11 +43,13 @@ Reveal.configure({ showNotes: 'separate-page' });
 ## 頁面大小
 
 導出尺寸是從配置的[簡報大小](/presentation-size/)中推斷出來的。如果幻燈片過高無法放在單一頁面內，它將擴展到多個頁面。你可以使用 `pdfMaxPagesPerSlide` 配置選項來限制一個幻燈片可能擴展到的頁面數量。例如，要確保沒有任何幻燈片超過一頁，你可以將它設置為 1。
+
 ```js
-Reveal.configure({ pdfMaxPagesPerSlide: 1 })
+Reveal.configure({ pdfMaxPagesPerSlide: 1 });
 ```
 
 ## 分段的單獨頁面
+
 [分段](/fragments/) 默認在單獨的幻燈片上列印。這意味著，如果你有一個包含三個分段步驟的幻燈片，它將生成三個單獨的幻燈片，其中的分段會逐步顯示。
 
 如果你喜歡在同一幻燈片上列印所有可見狀態的分段，你可以使用 `pdfSeparateFragments` 配置選項。

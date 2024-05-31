@@ -16,11 +16,27 @@ layout: default
 
 ```html
 <div class="r-stack">
-  <img class="fragment" src="https://picsum.photos/450/300" width="450" height="300">
-  <img class="fragment" src="https://picsum.photos/300/450" width="300" height="450">
-  <img class="fragment" src="https://picsum.photos/400/400" width="400" height="400">
+  <img
+    class="fragment"
+    src="https://picsum.photos/450/300"
+    width="450"
+    height="300"
+  />
+  <img
+    class="fragment"
+    src="https://picsum.photos/300/450"
+    width="300"
+    height="450"
+  />
+  <img
+    class="fragment"
+    src="https://picsum.photos/400/400"
+    width="400"
+    height="400"
+  />
 </div>
 ```
+
 <div class="reveal reveal-example">
   <div class="slides">
     <section>
@@ -37,11 +53,29 @@ layout: default
 
 ```html
 <div class="r-stack">
-  <img class="fragment fade-out" data-fragment-index="0" src="https://picsum.photos/450/300" width="450" height="300">
-  <img class="fragment current-visible" data-fragment-index="0" src="https://picsum.photos/300/450" width="300" height="450">
-  <img class="fragment" src="https://picsum.photos/400/400" width="400" height="400">
+  <img
+    class="fragment fade-out"
+    data-fragment-index="0"
+    src="https://picsum.photos/450/300"
+    width="450"
+    height="300"
+  />
+  <img
+    class="fragment current-visible"
+    data-fragment-index="0"
+    src="https://picsum.photos/300/450"
+    width="300"
+    height="450"
+  />
+  <img
+    class="fragment"
+    src="https://picsum.photos/400/400"
+    width="400"
+    height="400"
+  />
 </div>
 ```
+
 <div class="reveal reveal-example">
   <div class="slides">
     <section>
@@ -61,6 +95,7 @@ layout: default
 ```html
 <h2 class="r-fit-text">大</h2>
 ```
+
 <div class="reveal reveal-example">
   <div class="slides">
     <section>
@@ -73,6 +108,7 @@ layout: default
 <h2 class="r-fit-text">適應文字</h2>
 <h2 class="r-fit-text">可用於多個標題</h2>
 ```
+
 <div class="reveal reveal-example">
   <div class="slides">
     <section>
@@ -84,16 +120,16 @@ layout: default
 
 >
 
-
 ## 拉伸
 
 `r-stretch` 布局輔助讓您可以調整元素（如圖片或視頻）的大小，以覆蓋幻燈片中剩餘的垂直空間。例如，在下面的例子中，我們的幻燈片包含一個**標題**、一個**圖片**和一個**作者行**。因為**圖片**具有 `.r-stretch` 類，其高度設置為幻燈片高度減去**標題**和**作者行**的組合高度。
 
 ```html
 <h2>拉伸範例</h2>
-<img class="r-stretch" src="/images/slides-symbol-512x512.png">
+<img class="r-stretch" src="/images/slides-symbol-512x512.png" />
 <p>圖片說明</p>
 ```
+
 <div class="reveal reveal-example">
   <div class="slides">
     <section>
@@ -105,20 +141,21 @@ layout: default
 </div>
 
 #### 拉伸限制
+
 - 只有幻燈片部分的直接後代才可以拉伸
 - 每個幻燈片部分只能拉伸一個後代
-
 
 ## 框架
 
 用 `r-frame` 裝飾任何元素，使其在背景中脫穎而出。如果被框架的元素放置在錨點內，我們將對邊框應用懸停效果。
 
 ```html
-<img src="logo.svg" width="200">
+<img src="logo.svg" width="200" />
 <a href="#">
-  <img class="r-frame" src="logo.svg" width="200">
+  <img class="r-frame" src="logo.svg" width="200" />
 </a>
 ```
+
 <div class="reveal reveal-example">
   <div class="slides">
     <section>

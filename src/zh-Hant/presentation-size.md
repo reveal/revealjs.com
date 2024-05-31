@@ -22,15 +22,16 @@ Reveal.initialize({
 
   // 應用於內容的最小/最大可能縮放範圍
   minScale: 0.2,
-  maxScale: 2.0
+  maxScale: 2.0,
 });
 ```
 
 ## 置中
 
 幻燈片基於它們包含的內容量在螢幕上垂直置中。若要禁用此功能並保持幻燈片在配置的高度固定，請將 `center` 設置為 `false`。
+
 ```js
-Reveal.initialize({ center: false })
+Reveal.initialize({ center: false });
 ```
 
 ## 嵌入式
@@ -38,14 +39,14 @@ Reveal.initialize({ center: false })
 默認情況下，reveal.js 將假設其應覆蓋整個瀏覽器視窗。如果您想在網頁的一個較小部分嵌入您的簡報，或在同一頁面上顯示[多個簡報](/initialization/#multiple-presentations)，您可以使用 `embedded` [配置選項](/config/)。
 
 ```js
-Reveal.initialize({ embedded: false })
+Reveal.initialize({ embedded: false });
 ```
 
 一個嵌入式簡報將根據其 `.reveal` 根的尺寸確定其大小。如果該元素的大小因非窗口 `resize` 事件的原因而改變，您可以調用 `Reveal.layout()` 手動觸發布局更新。
 
 ```js
 // 更改我們簡報的尺寸
-document.querySelector( '.reveal' ).style.width = '50vw';
+document.querySelector('.reveal').style.width = '50vw';
 
 // 使 reveal.js 感知到尺寸變化
 Reveal.layout();
@@ -57,6 +58,6 @@ Reveal.layout();
 
 ```javascript
 Reveal.initialize({
-  disableLayout: false
+  disableLayout: false,
 });
 ```

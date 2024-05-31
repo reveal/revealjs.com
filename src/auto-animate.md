@@ -9,6 +9,7 @@ layout: default
 reveal.js can automatically animate elements across slides. All you need to do is add `data-auto-animate` to two adjacent slide `<section>` elements and Auto-Animate will animate all matching elements between the two.
 
 Here's a simple example to give you a better idea of how it can be used.
+
 ```html
 <section data-auto-animate>
   <h1>Auto-Animate</h1>
@@ -17,6 +18,7 @@ Here's a simple example to give you a better idea of how it can be used.
   <h1 style="margin-top: 100px; color: red;">Auto-Animate</h1>
 </section>
 ```
+
 <div class="reveal reveal-example">
   <div class="slides">
     <section data-auto-animate>
@@ -43,6 +45,7 @@ Animations are not limited to changes in style. Auto-Animate can also be used to
   <h1>Animation</h1>
 </section>
 ```
+
 <div class="reveal reveal-example">
   <div class="slides">
     <section data-auto-animate>
@@ -56,9 +59,10 @@ Animations are not limited to changes in style. Auto-Animate can also be used to
 </div>
 
 ## How Elements are Matched
+
 When you navigate between two auto-animated slides we'll do our best to automatically find matching elements in the two slides. For text, we consider it a match if both the text contents and node type are identical. For images, videos and iframes we compare the `src` attribute. We also take into account the order in which the element appears in the DOM.
 
-In situations where automatic matching is not feasible you can give the objects that you want to animate between a matching `data-id` attribute. We prioritize matching `data-id` values above our automatic matching. 
+In situations where automatic matching is not feasible you can give the objects that you want to animate between a matching `data-id` attribute. We prioritize matching `data-id` values above our automatic matching.
 
 Here's an example where we've given both blocks a matching ID since automatic matching has no content to go on.
 
@@ -70,6 +74,7 @@ Here's an example where we've given both blocks a matching ID since automatic ma
   <div data-id="box" style="height: 200px; background: blue;"></div>
 </section>
 ```
+
 <div class="reveal reveal-example">
   <div class="slides">
     <section data-auto-animate>
@@ -82,27 +87,30 @@ Here's an example where we've given both blocks a matching ID since automatic ma
 </div>
 
 ## Animation Settings
+
 You can override specific animation settings such as easing and duration either for the whole presentation, per-slide or individually for each animated element. The following configuration attributes can be used to change the settings for a specific slide or element:
 
-| Attribute&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                        | Default    | Description 
-| :------------------------------- | ---------: | :---------- 
-| data-auto-animate-easing         | ease       | A CSS [easing function](https://developer.mozilla.org/en-US/docs/Web/CSS/easing-function).
-| data-auto-animate-unmatched      | true       | Determines whether elements with no matching auto-animate target should fade in. Set to false to make them appear instantly.
-| data-auto-animate-duration       | 1.0        | Animation duration in seconds.
-| data-auto-animate-delay          | 0          | Animation delay in seconds (can only be set for specific elements, not at the slide level).
-| data-auto-animate-id             | _absent_   | An [id](#auto-animate-id-%26-restart) tying auto-animate slides together.
-| data-auto-animate-restart        | _absent_   | [Breaks apart](#auto-animate-id-%26-restart) two adjacent auto-animate slides (even with the same id).
+| Attribute&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |  Default | Description                                                                                                                  |
+| :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------: | :--------------------------------------------------------------------------------------------------------------------------- |
+| data-auto-animate-easing                                                                                                                                                                                                                                                          |     ease | A CSS [easing function](https://developer.mozilla.org/en-US/docs/Web/CSS/easing-function).                                   |
+| data-auto-animate-unmatched                                                                                                                                                                                                                                                       |     true | Determines whether elements with no matching auto-animate target should fade in. Set to false to make them appear instantly. |
+| data-auto-animate-duration                                                                                                                                                                                                                                                        |      1.0 | Animation duration in seconds.                                                                                               |
+| data-auto-animate-delay                                                                                                                                                                                                                                                           |        0 | Animation delay in seconds (can only be set for specific elements, not at the slide level).                                  |
+| data-auto-animate-id                                                                                                                                                                                                                                                              | _absent_ | An [id](#auto-animate-id-%26-restart) tying auto-animate slides together.                                                    |
+| data-auto-animate-restart                                                                                                                                                                                                                                                         | _absent_ | [Breaks apart](#auto-animate-id-%26-restart) two adjacent auto-animate slides (even with the same id).                       |
 
 If you'd like to change the defaults for the whole deck, use the following config options:
+
 ```javascript
 Reveal.initialize({
   autoAnimateEasing: 'ease-out',
   autoAnimateDuration: 0.8,
-  autoAnimateUnmatched: false
-})
+  autoAnimateUnmatched: false,
+});
 ```
 
 ## Auto-Animate Id & Restart
+
 When you want separate groups of auto-animated slides right next to each other you can use the `data-auto-animate-id` and `data-auto-animate-restart` attributes.
 
 With `data-auto-animate-id` you can specify arbitrary ids for your slides. Two adjacent slides will only auto-animate if they have the same id or if both don't have one.
@@ -111,24 +119,25 @@ Another way to control auto-animate is the `data-auto-animate-restart` attribute
 
 ```html
 <section data-auto-animate>
-	<h1>Group A</h1>
+  <h1>Group A</h1>
 </section>
 <section data-auto-animate>
-	<h1 style="color: #3B82F6;">Group A</h1>
+  <h1 style="color: #3B82F6;">Group A</h1>
 </section>
 <section data-auto-animate data-auto-animate-id="two">
-	<h1>Group B</h1>
+  <h1>Group B</h1>
 </section>
 <section data-auto-animate data-auto-animate-id="two">
-	<h1 style="color: #10B981;">Group B</h1>
+  <h1 style="color: #10B981;">Group B</h1>
 </section>
 <section data-auto-animate data-auto-animate-id="two" data-auto-animate-restart>
-	<h1>Group C</h1>
+  <h1>Group C</h1>
 </section>
 <section data-auto-animate data-auto-animate-id="two">
-	<h1 style="color: #EC4899;">Group C</h1>
+  <h1 style="color: #EC4899;">Group C</h1>
 </section>
 ```
+
 <div class="reveal reveal-example">
 	<div class="slides">
 		<section data-auto-animate>
@@ -157,13 +166,15 @@ Another way to control auto-animate is the `data-auto-animate-restart` attribute
 The `autoanimate` event is dispatched each time you step between two auto-animated slides.
 
 ```javascript
-Reveal.on( 'autoanimate', event => {
+Reveal.on('autoanimate', (event) => {
   // event.fromSlide, event.toSlide
-} );
+});
 ```
 
 ## Example: Animating Between Code Blocks
+
 We support animations between code blocks. Make sure that the code block has `data-line-numbers` enabled and that all blocks have a matching `data-id` value.
+
 ```html
 <section data-auto-animate>
   <pre data-id="code-animation"><code data-trim data-line-numbers>
@@ -197,6 +208,7 @@ We support animations between code blocks. Make sure that the code block has `da
   </code></pre>
 </section>
 ```
+
 <div class="reveal reveal-example">
   <div class="slides">
     <section data-auto-animate>
@@ -234,7 +246,9 @@ We support animations between code blocks. Make sure that the code block has `da
 </div>
 
 ## Example: Animating Between Lists
+
 We match list items individually to let you animate new items being added or removed.
+
 ```html/2-4,10,12
 <section data-auto-animate>
   <ul>
@@ -253,6 +267,7 @@ We match list items individually to let you animate new items being added or rem
   </ul>
 </section>
 ```
+
 <div class="reveal reveal-example">
   <div class="slides">
     <section data-auto-animate>
@@ -275,6 +290,7 @@ We match list items individually to let you animate new items being added or rem
 </div>
 
 ## Advanced: State Attributes
+
 We add state attributes to the different elements involved in an auto-animation. These attributes can be tied into if you want to, for example, fine-tune the animation behavior with custom CSS.
 
 Right before an auto-animation starts we add `data-auto-animate="pending"` to the slide `<section>` coming into view. At this point the upcoming slide is visible and all of the animated elements have been moved to their starting positions. Next we switch to `data-auto-animate="running"` to indicate when the elements start animating towards their final properties.

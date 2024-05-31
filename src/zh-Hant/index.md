@@ -4,7 +4,6 @@ title: HTML 簡報框架
 description: 針對開源專案 reveal.js HTML 簡報框架的文檔和示範。
 layout: home
 hidden: true
-
 ---
 
 # 在網頁上創建驚豔的簡報
