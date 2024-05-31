@@ -166,7 +166,7 @@ reveal.js 內置了強大的語法高亮功能。使用下面顯示的括號語�
 
 ## 配置 _marked_
 
-我們使用 [marked](https://github.com/chjj/marked) 解析 Markdown。要自定義 marked 的渲染，您可以在[配置 Reveal](/config/)時傳入選項：
+我們使用 [marked](https://github.com/chjj/marked) 解析 Markdown。要自定義 marked 的渲染，您可以在[配置 Reveal](/config/) 時傳入選項：
 
 ```javascript
 Reveal.initialize({
