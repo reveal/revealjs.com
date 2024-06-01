@@ -60,4 +60,4 @@ Reveal.initialize({
 </section>
 ```
 
-你也可以通過`preloadiframe`配置選項全局更改默認設置。如果設置為`true`，所有帶有`data-src`屬性的 iframe 都將在`viewDistance`範圍內預加載，無論個別的`data-preload`屬性如何。如果設置為`false`，所有 iframe 只有在它們變得可見時才會加載。
+你也可以通過`preloadIframes`配置選項全局更改默認設置。如果設置為`true`，所有帶有`data-src`屬性的 iframe 都將在`viewDistance`範圍內預加載，無論個別的`data-preload`屬性如何。如果設置為`false`，所有 iframe 只有在它們變得可見時才會加載。
