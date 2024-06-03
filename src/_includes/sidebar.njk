@@ -7,11 +7,14 @@
             <ul>
               {% for localeI in locales -%}
                 <li class="level-2 mb-px">
-                <a href="/{{ localeI.code }}/{{ pageUrl }}" class="nav-link -mx-1 p-1">
+                <a href="/{{ localeI.code }}/{{ page.url | replace(locale, '') | replace('/', '') }}" hreflang="{{ localeI.code }}" class="nav-link -mx-1 p-1">
                   {{ localeI.label }}
                 </a>
               </li>
               {% endfor -%}
+
+
+
             </ul>
           </li>
         
