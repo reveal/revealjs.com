@@ -24,8 +24,8 @@
           </a>
           <div class="header-lang-select absolute px-2 py-2 text-gray-800 hover:text-gray-900 rounded align-middle focus:outline-none">
           {% for locale in locales -%}
-          <a href="/{{ locale.code }}/{{ pageUrl }}"  hreflang="{{ locale.code }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200">{{ locale.label }}</a>
-          {% endfor -%}
+         <a href="/{{ locale.code }}/{{ page.url }}" hreflang="{{ locale.code }}" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200">{{ locale.label }}</a>
+ {% endfor -%}
           </div>
         </li>
         {% endif %}
