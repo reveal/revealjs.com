@@ -6,7 +6,7 @@ layout: default
 
 # 標記
 
-這是一個完全運作的 reveal.js 簡報的基本示例：
+這是一個完全運作的 reveal.js 簡報的基本範例：
 
 ```html
 <html>

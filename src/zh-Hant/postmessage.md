@@ -6,7 +6,7 @@ layout: default
 
 # postMessage API
 
-框架內建了 postMessage API，當需要與另一個窗口中的演示文稿進行通信時可以使用。以下示例展示了如何讓給定窗口中的 reveal.js 實例進行到第二張幻燈片：
+框架內建了 postMessage API，當需要與另一個窗口中的演示文稿進行通信時可以使用。以下範例展示了如何讓給定窗口中的 reveal.js 實例進行到第二張幻燈片：
 
 ```javascript
 <window>.postMessage( JSON.stringify({ method: 'slide', args: [ 2 ] }), '*' );
@@ -27,7 +27,7 @@ window.addEventListener('message', (event) => {
 
 ## postMessage 回調
 
-當您通過 postMessage API 調用任何方法時，reveal.js 會發送一條帶有返回值的消息。這樣做是為了讓您可以調用 getter 方法並查看結果。查看此示例：
+當您通過 postMessage API 調用任何方法時，reveal.js 會發送一條帶有返回值的消息。這樣做是為了讓您可以調用 getter 方法並查看結果。查看此範例：
 
 ```javascript
 <revealWindow>.postMessage( JSON.stringify({ method: 'getTotalSlides' }), '*' );

@@ -40,7 +40,7 @@ layout: default
 
 ## Markdown 插件
 
-這個功能由內置的 Markdown 插件提供支持，該插件反過來使用 [marked](https://github.com/chjj/marked) 進行所有解析。Markdown 插件包含在我們的默認簡報示例中。如果您想手動將其添加到新的簡報中，這是操作方式：
+這個功能由內置的 Markdown 插件提供支持，該插件反過來使用 [marked](https://github.com/chjj/marked) 進行所有解析。Markdown 插件包含在我們的默認簡報範例中。如果您想手動將其添加到新的簡報中，這是操作方式：
 
 ```html
 <script src="plugin/markdown/markdown.js"></script>
@@ -55,7 +55,7 @@ layout: default
 
 您可以將內容寫入一個單獨的文件，並讓 reveal.js 在運行時加載它。注意分隔符參數，它決定了外部文件中的幻燈片如何分隔：`data-separator` 屬性定義水平幻燈片的正則表達式（默認為 `^\r?\n---\r?\n$`，即以換行符為界的水平線）和 `data-separator-vertical` 定義垂直幻燈片（默認禁用）。`data-separator-notes` 屬性是一個正則表達式，用於指定當前幻燈片講者筆記的開始（默認為 `notes?:`，因此它會匹配 "note:" 和 "notes:"）。`data-charset` 屬性是可選的，指定加載外部文件時使用哪種字符集。
 
-在本地使用時，此功能要求 reveal.js [從本地網絡服務器運行](/zh-hant/installation/#full-setup)。以下示例自定義了所有可用選項：
+在本地使用時，此功能要求 reveal.js [從本地網頁伺服器運行](/zh-hant/installation/#full-setup)。以下範例自定義了所有可用選項：
 
 ```html
 <section

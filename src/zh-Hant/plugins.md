@@ -11,7 +11,7 @@ layout: default
 1. 在文檔中包含插件腳本。（有些插件可能還需要樣式。）
 1. 通過在初始化時將其包含在 `plugins` 數組中來告訴 reveal.js 關於插件。
 
-這是一個示例：
+這是一個範例：
 
 ```html
 <script src="plugin/markdown/markdown.js"></script>

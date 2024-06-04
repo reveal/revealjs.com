@@ -109,7 +109,7 @@ scrollSnap: 'mandatory';
 
 如果您更喜歡一個更密集的布局，並且多個幻燈片同時可見，將 `scrollLayout` 選項設置為 `compact`。這將使每個幻燈片的寬度與視口一致，高度根据您的長寬比（幻燈片寬度/高度）需要而設定。
 
-您可以在下面的示例中看到兩種模式之間的區別。從緊湊布局開始。
+您可以在下面的範例中看到兩種模式之間的區別。從緊湊布局開始。
 
 ```js
 Reveal.initialize({
@@ -164,6 +164,6 @@ Reveal.initialize({
   </div>
 </div>
 
-## 示例
+## 範例
 
-如果您正在尋找可滾動的 reveal.js 幻燈片示例，這裡有一個很好的示例：https://slides.com/news/scroll-mode/scroll
+如果您正在尋找可滾動的 reveal.js 幻燈片範例，這裡有一個很好的範例：https://slides.com/news/scroll-mode/scroll

@@ -14,7 +14,7 @@ reveal.js 提供了一個演講者筆記插件，可以在單獨的瀏覽器窗�
 
 或者，您可以在幻燈片的 `data-notes` 屬性中添加您的筆記，如 `<section data-notes="Something important"></section>`。
 
-在本地使用時，此功能要求 reveal.js [從本地網絡服務器運行](/zh-hant/installation/#full-setup)。
+在本地使用時，此功能要求 reveal.js [從本地網頁伺服器運行](/zh-hant/installation/#full-setup)。
 
 ```html/3-5
 <section>
@@ -72,6 +72,6 @@ Note:
 
 節奏計時器可以通過在 `Reveal` 配置塊中配置 `defaultTiming` 參數來啟用，該參數指定每張幻燈片的秒數。120 可以是一個合理的經驗法則。或者，您可以通過設置 `totalTime` 來啟用計時器，這設置了您的演示總長度（也以秒為單位）。如果兩個值都指定了，`totalTime` 將優先，`defaultTiming` 將被忽略。無論基準時間方法如何，也可以通過設置幻燈片 `<section>` 的 `data-timing` 屬性（同樣是以秒為單位）來給出時間。
 
-## 服務器端演講者筆記
+## 伺服器端演講者筆記
 
 在某些情況下，可能希望在與演示的設備不同的設備上運行筆記。基於 Node.js 的筆記插件允許您使用與其客戶端對應物相同的筆記定義來做到這一點。請參見 <https://github.com/reveal/notes-server>.

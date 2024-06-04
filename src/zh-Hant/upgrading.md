@@ -64,4 +64,4 @@ Multiplex 和 Notes Server 插件已從 reveal.js 核心移出到它們自己的
 ### 其他
 
 - 移除了 `Reveal.navigateTo`，改用 `Reveal.slide`。
-- 我們已切換到 gulp 和 rollup 作為構建系統。確保執行 `npm install` 以獲得最新的依賴項。服務器仍然使用 `npm start` 啟動，與之前相同。
+- 我們已切換到 gulp 和 rollup 作為構建系統。確保執行 `npm install` 以獲得最新的依賴項。伺服器仍然使用 `npm start` 啟動，與之前相同。

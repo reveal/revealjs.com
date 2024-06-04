@@ -15,7 +15,7 @@ layout: default
 </script>
 ```
 
-在此示例中，我們使用了 KaTeX 排版器，但你也可以選擇使用[MathJax 2](#mathjax-2)或[3](#mathjax-3-4.2.0)。
+在此範例中，我們使用了 KaTeX 排版器，但你也可以選擇使用[MathJax 2](#mathjax-2)或[3](#mathjax-3-4.2.0)。
 
 現在插件已註冊，我們可以開始在幻燈片中添加 [LaTeX](https://en.wikipedia.org/wiki/LaTeX) 公式。
 
@@ -80,7 +80,7 @@ Reveal.initialize({
 });
 ```
 
-注意，默認情況下最新的 KaTeX 從遠程服務器
+注意，默認情況下最新的 KaTeX 從遠程伺服器
 
 加載（https://cdn.jsdelivr.net/npm/katex）。要使用固定版本，將 `version` 設為例如 `0.13.18`。
 
@@ -117,7 +117,7 @@ Reveal.initialize({
 });
 ```
 
-注意，最新的 MathJax 2 從遠程服務器加載。要使用固定版本，將 mathjax 設為例如 https://cdn.jsdelivr.net/npm/mathjax@2.7.8/MathJax.js。
+注意，最新的 MathJax 2 從遠程伺服器加載。要使用固定版本，將 mathjax 設為例如 https://cdn.jsdelivr.net/npm/mathjax@2.7.8/MathJax.js。
 
 如果你想離線使用 MathJax，你需要下載庫的副本（例如通過 npm）並將 `mathjax` 指向本地副本。
 
@@ -143,6 +143,6 @@ Reveal.initialize({
 });
 ```
 
-注意，最新的 MathJax 3 從遠程服務器加載。要使用固定版本，將 `mathjax` 設為例如 <https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js>。此外，配置現在是 URL 的一部分，默认載入 `tex-mml-chtml`，它能識別 TeX 和 MathML 表示的數學公式，並使用 HTML 和 CSS 生成輸出（CommonHTML 輸出格式）。這是一個非常通用的配置，但這也是他很龐大的原因，因此你可能需要考慮一個更輕量，更符合你需求的配置，例如 `tex-svg`。
+注意，最新的 MathJax 3 從遠程伺服器加載。要使用固定版本，將 `mathjax` 設為例如 <https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js>。此外，配置現在是 URL 的一部分，默认載入 `tex-mml-chtml`，它能識別 TeX 和 MathML 表示的數學公式，並使用 HTML 和 CSS 生成輸出（CommonHTML 輸出格式）。這是一個非常通用的配置，但這也是他很龐大的原因，因此你可能需要考慮一個更輕量，更符合你需求的配置，例如 `tex-svg`。
 
 如果你想離線使用 MathJax，你需要下載庫的副本（例如通過 npm）並相應地調整 `mathjax`。

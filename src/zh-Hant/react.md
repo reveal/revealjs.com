@@ -47,7 +47,7 @@ import 'reveal.js/dist/theme/black.css'; // "black" 主題只是一個例子
 
 還建議使用 refs 來維護對幻燈片集容器 `div` 和相應的 `reveal` 實例的引用。這些 refs 可以幫助確保每個幻燈片集只初始化一次。
 
-#### 下面是一個完整的工作示例：
+#### 下面是一個完整的工作範例：
 
 ```ts
 // App.tsx

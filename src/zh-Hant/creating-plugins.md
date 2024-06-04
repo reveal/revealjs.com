@@ -20,7 +20,7 @@ layout: default
 
 {.key-value}
 
-這裡是一個示例插件，當按下 T 鍵時，它會在簡報中洗牌所有幻燈片。注意，我們導出一個返回新插件對象的函數。這樣做是因為同一頁面上可能有[多個簡報實例](/zh-hant/initialization/#multiple-presentations)，而每個實例都應該擁有我們插件的自己的實例。
+這裡是一個範例插件，當按下 T 鍵時，它會在簡報中洗牌所有幻燈片。注意，我們導出一個返回新插件對象的函數。這樣做是因為同一頁面上可能有[多個簡報實例](/zh-hant/initialization/#multiple-presentations)，而每個實例都應該擁有我們插件的自己的實例。
 
 ```js
 // toaster.js
@@ -50,7 +50,7 @@ Reveal.initialize({
 
 ### 異步插件
 
-如果你的插件需要在 reveal.js 完成初始化之前運行異步代碼，它可以返回一個 Promise。這裡是一個會延遲初始化三秒的示例插件。
+如果你的插件需要在 reveal.js 完成初始化之前運行異步代碼，它可以返回一個 Promise。這裡是一個會延遲初始化三秒的範例插件。
 
 ```js
 let WaitForIt = {
