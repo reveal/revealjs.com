@@ -26,7 +26,7 @@ Reveal.initialize({
 
 對於自動播放的幻燈片集，將自動出現播放/暫停控制元件。如果用戶開始與幻燈片集互動，播放將自動暫停。您還可以通過鍵盤上的「A」鍵來暫停或恢復播放（在這裡的嵌入式演示中不適用）。
 
-您可以通過在[配置選項](/config/)中指定 `autoSlideStoppable: false` 來禁用自動播放控制，防止播放被暫停。
+您可以通過在[配置選項](/zh-hant/config/)中指定 `autoSlideStoppable: false` 來禁用自動播放控制，防止播放被暫停。
 
 ## 幻燈片計時
 
@@ -44,7 +44,7 @@ Reveal.initialize({
 
 `autoSlideMethod` 屬性可以更改自動撥放的方向。
 
-我們預設將按順序播放所有幻燈片，包括水平和[垂直](/vertical-slides/)幻燈片。如果您只想沿頂層導航並忽略垂直幻燈片，您可以提供一個調用 `Reveal.right()` 的方法。
+我們預設將按順序播放所有幻燈片，包括水平和[垂直](/zh-hant/vertical-slides/)幻燈片。如果您只想沿頂層導航並忽略垂直幻燈片，您可以提供一個調用 `Reveal.right()` 的方法。
 
 ```js
 Reveal.configure({

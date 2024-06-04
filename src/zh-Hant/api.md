@@ -150,4 +150,4 @@ Reveal.getBackgroundsElement(); // <div class="backgrounds">
 
 ## 閱讀更多
 
-- [插件 API](/zh-TW/plugins/#api)
+- [插件 API](/zh-hant/plugins/#api)

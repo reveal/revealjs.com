@@ -6,7 +6,7 @@ layout: default
 
 # 配置選項
 
-可以通過使用大量的參數來微調簡報。這些選項可以在您[初始化](/initialization/) reveal.js 時包含進去。也可以在運行時[更改屬性值](#reconfiguring)。
+可以通過使用大量的參數來微調簡報。這些選項可以在您[初始化](/zh-hant/initialization/) reveal.js 時包含進去。也可以在運行時[重新配置](#%E9%87%8D%E6%96%B0%E9%85%8D%E7%BD%AE)。
 
 注意，**所有**屬性值都是**可選的**，以下顯示默認值。
 

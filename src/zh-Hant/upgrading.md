@@ -41,7 +41,7 @@ layout: default
 
 ### 插件註冊
 
-如果您保留了 v3 /plugin 目錄的副本，則*沒有破壞性更改*。如果您想切換到最新的插件版本，您需要更新您的 `Reveal.initialize()` 調用，以使用[新的插件註冊語法](/plugins/)。插件也可作為 ES 模塊使用。
+如果您保留了 v3 /plugin 目錄的副本，則*沒有破壞性更改*。如果您想切換到最新的插件版本，您需要更新您的 `Reveal.initialize()` 調用，以使用[新的插件註冊語法](/zh-hant/plugins/)。插件也可作為 ES 模塊使用。
 
 ```html
 <script src="dist/reveal.js"></script>

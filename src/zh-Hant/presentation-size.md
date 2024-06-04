@@ -8,7 +8,7 @@ layout: default
 
 所有簡報都有一個「正常」尺寸，即它們創作時的解析度。reveal.js 會根據正常尺寸自動等比例縮放簡報，以確保一切內容能適應任何顯示或視窗尺寸，同時不改變內容的縱橫比或布局。
 
-下面列出了與尺寸相關的[配置選項](/config/)，包括它們的預設值：
+下面列出了與尺寸相關的[配置選項](/zh-hant/config/)，包括它們的預設值：
 
 ```javascript
 Reveal.initialize({
@@ -36,7 +36,7 @@ Reveal.initialize({ center: false });
 
 ## 嵌入式
 
-默認情況下，reveal.js 將假設其應覆蓋整個瀏覽器視窗。如果您想在網頁的一個較小部分嵌入您的簡報，或在同一頁面上顯示[多個簡報](/initialization/#multiple-presentations)，您可以使用 `embedded` [配置選項](/config/)。
+默認情況下，reveal.js 將假設其應覆蓋整個瀏覽器視窗。如果您想在網頁的一個較小部分嵌入您的簡報，或在同一頁面上顯示[多個簡報](/zh-hant/initialization/#multiple-presentations)，您可以使用 `embedded` [配置選項](/zh-hant/config/)。
 
 ```js
 Reveal.initialize({ embedded: false });

@@ -66,6 +66,6 @@ Reveal.on('resize', (event) => {
 
 ## 特定功能的事件
 
-- [概覽模式事件](/overview/#events)
-- [片段事件](/fragments/#events)
-- [自動播放事件](/auto-slide/#events)
+- [概覽模式事件](/zh-hant/overview/#%E4%BA%8B%E4%BB%B6)
+- [片段事件](/zh-hant/fragments/#%E4%BA%8B%E4%BB%B6)
+- [自動播放事件](/zh-hant/auto-slide/#%E4%BA%8B%E4%BB%B6)

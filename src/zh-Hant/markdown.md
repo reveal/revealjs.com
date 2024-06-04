@@ -55,7 +55,7 @@ layout: default
 
 您可以將內容寫入一個單獨的文件，並讓 reveal.js 在運行時加載它。注意分隔符參數，它決定了外部文件中的幻燈片如何分隔：`data-separator` 屬性定義水平幻燈片的正則表達式（默認為 `^\r?\n---\r?\n$`，即以換行符為界的水平線）和 `data-separator-vertical` 定義垂直幻燈片（默認禁用）。`data-separator-notes` 屬性是一個正則表達式，用於指定當前幻燈片講者筆記的開始（默認為 `notes?:`，因此它會匹配 "note:" 和 "notes:"）。`data-charset` 屬性是可選的，指定加載外部文件時使用哪種字符集。
 
-在本地使用時，此功能要求 reveal.js [從本地網絡服務器運行](/installation/#full-setup)。以下示例自定義了所有可用選項：
+在本地使用時，此功能要求 reveal.js [從本地網絡服務器運行](/zh-hant/installation/#full-setup)。以下示例自定義了所有可用選項：
 
 ```html
 <section
@@ -102,7 +102,7 @@ layout: default
 
 ## 語法高亮
 
-reveal.js 內置了強大的語法高亮功能。使用下面顯示的括號語法，您可以突出顯示個別行，甚至逐步進行多個獨立的高亮。[了解更多關於行高亮的信息](/code/#line-numbers-highlights)。
+reveal.js 內置了強大的語法高亮功能。使用下面顯示的括號語法，您可以突出顯示個別行，甚至逐步進行多個獨立的高亮。[了解更多關於行高亮的信息](/zh-hant/code/#%E8%A1%8C%E8%99%9F%E8%88%87%E9%AB%98%E4%BA%AE)。
 
 ````html
 <section data-markdown>
@@ -134,7 +134,7 @@ reveal.js 內置了強大的語法高亮功能。使用下面顯示的括號語�
 
 ### 行號偏移
 
-您可以通過在高亮的開頭添加一個數字和冒號來添加[行號偏移](/code/#line-number-offset-4.2.0)。
+您可以通過在高亮的開頭添加一個數字和冒號來添加[行號偏移](/zh-hant/code/#%E8%A1%8C%E8%99%9F%E5%81%8F%E7%A7%BB-4.2.0)。
 
 ````html
 <section data-markdown>
@@ -166,7 +166,7 @@ reveal.js 內置了強大的語法高亮功能。使用下面顯示的括號語�
 
 ## 配置 _marked_
 
-我們使用 [marked](https://github.com/chjj/marked) 解析 Markdown。要自定義 marked 的渲染，您可以在[配置 Reveal](/config/) 時傳入選項：
+我們使用 [marked](https://github.com/chjj/marked) 解析 Markdown。要自定義 marked 的渲染，您可以在[配置 Reveal](/zh-hant/config/) 時傳入選項：
 
 ```javascript
 Reveal.initialize({

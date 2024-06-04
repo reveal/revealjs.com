@@ -31,7 +31,7 @@ layout: default
 
 簡報的標記層次結構需要是 `.reveal > .slides > section`，其中 `section` 元素代表一個幻燈片，可以無限重復。
 
-如果您在另一個 `section` 內放置多個 `section` 元素，它們將被顯示為[垂直幻燈片](/vertical-slides/)。垂直幻燈片的第一個是其他幻燈片的“根”（在頂部），並將包括在水平序列中。例如：
+如果您在另一個 `section` 內放置多個 `section` 元素，它們將被顯示為[垂直幻燈片](/zh-hant/vertical-slides/)。垂直幻燈片的第一個是其他幻燈片的“根”（在頂部），並將包括在水平序列中。例如：
 
 ```html
 <div class="reveal">
@@ -55,7 +55,7 @@ layout: default
   </div>
 </div>
 
-同樣可以使用 [Markdown](/markdown/) 編寫簡報。
+同樣可以使用 [Markdown](/zh-hant/markdown/) 編寫簡報。
 
 ## 視口
 

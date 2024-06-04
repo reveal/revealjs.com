@@ -36,17 +36,17 @@ layout: default
 
 ## 內置插件
 
-一些常見的插件，包括支持 [Markdown](/markdown/)、[代碼高亮](/code/) 和 [演講者筆記](/speaker-view/)，均包含在我們默認的[演示文稿模板](https://github.com/hakimel/reveal.js/blob/master/index.html)中。
+一些常見的插件，包括支持 [Markdown](/zh-hant/markdown/)、[代碼高亮](/zh-hant/code/) 和 [演講者筆記](/zh-hant/speaker-view/)，均包含在我們默認的[演示文稿模板](https://github.com/hakimel/reveal.js/blob/master/index.html)中。
 
 這些插件與 reveal.js 存儲庫一起分發。這是所有內置插件的完整列表。
 
 | 名稱            | 描述                                                                                                       |
 | :-------------- | :--------------------------------------------------------------------------------------------------------- |
-| RevealHighlight | 語法高亮的[代碼](/code/)。<br><span class="text-gray-600">plugin/highlight/highlight.js</span>             |
-| RevealMarkdown  | 使用 [Markdown](/markdown/) 編寫內容。<br><span class="text-gray-600">plugin/markdown/markdown.js</span>   |
+| RevealHighlight | 語法高亮的[代碼](/zh-hant/code/)。<br><span class="text-gray-600">plugin/highlight/highlight.js</span>             |
+| RevealMarkdown  | 使用 [Markdown](/zh-hant/markdown/) 編寫內容。<br><span class="text-gray-600">plugin/markdown/markdown.js</span>   |
 | RevealSearch    | 按 CTRL+Shift+F 搜索幻燈片內容。<br><span class="text-gray-600">plugin/search/search.js</span>             |
-| RevealNotes     | 在單獨窗口中顯示[演講者視圖](/speaker-view/)。<br><span class="text-gray-600">plugin/notes/notes.js</span> |
-| RevealMath      | 呈現[數學方程式](/math/)。<br><span class="text-gray-600">plugin/math/math.js</span>                       |
+| RevealNotes     | 在單獨窗口中顯示[演講者視圖](/zh-hant/speaker-view/)。<br><span class="text-gray-600">plugin/notes/notes.js</span> |
+| RevealMath      | 呈現[數學方程式](/zh-hant/math/)。<br><span class="text-gray-600">plugin/math/math.js</span>                       |
 | RevealZoom      | Alt+ 點擊元素放大（Linux 中使用 CTRL+ 點擊）。<br><span class="text-gray-600">plugin/zoom/zoom.js</span>     |
 
 {.key-value}

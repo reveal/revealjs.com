@@ -14,7 +14,7 @@ reveal.js 提供了一個演講者筆記插件，可以在單獨的瀏覽器窗�
 
 或者，您可以在幻燈片的 `data-notes` 屬性中添加您的筆記，如 `<section data-notes="Something important"></section>`。
 
-在本地使用時，此功能要求 reveal.js [從本地網絡服務器運行](/installation/#full-setup)。
+在本地使用時，此功能要求 reveal.js [從本地網絡服務器運行](/zh-hant/installation/#full-setup)。
 
 ```html/3-5
 <section>
@@ -26,7 +26,7 @@ reveal.js 提供了一個演講者筆記插件，可以在單獨的瀏覽器窗�
 </section>
 ```
 
-如果您正在使用 [Markdown](/markdown/) 插件，您可以利用特殊的分隔符添加筆記：
+如果您正在使用 [Markdown](/zh-hant/markdown/) 插件，您可以利用特殊的分隔符添加筆記：
 
 ```html/0-1,7-8
 <section data-markdown="example.md" data-separator="^\n\n\n"
@@ -58,7 +58,7 @@ Note:
 
 筆記僅對演講者在演講者視圖中可見。如果您希望與他人分享您的筆記，可以將 reveal.js 初始化時的 `showNotes` 配置值設置為 `true`。筆記將顯示在演示文稿的底部。
 
-當啟用 `showNotes` 時，筆記也會包含在您[導出到 PDF](/pdf-export/) 中。默認情況下，筆記在幻燈片上方的一個框中打印。如果您更喜歡在幻燈片之後的單獨頁面上打印它們，設置 `showNotes: "separate-page"`。
+當啟用 `showNotes` 時，筆記也會包含在您[導出到 PDF](/zh-hant/pdf-export/) 中。默認情況下，筆記在幻燈片上方的一個框中打印。如果您更喜歡在幻燈片之後的單獨頁面上打印它們，設置 `showNotes: "separate-page"`。
 
 ## 演講者筆記時鐘和計時器
 

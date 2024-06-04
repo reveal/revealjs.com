@@ -132,9 +132,9 @@ layout: default
 
 iframe 會在變得可見時懶加載。如果你想提前預加載 iframe，你可以在幻燈片 `<section>` 上添加 `data-preload` 屬性。你也可以使用 `preloadiframes` 配置選項為所有 iframes 啟用全局預加載。
 
-## 背景過渡
+## 背景轉場
 
-我們將使用交叉淡入來過渡幻燈片背景，這是預設設置。可以使用 [`backgroundTransition`](/transitions/#background-transitions) 配置選項更改此設置。
+我們將使用交叉淡入來過渡幻燈片背景，這是預設設置。可以使用 [`backgroundTransition`](/zh-hant/transitions/#%E8%83%8C%E6%99%AF%E8%BD%89%E5%A0%B4) 配置選項更改此設置。
 
 ## 視差背景
 
