@@ -6,7 +6,7 @@ layout: default
 
 # 鍵盤綁定
 
-如果您對任何默認的鍵盤綁定不滿意，可以使用 `keyboard` 配置選項來覆蓋它們。
+如果你對任何默認的鍵盤綁定不滿意，可以使用 `keyboard` 配置選項來覆蓋它們。
 
 ```javascript/1-5
 Reveal.configure({
@@ -23,7 +23,7 @@ Reveal.configure({
 | 類型   | 動作                                         |
 | :----- | :------------------------------------------- |
 | 函數   | 觸發一個回調函數。                           |
-| 字符串 | 調用 [reveal.js API](/zh-hant/api/) 中的指定方法名。 |
+| 字符串 | 調用 [reveal.js API](/zh-hant/api/) 中的指定函式名。 |
 | null   | 禁用該鍵（阻止默認的 reveal.js 動作）        |
 
 {.key-value}

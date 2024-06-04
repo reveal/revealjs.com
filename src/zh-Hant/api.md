@@ -125,7 +125,7 @@ Reveal.isLastVerticalSlide();
 ### 模式
 
 ```javascript
-// 顯示一個幫助介面，包含鍵盤快捷方式，可以傳遞 true/false 來強制開啟/關閉
+// 顯示一個幫助介面，包含鍵盤快捷鍵，可以傳遞 true/false 來強制開啟/關閉
 Reveal.toggleHelp();
 
 // 切換簡報狀態，可以傳遞 true/false 來強制開啟/關閉

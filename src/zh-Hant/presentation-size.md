@@ -36,13 +36,13 @@ Reveal.initialize({ center: false });
 
 ## 嵌入式
 
-默認情況下，reveal.js 將假設其應覆蓋整個瀏覽器視窗。如果您想在網頁的一個較小部分嵌入您的簡報，或在同一頁面上顯示[多個簡報](/zh-hant/initialization/#multiple-presentations)，您可以使用 `embedded` [配置選項](/zh-hant/config/)。
+默認情況下，reveal.js 將假設其應覆蓋整個瀏覽器視窗。如果你想在網頁的一個較小部分嵌入你的簡報，或在同一頁面上顯示[多個簡報](/zh-hant/initialization/#multiple-presentations)，你可以使用 `embedded` [配置選項](/zh-hant/config/)。
 
 ```js
 Reveal.initialize({ embedded: false });
 ```
 
-一個嵌入式簡報將根據其 `.reveal` 根的尺寸確定其大小。如果該元素的大小因非窗口 `resize` 事件的原因而改變，您可以調用 `Reveal.layout()` 手動觸發布局更新。
+一個嵌入式簡報將根據其 `.reveal` 根的尺寸確定其大小。如果該元素的大小因非窗口 `resize` 事件的原因而改變，你可以調用 `Reveal.layout()` 手動觸發布局更新。
 
 ```js
 // 更改我們簡報的尺寸
@@ -54,7 +54,7 @@ Reveal.layout();
 
 ## 自帶佈局
 
-如果您想禁用內建的縮放和置中，並帶來您自己的佈局，設置 `disableLayout: true`。這將使您的幻燈片覆蓋可用頁面的 100% 寬度和高度，並將響應式樣式留給您來處理。
+如果你想禁用內建的縮放和置中，並帶來你自己的佈局，設置 `disableLayout: true`。這將使你的幻燈片覆蓋可用頁面的 100% 寬度和高度，並將響應式樣式留給你來處理。
 
 ```javascript
 Reveal.initialize({

@@ -12,7 +12,7 @@ layout: default
 
 ## API
 
-你可以使用`toggleOverview()` API 方法從 JavaScript 中激活或停用概覽模式。
+你可以使用`toggleOverview()` API 函式從 JavaScript 中激活或停用概覽模式。
 
 ```js
 // 切換到當前狀態的相反狀態

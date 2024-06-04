@@ -15,8 +15,8 @@ layout: default
 | 屬性                                         | 值                                                                                                                                                                                                                                                                                                                                             |
 | :------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | id <span class="r-var-type">字符串</span>    | 插件的唯一 ID。這可以用來通過 `Reveal.getPlugin(<id>)` 檢索插件實例。                                                                                                                                                                                                                                                                           |
-| init <span class="r-var-type">函數</span>    | 可選的函數，當插件應該運行時被調用。它被調用時有一個參數；插件註冊的[簡報實例](/zh-hant/api/)的引用。<br><br>init 函數可以選擇性地返回一個 [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)。如果返回了 Promise，reveal.js 將等待它解析完成，然後簡報初始化完成並觸發[準備好的事件](/zh-hant/events/#%E5%B0%B1%E7%B7%92)。 |
-| destroy <span class="r-var-type">函數</span> | 可選的函數，當這個插件註冊的 reveal.js 實例被卸載時調用。                                                                                                                                                                                                                                                                                        |
+| init <span class="r-var-type">函數</span>    | 可選的函數，當插件應該運行時被調用。它被調用時有一個參數；插件導入的[簡報實例](/zh-hant/api/)的引用。<br><br>init 函數可以選擇性地返回一個 [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)。如果返回了 Promise，reveal.js 將等待它解析完成，然後簡報初始化完成並觸發[準備好的事件](/zh-hant/events/#%E5%B0%B1%E7%B7%92)。 |
+| destroy <span class="r-var-type">函數</span> | 可選的函數，當這個插件導入的 reveal.js 實例被卸載時調用。                                                                                                                                                                                                                                                                                        |
 
 {.key-value}
 
@@ -35,9 +35,9 @@ export default () => ({
 });
 ```
 
-## 註冊插件
+## 導入插件
 
-插件通過將它們包含在[配置選項](/zh-hant/config/)的 `plugins` 數組中來註冊。你也可以在運行時使用 `Reveal.registerPlugin( Plugin )` 註冊插件。
+插件通過將它們包含在[配置選項](/zh-hant/config/)的 `plugins` 數組中來導入。你也可以在運行時使用 `Reveal.registerPlugin( Plugin )` 導入插件。
 
 ```js
 import Reveal from 'dist/reveal.esm.js';

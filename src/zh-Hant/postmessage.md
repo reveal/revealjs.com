@@ -14,7 +14,7 @@ layout: default
 
 ## postMessage 事件
 
-當 reveal.js 在一個 iframe 中運行時，它可以選擇將所有事件冒泡到父窗口。冒泡的事件是三個字段的字符串化 JSON：namespace, eventName 和 state。這是從父窗口訂閱它們的方法：
+當 reveal.js 在一個 iframe 中運行時，它可以選擇將所有事件冒泡到父窗口。冒泡的事件是三個字段的字符串化 JSON：namespace, eventName 和 state。這是從父窗口訂閱它們的函式：
 
 ```javascript
 window.addEventListener('message', (event) => {
@@ -27,14 +27,14 @@ window.addEventListener('message', (event) => {
 
 ## postMessage 回調
 
-當您通過 postMessage API 調用任何方法時，reveal.js 會發送一條帶有返回值的消息。這樣做是為了讓您可以調用 getter 方法並查看結果。查看此範例：
+當你通過 postMessage API 調用任何函式時，reveal.js 會發送一條帶有返回值的消息。這樣做是為了讓你可以調用 getter 函式並查看結果。查看此範例：
 
 ```javascript
 <revealWindow>.postMessage( JSON.stringify({ method: 'getTotalSlides' }), '*' );
 
 window.addEventListener( 'message', event => {
   var data = JSON.parse( event.data );
-  // `data.method` 是我們調用的方法
+  // `data.method` 是我們調用的函式
   if( data.namespace === 'reveal' && data.eventName === 'callback' && data.method === 'getTotalSlides' ) {
     data.result // = 幻燈片的總數
   }

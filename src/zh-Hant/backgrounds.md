@@ -130,7 +130,7 @@ layout: default
 </section>
 ```
 
-iframe 會在變得可見時懶加載。如果你想提前預加載 iframe，你可以在幻燈片 `<section>` 上添加 `data-preload` 屬性。你也可以使用 `preloadiframes` 配置選項為所有 iframes 啟用全局預加載。
+iframe 會在變得可見時懶加載。如果你想提前預加載 iframe，你可以在幻燈片 `<section>` 上添加 `data-preload` 屬性。你也可以使用 `preloadiframes` 配置選項為所有 iframes 啟用全域預加載。
 
 ## 背景轉場
 

@@ -6,7 +6,7 @@ layout: default
 
 # 幻燈片編號
 
-您可以通過設置 `slideNumber` 配置選項為 `true` 來顯示當前幻燈片的頁碼。
+你可以通過設置 `slideNumber` 配置選項為 `true` 來顯示當前幻燈片的頁碼。
 
 ```js
 Reveal.initialize({ slideNumber: true });
@@ -43,7 +43,7 @@ Reveal.initialize({ slideNumber: 'c/t' });
   </div>
 </div>
 
-如果現有的格式都不符合您的需求，您可以提供一個自定義的幻燈片編號生成器。
+如果現有的格式都不符合你的需求，你可以提供一個自定義的幻燈片編號生成器。
 
 ```js
 Reveal.initialize({
@@ -56,7 +56,7 @@ Reveal.initialize({
 
 ## 上下文
 
-當啟用幻燈片編號時，它們將默認包含在所有上下文中。如果您只想在特定上下文中顯示幻燈片編號，您可以將 `showSlideNumber` 設置為以下之一：
+當啟用幻燈片編號時，它們將默認包含在所有上下文中。如果你只想在特定上下文中顯示幻燈片編號，你可以將 `showSlideNumber` 設置為以下之一：
 
 | 值      | 描述                                 |
 | :------ | :----------------------------------- |

@@ -6,7 +6,7 @@ layout: default
 
 # 配置選項
 
-可以通過使用大量的參數來微調簡報。這些選項可以在您[初始化](/zh-hant/initialization/) reveal.js 時包含進去。也可以在運行時[重新配置](#%E9%87%8D%E6%96%B0%E9%85%8D%E7%BD%AE)。
+可以通過使用大量的參數來微調簡報。這些選項可以在你[初始化](/zh-hant/initialization/) reveal.js 時包含進去。也可以在運行時[重新配置](#%E9%87%8D%E6%96%B0%E9%85%8D%E7%BD%AE)。
 
 注意，**所有**屬性值都是**可選的**，以下顯示默認值。
 
@@ -38,7 +38,7 @@ Reveal.initialize({
   // - "c":     扁平化幻燈片編號
   // - "c/t":   扁平化幻燈片編號 / 總幻燈片數
   //
-  // 或者，您可以提供一個返回當前幻燈片的幻燈片編號的函數。
+  // 或者，你可以提供一個返回當前幻燈片的幻燈片編號的函數。
   // 該函數應該接受一個幻燈片對象並返回一個字符串 [幻燈片編號] 或
   // 三個字符串 [n1,delimiter,n2]。見 #formatSlideNumber()。
   slideNumber: false,
@@ -58,7 +58,7 @@ Reveal.initialize({
   // 標記是否應監控哈希並相應地更改幻燈片
   respondToHashChanges: true,
 
-  // 啟用跳轉到幻燈片的導航快捷方式
+  // 啟用跳轉到幻燈片的導航快捷鍵
   jumpToSlide: true,
 
   // 將每次幻燈片更改推送到瀏覽器歷史記錄。意味著 `hash: true`
@@ -71,11 +71,11 @@ Reveal.initialize({
 
   // 可選函數，當返回 false 時阻止鍵盤事件
   //
-  // 如果您將此設置為 'focused'，我們只會在嵌入式幻燈片聚焦時捕獲鍵盤事件
+  // 如果你將此設置為 'focused'，我們只會在嵌入式幻燈片聚焦時捕獲鍵盤事件
   keyboardCondition: null,
 
   // 禁用默認的 reveal.js 幻燈片佈局（縮放和居中）
-  // 以便您可以使用自定義 CSS 佈局
+  // 以便你可以使用自定義 CSS 佈局
   disableLayout: false,
 
   // 啟用幻燈片概覽模式
@@ -103,7 +103,7 @@ Reveal.initialize({
   // 移除上/下箭頭。左/右箭頭步進通過所有幻燈片（水平和垂直）。
   //
   // "grid"
-  // 啟用時，從一個垂直堆疊向相鄰的垂直堆疊進行左/右步進時，將使您處於相同的垂直
+  // 啟用時，從一個垂直堆疊向相鄰的垂直堆疊進行左/右步進時，將使你處於相同的垂直
   // 索引。
   //
   // 考慮一個有六張幻燈片按兩個垂直堆疊排序的套件：
@@ -111,18 +111,18 @@ Reveal.initialize({
   // 1.2    2.2
   // 1.3    2.3
   //
-  // 如果您在幻燈片 1.3 上並向右導航，您通常會從 1.3 -> 2.1。如果使用 "grid"，相同的導航將帶您
+  // 如果你在幻燈片 1.3 上並向右導航，你通常會從 1.3 -> 2.1。如果使用 "grid"，相同的導航將帶你
   // 從 1.3 -> 2.3。
   navigationMode: 'default',
 
   // 每次加載簡報時隨機化幻燈片的順序
   shuffle: false,
 
-  // 全局開啟或關閉片段
+  // 全域開啟或關閉片段
   fragments: true,
 
   // 標記是否將當前片段包含在 URL 中，
-  // 以便重新加載後您會回到相同的片段位置
+  // 以便重新加載後你會回到相同的片段位置
   fragmentInURL: true,
 
   // 標記簡報是否在嵌入模式下運行，
@@ -138,7 +138,7 @@ Reveal.initialize({
   // 標記是否應向所有觀眾顯示演講者筆記
   showNotes: false,
 
-  // 全局覆蓋用於自動播放嵌入式媒體（視頻/音頻/iframe）
+  // 全域覆蓋用於自動播放嵌入式媒體（視頻/音頻/iframe）
   // - null:   媒體只有在存在 data-autoplay 時才會自動播放
   // - true:   所有媒體將自動播放，無論個別設定如何
   // - false:  無論個別設定如何，都不會自動播放媒體
@@ -190,7 +190,7 @@ Reveal.initialize({
   // 用戶輸入後停止自動播放
   autoSlideStoppable: true,
 
-  // 自動播放時用於導航的方法（默認為 navigateNext）
+  // 自動播放時用於導航的函式（默認為 navigateNext）
   autoSlideMethod: null,
 
   // 指定你認為你將花在每張幻燈片上的平均時間（秒）。這用於在演講者視圖中顯示配速計時器
@@ -231,7 +231,7 @@ Reveal.initialize({
   pdfSeparateFragments: true,
 
   // 用於減少導出 PDF 頁面內容高度的偏移量。
-  // 這存在於根據您如何打印到 PDF 來解釋環境差異。
+  // 這存在於根據你如何打印到 PDF 來解釋環境差異。
   // CLI 打印選項，如 phantomjs 和 wkpdf，可以精確地
   // 結束在文檔的總高度，而在瀏覽器中打印必須在
   // 一個像素之前結束。
@@ -258,7 +258,7 @@ Reveal.initialize({
 
 ## 重新配置
 
-使用 `configure` 方法可以在初始化後更新配置。
+使用 `configure` 函式可以在初始化後更新配置。
 
 ```javascript
 // 關閉 autoSlide

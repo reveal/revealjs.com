@@ -35,7 +35,7 @@ layout: default
 
 ## 分離進出轉場
 
-您還可以對同一幻燈片使用不同的進場和出場轉場，方法是在轉場名稱後附加 `-in` 或 `-out`。
+你還可以對同一幻燈片使用不同的進場和出場轉場，函式是在轉場名稱後附加 `-in` 或 `-out`。
 
 ```html
 <section data-transition="slide">火車繼續前進……</section>
@@ -67,7 +67,7 @@ layout: default
 
 ## 背景轉場
 
-我們預設使用交叉淡出來進行幻燈片背景之間的轉場。這可以在全局層面更改，或為特定幻燈片覆蓋。要更改所有幻燈片的背景轉場，請使用 `backgroundTransition` 配置選項。
+我們預設使用交叉淡出來進行幻燈片背景之間的轉場。這可以在全域層面更改，或為特定幻燈片覆蓋。要更改所有幻燈片的背景轉場，請使用 `backgroundTransition` 配置選項。
 
 ```js
 Reveal.initialize({
@@ -75,4 +75,4 @@ Reveal.initialize({
 });
 ```
 
-或者，您可以在任何 `<section>` 上使用 `data-background-transition` 屬性來覆蓋該特定轉場。
+或者，你可以在任何 `<section>` 上使用 `data-background-transition` 屬性來覆蓋該特定轉場。

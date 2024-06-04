@@ -19,7 +19,7 @@ layout: default
 ></video>
 ```
 
-如果你想要全局啟用或禁用所有嵌入媒體的自動播放，可以使用`autoPlayMedia`配置選項。如果將此選項設置為`true`，所有媒體將無視個別的`data-autoplay`屬性而自動播放。如果設置為`autoPlayMedia: false`，則沒有媒體將自動播放。
+如果你想要全域啟用或禁用所有嵌入媒體的自動播放，可以使用`autoPlayMedia`配置選項。如果將此選項設置為`true`，所有媒體將無視個別的`data-autoplay`屬性而自動播放。如果設置為`autoPlayMedia: false`，則沒有媒體將自動播放。
 
 ```js
 Reveal.initialize({
@@ -60,4 +60,4 @@ Reveal.initialize({
 </section>
 ```
 
-你也可以通過`preloadIframes`配置選項全局更改默認設置。如果設置為`true`，所有帶有`data-src`屬性的 iframe 都將在`viewDistance`範圍內預加載，無論個別的`data-preload`屬性如何。如果設置為`false`，所有 iframe 只有在它們變得可見時才會加載。
+你也可以通過`preloadIframes`配置選項全域更改默認設置。如果設置為`true`，所有帶有`data-src`屬性的 iframe 都將在`viewDistance`範圍內預加載，無論個別的`data-preload`屬性如何。如果設置為`false`，所有 iframe 只有在它們變得可見時才會加載。

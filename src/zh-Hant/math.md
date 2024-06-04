@@ -17,7 +17,7 @@ layout: default
 
 在此範例中，我們使用了 KaTeX 排版器，但你也可以選擇使用[MathJax 2](#mathjax-2)或[3](#mathjax-3-4.2.0)。
 
-現在插件已註冊，我們可以開始在幻燈片中添加 [LaTeX](https://en.wikipedia.org/wiki/LaTeX) 公式。
+現在插件已導入，我們可以開始在幻燈片中添加 [LaTeX](https://en.wikipedia.org/wiki/LaTeX) 公式。
 
 ```html
 <section>

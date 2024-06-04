@@ -31,7 +31,7 @@ layout: default
 
 簡報的標記層次結構需要是 `.reveal > .slides > section`，其中 `section` 元素代表一個幻燈片，可以無限重復。
 
-如果您在另一個 `section` 內放置多個 `section` 元素，它們將被顯示為[垂直幻燈片](/zh-hant/vertical-slides/)。垂直幻燈片的第一個是其他幻燈片的“根”（在頂部），並將包括在水平序列中。例如：
+如果你在另一個 `section` 內放置多個 `section` 元素，它們將被顯示為[垂直幻燈片](/zh-hant/vertical-slides/)。垂直幻燈片的第一個是其他幻燈片的“根”（在頂部），並將包括在水平序列中。例如：
 
 ```html
 <div class="reveal">
@@ -59,13 +59,13 @@ layout: default
 
 ## 視口
 
-reveal.js 的視口是確定簡報在網頁上的大小的包裝器 DOM 元素。默認情況下，這將是 `body` 元素。如果您在同一頁面上包含多個簡報，每個簡報的 `.reveal` 元素將作為它們的視口。
+reveal.js 的視口是確定簡報在網頁上的大小的包裝器 DOM 元素。默認情況下，這將是 `body` 元素。如果你在同一頁面上包含多個簡報，每個簡報的 `.reveal` 元素將作為它們的視口。
 
-視口在 reveal.js 初始化時始終帶有 `reveal-viewport` 類。
+視口在 reveal.js 初始化時始終帶有 叫做 `reveal-viewport` 的 class 。
 
 ## 幻燈片狀態
 
-如果您在幻燈片 `<section>` 上設置了 `data-state="make-it-pop"`，當該幻燈片打開時，"make-it-pop" 將作為類應用於[視口元素](#viewport)。這允許您根據活動幻燈片對頁面應用廣泛的風格更改。
+如果你在幻燈片 `<section>` 上設置了 `data-state="make-it-pop"`，當該幻燈片打開時，"make-it-pop" 將作為類應用於[視口元素](#viewport)。這允許你根據活動幻燈片對頁面應用廣泛的風格更改。
 
 ```html
 <section data-state="make-it-pop"></section>
@@ -78,7 +78,7 @@ reveal.js 的視口是確定簡報在網頁上的大小的包裝器 DOM 元素�
 }
 ```
 
-您還可以通過 JavaScript 監聽這些狀態變化：
+你還可以通過 JavaScript 監聽這些狀態變化：
 
 ```javascript
 Reveal.on('make-it-pop', () => {
