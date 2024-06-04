@@ -11,7 +11,7 @@ The Math plugin lets you include beautifully typeset math formulas in your slide
 ```html
 <script src="plugin/math/math.js"></script>
 <script>
-  Reveal.initialize({ plugins: [ RevealMath.KaTeX ] });
+  Reveal.initialize({ plugins: [RevealMath.KaTeX] });
 </script>
 ```
 
@@ -19,17 +19,14 @@ We're using the KaTeX typesetter in this example but you can also choose from [M
 
 Now that the plugin is registered we can start adding [LaTeX](https://en.wikipedia.org/wiki/LaTeX) formulas to our slides.
 
-
 ```html
 <section>
   <h2>The Lorenz Equations</h2>
-  \[\begin{aligned}
-  \dot{x} &amp; = \sigma(y-x) \\
-  \dot{y} &amp; = \rho x - y - xz \\
-  \dot{z} &amp; = -\beta z + xy
-  \end{aligned} \]
+  \[\begin{aligned} \dot{x} &amp; = \sigma(y-x) \\ \dot{y} &amp; = \rho x - y -
+  xz \\ \dot{z} &amp; = -\beta z + xy \end{aligned} \]
 </section>
 ```
+
 <div class="reveal reveal-example">
   <div class="slides">
     <section>
@@ -44,22 +41,23 @@ Now that the plugin is registered we can start adding [LaTeX](https://en.wikiped
 </div>
 
 ## Markdown
+
 If you want to include math inside of a presentation written in Markdown you need to wrap the formula in backticks. This prevents syntax conflicts between LaTeX and Markdown. For example:
 
 ```html
-<section data-markdown>
-  `$$ J(\theta_0,\theta_1) = \sum_{i=0} $$`
-</section>
+<section data-markdown>`$$ J(\theta_0,\theta_1) = \sum_{i=0} $$`</section>
 ```
 
 ## Typesetting Libraries
+
 The math plugin offers three choices of math typesetting libraries that you can use to render your math. Each variant is its own plugin that can be accessed via `RevealMath.<Variant>`. If you don't have a preference, we recommend going with KaTeX.
 
-| Library  | Plugin Name | Config Property
-| :-       | :-          | :-
-| [KaTeX](https://katex.org/)                             | RevealMath.KaTeX         | [katex](#katex-4.2.0)
-| [MathJax 2](https://docs.mathjax.org/en/v2.7-latest/)   | RevealMath.MathJax2      | [mathjax2](#mathjax-2)
-| [MathJax 3](https://www.mathjax.org/)                   | RevealMath.MathJax3      | [mathjax3](#mathjax-3-4.2.0)
+| Library                                               | Plugin Name         | Config Property              |
+| :---------------------------------------------------- | :------------------ | :--------------------------- |
+| [KaTeX](https://katex.org/)                           | RevealMath.KaTeX    | [katex](#katex-4.2.0)        |
+| [MathJax 2](https://docs.mathjax.org/en/v2.7-latest/) | RevealMath.MathJax2 | [mathjax2](#mathjax-2)       |
+| [MathJax 3](https://www.mathjax.org/)                 | RevealMath.MathJax3 | [mathjax3](#mathjax-3-4.2.0) |
+
 {.full-width}
 
 ### KaTeX <span class="r-version-badge new">4.2.0</span>
@@ -71,14 +69,14 @@ Reveal.initialize({
   katex: {
     version: 'latest',
     delimiters: [
-      {left: '$$', right: '$$', display: true},
-      {left: '$', right: '$', display: false},
-      {left: '\\(', right: '\\)', display: false},
-      {left: '\\[', right: '\\]', display: true}
-   ],
-   ignoredTags: ['script', 'noscript', 'style', 'textarea', 'pre']
- },
- plugins: [ RevealMath.KaTeX ]
+      { left: '$$', right: '$$', display: true },
+      { left: '$', right: '$', display: false },
+      { left: '\\(', right: '\\)', display: false },
+      { left: '\\[', right: '\\]', display: true },
+    ],
+    ignoredTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+  },
+  plugins: [RevealMath.KaTeX],
 });
 ```
 
@@ -91,7 +89,7 @@ Reveal.initialize({
   katex: {
     local: 'node_modules/katex',
   },
-  plugins: [ RevealMath.KaTeX ]
+  plugins: [RevealMath.KaTeX],
 });
 ```
 
@@ -106,11 +104,14 @@ Reveal.initialize({
     config: 'TeX-AMS_HTML-full',
     // pass other options into `MathJax.Hub.Config()`
     tex2jax: {
-      inlineMath: [ [ '$', '$' ], [ '\\(', '\\)' ] ],
-      skipTags: [ 'script', 'noscript', 'style', 'textarea', 'pre' ]
-    }
+      inlineMath: [
+        ['$', '$'],
+        ['\\(', '\\)'],
+      ],
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    },
   },
-  plugins: [ RevealMath.MathJax2 ]
+  plugins: [RevealMath.MathJax2],
 });
 ```
 
@@ -127,13 +128,16 @@ Reveal.initialize({
   mathjax3: {
     mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js',
     tex: {
-      inlineMath: [ [ '$', '$' ], [ '\\(', '\\)' ]  ]
+      inlineMath: [
+        ['$', '$'],
+        ['\\(', '\\)'],
+      ],
     },
     options: {
-      skipHtmlTags: [ 'script', 'noscript', 'style', 'textarea', 'pre' ]
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
     },
   },
-  plugins: [ RevealMath.MathJax3 ]
+  plugins: [RevealMath.MathJax3],
 });
 ```
 

@@ -12,16 +12,14 @@ If you wish to disable this you can set the `touch` config option to false when 
 
 ```javascript
 Reveal.initialize({
-  touch: false
-})
+  touch: false,
+});
 ```
 
 If there's some part of your content that needs to remain accessible to touch events you'll need to highlight this by adding a `data-prevent-swipe` attribute to the element. One common example where this is useful is elements that need to be scrolled.
 
 ```html
 <section>
-  <p data-prevent-swipe>
-    Can't change slides by swiping across this element.
-  </p>
+  <p data-prevent-swipe>Can't change slides by swiping across this element.</p>
 </section>
 ```

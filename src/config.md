@@ -12,7 +12,6 @@ Note that **all** configuration values are **optional** and will default to the 
 
 ```javascript
 Reveal.initialize({
-
   // Display presentation control arrows
   controls: true,
 
@@ -188,7 +187,7 @@ Reveal.initialize({
     'border-color',
     'border-radius',
     'outline',
-    'outline-offset'
+    'outline-offset',
   ],
 
   // Controls automatic progression to the next slide
@@ -264,8 +263,7 @@ Reveal.initialize({
   hideInactiveCursor: true,
 
   // Time before the cursor is hidden (in ms)
-  hideCursorTime: 5000
-
+  hideCursorTime: 5000,
 });
 ```
 

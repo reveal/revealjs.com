@@ -1,72 +1,101 @@
+/** @format */
+
 .header a,
 .header button {
-    -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .header-logo-wrapper {
-    position: relative;
+  position: relative;
 }
 
 .header-logo {
-    transform: translateY(-20px);
-    opacity: 0;
-    visibility: hidden;
+  transform: translateY(-20px);
+  opacity: 0;
+  visibility: hidden;
 }
 .logo-visible .header-logo,
 .menu-visible .header-logo {
-    transform: none;
-    transition: all 0.2s ease;
-    opacity: 1;
-    visibility: visible;
+  transform: none;
+  transition: all 0.2s ease;
+  opacity: 1;
+  visibility: visible;
 }
 
 .header-cta {
-    position: absolute !important;
-    transition: all 0.2s ease;
-    top: 0;
+  position: absolute !important;
+  transition: all 0.2s ease;
+  top: 0;
 }
 
 .logo-visible .header-cta,
 .menu-visible .header-cta {
-    opacity: 0;
-    transform: translateY(20px);
-    visibility: hidden;
+  opacity: 0;
+  transform: translateY(20px);
+  visibility: hidden;
+}
+.sidebar-language {
+  display: none;
 }
 
 @media (max-width: 1024px) {
-    .header-logo {
-        transform: none;
-        opacity: 1;
-        visibility: visible;
-    }
-    .header-cta {
-        opacity: 0;
-        visibility: hidden;
-    }
+  .header-logo {
+    transform: none;
+    opacity: 1;
+    visibility: visible;
+  }
+  .header-cta {
+    opacity: 0;
+    visibility: hidden;
+  }
+  .sidebar-language {
+    display: block;
+  }
 }
 
 .menu-visible .header-logo,
 .menu-visible .header-cta {
-    transition: none;
+  transition: none;
 }
 
 .menu-visible header {
-    position: fixed;
+  position: fixed;
 }
 
 .menu-toggle .line1,
 .menu-toggle .line2 {
-    transition: all 0.3s ease;
-    transform-origin: 8px 12px;
+  transition: all 0.3s ease;
+  transform-origin: 8px 12px;
 }
 
 .menu-visible .menu-toggle .line1 {
-    transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 .menu-visible .menu-toggle .line2 {
-    transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 
 .header-nav path {
-    @apply fill-current;
+  @apply fill-current;
+}
+
+.header-lang {
+  cursor: pointer;
+}
+.header-lang-select {
+  display: none;
+  background-color: rgb(226 232 240 / var(--tw-bg-opacity));
+  cursor: pointer;
+  transform-origin: top;
+  white-space: nowrap;
+}
+.header-lang:hover .header-lang-select {
+  display: block;
+}
+.header-lang-select .r-anchor-background {
+  background-color: #fff;
+  z-index: 1;
+}
+.header-lang-select .r-anchor-label {
+  z-index: 2;
 }

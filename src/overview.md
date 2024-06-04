@@ -19,16 +19,21 @@ You can use the `toggleOverview()` API method to activate or deactivate the over
 Reveal.toggleOverview();
 
 // Activate the overview mode
-Reveal.toggleOverview( true );
+Reveal.toggleOverview(true);
 
 // Deactivate the overview mode
-Reveal.toggleOverview( false );
+Reveal.toggleOverview(false);
 ```
 
 ## Events
+
 We fire events when the overview mode is activated and deactivated.
 
 ```javascript
-Reveal.on( 'overviewshown', event => { /* ... */ } );
-Reveal.on( 'overviewhidden', event => { /* ... */ } );
+Reveal.on('overviewshown', (event) => {
+  /* ... */
+});
+Reveal.on('overviewhidden', (event) => {
+  /* ... */
+});
 ```

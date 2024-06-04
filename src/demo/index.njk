@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="{{ locale }}">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,8 +16,11 @@
 </head>
 
 <body class="h-screen full-page-demo" data-page="demo">
-
+    {% if locate %}
+    {% include "demo."+locate+".html" %}
+    {% else %}
     {% include "demo.html" %}
+    {% endif %}
 
     <script src="/main.js{{ helpers.assetSuffix }}" defer></script>
 

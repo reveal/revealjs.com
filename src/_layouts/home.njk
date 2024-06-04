@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="text-sm sm:text-base">
+<html lang="{{ locale }}" dir="{{ dir }}" class="text-sm sm:text-base">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
@@ -23,14 +23,17 @@
 <body data-page="{{ id }}" class="text-gray-900 leading-normal bg-gray-100">
 
     <section id="demo" class="reveal-demo overflow-hidden outline-none text-center" tabindex="-1">
+        {% if locale %}
+         {% include "demo."+locale+".html" %}
+        {% else %}
         {% include "demo.html" %}
+        {% endif %}
         {#
         <a class="homepage-promotion" href="/course">
             Become a pro in the reveal.js video course <span>Learn more</span>
         </a>
         #}
     </section>
-
     {% include "header.njk" %}
 
     <div class="w-full max-w-screen-xl mx-auto px-6 relative">

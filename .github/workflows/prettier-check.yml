@@ -1,0 +1,22 @@
+name: Prettier Check
+
+on: [push, pull_request]
+
+jobs:
+  prettier:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      - name: Install Prettier
+        run: npm install prettier
+
+      - name: Run Prettier check
+        run: npx prettier --check --ignore-path .prettierignore .

@@ -10,14 +10,14 @@ The presentation's current state can be fetched by using the `getState` method. 
 
 ```javascript
 // Move to slide 1
-Reveal.slide( 1 );
+Reveal.slide(1);
 
 let state = Reveal.getState();
 // {indexh: 1, indexv: 0, indexf: undefined, paused: false, overview: false}
 
 // Move to slide 3
-Reveal.slide( 3 );
+Reveal.slide(3);
 
 // This restores the saved state, placing on slide 1 again
-Reveal.setState( state );
+Reveal.setState(state);
 ```

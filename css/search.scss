@@ -1,31 +1,30 @@
-
 .search-results {
-    display: none;
+  display: none;
 }
 
-.search-visible .search-results[data-state="no-results"],
-.search-visible .search-results[data-state="has-results"],
-.search-visible .search-results[data-state="loading-error"] {
-    display: block;
+.search-visible .search-results[data-state='no-results'],
+.search-visible .search-results[data-state='has-results'],
+.search-visible .search-results[data-state='loading-error'] {
+  display: block;
 }
 
-.search-visible .search-results[data-state="no-results"] {
-    @apply p-4;
+.search-visible .search-results[data-state='no-results'] {
+  @apply p-4;
 }
 
 .search-results .excerpt {
-    @apply text-gray-700;
-    white-space: pre-wrap;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
+  @apply text-gray-700;
+  white-space: pre-wrap;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
 
 .search-results mark {
-    @apply bg-yellow-300;
+  @apply bg-yellow-300;
 }
 
 .divider:last-child {
-    display: none;
+  display: none;
 }

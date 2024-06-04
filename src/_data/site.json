@@ -1,20 +1,20 @@
 {
-    "name": "reveal.js",
-    "url": "https://revealjs.com",
-    "urls": {
-        "twitter": "https://twitter.com/revealjs",
-        "github": "https://github.com/hakimel/reveal.js",
-        "personal_twitter": "https://twitter.com/hakimel"
-    },
-    "author": {
-        "name": "Hakim El Hattab",
-        "email": "hakim.elhattab@gmail.com",
-        "handle": "@hakimel"
-    },
-    "images": {
-        "logo": "/images/logo/reveal-black-text.svg",
-        "favicon": "/images/favicon.svg",
-        "twitter": "/images/meta/reveal-twitter-card-1024x512.png",
-        "og": "/images/meta/reveal-og-card-1200-630.png"
-    }
+  "name": "reveal.js",
+  "url": "https://revealjs.com",
+  "urls": {
+    "twitter": "https://twitter.com/revealjs",
+    "github": "https://github.com/hakimel/reveal.js",
+    "personal_twitter": "https://twitter.com/hakimel"
+  },
+  "author": {
+    "name": "Hakim El Hattab",
+    "email": "hakim.elhattab@gmail.com",
+    "handle": "@hakimel"
+  },
+  "images": {
+    "logo": "/images/logo/reveal-black-text.svg",
+    "favicon": "/images/favicon.svg",
+    "twitter": "/images/meta/reveal-twitter-card-1024x512.png",
+    "og": "/images/meta/reveal-og-card-1200-630.png"
+  }
 }

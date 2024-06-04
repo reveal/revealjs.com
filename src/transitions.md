@@ -22,14 +22,15 @@ When navigating a presentation, we transition between slides by animating them f
 
 This is a complete list of all available transition styles. They work for both slides and slide backgrounds.
 
-| Name     | Effect
-| :-       | :-
-| none     | Switch backgrounds instantly
-| fade     | Cross fade — *default for background transitions*
-| slide    | Slide between backgrounds — *default for slide transitions*
-| convex   | Slide at a convex angle
-| concave  | Slide at a concave angle
-| zoom     | Scale the incoming slide up so it grows in from the center of the screen
+| Name    | Effect                                                                   |
+| :------ | :----------------------------------------------------------------------- |
+| none    | Switch backgrounds instantly                                             |
+| fade    | Cross fade — _default for background transitions_                        |
+| slide   | Slide between backgrounds — _default for slide transitions_              |
+| convex  | Slide at a convex angle                                                  |
+| concave | Slide at a concave angle                                                 |
+| zoom    | Scale the incoming slide up so it grows in from the center of the screen |
+
 {.key-value}
 
 ## Separate In-Out Transitions
@@ -37,22 +38,15 @@ This is a complete list of all available transition styles. They work for both s
 You can also use different in and out transitions for the same slide by appending `-in` or `-out` to the transition name.
 
 ```html
-<section data-transition="slide">
-    The train goes on …
-</section>
-<section data-transition="slide">
-    and on …
-</section>
-<section data-transition="slide-in fade-out">
-    and stops.
-</section>
+<section data-transition="slide">The train goes on …</section>
+<section data-transition="slide">and on …</section>
+<section data-transition="slide-in fade-out">and stops.</section>
 <section data-transition="fade-in slide-out">
-    (Passengers entering and leaving)
+  (Passengers entering and leaving)
 </section>
-<section data-transition="slide">
-    And it starts again.
-</section>
+<section data-transition="slide">And it starts again.</section>
 ```
+
 <div class="reveal reveal-example">
   <div class="slides">
     <section data-transition="slide">
@@ -76,9 +70,10 @@ You can also use different in and out transitions for the same slide by appendin
 ## Background Transitions
 
 We transition between slide backgrounds using a cross fade by default. This can be changed on a global level or overridden for specific slides. To change background transitions for all slides, use the `backgroundTransition` config option.
+
 ```js
 Reveal.initialize({
-  backgroundTransition: 'slide'
+  backgroundTransition: 'slide',
 });
 ```
 

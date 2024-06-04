@@ -1,19 +1,14 @@
 module.exports = {
-  purge: [
-    './src/**/*.html',
-    './src/**/*.njk',
-    './src/**/*.md',
-    './js/**/*.js',
-  ],
+  purge: ['./src/**/*.html', './src/**/*.njk', './src/**/*.md', './js/**/*.js'],
   theme: {
     extend: {
       inset: {
-        '4': '1rem',
-        '16': '4rem',
-        '20': '5rem',
-        '24': '6rem',
-        '5vw': '5vw'
-      }
+        4: '1rem',
+        16: '4rem',
+        20: '5rem',
+        24: '6rem',
+        '5vw': '5vw',
+      },
     },
     colors: {
       transparent: 'transparent',
@@ -132,8 +127,8 @@ module.exports = {
         800: '#97266d',
         900: '#702459',
       },
-    }
+    },
   },
   variants: {},
   plugins: [],
-}
+};
