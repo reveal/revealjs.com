@@ -79,23 +79,16 @@
   @apply fill-current;
 }
 
-.header-lang {
-  cursor: pointer;
-}
 .header-lang-select {
   display: none;
-  background-color: rgb(226 232 240 / var(--tw-bg-opacity));
+  background-color: #fff;
   cursor: pointer;
   transform-origin: top;
   white-space: nowrap;
+  z-index: 0;
+  transform: translateX(-50%);
+  left: 50%;
 }
 .header-lang:hover .header-lang-select {
   display: block;
-}
-.header-lang-select .r-anchor-background {
-  background-color: #fff;
-  z-index: 1;
-}
-.header-lang-select .r-anchor-label {
-  z-index: 2;
 }
