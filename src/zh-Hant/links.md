@@ -45,9 +45,9 @@ layout: default
 <a href="#/3/2">前往第三張幻燈片中的第二個垂直幻燈片</a>
 ```
 
-## 導航鏈接
+## 導覽鏈接
 
-你可以添加相對導航鏈接，這與內置的方向控制箭頭的工作方式類似。這是通過在 `.reveal` 容器內的任何可點擊 HTML 元素上添加以下類之一來實現的。
+你可以添加相對導覽鏈接，這與內置的方向控制箭頭的工作方式類似。這是通過在 `.reveal` 容器內的任何可點擊 HTML 元素上添加以下類之一來實現的。
 
 ```html
 <button class="navigate-left">左</button>
@@ -62,4 +62,4 @@ layout: default
 <button class="navigate-next">下一個</button>
 ```
 
-每個導航元素都會自動根據當前幻燈片的導航路線有效性獲得 `enabled` 的 class。例如，如果你在第一張幻燈片上，只有 `navigate-right` 會獲得 `enabled` 的 class，因為向左導航是不可能的。這樣可以直觀的告诉使用者往哪些方向是可行的。
+每個導覽元素都會自動根據當前幻燈片的導覽路線有效性獲得 `enabled` 的 class。例如，如果你在第一張幻燈片上，只有 `navigate-right` 會獲得 `enabled` 的 class，因為向左導覽是不可能的。這樣可以直觀的告诉使用者往哪些方向是可行的。

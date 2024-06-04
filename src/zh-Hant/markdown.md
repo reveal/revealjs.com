@@ -6,7 +6,7 @@ layout: default
 
 # Markdown
 
-使用 Markdown 編寫簡報內容不僅可能，而且往往更方便。要創建一個 Markdown 幻燈片，請在你的 `<section>` 元素中添加 `data-markdown` 屬性，並將內容包裹在 `<textarea data-template>` 中，如下例所示。
+使用 Markdown 編寫簡報內容不僅可行，而且往往更方便。要創建一個 Markdown 幻燈片，請在你的 `<section>` 元素中添加 `data-markdown` 屬性，並將內容包裹在 `<textarea data-template>` 中，如下例所示。
 
 ```html
 <section data-markdown>
@@ -36,7 +36,7 @@ layout: default
   </div>
 </div>
 
-注意，這對縮進（避免混合使用制表符和空格）和換行（避免連續換行）很敏感。
+注意，它對縮進（避免混合使用制表符和空格）和換行（避免連續換行）很敏感。
 
 ## Markdown 插件
 
@@ -74,9 +74,7 @@ layout: default
 
 ## 元素屬性
 
-特殊語法（通過 HTML 註釋）可用於為 Markdown 元素添加屬性。這對於片段等很
-
-有用。
+特殊語法（通過 HTML 註釋）可用於為 Markdown 元素添加屬性。這對於片段等很有用。
 
 ```html
 <section data-markdown>

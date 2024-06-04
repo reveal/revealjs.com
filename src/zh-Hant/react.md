@@ -15,7 +15,7 @@ layout: default
 
 你可以在像 `main.tsx` 或 `app.tsx` 這樣的 JavaScript/TypeScript 源文件中添加和初始化 Reveal.js。
 
-你可以全域地執行，即在應用/組件函數之外，或者在其中之一內部。在後一種情況下，你必須小心不要堆疊初始化。只初始化一次幻燈片集。如果需要重新配置，請使用 `configure` 函數或在再次初始化之前 `destroy` 幻燈片集。
+你可以全域地執行，即在應用/組件函數之外，或者在其中之一內部。在後一種情況下，你必須小心不要堆疊初始化。只初始化一次簡報。如果需要重新配置，請使用 `configure` 函數或在再次初始化之前 `destroy` 簡報。
 
 首先，使用 `npm` 安裝 Reveal：
 
@@ -36,14 +36,14 @@ npm i --save-dev @types/reveal.js
 ```ts
 import Reveal from 'reveal.js';
 import 'reveal.js/dist/reveal.css';
-import 'reveal.js/dist/theme/black.css'; // "black" 主題只是一個例子
+import 'reveal.js/dist/theme/black.css'; // "black" 主題只是一個範例
 ```
 
 #### 初始化
 
 最後，添加最適合你項目需求的[初始化代碼](https://revealjs.com/initialization/)。
 
-如果你決定在返回 JSX 的應用或組件函數內部初始化幻燈片集，我們建議你使用 `useEffect` 鉤子來進行。這將確保在容器首次渲染後進行初始化。
+如果你決定在返回 JSX 的應用或組件函數內部初始化幻燈片集，我們建議你使用 `useEffect` 這個 hook 來進行。這將確保在容器首次渲染後進行初始化。
 
 還建議使用 refs 來維護對幻燈片集容器 `div` 和相應的 `reveal` 實例的引用。這些 refs 可以幫助確保每個幻燈片集只初始化一次。
 
@@ -103,9 +103,7 @@ export default App;
 
 ## React Portals
 
-如果你只想
-
-在特定幻燈片中添加一些組件，我們建議將 Reveal.js 的 DOM 樹保持在 React 之外，並使用 [React Portals](https://react.dev/reference/react-dom/createPortal) 將 react 組件放置在特定部分。
+如果你只想在特定幻燈片中添加一些組件，我們建議將 Reveal.js 的 DOM 樹保持在 React 之外，並使用 [React Portals](https://react.dev/reference/react-dom/createPortal) 將 react 組件放置在特定部分。
 
 ## 第三方套件
 

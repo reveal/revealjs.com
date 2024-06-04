@@ -42,7 +42,7 @@ Reveal.initialize({ center: false });
 Reveal.initialize({ embedded: false });
 ```
 
-一個嵌入式簡報將根據其 `.reveal` 根的尺寸確定其大小。如果該元素的大小因非窗口 `resize` 事件的原因而改變，你可以調用 `Reveal.layout()` 手動觸發布局更新。
+一個嵌入式簡報將根據其 `.reveal` 根的尺寸確定其大小。如果該元素的大小因非視窗 `resize` 事件的原因而改變，你可以調用 `Reveal.layout()` 手動觸發布局更新。
 
 ```js
 // 更改我們簡報的尺寸

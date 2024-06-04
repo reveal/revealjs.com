@@ -6,7 +6,7 @@ layout: default
 
 # 主題
 
-該框架附帶了幾種不同的主題。
+此框架附帶了幾種不同的主題。
 
 | 名稱         | 預覽                                                                                                          |
 | :----------- | :------------------------------------------------------------------------------------------------------------ |
@@ -33,7 +33,7 @@ layout: default
 
 ## 自定義屬性
 
-所有主題變量都作為 CSS 自定義屬性在偽類 `:root` 中暴露。查看[暴露變量列表](https://github.com/hakimel/reveal.js/blob/master/css/theme/template/exposer.scss)。
+所有主題變數都作為 CSS 自定義屬性在偽類 `:root` 中。查看[變數列表](https://github.com/hakimel/reveal.js/blob/master/css/theme/template/exposer.scss)。
 
 ## 創建主題
 

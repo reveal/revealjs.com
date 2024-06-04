@@ -44,7 +44,7 @@ Reveal.initialize({
 
 `autoSlideMethod` 屬性可以更改自動撥放的方向。
 
-我們預設將按順序播放所有幻燈片，包括水平和[垂直](/zh-hant/vertical-slides/)幻燈片。如果你只想沿頂層導航並忽略垂直幻燈片，你可以提供一個調用 `Reveal.right()` 的函式。
+我們預設將按順序播放所有幻燈片，包括水平和[垂直](/zh-hant/vertical-slides/)幻燈片。如果你只想沿頂層導覽並忽略垂直幻燈片，你可以提供一個調用 `Reveal.right()` 的函式。
 
 ```js
 Reveal.configure({

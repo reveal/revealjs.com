@@ -6,11 +6,11 @@ layout: default
 
 # 轉場效果
 
-在導航演示文稿時，我們通常通過從右向左動畫的方式在幻燈片之間進行轉場。這種轉場可以通過設置 `transition` 配置選項為有效的[轉場樣式](#styles)來更改。轉場也可以使用 `data-transition` 屬性為特定幻燈片覆蓋。
+在導覽簡報時，我們通常通過從右向左動畫的方式在幻燈片之間進行轉場。這種轉場可以通過設置 `transition` 配置選項為有效的[轉場樣式](#styles)來更改。轉場也可以使用 `data-transition` 屬性為特定幻燈片覆蓋。
 
 ```html
 <section data-transition="zoom">
-  <h2>此幻燈片將覆蓋演示文稿的轉場並放大！</h2>
+  <h2>此幻燈片將覆蓋簡報的轉場並放大！</h2>
 </section>
 
 <section data-transition-speed="fast">

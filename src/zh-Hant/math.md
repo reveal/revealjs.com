@@ -42,7 +42,7 @@ layout: default
 
 ## Markdown
 
-如果你想在 Markdown 寫的簡報中包含數學公式，你需要用反引號將公式包起來。這樣可以避免 LaTeX 和 Markdown 語法之間的衝突。例如：
+如果你想在 Markdown 寫的簡報中插入數學公式，你需要用反引號將公式包起來。這樣可以避免 LaTeX 和 Markdown 語法之間的衝突。例如：
 
 ```html
 <section data-markdown>`$$ J(\theta_0,\theta_1) = \sum_{i=0} $$`</section>
@@ -62,7 +62,7 @@ layout: default
 
 ### KaTeX <span class="r-version-badge new">4.2.0</span>
 
-通过 `katex` 配置對象調整選項。以下是默認的插件配置。如果你不打算更改這些值，則無需包括 `katex` 配置選項。
+通過 `katex` 配置對象調整選項。以下是默認的插件配置。如果你不打算更改這些值，則無需添加 `katex` 配置選項。
 
 ```js
 Reveal.initialize({
@@ -80,9 +80,7 @@ Reveal.initialize({
 });
 ```
 
-注意，默認情況下最新的 KaTeX 從遠程伺服器
-
-加載（https://cdn.jsdelivr.net/npm/katex）。要使用固定版本，將 `version` 設為例如 `0.13.18`。
+注意，默認情況下會從外部伺服器取得最新版本的 KaTeX（https://cdn.jsdelivr.net/npm/katex）。要使用固定版本，將 `version` 設為例如 `0.13.18`。
 
 如果你想離線使用 KaTeX，你需要下載庫的副本（例如通過 npm）並使用 `local` 配置選項（則 `version` 選項將被忽略），例如：
 
@@ -119,7 +117,7 @@ Reveal.initialize({
 
 注意，最新的 MathJax 2 從遠程伺服器加載。要使用固定版本，將 mathjax 設為例如 https://cdn.jsdelivr.net/npm/mathjax@2.7.8/MathJax.js。
 
-如果你想離線使用 MathJax，你需要下載庫的副本（例如通過 npm）並將 `mathjax` 指向本地副本。
+如果你想離線使用 MathJax，你需要下載函式庫的副本（例如通過 npm）並將 `mathjax` 指向本地副本。
 
 ### MathJax 3 <span class="r-version-badge new">4.2.0</span>
 
@@ -143,6 +141,6 @@ Reveal.initialize({
 });
 ```
 
-注意，最新的 MathJax 3 從遠程伺服器加載。要使用固定版本，將 `mathjax` 設為例如 <https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js>。此外，配置現在是 URL 的一部分，默认載入 `tex-mml-chtml`，它能識別 TeX 和 MathML 表示的數學公式，並使用 HTML 和 CSS 生成輸出（CommonHTML 輸出格式）。這是一個非常通用的配置，但這也是他很龐大的原因，因此你可能需要考慮一個更輕量，更符合你需求的配置，例如 `tex-svg`。
+注意，最新的 MathJax 3 從遠程伺服器加載。要使用固定版本，將 `mathjax` 設為例如 <https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js>。此外，配置現在是 URL 的一部分，默認載入 `tex-mml-chtml`，它能識別 TeX 和 MathML 表示的數學公式，並使用 HTML 和 CSS 生成輸出（CommonHTML 輸出格式）。這是一個非常通用的配置，但這也是它很龐大的原因，因此你可能需要考慮一個更輕量，更符合你需求的配置，例如 `tex-svg`。
 
 如果你想離線使用 MathJax，你需要下載庫的副本（例如通過 npm）並相應地調整 `mathjax`。

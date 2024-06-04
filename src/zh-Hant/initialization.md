@@ -6,7 +6,7 @@ layout: default
 
 # 初始化
 
-最常見的 reveal.js 使用情景是有一個覆蓋整個視口的單一簡報。從 4.0 版本開始，我們也支持在同一頁面上同時運行[多個簡報](#multiple-presentations)，以及將庫作為一個[ES 模塊](#es-module)引入。
+最常見的 reveal.js 使用情景是有一個覆蓋整個視窗的單一簡報。從 4.0 版本開始，我們也支持在同一頁面上同時運行[多個簡報](#multiple-presentations)，以及將庫作為一個[ES 模塊](#es-module)引入。
 
 如果你的頁面上只有一個簡報，我們建議使用全域的 `Reveal` 對象來初始化 reveal.js。`Reveal.initialize` 函式接受一個參數；一個 reveal.js 的[配置對象](/zh-hant/config/)。
 
@@ -29,7 +29,7 @@ Reveal.initialize().then(() => {
 
 要在同一頁面上並排運行多個簡報，你可以創建叫做 `Reveal` 的 class 的實例。`Reveal` 構造函數接受兩個參數；簡報的 `.reveal` HTML 元素根以及一個可選的[配置對象](/zh-hant/config/)。
 
-請注意，你還需要將[嵌入式](/zh-hant/presentation-size/#嵌入式)配置選項設置為真。這個標誌使得簡報按照它們的 `.reveal` 根元素的大小進行自我調整，而不是按照瀏覽器視口。你還需要手動為每個 `.reveal .deck*` 元素定義 `width` 和 `height` 的 CSS 屬性，才能看到它們顯示出來。
+請注意，你還需要將[嵌入式](/zh-hant/presentation-size/#嵌入式)配置選項設置為真。這個標誌使得簡報按照它們的 `.reveal` 根元素的大小進行自我調整，而不是按照瀏覽器視窗。你還需要手動為每個 `.reveal .deck*` 元素定義 `width` 和 `height` 的 CSS 屬性，才能看到它們顯示出來。
 
 默認情況下，reveal.js 會捕獲文檔中的所有鍵盤事件。對於嵌入式簡報，我們建議使用 `keyboardCondition: 'focused'` 初始化，這樣鍵盤事件只有在觀眾聚焦簡報時才會被捕獲。
 

@@ -6,9 +6,9 @@ layout: default
 
 # PDF 輸出
 
-簡報可以通過特殊的列印樣式表導出為 PDF。這裡有一個已經上傳到 SlideShare 的導出簡報的例子：https://slideshare.net/hakimel/revealjs-300。
+簡報可以通過特殊的列印樣式表導出為 PDF。這裡有一個已經上傳到 SlideShare 的導出簡報的範例：https://slideshare.net/hakimel/revealjs-300。
 
-注意：此功能目前僅確認在 [Google Chrome](https://google.com/chrome) 和 [Chromium](https://www.chromium.org/Home) 中工作。
+注意：此功能目前僅確認在 [Google Chrome](https://google.com/chrome) 和 [Chromium](https://www.chromium.org/Home) 中可行。
 
 ## 操作說明
 
@@ -24,7 +24,7 @@ layout: default
 
 ## 演講者筆記
 
-你的[演講者筆記](/zh-hant/speaker-view/)可以通過啟用 `showNotes` 選項包含在 PDF 輸出中。
+你的[演講者筆記](/zh-hant/speaker-view/)可以通過啟用 `showNotes` 選項包含在輸出的 PDF 中。
 
 ```js
 Reveal.configure({ showNotes: true });

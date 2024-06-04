@@ -22,7 +22,7 @@ Reveal.initialize({
   // 決定控制出現的位置，"edges" 或 "bottom-right"
   controlsLayout: 'bottom-right',
 
-  // 向後導航箭頭的可見性規則；"faded", "hidden" 或 "visible"
+  // 向後導覽箭頭的可見性規則；"faded", "hidden" 或 "visible"
   controlsBackArrows: 'faded',
 
   // 顯示簡報進度條
@@ -58,13 +58,13 @@ Reveal.initialize({
   // 標記是否應監控哈希並相應地更改幻燈片
   respondToHashChanges: true,
 
-  // 啟用跳轉到幻燈片的導航快捷鍵
+  // 啟用跳轉到幻燈片的導覽快捷鍵
   jumpToSlide: true,
 
   // 將每次幻燈片更改推送到瀏覽器歷史記錄。意味著 `hash: true`
   history: false,
 
-  // 啟用用於導航的鍵盤快捷
+  // 啟用用於導覽的鍵盤快捷
 
 鍵
   keyboard: true,
@@ -84,7 +84,7 @@ Reveal.initialize({
   // 幻燈片的垂直居中
   center: true,
 
-  // 啟用具有觸控輸入的設備上的觸控導航
+  // 啟用具有觸控輸入的設備上的觸控導覽
   touch: true,
 
   // 循環播放簡報
@@ -93,7 +93,7 @@ Reveal.initialize({
   // 將簡報方向更改為從右到左
   rtl: false,
 
-  // 更改我們的導航方向的行為。
+  // 更改我們的導覽方向的行為。
   //
   // "default"
   // 左/右箭頭鍵在水平幻燈片之間步進，上/下箭頭鍵在垂直幻燈片之間步進。空格鍵步進
@@ -111,7 +111,7 @@ Reveal.initialize({
   // 1.2    2.2
   // 1.3    2.3
   //
-  // 如果你在幻燈片 1.3 上並向右導航，你通常會從 1.3 -> 2.1。如果使用 "grid"，相同的導航將帶你
+  // 如果你在幻燈片 1.3 上並向右導覽，你通常會從 1.3 -> 2.1。如果使用 "grid"，相同的導覽將帶你
   // 從 1.3 -> 2.3。
   navigationMode: 'default',
 
@@ -190,13 +190,13 @@ Reveal.initialize({
   // 用戶輸入後停止自動播放
   autoSlideStoppable: true,
 
-  // 自動播放時用於導航的函式（默認為 navigateNext）
+  // 自動播放時用於導覽的函式（默認為 navigateNext）
   autoSlideMethod: null,
 
   // 指定你認為你將花在每張幻燈片上的平均時間（秒）。這用於在演講者視圖中顯示配速計時器
   defaultTiming: null,
 
-  // 啟用通過鼠標滾輪進行幻燈片導航
+  // 啟用通過鼠標滾輪進行幻燈片導覽
   mouseWheel: false,
 
   // 在 iframe 預覽覆蓋層中打開鏈接
@@ -208,7 +208,7 @@ Reveal.initialize({
 
   postMessage: true,
 
-  // 通過 postMessage 將所有 reveal.js 事件派發給父窗口
+  // 通過 postMessage 將所有 reveal.js 事件派發給父視窗
   postMessageEvents: false,
 
   // 當頁面可見性改變時聚焦 body 以確保鍵盤快捷鍵工作
@@ -240,7 +240,7 @@ Reveal.initialize({
   // 離當前幻燈片可見的幻燈片數
   viewDistance: 3,
 
-  // 在移動設備上離當前幻燈片可見的幻燈片數。
+  // 在行動裝置上離當前幻燈片可見的幻燈片數。
   // 建議將此數字設置為比 viewDistance 更低的數字以節省資源。
   mobileViewDistance: 2,
 

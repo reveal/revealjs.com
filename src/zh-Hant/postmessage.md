@@ -6,7 +6,7 @@ layout: default
 
 # postMessage API
 
-框架內建了 postMessage API，當需要與另一個窗口中的演示文稿進行通信時可以使用。以下範例展示了如何讓給定窗口中的 reveal.js 實例進行到第二張幻燈片：
+框架內建了 postMessage API，當需要與另一個視窗中的簡報進行通信時可以使用。以下範例展示了如何讓給定視窗中的 reveal.js 實例進行到第二張幻燈片：
 
 ```javascript
 <window>.postMessage( JSON.stringify({ method: 'slide', args: [ 2 ] }), '*' );
@@ -14,7 +14,7 @@ layout: default
 
 ## postMessage 事件
 
-當 reveal.js 在一個 iframe 中運行時，它可以選擇將所有事件冒泡到父窗口。冒泡的事件是三個字段的字符串化 JSON：namespace, eventName 和 state。這是從父窗口訂閱它們的函式：
+當 reveal.js 在一個 iframe 中運行時，它可以選擇將所有事件冒泡到父視窗。冒泡的事件是三個字段的字符串化 JSON：namespace, eventName 和 state。這是從父視窗監聽它們的方式：
 
 ```javascript
 window.addEventListener('message', (event) => {
@@ -43,14 +43,14 @@ window.addEventListener( 'message', event => {
 
 ## 啟用/禁用 postMessage
 
-這種跨窗口消息傳遞可以通過配置標誌來開啟或關閉。這些是默認值。
+這種跨視窗消息傳遞可以通過配置標誌來開啟或關閉。這些是默認值。
 
 ```javascript/1-5
 Reveal.initialize({
   // 通過 window.postMessage 暴露 reveal.js API
   postMessage: true,
 
-  // 通過 postMessage 將所有 reveal.js 事件發送到父窗口
+  // 通過 postMessage 將所有 reveal.js 事件發送到父視窗
   postMessageEvents: false
 });
 ```
