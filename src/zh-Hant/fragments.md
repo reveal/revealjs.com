@@ -6,9 +6,9 @@ layout: default
 
 # 片段
 
-片段用於突出顯示或逐步顯示幻燈片上的單個元素。所有帶有 `fragment` 類的元素將在轉到下一張幻燈片之前逐步顯示。
+片段用於突出顯示或逐步顯示幻燈片上的單個元素。所有帶有叫做 `fragment` 的 class 的元素將在轉到下一張幻燈片之前逐步顯示。
 
-默認的片段樣式是從不可見開始，然後淡入。通過添加不同的類到片段，可以更改這種樣式。
+默認的片段樣式是從不可見開始，然後淡入。通過添加不同的 class 到片段，可以更改這種樣式。
 
 ```html
 <p class="fragment">淡入</p>
@@ -55,7 +55,7 @@ layout: default
 
 ## 自定義片段 <span class="r-version-badge new">4.5.0</span>
 
-可以通過為 `.fragment.effectname` 和 `.fragment.effectname.visible` 分別定義 CSS 樣式來實現自定義效果。當片段在簡報中被逐步顯示時，`visible` 類將被添加到每個片段上。
+可以通過為 `.fragment.effectname` 和 `.fragment.effectname.visible` 分別定義 CSS 樣式來實現自定義效果。當片段在簡報中被逐步顯示時，叫做 `visible` 的 class 將被添加到每個片段上。
 
 例如，以下定義了一種片段樣式，其中元素最初被模糊，但在逐步顯示時變得清晰。
 
@@ -95,9 +95,9 @@ layout: default
   </div>
 </div>
 
-請注意，我們為每個片段添加了一個 `custom` 類。這告訴 reveal.js 避免應用其默認的淡入片段樣式。
+請注意，我們為每個片段添加了一個 叫做 `custom` 的 class 。這告訴 reveal.js 避免應用其默認的淡入片段樣式。
 
-如果您希望所有元素保持模糊，除了當前片段外，您可以用 `current-fragment` 替換 `visible`。
+如果你希望所有元素保持模糊，除了當前片段外，你可以用 `current-fragment` 替換 `visible`。
 
 ```css
 .fragment.blur.current-fragment {

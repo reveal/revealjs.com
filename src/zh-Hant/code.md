@@ -54,7 +54,7 @@ reveal.js 有一個強大的功能，就是為程式碼添加顏色 — 由 [hig
 
 ## 行號與高亮
 
-你可以通過在你的 `<code>` 標籤上添加 `data-line-numbers` 屬性來啟用行號。如果你想高亮特定行，可以使用同一屬性提供以逗號分隔的行號列表。例如，在以下示例中，第 3 行和第 8-10 行被高亮：
+你可以通過在你的 `<code>` 標籤上添加 `data-line-numbers` 屬性來啟用行號。如果你想高亮特定行，可以使用同一屬性提供以逗號分隔的行號列表。例如，在以下範例中，第 3 行和第 8-10 行被高亮：
 
 ```html
 <pre><code data-line-numbers="3,8-10">
@@ -96,7 +96,7 @@ reveal.js 有一個強大的功能，就是為程式碼添加顏色 — 由 [hig
 
 #### 行號偏移 <span class="r-version-badge new">4.2.0</span>
 
-如果你想展示一長串代碼的片段，你可以偏移行號。在下面的示例中，我們設置 `data-ln-start-from="7"` 使行號從 7 開始。
+如果你想展示一長串代碼的片段，你可以偏移行號。在下面的範例中，我們設置 `data-ln-start-from="7"` 使行號從 7 開始。
 
 ```html
 <pre><code data-line-numbers data-ln-start-from="7">

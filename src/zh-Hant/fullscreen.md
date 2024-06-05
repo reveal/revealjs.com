@@ -6,9 +6,9 @@ layout: default
 
 ### 全螢幕模式
 
-reveal.js 支援全螢幕模式。在鍵盤上按「F」鍵即可進入全螢幕模式觀看您的簡報。一旦進入全螢幕模式，按「ESC」鍵退出。
+reveal.js 支援全螢幕模式。在鍵盤上按「F」鍵即可進入全螢幕模式觀看你的簡報。一旦進入全螢幕模式，按「ESC」鍵退出。
 
-請在下方試用。請注意，這個例子使用了一個[嵌入式](/presentation-size/#embedded)簡報，您需要點擊以給它焦點然後按 F 鍵。
+你可以在下方試用。請注意，這個範例使用了一個[嵌入式](/zh-hant/presentation-size/#%E5%B5%8C%E5%85%A5%E5%BC%8F)簡報，你需要點擊以給它焦點然後按 F 鍵。
 
 <div class="reveal reveal-example">
   <div class="slides">

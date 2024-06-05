@@ -6,15 +6,15 @@ layout: default
 
 # API
 
-我們提供了一個廣泛的 JavaScript API 來控制導航和檢查簡報的當前狀態。如果你正在編輯單份簡報，可以通過全域對象 `Reveal` 來訪問 API。
+我們提供了一個廣泛的 JavaScript API 來控制導覽和檢查簡報的當前狀態。如果你正在編輯單份簡報，可以通過全域對象 `Reveal` 來訪問 API。
 
-### 導航
+### 導覽
 
 ```javascript
-// 導航到指定幻燈片
+// 導覽到指定幻燈片
 Reveal.slide(indexh, indexv, indexf);
 
-// 相對導航
+// 相對導覽
 Reveal.left();
 Reveal.right();
 Reveal.up();
@@ -22,16 +22,16 @@ Reveal.down();
 Reveal.prev();
 Reveal.next();
 
-// 片段導航
+// 片段導覽
 Reveal.navigateFragment(indexf); // (-1 表示隱藏所有片段)
 Reveal.prevFragment();
 Reveal.nextFragment();
 
-// 檢查我們可以向哪些方向導航
+// 檢查我們可以向哪些方向導覽
 // {top: false, right: true, bottom: false, left: false}
 Reveal.availableRoutes();
 
-// 檢查我們可以向哪些片段方向導航
+// 檢查我們可以向哪些片段方向導覽
 // {prev: false, next: true}
 Reveal.availableFragments();
 ```
@@ -110,7 +110,7 @@ Reveal.getSlides();
 Reveal.hasHorizontalSlides();
 Reveal.hasVerticalSlides();
 
-// 檢查套件是否至少在任一軸上導航過一次
+// 檢查套件是否至少在任一軸上導覽過一次
 Reveal.hasNavig;
 
 atedHorizontally();
@@ -125,7 +125,7 @@ Reveal.isLastVerticalSlide();
 ### 模式
 
 ```javascript
-// 顯示一個幫助介面，包含鍵盤快捷方式，可以傳遞 true/false 來強制開啟/關閉
+// 顯示一個幫助介面，包含鍵盤快捷鍵，可以傳遞 true/false 來強制開啟/關閉
 Reveal.toggleHelp();
 
 // 切換簡報狀態，可以傳遞 true/false 來強制開啟/關閉
@@ -150,4 +150,4 @@ Reveal.getBackgroundsElement(); // <div class="backgrounds">
 
 ## 閱讀更多
 
-- [插件 API](/zh-TW/plugins/#api)
+- [插件 API](/zh-hant/plugins/#api)
