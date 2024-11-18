@@ -74,7 +74,7 @@ Reveal.initialize({
       { left: '\\(', right: '\\)', display: false },
       { left: '\\[', right: '\\]', display: true },
     ],
-    ignoredTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    ignoredTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
   },
   plugins: [RevealMath.KaTeX],
 });
@@ -108,7 +108,7 @@ Reveal.initialize({
         ['$', '$'],
         ['\\(', '\\)'],
       ],
-      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
     },
   },
   plugins: [RevealMath.MathJax2],
@@ -134,7 +134,7 @@ Reveal.initialize({
       ],
     },
     options: {
-      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
     },
   },
   plugins: [RevealMath.MathJax3],
