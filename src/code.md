@@ -174,6 +174,30 @@ You can step through multiple code highlights on the same code block. Delimit ea
   </div>
 </div>
 
+## Language selection
+
+By default, [highlight.js](https://highlightjs.org/) tries to automatically detect which language is used in the code snippet. It is however possible to overwrite this by adding a `language-XXX` attribute. The full list of supported languages is available on [their documentation](https://highlightjs.readthedocs.io/en/latest/supported-languages.html).
+
+```html
+<pre><code data-trim class="language-python">
+>>> import antigravity
+>>> print(b"\x01\x02\x03")
+>>> a = 2
+</code></pre>
+```
+
+<div class="reveal reveal-example">
+  <div class="slides">
+    <section>
+<pre><code data-trim class="language-python">
+>>> import antigravity
+>>> print(b"\x01\x02\x03")
+>>> a = 2
+</code></pre>
+    </section>
+  </div>
+</div>
+
 ## HTML Entities <span class="r-version-badge new">4.1.0</span>
 
 Content added inside of a `<code>` block is parsed as HTML by the web browser. If you have HTML characters (<>) in your code you will need to escape them ($lt; $gt;).
