@@ -51,14 +51,14 @@ button {
 }
 
 // External links
-.exernal-link-icon {
+.external-link-icon {
   @apply inline-block ml-1 align-text-bottom opacity-75;
 }
 
-.exernal-link-icon svg {
+.external-link-icon svg {
   height: 1rem;
 }
-.exernal-link-icon path {
+.external-link-icon path {
   @apply fill-current;
 }
 
