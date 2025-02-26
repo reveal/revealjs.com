@@ -14,7 +14,7 @@ The scroll view gives you the best of both worlds—without any extra effort. Pr
 
 ### What About Vertical Slides?
 
-The scroll view flattens your deck into a single linear flow. All slides will appear in the order they were authored and there is no diffentiation between horizontal and [vertical slides](/vertical-slides).
+The scroll view flattens your deck into a single linear flow. All slides will appear in the order they were authored and there is no differentiation between horizontal and [vertical slides](/vertical-slides).
 
 ### Getting Started
 
@@ -76,7 +76,7 @@ Reveal.initialize({
 
 ## Scrollbar
 
-We render a custom scrollbar for any presentaion in scroll view. This scrollbar is broken up by slide so that users get a clear indication of when the slide will change.
+We render a custom scrollbar for any presentation in scroll view. This scrollbar is broken up by slide so that users get a clear indication of when the slide will change.
 
 The scrollbar also shows individual fragments within your slides. Slides with fragments are given more vertical space based on how many fragments there are.
 
