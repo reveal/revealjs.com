@@ -49,6 +49,10 @@ module.exports = {
     'zh-Hant': '媒體',
     en: 'Media',
   },
+  Lightbox: {
+    'zh-Hant': 'Lightbox',
+    en: 'Lightbox',
+  },
   Code: {
     'zh-Hant': '代碼',
     en: 'Code',
