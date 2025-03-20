@@ -29,6 +29,28 @@ Reveal.initialize({
 
 Note that embedded HTML `<video>`/`<audio>` and YouTube/Vimeo iframes are automatically paused when you navigate away from a slide. This can be disabled by decorating your element with a `data-ignore` attribute.
 
+## Lightbox
+
+You can turn any element into a media lightbox by adding the `data‑preview‑image`, `data‑preview‑video` or `data‑preview‑link` attribute. This will cause the media to open in a full-screen overlay when clicked. Learn more in the [Lightbox docs](/lightbox).
+
+```html
+<img src="reveal.png" data-preview-video="video.mp4">
+<a href="https://hakim.se" data-preview-link>Open Link</a>
+```
+
+<div class="reveal reveal-example">
+  <div class="slides">
+    <section>
+      <img src="/images/logo/reveal-black-text-sticker.png" data-preview-video="https://static.slid.es/site/homepage/v1/homepage-video-editor.mp4" width="400px">
+      <br />
+      <br />
+      <a href="https://hakim.se" data-preview-link>Open Link</a>
+    </section>
+  </div>
+</div>
+
+
+
 ## Lazy Loading
 
 When working on presentations with a lot of media or iframe content it's important to load lazily. Lazy loading means that reveal.js will only load content for the few slides nearest to the current slide. The number of slides that are preloaded is determined by the `viewDistance` configuration option.

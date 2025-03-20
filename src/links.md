@@ -63,3 +63,21 @@ You can add relative navigation links that work similarly to the built in direct
 ```
 
 Each navigation element is automatically given an `enabled` class when it's a valid navigation route based on the current slide. For example, if you're on the first slide only `navigate-right` will have the `enabled` class since it's not possible to navigate towards the left.
+
+## Lightbox Links
+
+If the website you're linking to supports iframe embedding, you can use the `data-preview-link` attribute to open the link in an iframe lightbox. This way you can show an external website without leaving the slide deck. Learn more in the [Lightbox docs](/lightbox/#iframe-lightbox).
+
+```html
+<a href="https://hakim.se" data-preview-link>Open Link</a>
+```
+
+<div class="reveal reveal-example">
+  <div class="slides">
+    <section>
+			<a href="https://hakim.se" data-preview-link>Open Link</a>
+    </section>
+  </div>
+</div>
+
+Note that this will only work if the link allows for embedding. Many websites prevent embedding via `x-frame-options` or `Content-Security-Policy`.

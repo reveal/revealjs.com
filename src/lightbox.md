@@ -4,7 +4,7 @@ title: Lightbox
 layout: default
 ---
 
-# Lightbox
+# Lightbox <span class="r-version-badge new">5.2.0</span>
 
 A lightbox is a modal that displays an image or video in a full-screen overlay. It's great for things like clicking on thumbnails to view a larger [image](#image-lightbox) or [video](#video-lightbox).
 
@@ -101,18 +101,24 @@ Note that the lightbox feature works on any element, not just images and videos.
 
 ## Iframe Lightbox
 
-It's also possible to preview links in iframe lightboxes. The syntax for this is slightly different from how image and video lightboxes work. To enable a link preview, you'll need to add the `data-preview-link` attribute to an anchor tag. It does not accept any value and will always use the anchor's `href` attribute as the source for the iframe.
+It's possible to preview links in iframe lightboxes using the `data-preview-link` attribute. When this attribute is added to an `<a>` tag, reveal.js will automatically open the link's `href` in an iframe.
+
+If you want to open an iframe lightbox from another element, you can set the iframe source as a value to the `data-preview-link` attribute.
 
 ```html
 <a href="https://hakim.se" data-preview-link>Open Hakim's Website</a>
+<img src="reveal.png" data-preview-link="https://hakim.se">
 ```
 
 <div class="reveal reveal-example">
   <div class="slides">
     <section>
       <a href="https://hakim.se" data-preview-link>Open Hakim's Website</a>
+      <br />
+      <br />
+      <img src="/images/logo/reveal-black-text-sticker.png" data-preview-link="https://hakim.se" width="400px">
     </section>
   </div>
 </div>
 
-Note that this will only work if the link allows for embedding. Many domains prevent embedding via `x-frame-options` or `Content-Security-Policy`.
+Note that this will only work if the link allows for embedding. Many websites prevent embedding via `x-frame-options` or `Content-Security-Policy`.
