@@ -88,3 +88,43 @@ You'll also need to include the reveal.js styles and a [presentation theme](/the
 <link rel="stylesheet" href="/node_modules/reveal.js/dist/reveal.css" />
 <link rel="stylesheet" href="/node_modules/reveal.js/dist/theme/black.css" />
 ```
+
+## Using framework
+This guide works with Deno Fresh. Appliance to other frameworks should be similar.
+
+On `routes/index.tsx`:
+```tsx
+import Island from "../islands/Island.tsx";
+
+export default function Home() {
+  return (
+    <Island />
+  );
+}
+```
+On `islands/Island.tsx`:
+```jsx
+import {useEffect} from 'preact/hooks'
+import Reveal from '../reveal/js/index.js';
+
+export default function Island() {
+  useEffect(()=> {
+    const deck = new Reveal()
+    deck.initialize();
+  }, [] ) 
+  return (
+    <div class="reveal">
+      <div class="slides">
+        <section>Slide 1</section>
+        <section>Slide 2</section>
+      </div>
+    </div>
+  ) 
+}
+```
+Add these styles into `routes/_app.tsx`:
+```html
+<link rel="stylesheet" href="https://unpkg.com/reveal.js@4.3.1/dist/reveal.css" />
+<link rel="stylesheet" href="https://unpkg.com/reveal.js@4.3.1/dist/reset.css" />
+<link rel="stylesheet" href="https://unpkg.com/reveal.js@4.3.1/dist/theme/black.css" />
+```
