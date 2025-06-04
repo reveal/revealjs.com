@@ -13,6 +13,9 @@ Note that **all** configuration values are **optional** and will default to the 
 ```javascript
 Reveal.initialize({
   // Display presentation control arrows
+  // - true: Display controls on all screens
+  // - false: Hide controls on all screens
+  // - "speaker-only": Only display controls in the speaker view
   controls: true,
 
   // Help the user learn the controls by providing hints, for example by
