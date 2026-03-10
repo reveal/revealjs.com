@@ -2,16 +2,19 @@
   <div class="w-full relative max-w-screen-xl mx-auto px-6 flex flex-row items-center justify-between">
     <div class="header-left mr-6 flex-shrink-0">
       <a class="header-logo block" href="/" title="reveal.js home">
-        <img class="hidden sm:block" src="/images/logo/reveal-black-text.svg" alt="reveal.js logo" style="width: 142px">
+        <picture class="hidden sm:block" style="width: 142px">
+          <source srcset="/images/logo/reveal-black-text.svg" media="(prefers-color-scheme: light)">
+          <img src="/images/logo/reveal-white-text.svg" alt="reveal.js logo" width="142">
+        </picture>
         <img class="block sm:hidden" src="/images/logo/reveal-symbol.svg" alt="reveal.js logo" style="width: 40px">
       </a>
       <!--<a class="header-cta py-3 px-2 -mx-2 text-gray-800 hover:text-gray-900 rounded font-semibold" href="/installation">Get Started</a>-->
     </div>
 
     <div class="search relative mr-2 flex-grow max-w-3xl sm:mr-6">
-      <input class="search-input appearance-none h-10 w-full inline-block py-1 px-4 bg-gray-300 border-2 border-gray-300 outline-none rounded-full placeholder-gray-600 text-gray-800 hover:text-gray-900 focus:border-yellow-400 focus:bg-white" placeholder="Search reveal.js..." />
+      <input class="search-input appearance-none h-10 w-full inline-block py-1 px-4 bg-gray-300 border-2 border-gray-300 outline-none rounded-full placeholder-gray-600 text-gray-800 hover:text-gray-900 focus:border-yellow-400" placeholder="Search reveal.js..." />
       <kbd class="search-shortcut absolute right-4 py-2 top-0.5 rounded-lg text-sm text-gray-600 pointer-events-none hidden sm:inline-block"><span class="search-shortcut-modifier text-lg leading-none align-middle mr-0.5">⌘</span>K</kbd>
-      <div class="search-results overflow-hidden fixed left-4 right-4 top-100 bg-white p-2 mt-2 rounded-lg shadow-2xl text-sm lg:absolute lg:left-auto lg:right-auto lg:min-w-full" data-state="no-term"></div>
+      <div class="search-results overflow-hidden fixed left-4 right-4 top-100 p-2 mt-2 rounded-lg shadow-2xl text-sm lg:absolute lg:left-auto lg:right-auto lg:min-w-full" data-state="no-term"></div>
     </div>
 
     <nav class="header-nav hidden lg:flex">
@@ -59,10 +62,10 @@
           </a>
         </li>
         <li>
-          <button class="menu-toggle inline-block py-1 pl-2">
+          <button class="menu-toggle inline-block py-1 pl-2 text-gray-800 hover:text-gray-900">
             <svg viewBox="0 0 24 24" width="24" height="24" xmlns="http://www.w3.org/2000/svg">
-              <line class="line1" x1="0" y1="8" x2="24" y2="8" style="stroke: #000; stroke-width: 2" />
-              <line class="line2" x1="0" y1="16" x2="24" y2="16" style="stroke: #000; stroke-width: 2" />
+              <line class="line1" x1="0" y1="8" x2="24" y2="8" style="stroke: currentColor; stroke-width: 2" />
+              <line class="line2" x1="0" y1="16" x2="24" y2="16" style="stroke: currentColor; stroke-width: 2" />
             </svg>
           </button>
         </li>

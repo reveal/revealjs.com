@@ -79,6 +79,7 @@ export function Presentation() {
         <Fragment as="p">First point</Fragment>
         <Fragment as="p">Second point</Fragment>
         <Fragment as="p">Third point</Fragment>
+        <Fragment asChild><div>Third point</div></Fragment>
       </Slide>
     </Deck>
   );

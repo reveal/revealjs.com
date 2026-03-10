@@ -79,9 +79,29 @@
   @apply fill-current;
 }
 
+.search-input {
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.search-input:focus {
+  background-color: rgb(var(--site-color-surface-raised));
+}
+
+.search-results,
+.header-lang-select {
+  border: 1px solid rgb(var(--site-color-gray-300));
+}
+
+.search-results {
+  background-color: rgb(var(--site-color-surface));
+}
+
 .header-lang-select {
   display: none;
-  background-color: #fff;
+  background-color: rgb(var(--site-color-surface-raised));
   cursor: pointer;
   transform-origin: top;
   white-space: nowrap;

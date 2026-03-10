@@ -131,7 +131,7 @@
   }
 
   tr {
-    background-color: #fff;
+    background-color: rgb(var(--site-color-table-row));
   }
 
   tr:nth-child(2n) {
@@ -180,7 +180,7 @@
     height: 300px;
     box-sizing: content-box;
     width: calc(100% + 32px);
-    @apply my-4 -mx-4 rounded border-t border-gray-700;
+    @apply my-4 -mx-4 rounded border-t;
 
     h1,
     h2,
@@ -237,7 +237,8 @@
   font-family: inherit !important;
   background-image: none !important;
   box-shadow: none !important;
-  @apply text-gray-900 bg-yellow-400 text-xl font-medium px-4 py-2 my-2 rounded #{!important};
+  color: rgb(var(--site-color-accent-foreground)) !important;
+  @apply bg-yellow-400 text-xl font-medium px-4 py-2 my-2 rounded #{!important};
 }
 .extras .gumroad-button:hover,
 .article .gumroad-button:hover {
@@ -260,7 +261,7 @@
   display: flex;
   width: 33%;
   max-width: 240px;
-  background: #111;
+  background: rgb(var(--site-color-course-thumb));
   @apply rounded-l-lg;
 }
 .buy-course-action {
@@ -269,7 +270,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #fff;
+  background-color: rgb(var(--site-color-surface));
   @apply border border-l-0 border-r-0 p-4 pt-2 pl-10 pr-5;
 }
 .buy-course-price {
@@ -283,13 +284,13 @@
 .buy-course-price .old-price {
   position: relative;
   font-size: 0.7em;
-  color: #999;
+  color: rgb(var(--site-color-course-strike));
   vertical-align: middle;
 }
 .buy-course-price .old-price:before {
   content: '';
   position: absolute;
-  background: #999;
+  background: rgb(var(--site-color-course-strike));
   display: block;
   height: 3px;
   left: -6px;
@@ -302,7 +303,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #fff;
+  background-color: rgb(var(--site-color-surface));
   @apply border border-l-0 p-4 pr-10 pl-5 rounded-lg rounded-l-none;
 }
 .buy-course-data ul {
@@ -311,11 +312,18 @@
 .buy-course-data li:before {
   content: '';
   margin-right: 10px;
-  background-image: url('/images/icons/checkmark.svg');
-  background-size: contain;
+  background-color: currentColor;
   display: inline-block;
   width: 1em;
   height: 1em;
+  -webkit-mask-image: url('/images/icons/checkmark.svg');
+  mask-image: url('/images/icons/checkmark.svg');
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  mask-size: contain;
 }
 
 @media screen and (max-width: 700px) {

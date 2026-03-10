@@ -95,7 +95,7 @@ export default async () => {
 				<p class="font-medium text-base">${title}</p>
 				${content}
 			</a>
-			<div class="divider border-t border-gray-200 my-2"></div>
+			<div class="divider border-t border-gray-300 my-2"></div>
 		`;
   }
 

@@ -34,12 +34,12 @@ main {
     padding: 1em;
     margin: 0.5em 0;
     overflow: auto;
-    border-radius: 0.3em;
+    border-radius: 1em;
   }
 
   :not(pre) > code:not(.hljs)[class*='language-'],
   pre[class*='language-'] {
-    background: #282a36;
+    background: #20222b;
   }
 
   /* Inline code */

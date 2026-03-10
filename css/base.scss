@@ -5,7 +5,241 @@ $easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 $easeOutQuint: cubic-bezier(0.23, 1, 0.32, 1);
 $easeInOutQuint: cubic-bezier(0.86, 0, 0.07, 1);
 
+$theme-light: (
+  gray-100: 247 250 252,
+  gray-200: 237 242 247,
+  gray-300: 226 232 240,
+  gray-400: 203 213 224,
+  gray-500: 160 174 192,
+  gray-600: 113 128 150,
+  gray-700: 74 85 104,
+  gray-800: 45 55 72,
+  gray-900: 26 32 44,
+  red-100: 255 245 245,
+  red-200: 254 215 215,
+  red-300: 254 178 178,
+  red-400: 252 129 129,
+  red-500: 245 101 101,
+  red-600: 229 62 62,
+  red-700: 197 48 48,
+  red-800: 155 44 44,
+  red-900: 116 42 42,
+  orange-100: 255 250 240,
+  orange-200: 254 235 200,
+  orange-300: 251 211 141,
+  orange-400: 246 173 85,
+  orange-500: 237 137 54,
+  orange-600: 221 107 32,
+  orange-700: 192 86 33,
+  orange-800: 156 66 33,
+  orange-900: 123 52 30,
+  yellow-100: 255 255 240,
+  yellow-200: 254 252 191,
+  yellow-300: 250 240 137,
+  yellow-400: 246 224 94,
+  yellow-500: 236 201 75,
+  yellow-600: 214 158 46,
+  yellow-700: 183 121 31,
+  yellow-800: 151 90 22,
+  yellow-900: 116 66 16,
+  green-100: 240 255 244,
+  green-200: 198 246 213,
+  green-300: 154 230 180,
+  green-400: 104 211 145,
+  green-500: 72 187 120,
+  green-600: 56 161 105,
+  green-700: 47 133 90,
+  green-800: 39 103 73,
+  green-900: 34 84 61,
+  teal-100: 230 255 250,
+  teal-200: 178 245 234,
+  teal-300: 129 230 217,
+  teal-400: 79 209 197,
+  teal-500: 56 178 172,
+  teal-600: 49 151 149,
+  teal-700: 44 122 123,
+  teal-800: 40 94 97,
+  teal-900: 35 78 82,
+  blue-100: 235 248 255,
+  blue-200: 190 227 248,
+  blue-300: 144 205 244,
+  blue-400: 99 179 237,
+  blue-500: 66 153 225,
+  blue-600: 49 130 206,
+  blue-700: 43 108 176,
+  blue-800: 44 82 130,
+  blue-900: 42 67 101,
+  indigo-100: 235 244 255,
+  indigo-200: 195 218 254,
+  indigo-300: 163 191 250,
+  indigo-400: 127 156 245,
+  indigo-500: 102 126 234,
+  indigo-600: 90 103 216,
+  indigo-700: 76 81 191,
+  indigo-800: 67 65 144,
+  indigo-900: 60 54 107,
+  purple-100: 250 245 255,
+  purple-200: 233 216 253,
+  purple-300: 214 188 250,
+  purple-400: 183 148 244,
+  purple-500: 159 122 234,
+  purple-600: 128 90 213,
+  purple-700: 107 70 193,
+  purple-800: 85 60 154,
+  purple-900: 68 51 122,
+  pink-100: 255 245 247,
+  pink-200: 254 215 226,
+  pink-300: 251 182 206,
+  pink-400: 246 135 179,
+  pink-500: 237 100 166,
+  pink-600: 213 63 140,
+  pink-700: 184 50 128,
+  pink-800: 151 38 109,
+  pink-900: 112 36 89,
+  surface: 255 255 255,
+  surface-raised: 255 255 255,
+  table-row: 255 255 255,
+  tap-highlight: 203 213 224,
+  accent-foreground: 116 66 16,
+  course-thumb: 17 17 17,
+  course-strike: 153 153 153,
+  promo-text: 255 255 255,
+  promo-border: 255 255 255,
+  promo-pill-bg: 255 255 255,
+  promo-pill-text: 0 0 0,
+  reveal-demo-bg: 35 28 62,
+  reveal-demo-overlay: 0 0 0,
+  reveal-demo-overlay-text: 238 238 238,
+);
+
+$theme-dark: (
+  gray-100: 18 18 20,
+  gray-200: 28 28 31,
+  gray-300: 44 44 48,
+  gray-400: 63 63 70,
+  gray-500: 113 113 122,
+  gray-600: 161 161 170,
+  gray-700: 212 212 216,
+  gray-800: 229 229 234,
+  gray-900: 250 250 250,
+  red-100: 255 245 245,
+  red-200: 254 215 215,
+  red-300: 254 178 178,
+  red-400: 252 129 129,
+  red-500: 245 101 101,
+  red-600: 229 62 62,
+  red-700: 197 48 48,
+  red-800: 155 44 44,
+  red-900: 116 42 42,
+  orange-100: 255 250 240,
+  orange-200: 254 235 200,
+  orange-300: 251 211 141,
+  orange-400: 246 173 85,
+  orange-500: 237 137 54,
+  orange-600: 221 107 32,
+  orange-700: 192 86 33,
+  orange-800: 156 66 33,
+  orange-900: 123 52 30,
+  yellow-100: 255 255 240,
+  yellow-200: 254 252 191,
+  yellow-300: 250 240 137,
+  yellow-400: 246 224 94,
+  yellow-500: 236 201 75,
+  yellow-600: 214 158 46,
+  yellow-700: 183 121 31,
+  yellow-800: 151 90 22,
+  yellow-900: 116 66 16,
+  green-100: 240 255 244,
+  green-200: 198 246 213,
+  green-300: 154 230 180,
+  green-400: 104 211 145,
+  green-500: 72 187 120,
+  green-600: 56 161 105,
+  green-700: 47 133 90,
+  green-800: 39 103 73,
+  green-900: 34 84 61,
+  teal-100: 230 255 250,
+  teal-200: 178 245 234,
+  teal-300: 129 230 217,
+  teal-400: 79 209 197,
+  teal-500: 56 178 172,
+  teal-600: 49 151 149,
+  teal-700: 44 122 123,
+  teal-800: 40 94 97,
+  teal-900: 35 78 82,
+  blue-100: 235 248 255,
+  blue-200: 190 227 248,
+  blue-300: 144 205 244,
+  blue-400: 99 179 237,
+  blue-500: 66 153 225,
+  blue-600: 49 130 206,
+  blue-700: 43 108 176,
+  blue-800: 44 82 130,
+  blue-900: 42 67 101,
+  indigo-100: 235 244 255,
+  indigo-200: 195 218 254,
+  indigo-300: 163 191 250,
+  indigo-400: 127 156 245,
+  indigo-500: 102 126 234,
+  indigo-600: 90 103 216,
+  indigo-700: 76 81 191,
+  indigo-800: 67 65 144,
+  indigo-900: 60 54 107,
+  purple-100: 250 245 255,
+  purple-200: 233 216 253,
+  purple-300: 214 188 250,
+  purple-400: 183 148 244,
+  purple-500: 159 122 234,
+  purple-600: 128 90 213,
+  purple-700: 107 70 193,
+  purple-800: 85 60 154,
+  purple-900: 68 51 122,
+  pink-100: 255 245 247,
+  pink-200: 254 215 226,
+  pink-300: 251 182 206,
+  pink-400: 246 135 179,
+  pink-500: 237 100 166,
+  pink-600: 213 63 140,
+  pink-700: 244 114 182,
+  pink-800: 249 168 212,
+  pink-900: 252 231 243,
+  surface: 28 28 31,
+  surface-raised: 37 37 41,
+  table-row: 37 37 41,
+  tap-highlight: 82 82 91,
+  accent-foreground: 116 66 16,
+  course-thumb: 17 17 17,
+  course-strike: 161 161 170,
+  promo-text: 255 255 255,
+  promo-border: 255 255 255,
+  promo-pill-bg: 255 255 255,
+  promo-pill-text: 0 0 0,
+  reveal-demo-bg: 24 24 27,
+  reveal-demo-overlay: 0 0 0,
+  reveal-demo-overlay-text: 238 238 238,
+);
+
+@mixin theme-colors($theme) {
+  @each $name, $value in $theme {
+    --site-color-#{$name}: #{$value};
+  }
+}
+
+:root {
+  color-scheme: dark;
+  @include theme-colors($theme-dark);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color-scheme: light;
+    @include theme-colors($theme-light);
+  }
+}
+
 html {
+  background-color: rgb(var(--site-color-gray-100));
+  color: rgb(var(--site-color-gray-900));
   font-family:
     'Inter',
     system-ui,
@@ -22,6 +256,17 @@ html {
   font-size: 16px;
 }
 
+body {
+  background-color: rgb(var(--site-color-gray-100));
+  color: rgb(var(--site-color-gray-900));
+}
+
+*,
+::before,
+::after {
+  border-color: rgb(var(--site-color-gray-300));
+}
+
 :target {
   scroll-margin-top: $headerHeight + $headerMargin;
 }
@@ -29,7 +274,7 @@ html {
 a,
 button {
   touch-action: manipulation !important;
-  -webkit-tap-highlight-color: darken(#edf2f7, 15%);
+  -webkit-tap-highlight-color: rgb(var(--site-color-tap-highlight) / 0.85);
 }
 
 .no-transition,
@@ -65,7 +310,7 @@ button {
 // Advertising
 #carbonads {
   width: 100%;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgb(var(--site-color-gray-300) / 0.7);
   z-index: 10;
   text-align: left;
   @apply text-sm;
@@ -92,6 +337,7 @@ button {
 // Directional hover effect
 .r-anchor {
   position: relative;
+  z-index: 0;
 }
 
 .r-anchor-label {
@@ -127,7 +373,7 @@ button {
 }
 
 .search-result .r-anchor-background {
-  @apply bg-gray-200;
+  @apply bg-gray-300;
 }
 
 .homepage-promotion {
@@ -137,13 +383,13 @@ button {
   bottom: 2rem;
   left: 2rem;
   padding: 0.5rem 0.5rem 0.5rem 0.75rem;
-  border: 1px solid rgba(255, 255, 255, 0.75);
+  border: 1px solid rgb(var(--site-color-promo-border) / 0.75);
   border-radius: 100px;
-  color: #fff;
+  color: rgb(var(--site-color-promo-text));
 }
 .homepage-promotion span {
-  background: #fff;
-  color: #000;
+  background: rgb(var(--site-color-promo-pill-bg));
+  color: rgb(var(--site-color-promo-pill-text));
   border-radius: 100px;
   margin-left: 0.75rem;
   font-size: 0.8em;
