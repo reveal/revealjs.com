@@ -8,10 +8,10 @@ import setupNavigation from 'components/navigation.js';
 import AnchorJS from 'anchor-js';
 
 import Reveal from 'reveal.js';
-import Highlight from 'reveal.js/plugin/highlight/highlight.esm.js';
-import Markdown from 'reveal.js/plugin/markdown/markdown.esm.js';
-import MathJax from 'reveal.js/plugin/math/math.esm.js';
-import Zoom from 'reveal.js/plugin/zoom/zoom.esm.js';
+import Highlight from 'reveal.js/plugin/highlight';
+import Markdown from 'reveal.js/plugin/markdown';
+import MathJax from 'reveal.js/plugin/math';
+import Zoom from 'reveal.js/plugin/zoom';
 
 const PAGE_ID = document.body.dataset.page;
 

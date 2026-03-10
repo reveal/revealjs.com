@@ -1,114 +1,171 @@
 ---
 id: react
-title: React 框架
+title: React
 layout: default
 ---
 
-# React 框架
+# React
 
-有幾種不同的方式可以將 Reveal.js 添加到 React 項目中。
+`@revealjs/react` 是 reveal.js 的官方 React 封裝套件。以 React 組件描述你的簡報，其餘的交由套件處理。
 
-1. [通過 npm 安裝並設置 Reveal.js](#installing-from-npm)
-2. [使用第三方套件](#third-party-packages)
+## 安裝
 
-## 通過 npm 安裝
-
-你可以在像 `main.tsx` 或 `app.tsx` 這樣的 JavaScript/TypeScript 源文件中添加和初始化 Reveal.js。
-
-你可以全域地執行，即在應用/組件函數之外，或者在其中之一內部。在後一種情況下，你必須小心不要堆疊初始化。只初始化一次簡報。如果需要重新配置，請使用 `configure` 函數或在再次初始化之前 `destroy` 簡報。
-
-首先，使用 `npm` 安裝 Reveal：
+安裝套件及其相依套件：
 
 ```bash
-npm install reveal.js
+npm i @revealjs/react reveal.js react react-dom
+# 或
+yarn add @revealjs/react reveal.js react react-dom
 ```
 
-如果你正在使用 TypeScript，你需要安裝類型：
+此套件僅包含 React 綁定，你仍需自行匯入 reveal.js 的 CSS、主題，以及簡報所需的插件。
 
-```bash
-npm i --save-dev @types/reveal.js
+## 基本配置
+
+渲染一個帶有一個或多個 `Slide` 子組件的 `Deck`，並匯入 reveal.js 核心樣式：
+
+```tsx
+import { Deck, Slide } from '@revealjs/react';
+import 'reveal.js/reveal.css';
+import 'reveal.js/theme/black.css';
+
+export function Presentation() {
+  return (
+    <Deck>
+      <Slide>
+        <h1>你好</h1>
+        <p>我的第一個 React reveal 簡報。</p>
+      </Slide>
+
+      <Slide background="#111827">
+        <h2>第二張投影片</h2>
+      </Slide>
+    </Deck>
+  );
+}
 ```
 
-#### 導入
+若要使用垂直投影片，請將 `Slide` 組件包裝在 `Stack` 中：
 
-你將需要以下導入：
+```tsx
+import { Deck, Slide, Stack } from '@revealjs/react';
 
-```ts
-import Reveal from 'reveal.js';
-import 'reveal.js/dist/reveal.css';
-import 'reveal.js/dist/theme/black.css'; // "black" 主題只是一個範例
+export function Presentation() {
+  return (
+    <Deck>
+      <Slide>介紹</Slide>
+
+      <Stack>
+        <Slide>垂直 1</Slide>
+        <Slide>垂直 2</Slide>
+      </Stack>
+    </Deck>
+  );
+}
 ```
 
-#### 初始化
+## 配置
 
-最後，添加最適合你項目需求的[初始化代碼](https://revealjs.com/initialization/)。
+透過 `Deck` 上的 `config` 屬性傳遞任何 [reveal.js 配置選項](/config/)。插件透過 `plugins` 單獨註冊，並在初始化時套用一次，符合 reveal.js 的插件生命週期。
 
-如果你決定在返回 JSX 的應用或組件函數內部初始化幻燈片集，我們建議你使用 `useEffect` 這個 hook 來進行。這將確保在容器首次渲染後進行初始化。
+{% raw %}
+```tsx
+import { Deck, Slide } from '@revealjs/react';
+import 'reveal.js/reveal.css';
+import 'reveal.js/theme/black.css';
+import 'reveal.js/plugin/highlight/monokai.css';
+import RevealHighlight from 'reveal.js/plugin/highlight';
 
-還建議使用 refs 來維護對幻燈片集容器 `div` 和相應的 `reveal` 實例的引用。這些 refs 可以幫助確保每個幻燈片集只初始化一次。
+export function Presentation() {
+  return (
+    <Deck
+      config={{
+        width: 1280,
+        height: 720,
+        hash: true,
+        transition: 'slide',
+      }}
+      plugins={[RevealHighlight]}
+    >
+      <Slide>已配置的簡報</Slide>
+    </Deck>
+  );
+}
+```
+{% endraw %}
 
-#### 下面是一個完整的工作範例：
+`Slide` 支援便捷的背景屬性，如 `background`、`backgroundImage` 和 `backgroundColor`，同時仍可將 `data-*` 原始屬性（如 `data-transition` 和 `data-auto-animate`）傳遞給底層的 `<section>` 元素。
 
-```ts
-// App.tsx
-import { useEffect, useRef } from "react";
-import Reveal from "reveal.js";
-import "reveal.js/dist/reveal.css";
-import "reveal.js/dist/theme/black.css";
+## 事件
 
-function App() {
-    const deckDivRef = useRef<HTMLDivElement>(null); // 幻燈片集容器 div 的引用
-    const deckRef = useRef<Reveal.Api | null>(null); // 幻燈片集 reveal 實例的引用
+在 `Deck` 上使用事件屬性來響應 reveal.js 的生命週期和導航事件：
 
-    useEffect(() => {
-        // 防止在嚴格模式下重複初始化
-        if (deckRef.current) return;
+```tsx
+import { Deck, Slide } from '@revealjs/react';
 
-        deckRef.current = new Reveal(deckDivRef.current!, {
-            transition: "slide",
-            // 其他配置選項
-        });
+export function Presentation() {
+  return (
+    <Deck
+      onReady={(deck) => console.log('準備好了', deck)}
+      onSlideChange={(event) => console.log('投影片已切換', event.indexh, event.indexv)}
+      onFragmentShown={(event) => console.log('片段顯示', event.fragment)}
+    >
+      <Slide>介紹</Slide>
+      <Slide>下一張</Slide>
+    </Deck>
+  );
+}
+```
 
-        deckRef.current.initialize().then(() => {
-            // 事件處理器和插件設置的好位置
-        });
+可用的事件屬性：`onReady`、`onSync`、`onSlideSync`、`onSlideChange`、`onSlideTransitionEnd`、`onFragmentShown`、`onFragmentHidden`、`onOverviewShown`、`onOverviewHidden`、`onPaused`、`onResumed`。
 
-        return () => {
-            try {
-                if (deckRef.current) {
-                    deckRef.current.destroy();
-                    deckRef.current = null;
-                }
-            } catch (e) {
-                console.warn("Reveal.js destroy 調用失敗。");
-            }
-        };
-    }, []);
+## Reveal API
 
-    return (
-        // 你的簡報大小是基於父元素的寬度和高度。確保父元素高度不為 0。
-        <div className="reveal" ref={deckDivRef}>
-            <div className="slides">
-                <section>幻燈片 1</section>
-                <section>幻燈片 2</section>
-            </div>
-        </div>
-    );
+在簡報組件樹內使用 `useReveal()` 從你自己的組件中呼叫 reveal.js API：
+
+```tsx
+import { Deck, Slide, useReveal } from '@revealjs/react';
+
+function NextButton() {
+  const deck = useReveal();
+
+  return <button onClick={() => deck?.next()}>下一張投影片</button>;
 }
 
-export default App;
+export function Presentation() {
+  return (
+    <Deck>
+      <Slide>
+        <h2>由 React 控制</h2>
+        <NextButton />
+      </Slide>
+    </Deck>
+  );
+}
 ```
 
-注意在 `Reveal` 構造器中使用 `deckDivRef`。如果你想在同一個 React 應用中添加多個幻燈片集，這一點非常重要。
+若要在組件樹外部存取 reveal.js 實例，請將 `deckRef` 傳遞給 `Deck`：
 
-## React Portals
+```tsx
+import { useRef } from 'react';
+import { Deck, Slide } from '@revealjs/react';
+import type { RevealApi } from 'reveal.js';
 
-如果你只想在特定幻燈片中添加一些組件，我們建議將 Reveal.js 的 DOM 樹保持在 React 之外，並使用 [React Portals](https://react.dev/reference/react-dom/createPortal) 將 react 組件放置在特定部分。
+export function Presentation() {
+  const deckRef = useRef<RevealApi>(null);
 
-## 第三方套件
+  return (
+    <Deck deckRef={deckRef}>
+      <Slide>你好</Slide>
+    </Deck>
+  );
+}
+```
 
-以下第三方套件可能對於將 Reveal.js 簡報添加到 React 項目中或將 React 組件/應用添加到 Reveal.js 簡報中非常有用：
+## 運作原理
 
-- [revealjs-react](https://github.com/blakeanedved/revealjs-react) - RevealJS 簡報庫的 React 包裝器。
-- [react-reveal-slides](https://github.com/bouzidanas/react-reveal-slides) - 一個用於完全在 React 中創建 Reveal.js 簡報的 React 組件。
-- [revealjs-react-boilerplate](https://github.com/cberthou/revealjs-react-boilerplate) - 使用 React 創建 revealJS 簡報的模板。
+- `Deck` 在掛載時建立一個 reveal.js 實例，並在卸載時銷毀它。
+- 每次影響 `children` 或 `config` 的 React 重新渲染後，`Deck` 都會呼叫 `reveal.sync()` 以保持 reveal.js 的內部投影片模型與 DOM 同步。
+- `config` 在每次渲染時進行淺層比較，因此只有在值實際發生變化時才會呼叫 `reveal.configure()`。
+- `plugins` 僅在初始化時使用，在首次掛載時捕獲一次，後續渲染將忽略此屬性。
+- 事件屬性在初始化後透過 `deck.on()` 綁定，並透過 `deck.off()` 清除。在渲染之間更改回調將自動替換監聽器。

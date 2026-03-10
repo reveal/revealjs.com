@@ -40,7 +40,7 @@ export default () => ({
 Plugins are registered by including them in the `plugins` array of the [config options](/config/). You can also register a plugin at runtime using `Reveal.registerPlugin( Plugin )`.
 
 ```js
-import Reveal from 'dist/reveal.esm.js';
+import Reveal from 'reveal.js';
 import Toaster from 'toaster.js';
 
 Reveal.initialize({

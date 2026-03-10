@@ -30,7 +30,7 @@ That's it 🚀
 
 Some reveal.js features, like external Markdown, require that presentations run from a local web server. The following instructions will set up such a server as well as all of the development tasks needed to make edits to the reveal.js source code.
 
-1. Install [Node.js](https://nodejs.org/) (10.0.0 or later)
+1. Install [Node.js](https://nodejs.org/) (20.19.0 or later)
 
 1. Clone the reveal.js repository
 
@@ -62,7 +62,7 @@ npm start -- --port=8001
 
 ## Installing From npm
 
-The framework is published to, and can be installed from, [npm](https://www.npmjs.com/package/reveal.js). Note that reveal.js is targeted at the browser and includes CSS, fonts and other assets so the npm dependency use case may be limited.
+The framework is published to, and can be installed from, [npm](https://www.npmjs.com/package/reveal.js).
 
 ```shell
 npm install reveal.js
@@ -74,7 +74,7 @@ Once installed, you can include reveal.js as an ES module:
 
 ```js
 import Reveal from 'reveal.js';
-import Markdown from 'reveal.js/plugin/markdown/markdown.esm.js';
+import Markdown from 'reveal.js/plugin/markdown';
 
 let deck = new Reveal({
   plugins: [Markdown],
@@ -84,7 +84,7 @@ deck.initialize();
 
 You'll also need to include the reveal.js styles and a [presentation theme](/themes/).
 
-```html
-<link rel="stylesheet" href="/node_modules/reveal.js/dist/reveal.css" />
-<link rel="stylesheet" href="/node_modules/reveal.js/dist/theme/black.css" />
+```js
+import 'reveal.js/reveal.css';
+import 'reveal.js/theme/black.css';
 ```

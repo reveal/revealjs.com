@@ -8,7 +8,7 @@ layout: default
 
 The most common reveal.js use case is to have a single presentation which covers the full viewport. As of 4.0 we also support running [multiple presentations](#multiple-presentations) in parallel on the same page as well as including the library as an [ES module](#es-module).
 
-If you only have a single presentation on the page we recommend initializing reveal.js using the global `Reveal` object. The `Reveal.initialize` method accepts one argument; a reveal.js [config object](/config/).
+If you only have a single presentation on the page we recommend initializing reveal.js using the `Reveal.initialize` method. `Reveal.initialize` accepts one argument; a reveal.js [config object](/config/).
 
 ```html
 <script src="dist/reveal.js"></script>
@@ -37,8 +37,9 @@ By default reveal.js will capture all keyboard events in the document. For embed
 <div class="reveal deck1">...</div>
 <div class="reveal deck2">...</div>
 
-<script src="dist/reveal.js"></script>
-<script>
+<script type="module">
+  import Reveal from 'reveal.js';
+
   let deck1 = new Reveal(document.querySelector('.deck1'), {
     embedded: true,
     keyboardCondition: 'focused', // only react to keys when focused
@@ -54,16 +55,16 @@ By default reveal.js will capture all keyboard events in the document. For embed
 
 ## ES Module <span class="r-version-badge new">4.0.0</span> {id="es-module"}
 
-We provide two JavaScript bundles depending your use case. Our default presentation boilerplate uses `dist/reveal.js` which has broad cross browser support (ES5) and exposes Reveal to the global window (UMD).
+We provide two JavaScript bundles depending your use case. Our default presentation boilerplate, `index.html`, uses `dist/reveal.js` which exposes Reveal to the global window (UMD). This allows reveal.js to run anywhere, even from your filesystem.
 
-The second bundle is `dist/reveal.esm.js` which makes it possible to import reveal.js as an ES module. This version can be used either directly in the browser with `<script type="module">` or bundled in your own build process.
+The second bundle is `dist/reveal.mjs` which makes it possible to import reveal.js as an ES module. This version can be used either directly in the browser with `<script type="module">` or bundled in your own build process.
 
 Here's how to import and initialize the ES module version of reveal.js as well as the Markdown plugin:
 
 ```html
 <script type="module">
-  import Reveal from 'dist/reveal.esm.js';
-  import Markdown from 'plugin/markdown/markdown.esm.js';
+  import Reveal from 'reveal.js';
+  import Markdown from 'plugin/markdown';
   Reveal.initialize({
     plugins: [Markdown],
   });
