@@ -9,6 +9,7 @@ layout: default
 這是一個完整的 reveal.js 簡報的基本範例：
 
 ```html
+<!doctype html>
 <html>
   <head>
     <link rel="stylesheet" href="dist/reveal.css" />

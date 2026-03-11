@@ -9,6 +9,7 @@ layout: default
 Here's a barebones example of a fully working reveal.js presentation:
 
 ```html
+<!doctype html>
 <html>
   <head>
     <link rel="stylesheet" href="dist/reveal.css" />
