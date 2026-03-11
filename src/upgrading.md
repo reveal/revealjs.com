@@ -31,6 +31,23 @@ import Reveal from 'reveal.js';
 import Markdown from 'reveal.js/plugin/markdown';
 ```
 
+### Update Plugin Paths (HTML/CDN)
+
+If you load plugins directly in HTML or via CDN, the plugin files have moved from `plugin/<name>/plugin.js` into the `dist/plugin/` directory:
+
+| Old path                              | New path                        |
+| :------------------------------------ | :------------------------------ |
+| plugin/notes/notes.js                 | dist/plugin/notes.js            |
+| plugin/markdown/markdown.js           | dist/plugin/markdown.js         |
+| plugin/highlight/highlight.js         | dist/plugin/highlight.js        |
+| plugin/math/math.js                   | dist/plugin/math.js             |
+| plugin/search/search.js               | dist/plugin/search.js           |
+| plugin/zoom/zoom.js                   | dist/plugin/zoom.js             |
+| plugin/highlight/monokai.css          | dist/plugin/highlight/monokai.css |
+| plugin/highlight/zenburn.css          | dist/plugin/highlight/zenburn.css |
+
+{.key-value}
+
 ### Update CSS Paths (npm)
 
 When importing via npm, the `dist/` prefix is no longer part of the public package API. Update any CSS imports to use the top-level package paths:
