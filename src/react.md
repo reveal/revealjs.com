@@ -66,7 +66,7 @@ export function Presentation() {
 
 ## Fragments
 
-Use `Fragment` to reveal content one step at a time. By default it renders as a `<span>` — use the `as` prop to change the element type.
+Use `Fragment` to reveal content one step at a time. By default it renders as a `<span>` — use the `as` prop to change the element type, or `asChild` to merge the fragment behavior onto an existing element:
 
 ```tsx
 import { Deck, Slide, Fragment } from '@revealjs/react';
@@ -78,20 +78,73 @@ export function Presentation() {
         <h2>Step by step</h2>
         <Fragment as="p">First point</Fragment>
         <Fragment as="p">Second point</Fragment>
-        <Fragment as="p">Third point</Fragment>
-        <Fragment asChild><div>Third point</div></Fragment>
+        <Fragment asChild>
+          <p>Third point</p>
+        </Fragment>
       </Slide>
     </Deck>
   );
 }
 ```
 
-Pass an `animation` prop for a specific [fragment style](/fragments/), and `index` to control the order:
+Pass an `animation` prop for a specific [fragment style](/fragments/), and `index` to control the reveal order:
 
 ```tsx
 <Fragment animation="fade-up">Fades up</Fragment>
 <Fragment animation="highlight-red" index={2}>Highlighted last</Fragment>
 ```
+
+## Code
+
+`Code` renders a syntax-highlighted code block through the reveal.js highlight plugin. Pass your source as a string child or via the `code` prop, and register the plugin on `Deck`:
+
+```tsx
+import { Deck, Slide, Code } from '@revealjs/react';
+import 'reveal.js/plugin/highlight/monokai.css';
+import RevealHighlight from 'reveal.js/plugin/highlight';
+
+export function Presentation() {
+  return (
+    <Deck plugins={[RevealHighlight]}>
+      <Slide>
+        <Code language="javascript">
+          {`const greeting = 'Hello, world!';
+console.log(greeting);`}
+        </Code>
+      </Slide>
+    </Deck>
+  );
+}
+```
+
+Set `lineNumbers` to show a gutter. Pass a range string to step through specific lines as fragments:
+
+```tsx
+<Code language="javascript" lineNumbers="1|2-3">
+  {`const a = 1;
+const b = 2;
+const c = a + b;`}
+</Code>
+```
+
+Use `startFrom` to offset the displayed line numbers, and `noEscape` when your snippet contains HTML that should be treated as literal characters:
+
+```tsx
+<Code language="python" lineNumbers startFrom={10}>
+  {`def greet():
+    print("Hello")`}
+</Code>
+```
+
+The `code` prop is an alternative to string children, useful when your source comes from a variable or import:
+
+```tsx
+const snippet = `console.log('Hi')`;
+
+<Code language="javascript" code={snippet} />
+```
+
+`Code` normalizes indentation automatically (controlled by the `trim` prop, which is `true` by default), so you can indent your source to match the surrounding JSX without affecting the rendered output.
 
 ## Configuration
 
@@ -123,7 +176,13 @@ export function Presentation() {
 ```
 {% endraw %}
 
-`Slide` supports convenient background props such as `background`, `backgroundImage` and `backgroundColor`, while still passing through raw `data-*` attributes like `data-transition` and `data-auto-animate` to the underlying `<section>` element.
+`Slide` exposes a number of convenient props that map to reveal.js `data-*` attributes on the underlying `<section>` element:
+
+- **Background** — `background`, `backgroundColor`, `backgroundImage`, `backgroundVideo`, `backgroundVideoLoop`, `backgroundVideoMuted`, `backgroundIframe`, `backgroundGradient`, `backgroundSize`, `backgroundPosition`, `backgroundRepeat`, `backgroundOpacity`, `backgroundTransition`
+- **Auto-animate** — `autoAnimate`, `autoAnimateId`, `autoAnimateRestart`, `autoAnimateUnmatched`, `autoAnimateEasing`, `autoAnimateDuration`, `autoAnimateDelay`
+- **Slide options** — `transition`, `transitionSpeed`, `autoSlide`, `visibility`, `notes`, `backgroundInteractive`, `preload`
+
+Any additional `data-*` attributes are passed through as-is to the `<section>` element.
 
 ## Events
 
@@ -181,7 +240,7 @@ import { Deck, Slide } from '@revealjs/react';
 import type { RevealApi } from 'reveal.js';
 
 export function Presentation() {
-  const deckRef = useRef<RevealApi>(null);
+  const deckRef = useRef<RevealApi | null>(null);
 
   return (
     <Deck deckRef={deckRef}>
@@ -193,8 +252,9 @@ export function Presentation() {
 
 ## How It Works
 
-- `Deck` creates one reveal.js instance on mount and destroys it on unmount.
-- After every React render that affects `children` or `config`, `Deck` calls `reveal.sync()` to keep reveal.js's internal slide model aligned with the DOM.
+- `Deck` creates one reveal.js instance on mount and destroys it on unmount. Initialization is asynchronous — `onReady` fires once `reveal.initialize()` resolves, after which the instance is also accessible via `useReveal()` and `deckRef`.
+- `Deck` calls `reveal.sync()` when the rendered slide structure changes — that is, when slides are added, removed, reordered, or regrouped into stacks. Ordinary content updates inside a slide do not trigger a full sync.
+- `Slide` handles slide-level `data-*` attribute updates locally with `reveal.syncSlide()`, keeping per-slide changes efficient.
 - `config` is shallow-compared on each render so that `reveal.configure()` is only called when a value actually changes.
 - `plugins` are initialization-only. The prop is captured once on first mount and ignored on subsequent renders.
 - Event props are wired with `deck.on()` after initialization and cleaned up with `deck.off()`. Changing a callback between renders swaps the listener automatically.
