@@ -19,7 +19,17 @@ const PAGE_ID = document.body.dataset.page;
 setupNavigation();
 setupTheme();
 setupHovers(
-  '.header-nav a, .header-nav button, .header-cta, .footer a, .sidebar a:not(.selected), .article > p a, .article > table a'
+  [
+    '.header-nav a',
+    '.header-nav button',
+    '.header-cta',
+    '.footer a',
+    '.sidebar a:not(.selected)',
+    '.article > p a',
+    '.article > table a',
+    '.article > ul a',
+    '.article > ol a',
+  ].join(',')
 );
 setupAnchors();
 setupPage();
