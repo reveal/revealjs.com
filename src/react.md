@@ -4,7 +4,7 @@ title: React
 layout: default
 ---
 
-# React
+# React <span class="r-version-badge new">reveal.js 6.0.0</span>
 
 `@revealjs/react` is the official React wrapper for reveal.js. Describe your slides as React components and let the package handle initialization, syncing and cleanup.
 
