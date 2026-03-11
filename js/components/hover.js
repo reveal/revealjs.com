@@ -8,7 +8,12 @@ let lastMouseX = 0,
 let pointerDirectionX = 0,
   pointerDirectionY = 0;
 
+let hoverTimeout;
 let lastMouseLeave;
+
+let isWrappedAcrossLines = (element) => {
+  return element.getClientRects().length > 1;
+};
 
 let transform = (element, x, y, scale) => {
   element.style.transform =
@@ -16,79 +21,32 @@ let transform = (element, x, y, scale) => {
 };
 
 let transformOrigin = (element, x, y) => {
-  let tx = (x / element.offsetWidth) * 100;
-  let ty = (y / element.offsetHeight) * 100;
+  let tx = (event.offsetX / element.offsetWidth) * 100;
+  let ty = (event.offsetY / element.offsetHeight) * 100;
   tx = Math.min(Math.max(tx, 0), 100);
   ty = Math.min(Math.max(ty, 0), 100);
   element.style.transformOrigin = Math.round(tx) + '% ' + Math.round(ty) + '%';
 };
 
-let getAnchorTransitionDirection = (fromAnchor, toAnchor) => {
-  const fromRect = fromAnchor.getBoundingClientRect();
-  const toRect = toAnchor.getBoundingClientRect();
-
-  // Direction from edge-to-edge distance between boxes.
-  // If boxes overlap on an axis, that axis contributes 0.
-  let dx = 0;
-  let dy = 0;
-
-  if (fromRect.right <= toRect.left) dx = toRect.left - fromRect.right;
-  else if (fromRect.left >= toRect.right) dx = toRect.right - fromRect.left;
-
-  if (fromRect.bottom <= toRect.top) dy = toRect.top - fromRect.bottom;
-  else if (fromRect.top >= toRect.bottom) dy = toRect.bottom - fromRect.top;
-
-  // Fallback: overlapping/abutting boxes can yield a 0 vector.
-  if (dx === 0 && dy === 0) {
-    const fromCx = fromRect.left + fromRect.width / 2;
-    const fromCy = fromRect.top + fromRect.height / 2;
-    const toCx = toRect.left + toRect.width / 2;
-    const toCy = toRect.top + toRect.height / 2;
-
-    dx = toCx - fromCx;
-    dy = toCy - fromCy;
-  }
-
-  const longest = Math.max(Math.abs(dx), Math.abs(dy)) || 1;
-  return {
-    x: (dx / longest) * 2,
-    y: (dy / longest) * 2,
-  };
-};
-
 let bindDirectionalHovers = (element, childSelector) => {
   let children = Array.from(element.querySelectorAll(childSelector));
-  let hoverTimeout;
 
   element.addEventListener(
     'mouseenter',
     function (event) {
       clearTimeout(hoverTimeout);
 
-      let localDirectionX = pointerDirectionX;
-      let localDirectionY = pointerDirectionY;
-
-      const fromAnchor = event.relatedTarget
-        ? event.relatedTarget.closest('.r-anchor')
-        : null;
-
-      if (fromAnchor && fromAnchor !== element) {
-        const direction = getAnchorTransitionDirection(fromAnchor, element);
-        localDirectionX = direction.x;
-        localDirectionY = direction.y;
-      }
-
       // Move the children into their start positions
       children.forEach((childElement) => {
         transformOrigin(childElement, event.offsetX, event.offsetY);
 
-        let scale = Date.now() - lastMouseLeave < 750 ? 1 : 0.7;
+        let scale = Date.now() - lastMouseLeave < 200 ? 1 : 0.7;
 
         childElement.classList.add('no-transition');
         transform(
           childElement,
-          -16 * localDirectionX,
-          -16 * localDirectionY,
+          -16 * pointerDirectionX,
+          -16 * pointerDirectionY,
           scale
         );
         childElement.offsetHeight;
@@ -110,21 +68,6 @@ let bindDirectionalHovers = (element, childSelector) => {
 
       clearTimeout(hoverTimeout);
 
-      let localDirectionX = pointerDirectionX;
-      let localDirectionY = pointerDirectionY;
-      let localScale = 0.7;
-
-      const toAnchor = event.relatedTarget
-        ? event.relatedTarget.closest('.r-anchor')
-        : null;
-
-      if (toAnchor && toAnchor !== element) {
-        const direction = getAnchorTransitionDirection(element, toAnchor);
-        localDirectionX = direction.x;
-        localDirectionY = direction.y;
-        localScale = 1;
-      }
-
       // Remove the hover effect and move the child in the
       // direction of the mouse
       element.classList.remove('hover');
@@ -132,9 +75,9 @@ let bindDirectionalHovers = (element, childSelector) => {
         transformOrigin(childElement, event.offsetX, event.offsetY);
         transform(
           childElement,
-          16 * localDirectionX,
-          16 * localDirectionY,
-          localScale
+          16 * pointerDirectionX,
+          16 * pointerDirectionY,
+          0.7
         );
       });
     },
@@ -142,7 +85,7 @@ let bindDirectionalHovers = (element, childSelector) => {
   );
 };
 
-document.addEventListener('mousemove', (event) => {
+document.addEventListener('mousemove', () => {
   if (lastMouseX && lastMouseY) {
     let ox = event.pageX - lastMouseX;
     let oy = event.pageY - lastMouseY;
@@ -179,6 +122,13 @@ export default (selector) => {
   if (!/ipad|iphone|ipod|android|windows\sphone/gi.test(navigator.userAgent)) {
     // Wrap anchors in the markup we need for hover effects
     Array.from(document.querySelectorAll(selector)).forEach((element) => {
+      if (
+        element.classList.contains('r-anchor') ||
+        isWrappedAcrossLines(element)
+      ) {
+        return;
+      }
+
       element.classList.add('r-anchor');
       element.innerHTML =
         '<span class="r-anchor-label">' +

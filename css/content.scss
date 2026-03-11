@@ -39,6 +39,18 @@
     }
   }
 
+  a.r-anchor {
+    @apply text-pink-700 border-b border-pink-400 no-underline break-words transition-colors;
+
+    &:hover {
+      @apply text-pink-900 border-transparent;
+    }
+  }
+
+  a.r-anchor .r-anchor-background {
+    inset: -4px;
+  }
+
   b,
   strong {
     font-weight: 600;

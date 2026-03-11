@@ -16,7 +16,9 @@ import Zoom from 'reveal.js/plugin/zoom';
 const PAGE_ID = document.body.dataset.page;
 
 setupNavigation();
-setupHovers('.header-nav a, .header-cta, .footer a, .sidebar a:not(.selected)');
+setupHovers(
+  '.header-nav a, .header-cta, .footer a, .sidebar a:not(.selected), .article > p a, .article > table a'
+);
 setupAnchors();
 setupPage();
 
