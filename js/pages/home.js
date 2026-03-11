@@ -1,8 +1,8 @@
 import Reveal from 'reveal.js';
-import Highlight from 'reveal.js/plugin/highlight/highlight.esm.js';
-import Markdown from 'reveal.js/plugin/markdown/markdown.esm.js';
-import Notes from 'reveal.js/plugin/notes/notes.esm.js';
-import Zoom from 'reveal.js/plugin/zoom/zoom.esm.js';
+import Highlight from 'reveal.js/plugin/highlight';
+import Markdown from 'reveal.js/plugin/markdown';
+import Notes from 'reveal.js/plugin/notes';
+import Zoom from 'reveal.js/plugin/zoom';
 import throttle from 'lodash/throttle';
 
 export default () => {

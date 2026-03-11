@@ -79,9 +79,124 @@
   @apply fill-current;
 }
 
+.header-logo-desktop {
+  position: relative;
+  width: 142px;
+}
+
+.header-logo-desktop img {
+  width: 100%;
+}
+
+.header-logo-light {
+  display: none;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme='dark']) .header-logo-light {
+    display: block;
+  }
+
+  :root:not([data-theme='dark']) .header-logo-dark {
+    display: none;
+  }
+}
+
+:root[data-theme='light'] .header-logo-light {
+  display: block;
+}
+
+:root[data-theme='light'] .header-logo-dark {
+  display: none;
+}
+
+:root[data-theme='dark'] .header-logo-light {
+  display: none;
+}
+
+:root[data-theme='dark'] .header-logo-dark {
+  display: block;
+}
+
+.theme-toggle {
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.theme-toggle:hover {
+  background-color: rgb(var(--site-color-gray-200));
+}
+
+.theme-toggle:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px rgb(var(--site-color-blue-400));
+}
+
+.theme-toggle svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.theme-toggle path,
+.theme-toggle circle {
+  fill: none !important;
+}
+
+.theme-toggle-icon-moon {
+  display: none;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme='dark']) .theme-toggle-icon-sun {
+    display: none;
+  }
+
+  :root:not([data-theme='dark']) .theme-toggle-icon-moon {
+    display: block;
+  }
+}
+
+:root[data-theme='light'] .theme-toggle-icon-sun {
+  display: none;
+}
+
+:root[data-theme='light'] .theme-toggle-icon-moon {
+  display: block;
+}
+
+.theme-toggle[data-theme='light'] .theme-toggle-icon-sun {
+  display: none;
+}
+
+.theme-toggle[data-theme='light'] .theme-toggle-icon-moon {
+  display: block;
+}
+
+.search-input {
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.search-input:focus {
+  background-color: rgb(var(--site-color-surface-raised));
+}
+
+.search-results,
+.header-lang-select {
+  border: 1px solid rgb(var(--site-color-gray-300));
+}
+
+.search-results {
+  background-color: rgb(var(--site-color-surface));
+}
+
 .header-lang-select {
   display: none;
-  background-color: #fff;
+  background-color: rgb(var(--site-color-surface-raised));
   cursor: pointer;
   transform-origin: top;
   white-space: nowrap;

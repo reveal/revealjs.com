@@ -39,7 +39,8 @@ Reveal.availableFragments();
 ### Misc
 
 ```javascript
-// Call this if you add or remove slides to update controls, progress, etc
+// Call this if you add or remove slides to update controls, progress,
+// slide classes, etc
 Reveal.sync();
 // Call this to sync just one slide
 Reveal.syncSlide((slide = currentSlide));
@@ -100,6 +101,9 @@ Reveal.getSlidePastCount();
 
 // Array of all slides
 Reveal.getSlides();
+
+// Remove all slides with data-visibility="hidden" from the DOM
+Reveal.removeHiddenSlides();
 ```
 
 ### Slide State

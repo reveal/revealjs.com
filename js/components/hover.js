@@ -11,6 +11,10 @@ let pointerDirectionX = 0,
 let hoverTimeout;
 let lastMouseLeave;
 
+let isWrappedAcrossLines = (element) => {
+  return element.getClientRects().length > 1;
+};
+
 let transform = (element, x, y, scale) => {
   element.style.transform =
     'scale(' + scale + ') translate(' + x + 'px,' + y + 'px)';
@@ -118,6 +122,13 @@ export default (selector) => {
   if (!/ipad|iphone|ipod|android|windows\sphone/gi.test(navigator.userAgent)) {
     // Wrap anchors in the markup we need for hover effects
     Array.from(document.querySelectorAll(selector)).forEach((element) => {
+      if (
+        element.classList.contains('r-anchor') ||
+        isWrappedAcrossLines(element)
+      ) {
+        return;
+      }
+
       element.classList.add('r-anchor');
       element.innerHTML =
         '<span class="r-anchor-label">' +

@@ -4,19 +4,23 @@ import setupSearch from 'components/search.js';
 import setupHovers from 'components/hover.js';
 import setupPrefetch from 'components/prefetch.js';
 import setupNavigation from 'components/navigation.js';
+import setupTheme from 'components/theme.js';
 
 import AnchorJS from 'anchor-js';
 
 import Reveal from 'reveal.js';
-import Highlight from 'reveal.js/plugin/highlight/highlight.esm.js';
-import Markdown from 'reveal.js/plugin/markdown/markdown.esm.js';
-import MathJax from 'reveal.js/plugin/math/math.esm.js';
-import Zoom from 'reveal.js/plugin/zoom/zoom.esm.js';
+import Highlight from 'reveal.js/plugin/highlight';
+import Markdown from 'reveal.js/plugin/markdown';
+import MathJax from 'reveal.js/plugin/math';
+import Zoom from 'reveal.js/plugin/zoom';
 
 const PAGE_ID = document.body.dataset.page;
 
 setupNavigation();
-setupHovers('.header-nav a, .header-cta, .footer a, .sidebar a:not(.selected)');
+setupTheme();
+setupHovers(
+  '.header-nav a, .header-nav button, .header-cta, .footer a, .sidebar a:not(.selected), .article > p a, .article > table a'
+);
 setupAnchors();
 setupPage();
 

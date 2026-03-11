@@ -6,9 +6,10 @@
     <title>{{ title }} | {{ site.name }}</title>
     <meta name="description" content="{% if description %}{{ description }}{% else %}{{ excerpt }}{% endif %}">
 
-    <link rel="stylesheet" href="/main.css{{ helpers.assetSuffix }}">
-
     {% include "meta.njk" %}
+    {% include "theme-init.njk" %}
+
+    <link rel="stylesheet" href="/main.css{{ helpers.assetSuffix }}">
 
     <link rel="icon" type="image/svg+xml" href="{{ site.images.favicon }}">
 

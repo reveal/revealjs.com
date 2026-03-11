@@ -26,8 +26,8 @@ If you're using ES modules, we also provide module exports for all built-in plug
 
 ```html
 <script type="module">
-  import Reveal from 'dist/reveal.esm.js';
-  import Markdown from 'plugin/markdown/markdown.esm.js';
+  import Reveal from 'dist/reveal.mjs';
+  import Markdown from 'dist/plugin/markdown.mjs';
   Reveal.initialize({
     plugins: [Markdown],
   });
@@ -51,16 +51,16 @@ These plugins are distributed together with the reveal.js repo. Here's a complet
 
 {.key-value}
 
-All of the above are available as ES modules if you swap `.js` for `.esm.js`.
+All of the above are available as ES modules under `dist/plugin/` with a `.mjs` extension (e.g. `dist/plugin/markdown.mjs`).
 
 ## API
 
 We provide API methods for checking which plugins that are currently registered. It's also possible to retrieve a reference to any registered plugin instance if you want to manually call a method on them.
 
 ```js
-import Reveal from 'dist/reveal.esm.js';
-import Markdown from 'plugin/markdown/markdown.esm.js';
-import Highlight from 'plugin/highlight/highlight.esm.js';
+import Reveal from 'dist/reveal.mjs';
+import Markdown from 'dist/plugin/markdown.mjs';
+import Highlight from 'dist/plugin/highlight.mjs';
 
 Reveal.initialize({ plugins: [Markdown, Highlight] });
 
