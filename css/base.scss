@@ -98,6 +98,7 @@ $theme-light: (
   pink-900: 112 36 89,
   surface: 255 255 255,
   surface-raised: 255 255 255,
+  table-header-row: 255 255 255,
   table-row: 255 255 255,
   tap-highlight: 203 213 224,
   accent-foreground: 116 66 16,
@@ -110,10 +111,11 @@ $theme-light: (
   reveal-demo-bg: 35 28 62,
   reveal-demo-overlay: 0 0 0,
   reveal-demo-overlay-text: 238 238 238,
+  code-highlight-bg: 32 34 43,
 );
 
 $theme-dark: (
-  gray-100: 18 18 20,
+  gray-100: 14 14 16,
   gray-200: 28 28 31,
   gray-300: 44 44 48,
   gray-400: 63 63 70,
@@ -205,7 +207,8 @@ $theme-dark: (
   pink-900: 252 231 243,
   surface: 28 28 31,
   surface-raised: 37 37 41,
-  table-row: 37 37 41,
+  table-header-row: 13 13 15,
+  table-row: 20 20 23,
   tap-highlight: 82 82 91,
   accent-foreground: 116 66 16,
   course-thumb: 17 17 17,
@@ -217,6 +220,7 @@ $theme-dark: (
   reveal-demo-bg: 24 24 27,
   reveal-demo-overlay: 0 0 0,
   reveal-demo-overlay-text: 238 238 238,
+  code-highlight-bg: 31 31 34,
 );
 
 @mixin theme-colors($theme) {
@@ -292,7 +296,7 @@ button {
 }
 
 .nav-link.selected {
-  @apply text-yellow-900 bg-yellow-400 rounded;
+  @apply text-yellow-900 bg-yellow-400 rounded-md;
 }
 
 // External links
@@ -354,9 +358,9 @@ button {
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
-  border-radius: 0.25rem;
   z-index: -1;
-  @apply bg-gray-300;
+  background-color: rgb(var(--site-color-pink-800) / 0.2);
+  @apply rounded-md;
 
   transition:
     opacity 0.2s $easeOutQuint,

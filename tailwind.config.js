@@ -13,7 +13,12 @@ const colorScale = (name) =>
   );
 
 module.exports = {
-  content: ['./src/**/*.html', './src/**/*.njk', './src/**/*.md', './js/**/*.js'],
+  content: [
+    './src/**/*.html',
+    './src/**/*.njk',
+    './src/**/*.md',
+    './js/**/*.js',
+  ],
   theme: {
     extend: {
       inset: {

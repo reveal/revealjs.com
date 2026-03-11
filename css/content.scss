@@ -35,7 +35,7 @@
     @apply text-pink-700 border-b border-pink-400 no-underline break-words;
 
     &:hover {
-      @apply text-pink-900 border-pink-600;
+      @apply text-pink-600 border-pink-600;
     }
   }
 
@@ -120,7 +120,7 @@
 .article > table {
   display: block;
   overflow: auto;
-  @apply m-4 -mx-4 border rounded text-base;
+  @apply m-4 -mx-4 border rounded-xl text-base;
 
   th {
     @apply p-4 align-top border-b font-medium;
@@ -128,6 +128,10 @@
 
   td {
     @apply p-4 align-top border-0;
+  }
+
+  thead tr {
+    background-color: rgb(var(--site-color-table-header-row));
   }
 
   tr {

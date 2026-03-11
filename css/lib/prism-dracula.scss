@@ -39,7 +39,7 @@ main {
 
   :not(pre) > code:not(.hljs)[class*='language-'],
   pre[class*='language-'] {
-    background: #20222b;
+    background: rgb(var(--site-color-code-highlight-bg));
   }
 
   /* Inline code */
