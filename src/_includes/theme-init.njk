@@ -1,0 +1,34 @@
+<script>
+  (() => {
+    const STORAGE_KEY = 'revealjs.com-theme';
+    const THEME_COLORS = {
+      dark: '#121214',
+      light: '#f7fafc',
+    };
+
+    try {
+      const storedTheme = window.localStorage.getItem(STORAGE_KEY);
+      const systemTheme = window.matchMedia?.('(prefers-color-scheme: light)')
+        .matches
+        ? 'light'
+        : 'dark';
+      const theme =
+        storedTheme === 'light' || storedTheme === 'dark'
+          ? storedTheme
+          : systemTheme;
+
+      if (storedTheme === 'light' || storedTheme === 'dark') {
+        document.documentElement.dataset.theme = storedTheme;
+        document.documentElement.style.colorScheme = storedTheme;
+      }
+
+      const themeColor = document.querySelector(
+        'meta[name="theme-color"]:not([media])'
+      );
+
+      if (themeColor) {
+        themeColor.setAttribute('content', THEME_COLORS[theme]);
+      }
+    } catch (error) {}
+  })();
+</script>

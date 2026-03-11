@@ -4,6 +4,7 @@ import setupSearch from 'components/search.js';
 import setupHovers from 'components/hover.js';
 import setupPrefetch from 'components/prefetch.js';
 import setupNavigation from 'components/navigation.js';
+import setupTheme from 'components/theme.js';
 
 import AnchorJS from 'anchor-js';
 
@@ -16,8 +17,9 @@ import Zoom from 'reveal.js/plugin/zoom';
 const PAGE_ID = document.body.dataset.page;
 
 setupNavigation();
+setupTheme();
 setupHovers(
-  '.header-nav a, .header-cta, .footer a, .sidebar a:not(.selected), .article > p a, .article > table a'
+  '.header-nav a, .header-nav button, .header-cta, .footer a, .sidebar a:not(.selected), .article > p a, .article > table a'
 );
 setupAnchors();
 setupPage();

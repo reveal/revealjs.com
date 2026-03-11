@@ -241,6 +241,16 @@ $theme-dark: (
   }
 }
 
+:root[data-theme='light'] {
+  color-scheme: light;
+  @include theme-colors($theme-light);
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  @include theme-colors($theme-dark);
+}
+
 html {
   background-color: rgb(var(--site-color-gray-100));
   color: rgb(var(--site-color-gray-900));

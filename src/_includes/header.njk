@@ -2,10 +2,10 @@
   <div class="w-full relative max-w-screen-xl mx-auto px-6 flex flex-row items-center justify-between">
     <div class="header-left mr-6 flex-shrink-0">
       <a class="header-logo block" href="/" title="reveal.js home">
-        <picture class="hidden sm:block" style="width: 142px">
-          <source srcset="/images/logo/reveal-black-text.svg" media="(prefers-color-scheme: light)">
-          <img src="/images/logo/reveal-white-text.svg" alt="reveal.js logo" width="142">
-        </picture>
+        <span class="header-logo-desktop hidden sm:block">
+          <img class="header-logo-dark" src="/images/logo/reveal-white-text.svg" alt="reveal.js logo" width="142">
+          <img class="header-logo-light" src="/images/logo/reveal-black-text.svg" alt="reveal.js logo" width="142">
+        </span>
         <img class="block sm:hidden" src="/images/logo/reveal-symbol.svg" alt="reveal.js logo" style="width: 40px">
       </a>
       <!--<a class="header-cta py-3 px-2 -mx-2 text-gray-800 hover:text-gray-900 rounded font-semibold" href="/installation">Get Started</a>-->
@@ -22,7 +22,7 @@
       <ul class="menu flex flex-col lg:flex-row items-center list-reset text-base">
         {% if locales.length %}
         <li class="relative header-lang">
-          <a class="inline-block py-3 px-5 text-gray-800 hover:text-gray-900 rounded align-middle">
+          <a class="inline-block py-3 px-4 text-gray-800 hover:text-gray-900 rounded align-middle">
             {% include "images/icons/translate.svg" %}
           </a>
           <div class="header-lang-select absolute shadow-2xl px-2 py-2 text-gray-800 rounded-lg align-middle focus:outline-none">
@@ -33,12 +33,30 @@
         </li>
         {% endif %}
         <li>
-          <a class="inline-block py-3 px-5 text-gray-800 hover:text-gray-900 rounded align-middle" href="{{ site.urls.twitter }}">
+          <button type="button" data-theme-toggle class="theme-toggle inline-flex items-center justify-center py-3 px-4 text-gray-800 hover:text-gray-900 rounded align-middle" aria-label="Switch theme">
+            <svg class="theme-toggle-icon-sun" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="12" cy="12" r="4" style="stroke: currentColor; stroke-width: 2" />
+              <path d="M12 2V5" style="stroke: currentColor; stroke-width: 2; stroke-linecap: round" />
+              <path d="M12 19V22" style="stroke: currentColor; stroke-width: 2; stroke-linecap: round" />
+              <path d="M2 12H5" style="stroke: currentColor; stroke-width: 2; stroke-linecap: round" />
+              <path d="M19 12H22" style="stroke: currentColor; stroke-width: 2; stroke-linecap: round" />
+              <path d="M4.93 4.93L7.05 7.05" style="stroke: currentColor; stroke-width: 2; stroke-linecap: round" />
+              <path d="M16.95 16.95L19.07 19.07" style="stroke: currentColor; stroke-width: 2; stroke-linecap: round" />
+              <path d="M16.95 7.05L19.07 4.93" style="stroke: currentColor; stroke-width: 2; stroke-linecap: round" />
+              <path d="M4.93 19.07L7.05 16.95" style="stroke: currentColor; stroke-width: 2; stroke-linecap: round" />
+            </svg>
+            <svg class="theme-toggle-icon-moon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M20 14.19A8 8 0 0 1 9.81 4a8 8 0 1 0 10.19 10.19Z" style="stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round" />
+            </svg>
+          </button>
+        </li>
+        <li>
+          <a class="inline-block py-3 px-4 text-gray-800 hover:text-gray-900 rounded align-middle" href="{{ site.urls.twitter }}">
             {% include "images/icons/twitter.svg" %}
           </a>
         </li>
         <li>
-          <a class="inline-block py-3 px-5 text-gray-800 hover:text-gray-900 rounded align-middle" href="{{ site.urls.github }}">
+          <a class="inline-block py-3 px-4 text-gray-800 hover:text-gray-900 rounded align-middle" href="{{ site.urls.github }}">
             {% include "images/icons/github.svg" %}
           </a>
         </li>
