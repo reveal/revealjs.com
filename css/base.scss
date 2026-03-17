@@ -217,7 +217,7 @@ $theme-dark: (
   promo-border: 255 255 255,
   promo-pill-bg: 255 255 255,
   promo-pill-text: 0 0 0,
-  reveal-demo-bg: 24 24 27,
+  reveal-demo-bg: 20 20 24,
   reveal-demo-overlay: 0 0 0,
   reveal-demo-overlay-text: 238 238 238,
   code-highlight-bg: 31 31 34,
@@ -324,7 +324,6 @@ button {
 // Advertising
 #carbonads {
   width: 100%;
-  border: 1px solid rgb(var(--site-color-gray-300) / 0.7);
   z-index: 10;
   text-align: left;
   @apply text-sm;
