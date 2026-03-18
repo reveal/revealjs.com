@@ -158,8 +158,8 @@ export function Presentation() {
     <Deck>
       <Markdown>
         {`
-## Title
-Hello world
+          ## Title
+          Hello world
         `}
       </Markdown>
     </Deck>
@@ -175,15 +175,15 @@ Slides are split by `---` on its own line (the `separator` default). Use `vertic
   verticalSeparator="^\n--\n$"
 >
   {`
-## Slide 1
+    ## Slide 1
 
---
+    --
 
-## Slide 1.1 (vertical)
+    ## Slide 1.1 (vertical)
 
----
+    ---
 
-## Slide 2
+    ## Slide 2
   `}
 </Markdown>
 ```
@@ -195,10 +195,10 @@ Lines matching the `notesSeparator` pattern (default `Notes:`) become speaker no
 ```tsx
 <Markdown>
   {`
-## My Slide
+    ## My Slide
 
-Notes:
-These lines become speaker notes.
+    Notes:
+    These lines become speaker notes.
   `}
 </Markdown>
 ```
@@ -231,11 +231,11 @@ Pass rendering options through the `options` prop. Set `animateLists` to automat
 ```tsx
 <Markdown options={{ animateLists: true, smartypants: true }}>
   {`
-## My Slide
+    ## My Slide
 
-- First item
-- Second item
-- Third item
+    - First item
+    - Second item
+    - Third item
   `}
 </Markdown>
 ```
