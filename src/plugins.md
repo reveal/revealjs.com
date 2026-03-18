@@ -14,7 +14,7 @@ Plugins can be used to extend reveal.js with additional functionality. To make u
 Here's an example:
 
 ```html
-<script src="plugin/markdown/markdown.js"></script>
+<script src="dist/plugin/markdown.js"></script>
 <script>
   Reveal.initialize({
     plugins: [RevealMarkdown],
@@ -42,12 +42,12 @@ These plugins are distributed together with the reveal.js repo. Here's a complet
 
 | Name            | Description                                                                                                             |
 | :-------------- | :---------------------------------------------------------------------------------------------------------------------- |
-| RevealHighlight | Syntax highlighted [code](/code/).<br><span class="text-gray-600">plugin/highlight/highlight.js</span>                  |
-| RevealMarkdown  | Write content using [Markdown](/markdown/).<br><span class="text-gray-600">plugin/markdown/markdown.js</span>           |
-| RevealSearch    | Press CTRL+Shift+F to search slide content.<br><span class="text-gray-600">plugin/search/search.js</span>               |
-| RevealNotes     | Show a [speaker view](/speaker-view/) in a separate window.<br><span class="text-gray-600">plugin/notes/notes.js</span> |
-| RevealMath      | Render [math equations](/math/).<br><span class="text-gray-600">plugin/math/math.js</span>                              |
-| RevealZoom      | Alt+click to zoom in on elements (CTRL+click in Linux).<br><span class="text-gray-600">plugin/zoom/zoom.js</span>       |
+| RevealHighlight | Syntax highlighted [code](/code/).<br><span class="text-gray-600">dist/plugin/highlight.js</span>                  |
+| RevealMarkdown  | Write content using [Markdown](/markdown/).<br><span class="text-gray-600">dist/plugin/markdown.js</span>           |
+| RevealSearch    | Press CTRL+Shift+F to search slide content.<br><span class="text-gray-600">dist/plugin/search.js</span>               |
+| RevealNotes     | Show a [speaker view](/speaker-view/) in a separate window.<br><span class="text-gray-600">dist/plugin/notes.js</span> |
+| RevealMath      | Render [math equations](/math/).<br><span class="text-gray-600">dist/plugin/math.js</span>                              |
+| RevealZoom      | Alt+click to zoom in on elements (CTRL+click in Linux).<br><span class="text-gray-600">dist/plugin/zoom.js</span>       |
 
 {.key-value}
 
@@ -86,10 +86,10 @@ Dependencies are loaded in the order they appear.
 ```js
 Reveal.initialize({
   dependencies: [
-    { src: 'plugin/markdown/markdown.js', condition: () => {
+    { src: 'dist/plugin/markdown.js', condition: () => {
         return !!document.querySelector( ’[data-markdown]’ );
     } },
-    { src: 'plugin/highlight/highlight.js', async: true }
+    { src: 'dist/plugin/highlight.js', async: true }
   ]
 });
 ```

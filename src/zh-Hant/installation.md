@@ -74,7 +74,7 @@ yarn add reveal.js
 
 ```js
 import Reveal from 'reveal.js';
-import Markdown from 'reveal.js/plugin/markdown/markdown.esm.js';
+import Markdown from 'reveal.js/plugin/markdown';
 
 let deck = new Reveal({
   plugins: [Markdown],
@@ -84,7 +84,7 @@ deck.initialize();
 
 你還需要包括 reveal.js 的樣式和一個 [簡報主題](/zh-hant/themes/)。
 
-```html
-<link rel="stylesheet" href="/node_modules/reveal.js/dist/reveal.css" />
-<link rel="stylesheet" href="/node_modules/reveal.js/dist/theme/black.css" />
+```js
+import 'reveal.js/reveal.css';
+import 'reveal.js/theme/black.css';
 ```

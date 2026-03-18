@@ -46,7 +46,7 @@ This will only display in the notes window.
 The plugin is already bundled with reveal.js. To enable the speaker notes plugin, add the plugin source to the `index.html` and add the plugin to the initialization of reveal.js.
 
 ```html
-<script src="plugin/notes/notes.js"></script>
+<script src="dist/plugin/notes.js"></script>
 <script>
   Reveal.initialize({
     plugins: [RevealNotes],

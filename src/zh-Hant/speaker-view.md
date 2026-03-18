@@ -46,7 +46,7 @@ Note:
 該插件已經與 reveal.js 捆綁在一起。要啟用演講者筆記插件，將插件源添加到 `index.html` 中並將插件添加到 reveal.js 的初始化中。
 
 ```html
-<script src="plugin/notes/notes.js"></script>
+<script src="dist/plugin/notes.js"></script>
 <script>
   Reveal.initialize({
     plugins: [RevealNotes],

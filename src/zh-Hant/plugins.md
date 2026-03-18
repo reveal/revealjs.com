@@ -14,7 +14,7 @@ layout: default
 這是一個範例：
 
 ```html
-<script src="plugin/markdown/markdown.js"></script>
+<script src="dist/plugin/markdown.js"></script>
 <script>
   Reveal.initialize({
     plugins: [RevealMarkdown],
@@ -26,8 +26,8 @@ layout: default
 
 ```html
 <script type="module">
-  import Reveal from 'dist/reveal.esm.js';
-  import Markdown from 'plugin/markdown/markdown.esm.js';
+  import Reveal from 'dist/reveal.mjs';
+  import Markdown from 'dist/plugin/markdown.mjs';
   Reveal.initialize({
     plugins: [Markdown],
   });
@@ -42,25 +42,25 @@ layout: default
 
 | 名稱            | 描述                                                                                                       |
 | :-------------- | :--------------------------------------------------------------------------------------------------------- |
-| RevealHighlight | 語法高亮的[代碼](/zh-hant/code/)。<br><span class="text-gray-600">plugin/highlight/highlight.js</span>             |
-| RevealMarkdown  | 使用 [Markdown](/zh-hant/markdown/) 編寫內容。<br><span class="text-gray-600">plugin/markdown/markdown.js</span>   |
-| RevealSearch    | 按 CTRL+Shift+F 搜索幻燈片內容。<br><span class="text-gray-600">plugin/search/search.js</span>             |
-| RevealNotes     | 在單獨視窗中顯示[演講者視圖](/zh-hant/speaker-view/)。<br><span class="text-gray-600">plugin/notes/notes.js</span> |
-| RevealMath      | 呈現[數學方程式](/zh-hant/math/)。<br><span class="text-gray-600">plugin/math/math.js</span>                       |
-| RevealZoom      | Alt+ 點擊元素放大（Linux 中使用 CTRL+ 點擊）。<br><span class="text-gray-600">plugin/zoom/zoom.js</span>     |
+| RevealHighlight | 語法高亮的[代碼](/zh-hant/code/)。<br><span class="text-gray-600">dist/plugin/highlight.js</span>             |
+| RevealMarkdown  | 使用 [Markdown](/zh-hant/markdown/) 編寫內容。<br><span class="text-gray-600">dist/plugin/markdown.js</span>   |
+| RevealSearch    | 按 CTRL+Shift+F 搜索幻燈片內容。<br><span class="text-gray-600">dist/plugin/search.js</span>             |
+| RevealNotes     | 在單獨視窗中顯示[演講者視圖](/zh-hant/speaker-view/)。<br><span class="text-gray-600">dist/plugin/notes.js</span> |
+| RevealMath      | 呈現[數學方程式](/zh-hant/math/)。<br><span class="text-gray-600">dist/plugin/math.js</span>                       |
+| RevealZoom      | Alt+ 點擊元素放大（Linux 中使用 CTRL+ 點擊）。<br><span class="text-gray-600">dist/plugin/zoom.js</span>     |
 
 {.key-value}
 
-如果你換用 `.js` 為 `.esm.js`，以上所有插件都可以作為 ES 模塊獲得。
+如果你換用 `.js` 為 `.mjs`，以上所有插件都可以作為 ES 模塊獲得。
 
 ## API
 
 我們提供了 API 函式來檢查哪些插件目前已導入。如果你想手動調用插件上的函式，也可以檢索任何已導入插件實例的參考。
 
 ```js
-import Reveal from 'dist/reveal.esm.js';
-import Markdown from 'plugin/markdown/markdown.esm.js';
-import Highlight from 'plugin/highlight/highlight.esm.js';
+import Reveal from 'dist/reveal.mjs';
+import Markdown from 'dist/plugin/markdown.mjs';
+import Highlight from 'plugin/highlight/highlight.mjs';
 
 Reveal.initialize({ plugins: [Markdown, Highlight] });
 
@@ -86,7 +86,7 @@ Reveal.getPlugins();
 ```js
 Reveal.initialize({
   dependencies: [
-    { src: 'plugin/markdown/markdown.js', condition: () => {
+    { src: 'dist/plugin/markdown.js', condition: () => {
         return !!document.querySelector( ’[data-markdown]’ );
     } },
     { src: 'plugin/highlight/highlight.js', async: true }

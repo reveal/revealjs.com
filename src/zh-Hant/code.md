@@ -40,11 +40,11 @@ reveal.js 有一個強大的功能，就是為程式碼添加顏色 — 由 [hig
 
 ## 主題
 
-確保在你的文檔中包含了一個語法高亮主題。我們預設包含了 Monokai，它隨 reveal.js 儲存在 [plugin/highlight/monokai.css](https://github.com/hakimel/reveal.js/tree/master/plugin/highlight/monokai.css) 中。可用的主題完整列表可以在 <https://highlightjs.org/static/demo/> 上找到。
+確保在你的文檔中包含了一個語法高亮主題。我們預設包含了 Monokai，它隨 reveal.js 儲存在 [dist/plugin/highlight/monokai.css](https://github.com/hakimel/reveal.js/tree/master/dist/plugin/highlight/monokai.css) 中。可用的主題完整列表可以在 <https://highlightjs.org/static/demo/> 上找到。
 
 ```html
-<link rel="stylesheet" href="plugin/highlight/monokai.css" />
-<script src="plugin/highlight/highlight.js"></script>
+<link rel="stylesheet" href="dist/plugin/highlight/monokai.css" />
+<script src="dist/plugin/highlight.js"></script>
 <script>
   Reveal.initialize({
     plugins: [RevealHighlight],

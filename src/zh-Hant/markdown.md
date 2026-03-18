@@ -43,7 +43,7 @@ layout: default
 這個功能由內置的 Markdown 插件提供支持，該插件反過來使用 [marked](https://github.com/chjj/marked) 進行所有解析。Markdown 插件包含在我們的默認簡報範例中。如果你想手動將其添加到新的簡報中，這是操作方式：
 
 ```html
-<script src="plugin/markdown/markdown.js"></script>
+<script src="dist/plugin/markdown.js"></script>
 <script>
   Reveal.initialize({
     plugins: [RevealMarkdown],

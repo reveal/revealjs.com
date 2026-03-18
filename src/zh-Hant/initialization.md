@@ -64,8 +64,8 @@ Reveal.initialize().then(() => {
 
 ```html
 <script type="module">
-  import Reveal from 'dist/reveal.esm.js';
-  import Markdown from 'plugin/markdown/markdown.esm.js';
+  import Reveal from 'dist/reveal.mjs';
+  import Markdown from 'dist/plugin/markdown.mjs';
   Reveal.initialize({
     plugins: [Markdown],
   });
