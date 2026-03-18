@@ -146,6 +146,105 @@ const snippet = `console.log('Hi')`;
 
 `Code` normalizes indentation automatically (controlled by the `trim` prop, which is `true` by default), so you can indent your source to match the surrounding JSX without affecting the rendered output.
 
+## Markdown
+
+`Markdown` renders reveal.js-compatible markdown slides directly — no reveal.js markdown plugin required. Pass your content as a string child or via the `markdown` prop:
+
+```tsx
+import { Deck, Markdown } from '@revealjs/react';
+
+export function Presentation() {
+  return (
+    <Deck>
+      <Markdown>
+        {`
+## Title
+Hello world
+        `}
+      </Markdown>
+    </Deck>
+  );
+}
+```
+
+Slides are split by `---` on its own line (the `separator` default). Use `verticalSeparator` to also create vertical stacks from within the same `Markdown` block:
+
+```tsx
+<Markdown
+  separator="^\n---\n$"
+  verticalSeparator="^\n--\n$"
+>
+  {`
+## Slide 1
+
+--
+
+## Slide 1.1 (vertical)
+
+---
+
+## Slide 2
+  `}
+</Markdown>
+```
+
+### Speaker notes
+
+Lines matching the `notesSeparator` pattern (default `Notes:`) become speaker notes:
+
+```tsx
+<Markdown>
+  {`
+## My Slide
+
+Notes:
+These lines become speaker notes.
+  `}
+</Markdown>
+```
+
+### Element & slide attributes
+
+The same comment-based attribute syntax as the core markdown plugin is supported. Use `<!-- .element: -->` to add attributes to the preceding element and `<!-- .slide: -->` to add attributes to the slide itself:
+
+```md
+## My Slide
+<!-- .slide: data-background="#111827" -->
+
+- First item <!-- .element: class="fragment" -->
+- Second item <!-- .element: class="fragment" -->
+```
+
+### External markdown
+
+Use the `src` prop to load markdown from an external file. The component fetches the file asynchronously and renders nothing until the content is ready:
+
+```tsx
+<Markdown src="/slides/content.md" />
+```
+
+### Options
+
+Pass rendering options through the `options` prop. Set `animateLists` to automatically wrap every list item as a fragment, and `smartypants` to convert straight quotes and dashes to typographic equivalents:
+
+{% raw %}
+```tsx
+<Markdown options={{ animateLists: true, smartypants: true }}>
+  {`
+## My Slide
+
+- First item
+- Second item
+- Third item
+  `}
+</Markdown>
+```
+{% endraw %}
+
+Any other option accepted by [Marked](https://marked.js.org/) can be passed through `options` as well.
+
+`Markdown` accepts the same slide props as `Slide` — `background`, `backgroundColor`, `autoAnimate`, `transition`, and so on — which are applied to every top-level slide in the block. Raw `data-*` attributes are forwarded to the underlying `<section>` elements.
+
 ## Configuration
 
 Pass any [reveal.js config option](/config/) through the `config` prop on `Deck`. Plugins are registered separately via `plugins` and are applied once at initialization time, matching reveal.js's plugin lifecycle.
