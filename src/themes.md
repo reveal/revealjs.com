@@ -33,7 +33,7 @@ Each theme is available as a separate stylesheet. To change theme you will need 
 
 ## Custom Properties
 
-All theme variables are exposed as CSS custom properties in the pseudo-class `:root`. See [the list of exposed variables](https://github.com/hakimel/reveal.js/blob/master/css/theme/template/exposer.scss).
+All theme variables are exposed as CSS custom properties in the pseudo-class `:root`. See [the list of exposed variables](https://github.com/hakimel/reveal.js/blob/master/css/theme/template/settings.scss).
 
 ## Creating a Theme
 
