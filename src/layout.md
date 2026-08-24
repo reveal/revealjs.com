@@ -124,7 +124,7 @@ The `r-stretch` layout helper lets you resize an element, like an image or video
 
 ```html
 <h2>Stretch Example</h2>
-<img class="r-stretch" src="/images/slides-symbol-512x512.png" />
+<img class="r-stretch" src="/images/slides-symbol.svg" />
 <p>Image byline</p>
 ```
 
@@ -132,7 +132,7 @@ The `r-stretch` layout helper lets you resize an element, like an image or video
   <div class="slides">
     <section>
       <h2>Stretch Example</h2>
-      <img class="r-stretch" style="display: inline-block;" src="/images/slides-symbol-512x512.png">
+      <img class="r-stretch" style="display: inline-block;" src="/images/slides-symbol.svg">
       <p>Image byline</p>
     </section>
   </div>

@@ -126,7 +126,7 @@ layout: default
 
 ```html
 <h2>拉伸範例</h2>
-<img class="r-stretch" src="/images/slides-symbol-512x512.png" />
+<img class="r-stretch" src="/images/slides-symbol.svg" />
 <p>圖片說明</p>
 ```
 
@@ -134,7 +134,7 @@ layout: default
   <div class="slides">
     <section>
       <h2>拉伸範例</h2>
-      <img class="r-stretch" style="display: inline-block;" src="/images/slides-symbol-512x512.png">
+      <img class="r-stretch" style="display: inline-block;" src="/images/slides-symbol.svg">
       <p>圖片說明</p>
     </section>
   </div>
