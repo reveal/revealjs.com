@@ -11,7 +11,7 @@ hide_ads: true
 
 <iframe width="100%" height="405" src="https://www.youtube.com/embed/6-uWaBcqguc?color=white&controls=1&modestbranding=1&rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-This video course that will teach you how to everything you need to know to create great looking presentations with reveal.js.
+This video course will teach you everything you need to know to create great looking presentations with reveal.js.
 
 We'll start from the basics of installing reveal.js, creating slides and configuring your presentation. Then we'll work our way up to more interesting topics like presenting syntax highlighted code, animating slide content with Auto-Animate and using the speaker view. In the advanced videos we'll explore the reveal.js JavaScript API, plugin creation and how to customize keyboard bindings. (See [full list of videos](#table-of-contents).)
 
