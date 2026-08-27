@@ -1,3 +1,18 @@
+{# Speculation Rules: prerender same-origin pages on hover #}
+<script type="speculationrules">
+{
+  "prerender": [{
+    "where": {
+      "and": [
+        { "href_matches": "/*" },
+        { "not": { "href_matches": "/api/*" } }
+      ]
+    },
+    "eagerness": "moderate"
+  }]
+}
+</script>
+
 {# Google Schema #}
 <meta itemprop="name" content="{{ title }} | {{ site.name }}">
 <meta itemprop="description" content="{% if description %}{{ description }}{% else %}{{ excerpt }}{% endif %}">
